@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navira</title>
+
+<link rel="stylesheet" href="super.css">
+</head>
+<body>
+
+<button class="backTop" onclick="history.back()">← Back</button>
+
+<!-- Seller Information -->
+<div class="topbox">
+<div class="details">
+<h2 class="shop">Lakshmi Kangan Niketan</h2>
+<div class="stars">
+★★★★★
+<span>9,846 Ratings</span>
+</div>
+<p class="desc">
+Women's Elegant Ruby Stone Gold Finish Bangle
+</p>
+</div>
+</div>
+
+<!-- Main Container -->
+<div class="container">
+
+<!-- LEFT SIDE -->
+<div class="left">
+
+<div class="likeBox">
+    <input type="checkbox" id="fav">
+    <label for="fav">♥</label>
+</div>
+
+<div class="slider">
+
+<img id="productImage"
+src="bangle (27).jpeg"
+data-images="bangle (27).jpeg,  bangle (26).jpeg,   bangle (25).jpeg"
+class="product">
+
+<br>
+
+<button class="arrow"
+onclick="previous()">❮</button>
+
+<button class="arrow"
+onclick="next()">❯</button>
+
+<br><br>
+
+<span id="dot1">●</span>
+<span id="dot2">○</span>
+<span id="dot3">○</span>
+
+</div>
+
+<h1>Women's Elegant Ruby Stone Gold Finish Bangle</h1>
+
+<h2 class="price">₹1,149</h2>
+
+<div class="discount">
+44% OFF
+</div>
+
+<h2>
+₹1,149
+<del>₹2,049</del>
+</h2>
+
+<h3>Select Colour</h3>
+
+<label><input type="radio" name="colour"> Ruby Red</label>
+
+<label><input type="radio" name="colour"> Emerald Green</label>
+
+<label><input type="radio" name="colour"> Royal Blue</label>
+
+<label><input type="radio" name="colour"> Rose Pink</label>
+
+<label><input type="radio" name="colour"> Golden Yellow</label>
+
+<label><input type="radio" name="colour"> Pearl White</label>
+
+<br><br>
+
+<button class="buy"
+onclick="showBuy()">
+Buy Now
+</button>
+
+<hr>
+
+<h2>Product Details</h2>
+
+<h3>Top Highlights</h3>
+
+<ul>
+<li>✔️ Elegant Ruby Stone Design</li>
+<li>✔️ Beautiful Gold Finish</li>
+<li>✔️ Decorative Traditional Pattern</li>
+<li>✔️ Available in Multiple Colour Options</li>
+<li>✔️ Stylish and Graceful Wrist Accessory</li>
+<li>✔️ Suitable for Festivals, Weddings and Parties</li>
+</ul>
+
+<h2>Description</h2>
+
+<p>
+Add a rich and graceful traditional touch to your jewellery collection with this Women's Elegant Ruby Stone Gold Finish Bangle from Lakshmi Kangan Niketan. Designed with beautiful coloured stone detailing and a refined gold finish, this bangle creates an attractive and elegant appearance on the wrist. The vibrant stone accents add a festive charm while the classic design makes it easy to pair with a wide variety of Indian outfits and jewellery styles.
+</p>
+
+<p>
+This bangle can be paired beautifully with sarees, churidars, lehengas, salwar suits and other traditional outfits, while also complementing elegant modern clothing. It is suitable for festivals, weddings, family functions, poojas, parties, celebrations and evening gatherings. Wear it alone for a graceful statement or combine it with other matching bangles and bracelets to create a stylish layered traditional look.
+</p>
+
+<p>
+Available in Ruby Red, Emerald Green, Royal Blue, Rose Pink, Golden Yellow and Pearl White, this bangle gives you multiple options for coordinating with different outfits and occasions. The colourful stone detailing and gold-inspired finish make it especially suitable for festive and wedding styling. It can also be given as a thoughtful jewellery gift for birthdays, anniversaries, festivals, weddings and other special celebrations.
+</p>
+
+<h2>Additional Information</h2>
+
+<table>
+
+<tr>
+<td>Brand</td>
+<td>Navira</td>
+</tr>
+
+<tr>
+<td>Colour</td>
+<td>Ruby Red, Emerald Green, Royal Blue, Rose Pink, Golden Yellow, Pearl White</td>
+</tr>
+
+<tr>
+<td>Type</td>
+<td>Designer Bangle</td>
+</tr>
+
+<tr>
+<td>Design</td>
+<td>Ruby Stone</td>
+</tr>
+
+<tr>
+<td>Finish</td>
+<td>Gold Finish</td>
+</tr>
+
+<tr>
+<td>Material</td>
+<td>Fashion Jewellery Alloy</td>
+</tr>
+
+<tr>
+<td>Detailing</td>
+<td>Coloured Stone Detailing</td>
+</tr>
+
+<tr>
+<td>Suitable For</td>
+<td>Women</td>
+</tr>
+
+<tr>
+<td>Style</td>
+<td>Traditional & Festive</td>
+</tr>
+
+<tr>
+<td>Packaging</td>
+<td>Jewellery Gift Box</td>
+</tr>
+
+<tr>
+<td>Pattern</td>
+<td>Stone Studded</td>
+</tr>
+
+<tr>
+<td>Occasion</td>
+<td>Festival, Party, Wedding, Celebration, Evening</td>
+</tr>
+
+<tr>
+<td>Care Instructions</td>
+<td>Keep Away From Water, Perfume and Chemicals</td>
+</tr>
+
+<tr>
+<td>Country of Origin</td>
+<td>India</td>
+</tr>
+
+<tr>
+<td>Weight</td>
+<td>41 g</td>
+</tr>
+
+</table>
+
+</div>
+
+<!-- RIGHT SIDE -->
+<div class="right" id="rightPanel">
+
+<button onclick="goBack()" class="backCheckout">← Back</button>
+
+<h2>Checkout</h2>
+
+<hr>
+
+<h3>Delivery Details</h3>
+
+<label>Full Name</label><br>
+<input type="text" placeholder="Enter your Full Name">
+
+<br><br>
+
+<label>Phone Number</label><br>
+<input type="tel" placeholder="9876543210">
+
+<br><br>
+
+<label>Email Address</label><br>
+<input type="email" placeholder="example@gmail.com">
+
+<br><br>
+
+<label>House Name</label><br>
+<input type="text" placeholder="House Name">
+
+<br><br>
+
+<label>Street</label><br>
+<input type="text" placeholder="Street">
+
+<br><br>
+
+<label>City</label><br>
+<input type="text" placeholder="City">
+
+<br><br>
+
+<label>State</label><br>
+<input type="text" placeholder="State">
+
+<br><br>
+
+<label>PIN Code</label><br>
+<input type="text" placeholder="PIN Code">
+
+<hr>
+
+<h3>Select Payment Method</h3>
+
+<label>
+<input type="radio" name="pay">
+<img src="gpay.jpeg" width="28">
+Google Pay
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="phonepe.jpeg" width="28">
+PhonePe
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="paytm.jpeg" width="28">
+Paytm
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="upi.jpeg" width="28">
+UPI
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="card.jpeg" width="28">
+Credit / Debit Card
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="netbanking.jpeg" width="28">
+Net Banking
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="cod.jpeg" width="28">
+Cash on Delivery
+</label>
+
+<hr>
+<hr>
+
+<h3>Product Options</h3>
+
+<label>Selected Colour</label><br>
+
+<select>
+<option>Ruby Red</option>
+<option>Emerald Green</option>
+<option>Royal Blue</option>
+<option>Rose Pink</option>
+<option>Golden Yellow</option>
+<option>Pearl White</option>
+</select>
+
+<br><br>
+
+<hr>
+
+<h3>Order Summary</h3>
+
+<table width="100%">
+
+<tr>
+<td>Product</td>
+<td align="right">Ruby Stone Gold Finish Bangle</td>
+</tr>
+
+<tr>
+<td>Price</td>
+<td align="right">₹1,149</td>
+</tr>
+
+<tr>
+<td>Packaging Fee</td>
+<td align="right">₹49</td>
+</tr>
+
+<tr>
+<td>Delivery Charges</td>
+<td align="right">FREE</td>
+</tr>
+
+<tr>
+<th>Total</th>
+<th align="right">₹1,198</th>
+</tr>
+
+</table>
+
+<br>
+
+<button class="place"
+onclick="stock()">
+Place Order
+</button>
+
+</div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

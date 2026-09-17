@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Navira</title>
+    <link rel="stylesheet" href="super.css">
+</head>
+
+<body>
+
+<button class="backTop" onclick="history.back()">← Back</button>
+
+<!-- Seller Information -->
+
+<div class="topbox">
+
+    <div class="details">
+
+        <h2 class="shop">Maira Women's Fashion</h2>
+
+        <div class="stars">
+            ★★★★★
+            <span>11,526 Ratings</span>
+        </div>
+
+        <p class="desc">
+            Women's Printed Cotton Churidar Set with Matching Dupatta
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- Main Container -->
+
+<div class="container">
+
+
+<!-- LEFT SIDE -->
+
+<div class="left">
+
+<div class="likeBox">
+
+    <input type="checkbox" id="fav">
+
+    <label for="fav">♥</label>
+
+</div>
+
+
+<div class="slider">
+
+<img id="productImage"
+     src="churidar (22).jpeg"
+     data-images="churidar (22).jpeg, churidar (23).jpeg, churidar (24).jpeg"
+     class="product">
+
+<br>
+
+
+<button class="arrow"
+onclick="previous()">❮</button>
+
+<button class="arrow"
+onclick="next()">❯</button>
+
+<br><br>
+
+
+<span id="dot1">●</span>
+<span id="dot2">○</span>
+<span id="dot3">○</span>
+
+</div>
+
+
+<h1>
+Women's Printed Cotton Churidar Set with Matching Dupatta
+</h1>
+
+
+<h2 class="price">
+₹1,599
+</h2>
+
+
+<div class="discount">
+43% OFF
+</div>
+
+
+<h2>
+₹1,599
+<del>₹2,799</del>
+</h2>
+
+
+<h3>Select Size</h3>
+
+
+<label>
+<input type="radio" name="size"> XS
+</label>
+
+<label>
+<input type="radio" name="size"> S
+</label>
+
+<label>
+<input type="radio" name="size"> M
+</label>
+
+<label>
+<input type="radio" name="size"> L
+</label>
+
+<label>
+<input type="radio" name="size"> XL
+</label>
+
+<label>
+<input type="radio" name="size"> XXL
+</label>
+
+
+<br><br>
+
+
+<button class="buy"
+onclick="showBuy()">
+
+Buy Now
+
+</button>
+
+
+<hr>
+
+
+<h2>Product Details</h2>
+
+
+<h3>Top Highlights</h3>
+
+
+<ul>
+
+<li>✔️ Soft and Comfortable Printed Fabric</li>
+
+<li>✔️ Attractive Traditional Floral Pattern</li>
+
+<li>✔️ Elegant Straight Kurta Design</li>
+
+<li>✔️ Detailed Neckline with Decorative Finish</li>
+
+<li>✔️ Comfortable Matching Churidar Bottom</li>
+
+<li>✔️ Coordinated Printed Dupatta</li>
+
+<li>✔️ Lightweight and Easy to Wear</li>
+
+<li>✔️ Suitable for Everyday and Festive Styling</li>
+
+</ul>
+
+
+<h2>Description</h2>
+
+
+<p>
+
+Embrace a comfortable and elegant ethnic look with this beautifully printed churidar set. The kurta features an attractive traditional floral pattern combined with a simple straight silhouette, making it easy to style for different occasions. The decorative neckline adds a subtle touch of sophistication, while the matching churidar provides a classic traditional finish. A coordinated dupatta completes the ensemble and adds an effortless graceful look. The lightweight construction makes this outfit comfortable for extended wear, whether you are attending a family gathering, visiting friends, going to the office or enjoying a festive occasion.
+
+</p>
+
+
+<h2>Additional Information</h2>
+
+
+<table>
+
+<tr>
+<td>Brand</td>
+<td>Maira Women's Fashion</td>
+</tr>
+
+<tr>
+<td>Colour</td>
+<td>Mustard Yellow, Pink & Green</td>
+</tr>
+
+<tr>
+<td>Type</td>
+<td>Printed Churidar Set</td>
+</tr>
+
+<tr>
+<td>Fabric</td>
+<td>Soft Cotton Blend</td>
+</tr>
+
+<tr>
+<td>Kurta Pattern</td>
+<td>Floral Printed</td>
+</tr>
+
+<tr>
+<td>Bottom</td>
+<td>Matching Churidar</td>
+</tr>
+
+<tr>
+<td>Dupatta</td>
+<td>Printed Matching Dupatta</td>
+</tr>
+
+<tr>
+<td>Neck</td>
+<td>Round Neck</td>
+</tr>
+
+<tr>
+<td>Sleeve</td>
+<td>Full Sleeve</td>
+</tr>
+
+<tr>
+<td>Fit</td>
+<td>Regular Fit</td>
+</tr>
+
+<tr>
+<td>Style</td>
+<td>Comfortable Ethnic Wear</td>
+</tr>
+
+<tr>
+<td>Occasion</td>
+<td>Daily Wear, Casual, Office & Festive</td>
+</tr>
+
+<tr>
+<td>Set Contains</td>
+<td>Kurta, Churidar Bottom & Dupatta</td>
+</tr>
+
+<tr>
+<td>Care Instructions</td>
+<td>Gentle Machine Wash</td>
+</tr>
+
+<tr>
+<td>Country of Origin</td>
+<td>India</td>
+</tr>
+
+<tr>
+<td>Weight</td>
+<td>570 g</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<!-- RIGHT SIDE -->
+
+<div class="right" id="rightPanel">
+
+<button onclick="goBack()" class="backCheckout">
+← Back
+</button>
+
+<h2>Checkout</h2>
+
+<hr>
+
+<h3>Delivery Details</h3>
+
+<label>Full Name</label><br>
+
+<input type="text"
+placeholder="Enter your Full Name">
+
+<br><br>
+
+<label>Phone Number</label><br>
+
+<input type="tel"
+placeholder="9876543210">
+
+<br><br>
+
+<label>Email Address</label><br>
+
+<input type="email"
+placeholder="example@gmail.com">
+
+<br><br>
+
+<label>House Name</label><br>
+
+<input type="text"
+placeholder="House Name">
+
+<br><br>
+
+<label>Street</label><br>
+
+<input type="text"
+placeholder="Street">
+
+<br><br>
+
+<label>City</label><br>
+
+<input type="text"
+placeholder="City">
+
+<br><br>
+
+<label>State</label><br>
+
+<input type="text"
+placeholder="State">
+
+<br><br>
+
+<label>PIN Code</label><br>
+
+<input type="text"
+placeholder="PIN Code">
+
+<hr>
+
+
+<h3>Select Payment Method</h3>
+
+<label>
+<input type="radio" name="pay">
+<img src="gpay.jpeg" width="28">
+Google Pay
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="phonepe.jpeg" width="28">
+PhonePe
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="paytm.jpeg" width="28">
+Paytm
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="upi.jpeg" width="28">
+UPI
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="card.jpeg" width="28">
+Credit / Debit Card
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="netbanking.jpeg" width="28">
+Net Banking
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="cod.jpeg" width="28">
+Cash on Delivery
+</label>
+
+<hr>
+<hr>
+
+
+<h3>Product Options</h3>
+
+<label>Selected Colour</label><br>
+
+<select>
+
+<option>Mustard Yellow</option>
+<option>Pink</option>
+<option>Green</option>
+
+</select>
+
+<br><br>
+
+<label>Selected Size</label><br>
+
+<select>
+
+<option>XS</option>
+<option>S</option>
+<option>M</option>
+<option>L</option>
+<option>XL</option>
+<option>XXL</option>
+
+</select>
+
+<br><br>
+
+<hr>
+
+
+<h3>Order Summary</h3>
+
+<table width="100%">
+
+<tr>
+
+<td>Product</td>
+
+<td align="right">
+Printed Cotton Churidar Set
+</td>
+
+</tr>
+
+<tr>
+
+<td>Price</td>
+
+<td align="right">
+₹1,599
+</td>
+
+</tr>
+
+<tr>
+
+<td>Packaging Fee</td>
+
+<td align="right">
+₹49
+</td>
+
+</tr>
+
+<tr>
+
+<td>Delivery Charges</td>
+
+<td align="right">
+FREE
+</td>
+
+</tr>
+
+<tr>
+
+<th>Total</th>
+
+<th align="right">
+₹1,648
+</th>
+
+</tr>
+
+</table>
+
+<br>
+
+<button class="place"
+onclick="stock()">
+
+Place Order
+
+</button>
+
+</div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

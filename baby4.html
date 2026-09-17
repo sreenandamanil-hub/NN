@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Navira</title>
+    <link rel="stylesheet" href="super.css">
+
+</head>
+
+<body>
+
+<button class="backTop" onclick="history.back()">← Back</button>
+
+<!-- Seller Information -->
+
+<div class="topbox">
+
+<div class="details">
+
+<h2 class="shop">Cuddle Care Baby Store</h2>
+
+<div class="stars">
+★★★★★
+<span>10,628 Ratings</span>
+</div>
+
+<p class="desc">
+Baby Unisex Soft Cotton Wrap Romper Set with Matching Cap, Bib, Socks and Booties
+</p>
+
+</div>
+
+</div>
+
+
+<!-- Main Container -->
+
+<div class="container">
+
+<!-- LEFT SIDE -->
+
+<div class="left">
+
+<div class="likeBox">
+
+    <input type="checkbox" id="fav">
+
+    <label for="fav">♥</label>
+
+</div>
+
+
+<div class="slider">
+
+<img id="productImage"
+     src="baby (10).jpeg"
+     data-images="baby (10).jpeg, baby (11).jpeg, baby (12).jpeg"
+     class="product">
+
+<br>
+
+<button class="arrow"
+onclick="previous()">❮</button>
+
+<button class="arrow"
+onclick="next()">❯</button>
+
+<br><br>
+
+<span id="dot1">●</span>
+<span id="dot2">○</span>
+<span id="dot3">○</span>
+
+</div>
+
+
+<h1>
+Baby Unisex Soft Cotton Wrap Romper Set with Matching Accessories
+</h1>
+
+
+<h2 class="price">
+₹1,599
+</h2>
+
+
+<div class="discount">
+42% OFF
+</div>
+
+
+<h2>
+₹1,599
+<del>₹2,749</del>
+</h2>
+
+
+<h3>Select Size</h3>
+
+<label>
+<input type="radio" name="size"> 0-3 Months
+</label>
+
+<label>
+<input type="radio" name="size"> 3-6 Months
+</label>
+
+<label>
+<input type="radio" name="size"> 6-12 Months
+</label>
+
+<label>
+<input type="radio" name="size"> 12-18 Months
+</label>
+
+<br><br>
+
+
+<button class="buy"
+onclick="showBuy()">
+
+Buy Now
+
+</button>
+
+
+<hr>
+
+
+<h2>Product Details</h2>
+
+<h3>Top Highlights</h3>
+
+<ul>
+
+<li>✔️ Soft and Comfortable Baby Wrap Romper</li>
+
+<li>✔️ Gentle Fabric for Baby's Sensitive Skin</li>
+
+<li>✔️ Stylish Cross-Wrap Front Design</li>
+
+<li>✔️ Matching Baby Cap Included</li>
+
+<li>✔️ Coordinated Bib and Socks</li>
+
+<li>✔️ Matching Baby Booties Included</li>
+
+<li>✔️ Available in Six Soft Colour Options</li>
+
+<li>✔️ Ideal for Newborns, Everyday Wear and Gifting</li>
+
+</ul>
+
+
+<h2>Description</h2>
+
+<p>
+
+Keep your little one cosy and comfortable with this adorable baby wrap-style clothing set from Cuddle Care Baby Store. The soft and simple design features a convenient wrap-style front that gives the outfit a charming appearance while making dressing easier. Matching accessories complete the coordinated look, including a baby cap, bib, socks and booties. The gentle design is suitable for everyday wear, indoor use, outings, baby photography and special family occasions. Available in six soft colour options, this set also makes a thoughtful choice for newborn gifting and baby showers.
+
+</p>
+
+
+<h2>Additional Information</h2>
+
+<table>
+
+<tr>
+<td>Brand</td>
+<td>Cuddle Care Baby Store</td>
+</tr>
+
+<tr>
+<td>Colour</td>
+<td>Beige, Cream, Pink, Baby Blue, Sage Green & Lavender</td>
+</tr>
+
+<tr>
+<td>Type</td>
+<td>Baby Wrap Romper Set</td>
+</tr>
+
+<tr>
+<td>Fabric</td>
+<td>Soft Cotton Fabric</td>
+</tr>
+
+<tr>
+<td>Pattern</td>
+<td>Solid</td>
+</tr>
+
+<tr>
+<td>Sleeve</td>
+<td>Full Sleeve</td>
+</tr>
+
+<tr>
+<td>Closure</td>
+<td>Wrap Style Closure</td>
+</tr>
+
+<tr>
+<td>Fit</td>
+<td>Comfortable Baby Fit</td>
+</tr>
+
+<tr>
+<td>Age Group</td>
+<td>0-18 Months</td>
+</tr>
+
+<tr>
+<td>Style</td>
+<td>Comfortable Newborn Wear</td>
+</tr>
+
+<tr>
+<td>Occasion</td>
+<td>Daily Wear, Outing, Photography & Gifting</td>
+</tr>
+
+<tr>
+<td>Set Contains</td>
+<td>Romper, Cap, Bib, Socks & Booties</td>
+</tr>
+
+<tr>
+<td>Care Instructions</td>
+<td>Gentle Wash Recommended</td>
+</tr>
+
+<tr>
+<td>Country of Origin</td>
+<td>India</td>
+</tr>
+
+<tr>
+<td>Weight</td>
+<td>430 g</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<!-- RIGHT SIDE -->
+
+<div class="right" id="rightPanel">
+
+<button onclick="goBack()" class="backCheckout">
+← Back
+</button>
+
+<h2>Checkout</h2>
+
+<hr>
+
+
+<h3>Delivery Details</h3>
+
+<label>Full Name</label><br>
+<input type="text" placeholder="Enter your Full Name">
+
+<br><br>
+
+<label>Phone Number</label><br>
+<input type="tel" placeholder="9876543210">
+
+<br><br>
+
+<label>Email Address</label><br>
+<input type="email" placeholder="example@gmail.com">
+
+<br><br>
+
+<label>House Name</label><br>
+<input type="text" placeholder="House Name">
+
+<br><br>
+
+<label>Street</label><br>
+<input type="text" placeholder="Street">
+
+<br><br>
+
+<label>City</label><br>
+<input type="text" placeholder="City">
+
+<br><br>
+
+<label>State</label><br>
+<input type="text" placeholder="State">
+
+<br><br>
+
+<label>PIN Code</label><br>
+<input type="text" placeholder="PIN Code">
+
+
+<hr>
+
+
+<h3>Select Payment Method</h3>
+
+<label>
+<input type="radio" name="pay">
+<img src="gpay.jpeg" width="28">
+Google Pay
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="phonepe.jpeg" width="28">
+PhonePe
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="paytm.jpeg" width="28">
+Paytm
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="upi.jpeg" width="28">
+UPI
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="card.jpeg" width="28">
+Credit / Debit Card
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="netbanking.jpeg" width="28">
+Net Banking
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="cod.jpeg" width="28">
+Cash on Delivery
+</label>
+
+
+<hr>
+<hr>
+
+
+<h3>Product Options</h3>
+
+<label>Selected Colour</label><br>
+
+<select>
+
+<option>Beige</option>
+<option>Cream</option>
+<option>Pink</option>
+<option>Baby Blue</option>
+<option>Sage Green</option>
+<option>Lavender</option>
+
+</select>
+
+<br><br>
+
+
+<label>Selected Size</label><br>
+
+<select>
+
+<option>0-3 Months</option>
+<option>3-6 Months</option>
+<option>6-12 Months</option>
+<option>12-18 Months</option>
+
+</select>
+
+<br><br>
+
+<hr>
+
+
+<h3>Order Summary</h3>
+
+<table width="100%">
+
+<tr>
+
+<td>Product</td>
+
+<td align="right">
+Baby Wrap Romper Set
+</td>
+
+</tr>
+
+<tr>
+
+<td>Price</td>
+
+<td align="right">
+₹1,599
+</td>
+
+</tr>
+
+<tr>
+
+<td>Packaging Fee</td>
+
+<td align="right">
+₹49
+</td>
+
+</tr>
+
+<tr>
+
+<td>Delivery Charges</td>
+
+<td align="right">
+FREE
+</td>
+
+</tr>
+
+<tr>
+
+<th>Total</th>
+
+<th align="right">
+₹1,648
+</th>
+
+</tr>
+
+</table>
+
+
+<br>
+
+
+<button class="place"
+onclick="stock()">
+
+Place Order
+
+</button>
+
+</div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

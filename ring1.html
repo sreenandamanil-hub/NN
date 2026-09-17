@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Navira</title>
+
+<link rel="stylesheet" href="super.css">
+
+</head>
+
+<body>
+
+<button class="backTop" onclick="history.back()">← Back</button>
+
+
+<!-- Seller Information -->
+
+<div class="topbox">
+
+<div class="details">
+
+<h2 class="shop">Vaishnavi Ratna Jewels</h2>
+
+<div class="stars">
+★★★★★
+<span>12,486 Ratings</span>
+</div>
+
+<p class="desc">
+Women's Elegant Gold-Tone Solitaire Ring
+</p>
+
+</div>
+
+</div>
+
+
+<!-- Main Container -->
+
+<div class="container">
+
+
+<!-- LEFT SIDE -->
+
+<div class="left">
+
+<div class="likeBox">
+
+    <input type="checkbox" id="fav">
+
+    <label for="fav">♥</label>
+
+</div>
+
+
+<div class="slider">
+
+<img id="productImage"
+src="ring (27).jpeg"
+data-images="ring (27).jpeg,  ring (26).jpeg,   ring (25).jpeg"
+class="product">
+
+<br>
+
+<button class="arrow"
+onclick="previous()">❮</button>
+
+<button class="arrow"
+onclick="next()">❯</button>
+
+<br><br>
+
+<span id="dot1">●</span>
+<span id="dot2">○</span>
+<span id="dot3">○</span>
+
+</div>
+
+
+<h1>Women's Elegant Gold-Tone Solitaire Ring</h1>
+
+<h2 class="price">₹1,299</h2>
+
+<div class="discount">
+43% OFF
+</div>
+
+<h2>
+₹1,299
+<del>₹2,299</del>
+</h2>
+
+
+<h3>Select Colour</h3>
+
+<label>
+<input type="radio" name="colour">
+Gold
+</label>
+
+<label>
+<input type="radio" name="colour">
+Rose Gold
+</label>
+
+<label>
+<input type="radio" name="colour">
+Silver
+</label>
+
+<label>
+<input type="radio" name="colour">
+White Gold
+</label>
+
+<label>
+<input type="radio" name="colour">
+Champagne Gold
+</label>
+
+<label>
+<input type="radio" name="colour">
+Antique Gold
+</label>
+
+
+<br><br>
+
+
+<button class="buy"
+onclick="showBuy()">
+Buy Now
+</button>
+
+
+<hr>
+
+
+<h2>Product Details</h2>
+
+
+<h3>Top Highlights</h3>
+
+<ul>
+
+<li>✔️ Elegant Gold-Tone Solitaire Ring</li>
+
+<li>✔️ Classic Round Centre Stone Design</li>
+
+<li>✔️ Stylish and Graceful Appearance</li>
+
+<li>✔️ Available in Multiple Colour Options</li>
+
+<li>✔️ Suitable for Everyday and Special Occasions</li>
+
+<li>✔️ Beautiful Addition to Women's Jewellery Collection</li>
+
+</ul>
+
+
+<h2>Description</h2>
+
+<p>
+Add a graceful and sophisticated touch to your jewellery collection with this Women's Elegant Gold-Tone Solitaire Ring from Vaishnavi Ratna Jewels. Designed with a classic round centre stone and a beautifully detailed band, this ring creates a timeless and feminine appearance. Its simple yet attractive design makes it easy to style with different outfits and other jewellery pieces, making it suitable for women who prefer elegant accessories with a refined finish.
+</p>
+
+<p>
+The ring is available in six attractive colour options including Gold, Rose Gold, Silver, White Gold, Champagne Gold and Antique Gold. Each finish provides a different look, allowing you to choose a shade that matches your personal style and outfit. It can be paired with sarees, churidars, dresses, formal wear and casual outfits, making it suitable for college, office, parties, weddings, festivals, family functions, celebrations and everyday styling.
+</p>
+
+<p>
+This elegant ring can also be a thoughtful gift choice for birthdays, anniversaries, engagements, weddings, festivals and other memorable occasions. To maintain its appearance, keep the ring away from water, perfume, cosmetics and harsh chemicals and store it safely in a jewellery box when not in use. With its classic centre-stone design and versatile colour choices, this Navira ring is a beautiful accessory for adding a polished and elegant finishing touch to any look.
+</p>
+
+
+<h2>Additional Information</h2>
+
+<table>
+
+<tr>
+<td>Brand</td>
+<td>Navira</td>
+</tr>
+
+<tr>
+<td>Colour</td>
+<td>Gold, Rose Gold, Silver, White Gold, Champagne Gold, Antique Gold</td>
+</tr>
+
+<tr>
+<td>Type</td>
+<td>Solitaire Ring</td>
+</tr>
+
+<tr>
+<td>Design</td>
+<td>Round Centre Stone</td>
+</tr>
+
+<tr>
+<td>Finish</td>
+<td>Polished Finish</td>
+</tr>
+
+<tr>
+<td>Style</td>
+<td>Elegant & Classic</td>
+</tr>
+
+<tr>
+<td>Suitable For</td>
+<td>Women</td>
+</tr>
+
+<tr>
+<td>Occasion</td>
+<td>Everyday, College, Office, Party, Wedding, Festival</td>
+</tr>
+
+<tr>
+<td>Material</td>
+<td>Alloy</td>
+</tr>
+
+<tr>
+<td>Pattern</td>
+<td>Solid</td>
+</tr>
+
+<tr>
+<td>Stone</td>
+<td>Decorative Centre Stone</td>
+</tr>
+
+<tr>
+<td>Care Instructions</td>
+<td>Keep Away From Water, Perfume and Chemicals</td>
+</tr>
+
+<tr>
+<td>Country of Origin</td>
+<td>India</td>
+</tr>
+
+<tr>
+<td>Weight</td>
+<td>8 g</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<!-- RIGHT SIDE -->
+
+<div class="right" id="rightPanel">
+
+<button onclick="goBack()" class="backCheckout">
+← Back
+</button>
+
+
+<h2>Checkout</h2>
+
+<hr>
+
+
+<h3>Delivery Details</h3>
+
+
+<label>Full Name</label><br>
+
+<input type="text"
+placeholder="Enter your Full Name">
+
+<br><br>
+
+
+<label>Phone Number</label><br>
+
+<input type="tel"
+placeholder="9876543210">
+
+<br><br>
+
+
+<label>Email Address</label><br>
+
+<input type="email"
+placeholder="example@gmail.com">
+
+<br><br>
+
+
+<label>House Name</label><br>
+
+<input type="text"
+placeholder="House Name">
+
+<br><br>
+
+
+<label>Street</label><br>
+
+<input type="text"
+placeholder="Street">
+
+<br><br>
+
+
+<label>City</label><br>
+
+<input type="text"
+placeholder="City">
+
+<br><br>
+
+
+<label>State</label><br>
+
+<input type="text"
+placeholder="State">
+
+<br><br>
+
+
+<label>PIN Code</label><br>
+
+<input type="text"
+placeholder="PIN Code">
+
+
+<hr>
+
+
+<h3>Select Payment Method</h3>
+
+
+<label>
+
+<input type="radio" name="pay">
+
+<img src="gpay.jpeg" width="28">
+
+Google Pay
+
+</label>
+
+<br><br>
+
+
+<label>
+
+<input type="radio" name="pay">
+
+<img src="phonepe.jpeg" width="28">
+
+PhonePe
+
+</label>
+
+<br><br>
+
+
+<label>
+
+<input type="radio" name="pay">
+
+<img src="paytm.jpeg" width="28">
+
+Paytm
+
+</label>
+
+<br><br>
+
+
+<label>
+
+<input type="radio" name="pay">
+
+<img src="upi.jpeg" width="28">
+
+UPI
+
+</label>
+
+<br><br>
+
+
+<label>
+
+<input type="radio" name="pay">
+
+<img src="card.jpeg" width="28">
+
+Credit / Debit Card
+
+</label>
+
+<br><br>
+
+
+<label>
+
+<input type="radio" name="pay">
+
+<img src="netbanking.jpeg" width="28">
+
+Net Banking
+
+</label>
+
+<br><br>
+
+
+<label>
+
+<input type="radio" name="pay">
+
+<img src="cod.jpeg" width="28">
+
+Cash on Delivery
+
+</label>
+
+
+<hr>
+
+<hr>
+
+
+<h3>Product Options</h3>
+
+
+<label>Selected Colour</label><br>
+
+
+<select>
+
+<option>Gold</option>
+
+<option>Rose Gold</option>
+
+<option>Silver</option>
+
+<option>White Gold</option>
+
+<option>Champagne Gold</option>
+
+<option>Antique Gold</option>
+
+</select>
+
+
+<br><br>
+
+
+<hr>
+
+
+<h3>Order Summary</h3>
+
+
+<table width="100%">
+
+<tr>
+
+<td>Product</td>
+
+<td align="right">
+Elegant Gold-Tone Solitaire Ring
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>Price</td>
+
+<td align="right">
+₹1,299
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>Packaging Fee</td>
+
+<td align="right">
+₹49
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>Delivery Charges</td>
+
+<td align="right">
+FREE
+</td>
+
+</tr>
+
+
+<tr>
+
+<th>Total</th>
+
+<th align="right">
+₹1,348
+</th>
+
+</tr>
+
+</table>
+
+
+<br>
+
+
+<button class="place"
+onclick="stock()">
+
+Place Order
+
+</button>
+
+
+</div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

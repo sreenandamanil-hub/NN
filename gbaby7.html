@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navira</title>
+<link rel="stylesheet" href="super.css">
+
+</head>
+<body>
+<button class="backTop" onclick="history.back()">← Back</button>
+
+<div class="topbox">
+<div class="details">
+    <h2 class="shop">Little Blossom Kids</h2>
+    <div class="stars">
+        ★★★★★
+        <span>4,986 Ratings</span>
+    </div>
+    <p class="desc">
+        Girls Floral Embroidered Party Dress
+    </p>
+</div>
+</div>
+
+<div class="container">
+
+<div class="left">
+
+<div class="likeBox">
+    <input type="checkbox" id="fav">
+    <label for="fav">♥</label>
+</div>
+
+<div class="slider">
+
+<img id="productImage"
+src="gbaby (19).jpeg"
+data-images="gbaby (19).jpeg, gbaby (20).jpeg, gbaby (21).jpeg"
+class="product">
+
+<br>
+
+<button class="arrow" onclick="previous()">❮</button>
+<button class="arrow" onclick="next()">❯</button>
+
+<br><br>
+
+<span id="dot1">●</span>
+<span id="dot2">○</span>
+<span id="dot3">○</span>
+
+</div>
+
+<h1>Girls Floral Embroidered Party Dress</h1>
+
+<h2 class="price">₹699</h2>
+
+<div class="discount">
+30% OFF
+</div>
+
+<h2>
+₹699
+<del>₹999</del>
+</h2>
+
+<h3>Select Size</h3>
+
+<label><input type="radio" name="size"> 0-3 Months</label>
+<label><input type="radio" name="size"> 3-6 Months</label>
+<label><input type="radio" name="size"> 6-9 Months</label>
+<label><input type="radio" name="size"> 9-12 Months</label>
+<label><input type="radio" name="size"> 12-18 Months</label>
+
+<br><br>
+
+<button class="buy" onclick="showBuy()">Buy Now</button>
+
+<hr>
+
+<h2>Product Details</h2>
+
+<h3>Top Highlights</h3>
+
+<ul>
+<li>✔️ Soft Comfortable Fabric</li>
+<li>✔️ Beautiful Embroidered Detailing</li>
+<li>✔️ Sleeveless Comfortable Design</li>
+<li>✔️ Flared Skirt Silhouette</li>
+<li>✔️ Suitable for Parties and Special Occasions</li>
+</ul>
+
+<h2>Description</h2>
+
+<p>
+Dress your little girl in charming style with this beautiful embroidered party dress, designed with delicate floral detailing and a comfortable flared silhouette. The soft fabric and neat finishing make it suitable for comfortable wear during celebrations and special occasions.
+</p>
+
+<p>
+The elegant design gives the dress a lovely festive appearance while allowing easy movement for little ones. It is a sweet choice for birthdays, family functions, parties, photographs and other memorable occasions.
+</p>
+
+<h2>Additional Information</h2>
+
+<table>
+
+<tr><td>Brand</td><td>Little Blossom</td></tr>
+<tr><td>Colour</td><td>Multiple Colour Combinations</td></tr>
+<tr><td>Material</td><td>Soft Cotton Blend</td></tr>
+<tr><td>Style</td><td>Embroidered Party Dress</td></tr>
+<tr><td>Pattern</td><td>Floral Embroidery</td></tr>
+<tr><td>Size</td><td>0-18 Months</td></tr>
+<tr><td>Closure</td><td>Button Closure</td></tr>
+<tr><td>Occasion</td><td>Party, Birthday, Celebration & Special Events</td></tr>
+<tr><td>Country</td><td>India</td></tr>
+<tr><td>Weight</td><td>210 g</td></tr>
+
+</table>
+
+</div>
+
+<div class="right" id="rightPanel">
+
+<button onclick="goBack()" class="backCheckout">← Back</button>
+
+<h2>Checkout</h2>
+<hr>
+
+<h3>Delivery Details</h3>
+
+<label>Full Name</label><br>
+<input type="text" placeholder="Enter your Full Name">
+
+<br><br>
+
+<label>Phone Number</label><br>
+<input type="tel" placeholder="9876543210">
+
+<br><br>
+
+<label>Email Address</label><br>
+<input type="email" placeholder="example@gmail.com">
+
+<br><br>
+
+<label>House Name</label><br>
+<input type="text" placeholder="House Name">
+
+<br><br>
+
+<label>Street</label><br>
+<input type="text" placeholder="Street">
+
+<br><br>
+
+<label>City</label><br>
+<input type="text" placeholder="City">
+
+<br><br>
+
+<label>State</label><br>
+<input type="text" placeholder="State">
+
+<br><br>
+
+<label>PIN Code</label><br>
+<input type="text" placeholder="PIN Code">
+
+<hr>
+
+<h3>Select Payment Method</h3>
+
+<label><input type="radio" name="pay"><img src="gpay.jpeg" width="28"> Google Pay</label>
+<br><br>
+<label><input type="radio" name="pay"><img src="phonepe.jpeg" width="28"> PhonePe</label>
+<br><br>
+<label><input type="radio" name="pay"><img src="paytm.jpeg" width="28"> Paytm</label>
+<br><br>
+<label><input type="radio" name="pay"><img src="upi.jpeg" width="28"> UPI</label>
+<br><br>
+<label><input type="radio" name="pay"><img src="card.jpeg" width="28"> Credit / Debit Card</label>
+<br><br>
+<label><input type="radio" name="pay"><img src="netbanking.jpeg" width="28"> Net Banking</label>
+<br><br>
+<label><input type="radio" name="pay"><img src="cod.jpeg" width="28"> Cash on Delivery</label>
+
+<hr>
+<hr>
+
+<h3>Product Options</h3>
+
+<label>Selected Colour</label><br>
+
+<select>
+<option>Blush Pink & Cream</option>
+<option>Lavender & White</option>
+<option>Peach & Ivory</option>
+<option>Mint Green & White</option>
+<option>Sky Blue & Cream</option>
+<option>Rose Pink & Beige</option>
+</select>
+
+<br><br>
+
+<label>Selected Size</label><br>
+
+<select>
+<option>0-3 Months</option>
+<option>3-6 Months</option>
+<option>6-9 Months</option>
+<option>9-12 Months</option>
+<option>12-18 Months</option>
+</select>
+
+<br><br>
+
+<hr>
+
+<h3>Order Summary</h3>
+
+<table width="100%">
+<tr>
+<td>Product</td>
+<td align="right">Floral Embroidered Party Dress</td>
+</tr>
+<tr>
+<td>Price</td>
+<td align="right">₹699</td>
+</tr>
+<tr>
+<td>Delivery</td>
+<td align="right">FREE</td>
+</tr>
+<tr>
+<th>Total</th>
+<th align="right">₹699</th>
+</tr>
+</table>
+
+<br>
+
+<button class="place" onclick="stock()">Place Order</button>
+
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

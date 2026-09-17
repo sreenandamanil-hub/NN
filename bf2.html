@@ -1,0 +1,149 @@
+<!DOCTYPE html>    
+<html>      
+<head>      
+    <meta charset="UTF-8">      
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Navira</title>      
+    <link rel="stylesheet" href="super.css">  
+</head>      
+<body>      
+<button class="backTop" onclick="history.back()">← Back</button>    
+<div class="topbox">    
+    <div class="details">      
+        <h2 class="shop">Tiny Toes Store</h2>      
+        <div class="stars">      
+            ★★★★★      
+            <span>3,890 Ratings</span>      
+        </div>      
+        <p class="desc">      
+            Baby Boys Cute Bear Face Knitted Booties      
+        </p>      
+    </div>  
+</div>    
+<div class="container">    
+    <div class="left">      
+        <div class="likeBox">      
+            <input type="checkbox" id="fav">      
+            <label for="fav">♥</label>      
+        </div>    
+        <div class="slider">    
+            <img id="productImage"      
+            src="bf (4).jpeg"      
+            data-images="bf (4).jpeg, bf (5).jpeg, bf (6).jpeg"      
+            class="product">  
+            <br>  
+            <button class="arrow" onclick="previous()">❮</button>  
+            <button class="arrow" onclick="next()">❯</button>  
+            <br><br>  
+            <span id="dot1">●</span>  
+            <span id="dot2">○</span>  
+            <span id="dot3">○</span>  
+        </div>    
+        <h1>Baby Boys Cute Bear Face Knitted Booties</h1>    
+        <h2 class="price">₹299</h2>    
+        <div class="discount">      
+            40% OFF      
+        </div>    
+        <h2>      
+            ₹299      
+            <del>₹499</del>      
+        </h2>    
+        <h3>Select Size</h3>    
+        <label><input type="radio" name="size"> 0-3 Months</label>  
+        <label><input type="radio" name="size"> 3-6 Months</label>  
+        <label><input type="radio" name="size"> 6-9 Months</label>  
+        <label><input type="radio" name="size"> 9-12 Months</label>  
+        <label><input type="radio" name="size"> 12-18 Months</label>  
+        <br><br>  
+        <button class="buy" onclick="showBuy()">Buy Now</button>  
+        <hr>    
+        <h2>Product Details</h2>    
+        <h3>Top Highlights</h3>    
+        <ul>      
+            <li>✔️ Soft Ribbed Knitted Fabric</li>      
+            <li>✔️ Adorable Embroidered Bear Face</li>      
+            <li>✔️ Elastic Fold-Over Ankle Cuff</li>      
+            <li>✔️ Warm & Gentle on Skin</li>      
+            <li>✔️ Perfect for Newborns & Gifting</li>      
+        </ul>    
+        <h2>Description</h2>    
+        <p>      
+            Keep tiny toes warm and cozy with these soft knitted booties featuring an charming embroidered bear face motif. Designed with a flexible folded ribbed cuff, they stay securely in place without pressing on delicate skin.      
+        </p>    
+        <p>      
+            Crafted from hypoallergenic, breathable yarn, these booties provide comfortable warmth indoors during colder days. A delightful accessory for everyday baby wear, photo shoots, and newborn baby gifts.      
+        </p>    
+        <h2>Additional Information</h2>    
+        <table>    
+            <tr><td>Brand</td><td>Tiny Toes</td></tr>    
+            <tr><td>Colour</td><td>Multiple Colour Combinations</td></tr>    
+            <tr><td>Material</td><td>Soft Woolen Blend Knit</td></tr>    
+            <tr><td>Style</td><td>Knitted Ankle Booties</td></tr>    
+            <tr><td>Pattern</td><td>Bear Embroidery Detail</td></tr>    
+            <tr><td>Size</td><td>0-18 Months</td></tr>    
+            <tr><td>Closure</td><td>Slip-On Elastic Cuff</td></tr>    
+            <tr><td>Occasion</td><td>Winter Wear, Casual & Gifting</td></tr>    
+            <tr><td>Country</td><td>India</td></tr>    
+            <tr><td>Weight</td><td>140 g</td></tr>    
+        </table>    
+    </div>    
+    <div class="right" id="rightPanel">      
+        <button onclick="goBack()" class="backCheckout">← Back</button>    
+        <h2>Checkout</h2>    
+        <hr>    
+        <h3>Delivery Details</h3>    
+        <label>Full Name</label><br>  
+        <input type="text" placeholder="Enter your Full Name"><br><br>  
+        <label>Phone Number</label><br>  
+        <input type="tel" placeholder="9876543210"><br><br>  
+        <label>Email Address</label><br>  
+        <input type="email" placeholder="example@gmail.com"><br><br>  
+        <label>House Name</label><br>  
+        <input type="text" placeholder="House Name"><br><br>  
+        <label>Street</label><br>  
+        <input type="text" placeholder="Street"><br><br>  
+        <label>City</label><br>  
+        <input type="text" placeholder="City"><br><br>  
+        <label>State</label><br>  
+        <input type="text" placeholder="State"><br><br>  
+        <label>PIN Code</label><br>  
+        <input type="text" placeholder="PIN Code"><hr>    
+        <h3>Select Payment Method</h3>    
+        <label><input type="radio" name="pay"><img src="gpay.jpeg" width="28"> Google Pay</label><br><br>  
+        <label><input type="radio" name="pay"><img src="phonepe.jpeg" width="28"> PhonePe</label><br><br>  
+        <label><input type="radio" name="pay"><img src="paytm.jpeg" width="28"> Paytm</label><br><br>  
+        <label><input type="radio" name="pay"><img src="upi.jpeg" width="28"> UPI</label><br><br>  
+        <label><input type="radio" name="pay"><img src="card.jpeg" width="28"> Credit / Debit Card</label><br><br>  
+        <label><input type="radio" name="pay"><img src="netbanking.jpeg" width="28"> Net Banking</label><br><br>  
+        <label><input type="radio" name="pay"><img src="cod.jpeg" width="28"> Cash on Delivery</label><hr><hr>    
+        <h3>Product Options</h3>    
+        <label>Selected Colour</label><br>  
+        <select>      
+            <option>Soft Grey</option>      
+            <option>Cream White</option>      
+            <option>Baby Blue</option>      
+            <option>Warm Tan</option>      
+            <option>Pastel Green</option>      
+            <option>Oatmeal Beige</option>      
+        </select><br><br>  
+        <label>Selected Size</label><br>  
+        <select>      
+            <option>0-3 Months</option>      
+            <option>3-6 Months</option>      
+            <option>6-9 Months</option>      
+            <option>9-12 Months</option>      
+            <option>12-18 Months</option>      
+        </select><br><br><hr>    
+        <h3>Order Summary</h3>    
+        <table width="100%">    
+            <tr><td>Product</td><td align="right">Baby Boys Cute Bear Face Knitted Booties</td></tr>    
+            <tr><td>Price</td><td align="right">₹299</td></tr>    
+            <tr><td>Delivery</td><td align="right">FREE</td></tr>    
+            <tr><th>Total</th><th align="right">₹299</th></tr>    
+        </table><br>    
+        <button class="place" onclick="stock()">Place Order</button>  
+    </div>    
+</div>    
+<script src="script.js"></script>    
+</body>      
+</html>

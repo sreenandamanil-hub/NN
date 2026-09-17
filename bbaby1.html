@@ -1,0 +1,225 @@
+<!-- PAGE 1: bbaby1.html -->
+<!DOCTYPE html>    <html>      
+<head>      
+    <meta charset="UTF-8">      
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Navira</title>      
+<link rel="stylesheet" href="super.css">  
+  
+</head>      
+<body>      
+<button class="backTop" onclick="history.back()">← Back</button>    <!-- Seller Information -->    <div class="topbox">    <div class="details">      
+    <h2 class="shop">Tiny Tots Apparel</h2>      
+    <div class="stars">      
+        ★★★★★      
+        <span>4,821 Ratings</span>      
+    </div>      
+    <p class="desc">      
+        Baby Boy Short Sleeve Button-Up Shirt and Shorts Set      
+    </p>      
+</div>  
+  
+</div>    <!-- Main Container -->    <div class="container">    <!-- LEFT SIDE -->    <div class="left">      
+<div class="likeBox">      
+    <input type="checkbox" id="fav">      
+    <label for="fav">♥</label>      
+</div>    <div class="slider">    <img id="productImage"      
+src="bbaby (1).jpeg"      
+data-images="   bbaby (1).jpeg,  bbaby (2).jpeg,   bbaby (3).jpeg"      
+class="product">  
+<br>  
+  
+<button class="arrow"      
+onclick="previous()">❮</button>  
+  
+<button class="arrow"      
+onclick="next()">❯</button>  
+  
+<br><br>  
+  
+<span id="dot1">●</span>  
+<span id="dot2">○</span>  
+<span id="dot3">○</span>  
+  
+</div>    <h1>Baby Boy Short Sleeve Button-Up Shirt and Shorts Set</h1>    <h2 class="price">₹599</h2>    <div class="discount">      
+40% OFF      
+</div>    <h2>      
+₹599      
+<del>₹999</del>      
+</h2>    <h3>Select Size</h3>    <label><input type="radio" name="size"> 0-3M</label>  
+  
+<label><input type="radio" name="size"> 3-6M</label>  
+  
+<label><input type="radio" name="size"> 6-12M</label>  
+  
+<label><input type="radio" name="size"> 12-18M</label>  
+  
+<label><input type="radio" name="size"> 18-24M</label>  
+  
+<br><br>  
+  
+<button class="buy"      
+onclick="showBuy()">  
+Buy Now  
+</button>  
+  
+<hr>    <h2>Product Details</h2>    <h3>Top Highlights</h3>    <ul>      
+<li>✔️ Soft Cotton Fabric Blend</li>      
+<li>✔️ Smart Collared Shirt Design</li>      
+<li>✔️ Elasticated Waistband Shorts</li>      
+<li>✔️ Light and Breathable Wear</li>      
+<li>✔️ Ideal for Casual Outings & Events</li>      
+</ul>    <h2>Description</h2>    <p>      
+Keep your little one looking dapper and feeling comfy in this stylish short-sleeve shirt and shorts set. Crafted from lightweight, skin-friendly fabric, it ensures maximum breathability for all-day play and summer outings.      
+</p>    <p>      
+The button-down shirt paired with soft elasticated shorts provides an effortless dress-up solution for family gatherings or everyday adventures. Gentle on sensitive baby skin, this outfit blends smart classic style with essential everyday comfort.      
+</p>    <h2>Additional Information</h2>    <table>    <tr>      
+<td>Brand</td>      
+<td>Navira Kids</td>      
+</tr>    <tr>      
+<td>Colour</td>      
+<td>Multiple Colour Combinations</td>      
+</tr>    <tr>      
+<td>Material</td>      
+<td>100% Breathable Cotton</td>      
+</tr>    <tr>      
+<td>Style</td>      
+<td>Short Sleeve Two-Piece Set</td>      
+</tr>    <tr>      
+<td>Pattern</td>      
+<td>Solid Classic</td>      
+</tr>    <tr>      
+<td>Size</td>      
+<td>0-24 Months</td>      
+</tr>    <tr>      
+<td>Closure</td>      
+<td>Front Buttons</td>      
+</tr>    <tr>      
+<td>Occasion</td>      
+<td>Casual, Daily Wear & Family Outings</td>      
+</tr>    <tr>      
+<td>Country</td>      
+<td>India</td>      
+</tr>    <tr>      
+<td>Weight</td>      
+<td>220 g</td>      
+</tr>    </table>    </div>    <!-- RIGHT SIDE -->    <div class="right" id="rightPanel">      
+<button onclick="goBack()" class="backCheckout">← Back</button>    <h2>Checkout</h2>    <hr>    <h3>Delivery Details</h3>    <label>Full Name</label><br>  
+<input type="text" placeholder="Enter your Full Name">  
+  
+<br><br>  
+  
+<label>Phone Number</label><br>  
+<input type="tel" placeholder="9876543210">  
+  
+<br><br>  
+  
+<label>Email Address</label><br>  
+<input type="email" placeholder="example@gmail.com">  
+  
+<br><br>  
+  
+<label>House Name</label><br>  
+<input type="text" placeholder="House Name">  
+  
+<br><br>  
+  
+<label>Street</label><br>  
+<input type="text" placeholder="Street">  
+  
+<br><br>  
+  
+<label>City</label><br>  
+<input type="text" placeholder="City">  
+  
+<br><br>  
+  
+<label>State</label><br>  
+<input type="text" placeholder="State">  
+  
+<br><br>  
+  
+<label>PIN Code</label><br>  
+<input type="text" placeholder="PIN Code">  
+  
+<hr>    <h3>Select Payment Method</h3>    <label>      
+<input type="radio" name="pay">      
+<img src="gpay.jpeg" width="28">      
+Google Pay      
+</label>    <br><br>  
+  
+<label>      
+<input type="radio" name="pay">      
+<img src="phonepe.jpeg" width="28">      
+PhonePe      
+</label>    <br><br>  
+  
+<label>      
+<input type="radio" name="pay">      
+<img src="paytm.jpeg" width="28">      
+Paytm      
+</label>    <br><br>  
+  
+<label>      
+<input type="radio" name="pay">      
+<img src="upi.jpeg" width="28">      
+UPI      
+</label>    <br><br>  
+  
+<label>      
+<input type="radio" name="pay">      
+<img src="card.jpeg" width="28">      
+Credit / Debit Card      
+</label>    <br><br>  
+  
+<label>      
+<input type="radio" name="pay">      
+<img src="netbanking.jpeg" width="28">      
+Net Banking      
+</label>    <br><br>  
+  
+<label>      
+<input type="radio" name="pay">      
+<img src="cod.jpeg" width="28">      
+Cash on Delivery      
+</label>    <hr>      
+<hr>    <h3>Product Options</h3>    <label>Selected Colour</label><br>  
+  
+<select>      
+<option>Sky Blue & White</option>      
+<option>Mint Green & Beige</option>      
+<option>Soft Yellow & Grey</option>      
+<option>Peach & Navy Blue</option>      
+<option>Lavender & Off-White</option>      
+<option>Classic White & Denim Blue</option>      
+</select>    <br><br>  
+  
+<label>Selected Size</label><br>  
+  
+<select>      
+<option>0-3 Months</option>      
+<option>3-6 Months</option>      
+<option>6-12 Months</option>      
+<option>12-18 Months</option>      
+<option>18-24 Months</option>      
+<option>24-36 Months</option>      
+</select>    <br><br>  
+  
+<hr>    <h3>Order Summary</h3>    <table width="100%">    <tr>      
+<td>Product</td>      
+<td align="right">Short Sleeve Shirt and Shorts Set</td>      
+</tr>    <tr>      
+<td>Price</td>      
+<td align="right">₹599</td>      
+</tr>    <tr>      
+<td>Delivery</td>      
+<td align="right">FREE</td>      
+</tr>    <tr>      
+<th>Total</th>      
+<th align="right">₹599</th>      
+</tr>    </table>    <br>    <button class="place"      
+onclick="stock()">  
+Place Order  
+</button>  
+  
+</div>    </div>    <script src="script.js"></script>    </body>      
+</html>

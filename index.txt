@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Navira</title>
+    <link rel="stylesheet" href="super.css">
+</head>
+
+<body>
+
+<!-- HOME TOP -->
+
+<header class="homeTop">
+
+    <!-- PROFILE -->
+    <div class="homeProfile" onclick="openAccount()">
+
+        <img id="homeProfilePhoto"
+             src="profile.png"
+             alt="Profile">
+
+        <span>
+            Hi, <b id="homeProfileName">User</b>
+        </span>
+
+    </div>
+
+
+    <!-- RIGHT SIDE -->
+
+    <div class="homeActions">
+
+        <button onclick="openWishlist()" aria-label="Wishlist">
+    💙
+</button>
+
+<button onclick="openOrders()" aria-label="order">
+    📦
+</button>
+
+<button onclick="openSettings()" aria-label="Settings">
+    ⚙
+</button>
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="homeSearch">
+
+        <span>🔍</span>
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Search by Keyword or Product ID"
+        >
+
+    </div>
+
+</header>
+<!-- ONAM POSTER SLIDER -->
+<section class="naviraOnamSlider">
+
+    <div class="naviraOnamSlides">
+
+        <a href="onam.html" class="naviraOnamSlide active">
+            <img src="poster1.jpeg" alt="Navira Onam Collection">
+        </a>
+
+        <a href="onam.html" class="naviraOnamSlide">
+            <img src="poster2.jpeg" alt="Navira Onam Collection">
+        </a>
+
+        <a href="onam.html" class="naviraOnamSlide">
+            <img src="poster3.jpeg" alt="Navira Onam Collection">
+        </a>
+
+        <a href="onam.html" class="naviraOnamSlide">
+            <img src="poster4.jpeg" alt="Navira Onam Collection">
+        </a>
+
+    </div>
+
+    <button
+        type="button"
+        class="naviraOnamArrow naviraOnamPrev"
+        onclick="naviraOnamChange(-1)">
+        &#10094;
+    </button>
+
+    <button
+        type="button"
+        class="naviraOnamArrow naviraOnamNext"
+        onclick="naviraOnamChange(1)">
+        &#10095;
+    </button>
+
+    <div class="naviraOnamDots">
+
+        <button
+            type="button"
+            class="naviraOnamDot active"
+            onclick="naviraOnamGoTo(0)">
+        </button>
+
+        <button
+            type="button"
+            class="naviraOnamDot"
+            onclick="naviraOnamGoTo(1)">
+        </button>
+
+        <button
+            type="button"
+            class="naviraOnamDot"
+            onclick="naviraOnamGoTo(2)">
+        </button>
+
+        <button
+            type="button"
+            class="naviraOnamDot"
+            onclick="naviraOnamGoTo(3)">
+        </button>
+
+    </div>
+
+</section>
+
+<!-- MIDDLE WILL BE ADDED LATER -->
+
+<main id="homeContent"></main>
+
+<!-- ================= SEARCH RESULTS ================= -->
+
+<div id="products" class="searchResults"></div>
+
+<!-- ================= ACCOUNT INFORMATION ================= -->
+<div class="accountOverlay" id="accountOverlay">
+
+    <div class="accountBox">
+
+        <button class="closeAccount" onclick="closeAccount()">
+            ×
+        </button>
+
+        <h2>Account Information</h2>
+
+        <div class="accountPhotoSection">
+
+            <img id="accountPhoto"
+                 src="profile.png"
+                 alt="Profile">
+
+            <button onclick="showPhotoOptions()">
+                Change Photo
+            </button>
+
+        </div>
+
+
+        <!-- PHOTO OPTIONS -->
+
+<div id="photoOptions" class="photoOptions">
+
+    <h3>Select a photo</h3>
+
+    <div class="photoChoices">
+
+        <!-- UPLOAD FROM DEVICE -->
+        <label class="photoChoice uploadChoice">
+
+            <span>📤</span>
+
+            <strong>Upload</strong>
+
+            <small>from device</small>
+
+            <input
+                type="file"
+                accept="image/*"
+                onchange="uploadProfilePhoto(event)"
+                hidden>
+
+        </label>
+
+
+        <!-- WEBSITE PHOTOS -->
+
+        <button
+            type="button"
+            class="photoChoice"
+            onclick="selectProfilePhoto('profile1.png')">
+
+            <img src="profile1.png" alt="Profile 1">
+
+        </button>
+
+
+        <button
+            type="button"
+            class="photoChoice"
+            onclick="selectProfilePhoto('profile2.png')">
+
+            <img src="profile2.png" alt="Profile 2">
+
+        </button>
+
+
+        <button
+            type="button"
+            class="photoChoice"
+            onclick="selectProfilePhoto('profile3.png')">
+
+            <img src="profile3.png" alt="Profile 3">
+
+        </button>
+
+
+        <button
+            type="button"
+            class="photoChoice"
+            onclick="selectProfilePhoto('profile4.png')">
+
+            <img src="profile4.png" alt="Profile 4">
+
+        </button>
+
+
+        <button
+            type="button"
+            class="photoChoice"
+            onclick="selectProfilePhoto('profile5.png')">
+
+            <img src="profile5.png" alt="Profile 5">
+
+        </button>
+
+
+        <button
+            type="button"
+            class="photoChoice"
+            onclick="selectProfilePhoto('profile6.png')">
+
+            <img src="profile6.png" alt="Profile 6">
+
+        </button>
+
+
+        <button
+            type="button"
+            class="photoChoice"
+            onclick="selectProfilePhoto('profile7.png')">
+
+            <img src="profile7.png" alt="Profile 7">
+
+        </button>
+
+
+        <button
+            type="button"
+            class="photoChoice"
+            onclick="selectProfilePhoto('profile8.png')">
+
+            <img src="profile8.png" alt="Profile 8">
+
+        </button>
+
+
+        <button
+            type="button"
+            class="photoChoice"
+            onclick="selectProfilePhoto('profile9.png')">
+
+            <img src="profile9.png" alt="Profile 9">
+
+        </button>
+
+    </div>
+
+</div>
+
+        <label class="accountLabel">
+            Name
+        </label>
+
+        <input type="text"
+               id="nameInput"
+               class="accountInput"
+               placeholder="Enter your name">
+
+
+        <label class="accountLabel">
+            Address
+        </label>
+
+        <textarea id="addressInput"
+                  class="accountInput"
+                  placeholder="Enter your address"
+                  rows="3"></textarea>
+				  <!-- PINCODE -->
+<label class="accountLabel">
+    Pincode *
+</label>
+
+<input
+    type="text"
+    id="pincodeInput"
+    class="accountInput"
+    placeholder="Enter your pincode">
+
+
+<!-- CITY -->
+<label class="accountLabel">
+    City *
+</label>
+
+<input
+    type="text"
+    id="cityInput"
+    class="accountInput"
+    placeholder="Enter your city">
+				  <!-- EMAIL -->
+<label class="accountLabel">
+    Email *
+</label>
+
+<input
+    type="email"
+    id="emailInput"
+    class="accountInput"
+    placeholder="Enter your email">
+
+
+<!-- PHONE -->
+<label class="accountLabel">
+    Phone *
+</label>
+
+<input
+    type="tel"
+    id="phoneInput"
+    class="accountInput"
+    placeholder="Enter your phone number">
+
+
+<!-- GENDER -->
+<label class="accountLabel">
+    Gender *
+</label>
+
+<select
+    id="genderInput"
+    class="accountInput">
+
+    <option value="">Select Gender</option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+    <option value="Other">Other</option>
+
+</select>
+
+
+<!-- LANGUAGE -->
+<label class="accountLabel">
+    Language
+</label>
+
+<input
+    type="text"
+    id="languageInput"
+    class="accountInput"
+    placeholder="Enter your language">
+
+
+<!-- OCCUPATION -->
+<label class="accountLabel">
+    Occupation
+</label>
+
+<input
+    type="text"
+    id="occupationInput"
+    class="accountInput"
+    placeholder="Enter your occupation">
+
+
+<!-- BUSINESS -->
+<label class="accountLabel">
+    Business
+</label>
+
+<input
+    type="text"
+    id="businessInput"
+    class="accountInput"
+    placeholder="Enter your business">
+
+
+        <button class="saveAccount"
+                onclick="saveAccount()">
+
+            Save
+
+        </button>
+
+    </div>
+
+</div>
+<!-- ================= ORDER TRACKING ================= -->
+
+<div class="orderOverlay" id="orderOverlay">
+
+    <div class="orderBox">
+
+        <button class="closeOrder" onclick="closeOrders()">×</button>
+
+        <h2>📦 Order Tracking</h2>
+
+        <div class="noOrders">
+
+            <div class="orderIcon">📦</div>
+
+            <h3>No orders yet</h3>
+
+            <p>You haven't purchased anything yet.</p>
+
+            <p>Start shopping to see your orders here.</p>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- ================= ABOUT NAVIRA ================= -->
+
+<div class="aboutOverlay" id="aboutOverlay">
+
+    <div class="aboutBox">
+
+        <button
+            type="button"
+            class="closeAbout"
+            onclick="closeAbout()">
+            ×
+        </button>
+
+        <h2>ℹ️ About</h2>
+
+        <!-- Content will be added later -->
+<div class="aboutContent">
+
+    <div class="aboutItem">
+        <h3>Project</h3>
+        <p>Navira</p>
+    </div>
+
+    <div class="aboutItem">
+        <h3>Developer</h3>
+        <p>Your name</p>
+    </div>
+
+    <div class="aboutItem">
+        <h3>College</h3>
+        <p>Your college name</p>
+    </div>
+
+</div>
+    </div>
+
+</div>
+<!-- ================= NAVIRA SETTINGS ================= -->
+
+<div id="settingsOverlay" class="naviraSettingsOverlay">
+
+    <div class="naviraSettingsBox">
+
+        <button
+            type="button"
+            class="naviraSettingsClose"
+            onclick="closeSettings()">×</button>
+
+        <h2>⚙️ Settings</h2>
+
+
+        <!-- NOTIFICATIONS -->
+
+        <div class="naviraSettingRow">
+
+            <div class="naviraSettingInfo">
+
+                <span class="naviraSettingIcon">🔔</span>
+
+                <div>
+                    <strong>Notifications</strong>
+                    <small>Receive notifications from Navira</small>
+                </div>
+
+            </div>
+
+            <button
+                type="button"
+                id="notificationButton"
+                class="naviraToggle"
+                onclick="toggleNotifications()">
+                OFF
+            </button>
+
+        </div>
+
+
+        <!-- DARK MODE -->
+
+        <div class="naviraSettingRow">
+
+            <div class="naviraSettingInfo">
+
+                <span class="naviraSettingIcon">🌙</span>
+
+                <div>
+                    <strong>Dark Mode</strong>
+                    <small>Change the appearance of Navira</small>
+                </div>
+
+            </div>
+
+            <button
+                type="button"
+                id="darkModeButton"
+                class="naviraToggle"
+                onclick="toggleDarkMode()">
+                OFF
+            </button>
+
+        </div>
+
+
+        <!-- FONT SIZE -->
+
+        <div class="naviraSettingRow">
+
+            <div class="naviraSettingInfo">
+
+                <span class="naviraSettingIcon">🔤</span>
+
+                <div>
+                    <strong>Font Size</strong>
+                    <small>Change text size</small>
+                </div>
+
+            </div>
+
+            <select
+                id="fontSizeSetting"
+                class="naviraSettingSelect"
+                onchange="changeFontSize()">
+
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+
+            </select>
+
+        </div>
+
+
+        <!-- FONT STYLE -->
+
+        <div class="naviraSettingRow">
+
+            <div class="naviraSettingInfo">
+
+                <span class="naviraSettingIcon">✍️</span>
+
+                <div>
+                    <strong>Font Style</strong>
+                    <small>Change the website font</small>
+                </div>
+
+            </div>
+
+          <select
+    id="fontStyleSetting"
+    class="naviraSettingSelect"
+    onchange="changeFontStyle()"
+>
+
+    <option value="default">Default</option>
+
+    <option value="serif">Serif</option>
+
+    <option value="mono">Monospace</option>
+
+    <option value="verdana">Verdana</option>
+
+    <option value="trebuchet">Trebuchet</option>
+
+</select>
+
+        </div>
+
+
+        <!-- THEME COLOUR -->
+
+        <div class="naviraThemeSection">
+
+            <div class="naviraSettingInfo">
+
+                <span class="naviraSettingIcon">🎨</span>
+
+                <div>
+                    <strong>Theme Colour</strong>
+                    <small>Choose your Navira colour</small>
+                </div>
+
+            </div>
+<div class="naviraThemeChoices">
+
+    <button
+        type="button"
+        class="naviraThemeButton naviraDarkBlue"
+        data-theme="darkblue"
+        onclick="changeTheme('darkblue')">
+    </button>
+
+
+    <button
+        type="button"
+        class="naviraThemeButton naviraPink"
+        data-theme="pink"
+        onclick="changeTheme('pink')">
+    </button>
+
+
+    <button
+        type="button"
+        class="naviraThemeButton naviraGreen"
+        data-theme="green"
+        onclick="changeTheme('green')">
+    </button>
+
+
+    <button
+        type="button"
+        class="naviraThemeButton naviraPurple"
+        data-theme="purple"
+        onclick="changeTheme('purple')">
+    </button>
+
+
+    <button
+        type="button"
+        class="naviraThemeButton naviraOrange"
+        data-theme="orange"
+        onclick="changeTheme('orange')">
+    </button>
+
+
+    <button
+        type="button"
+        class="naviraThemeButton naviraRed"
+        data-theme="red"
+        onclick="changeTheme('red')">
+    </button>
+
+
+    <button
+        type="button"
+        class="naviraThemeButton naviraLightBlue"
+        data-theme="lightblue"
+        onclick="changeTheme('lightblue')">
+    </button>
+
+</div>
+
+        
+
+            <button
+                type="button"
+                class="naviraResetTheme"
+                onclick="resetTheme()">
+
+                🔄 Reset to Original Theme
+
+            </button>
+
+        </div>
+
+
+        <!-- RATING -->
+
+        <div class="naviraRatingSection">
+
+            <div class="naviraSettingInfo">
+
+                <span class="naviraSettingIcon">⭐</span>
+
+                <div>
+                    <strong>Rate Navira</strong>
+                    <small>How do you like our app?</small>
+                </div>
+
+            </div>
+
+
+            <div class="naviraRatingStars">
+
+                <button
+                    type="button"
+                    onclick="submitRating(1)">★</button>
+
+                <button
+                    type="button"
+                    onclick="submitRating(2)">★</button>
+
+                <button
+                    type="button"
+                    onclick="submitRating(3)">★</button>
+
+                <button
+                    type="button"
+                    onclick="submitRating(4)">★</button>
+
+                <button
+                    type="button"
+                    onclick="submitRating(5)">★</button>
+
+            </div>
+
+            <p id="ratingMessage"></p>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- ================= BOTTOM NAVIGATION ================= -->
+
+<nav class="naviraBottomNav">
+
+    <button
+        type="button"
+        class="naviraBottomItem naviraBottomActive"
+        onclick="goNaviraHome()">
+
+        <span class="naviraBottomIcon">⌂</span>
+        <span>Home</span>
+
+    </button>
+
+
+    <button
+        type="button"
+        class="naviraBottomItem"
+        onclick="openCategories()">
+
+        <span class="naviraBottomIcon">▦</span>
+        <span>Categories</span>
+
+    </button>
+
+
+    <button
+        type="button"
+        class="naviraBottomItem"
+        onclick="openRecentlyViewed()">
+
+        <span class="naviraBottomIcon">◉</span>
+        <span>Watched</span>
+
+    </button>
+
+
+    <button
+        type="button"
+        class="naviraBottomItem"
+        onclick="openAbout()">
+
+        <span class="naviraBottomIcon">ⓘ</span>
+        <span>About</span>
+
+    </button>
+	
+
+</nav>
+<script src="products.js"></script>
+<script src="script.js"></script>
+<script src="settings.js"></script>
+<script src="wishlist.js"></script>
+<script src="bottom-nav.js"></script>
+
+<script src="onam-slider.js"></script>
+
+</body>
+</html>

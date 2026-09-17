@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navira</title>
+    <link rel="stylesheet" href="super.css">
+</head>
+<body>
+<button class="backTop" onclick="history.back()">← Back</button>
+
+<!-- Seller Information -->
+<div class="topbox">
+    <div class="details">
+        <h2 class="shop">Tiny Tots Apparel</h2>
+        <div class="stars">
+            ★★★★★
+            <span>4,890 Ratings</span>
+        </div>
+        <p class="desc">
+            Girls Cute Bunny Ears Embroidered Cotton Baseball Cap
+        </p>
+    </div>
+</div>
+
+<!-- Main Container -->
+<div class="container">
+    <!-- LEFT SIDE -->
+    <div class="left">
+        <div class="likeBox">
+            <input type="checkbox" id="fav">
+            <label for="fav">♥</label>
+        </div>
+
+        <div class="slider">
+            <img id="productImage"
+                 src="gcap (1).jpeg"
+                 data-images="gcap (1).jpeg, gcap (2).jpeg, gcap (3).jpeg"
+                 class="product">
+            <br>
+            <button class="arrow" onclick="previous()">❮</button>
+            <button class="arrow" onclick="next()">❯</button>
+            <br><br>
+            <span id="dot1">●</span>
+            <span id="dot2">○</span>
+            <span id="dot3">○</span>
+        </div>
+
+        <h1>Girls Cute Bunny Ears Embroidered Cotton Baseball Cap</h1>
+        <h2 class="price">₹399</h2>
+        <div class="discount">
+            42% OFF
+        </div>
+        <h2>
+            ₹399
+            <del>₹689</del>
+        </h2>
+
+        <h3>Select Size</h3>
+        <label><input type="radio" name="size"> Free Size</label>
+        <label><input type="radio" name="size"> 2-4 Years</label>
+        <label><input type="radio" name="size"> 4-8 Years</label>
+
+        <br><br>
+        <button class="buy" onclick="showBuy()">
+            Buy Now
+        </button>
+
+        <hr>
+        <h2>Product Details</h2>
+        <h3>Top Highlights</h3>
+        <ul>
+            <li>✔️ Soft Breathable Cotton Fabric</li>
+            <li>✔️ Playful Plush Bunny Ears Design</li>
+            <li>✔️ Cute Embroidered Bunny Face</li>
+            <li>✔️ Adjustable Back Strap for Perfect Fit</li>
+            <li>✔️ Sun Protection for Daily Outings</li>
+        </ul>
+
+        <h2>Description</h2>
+        <p>
+            Add a charming touch to your child's everyday look with this adorable bunny ears baseball cap. Crafted from breathable cotton, it features soft plush ears on top and cute facial embroidery on the front panel to keep your little one looking stylish and playful.
+        </p>
+        <p>
+            Designed for all-day comfort, the curved brim provides effective shade from the sun while the adjustable strap back ensures a secure fit as your kid grows. Pair it easily with casual dresses, shorts, or summer tees for outings and playdates.
+        </p>
+
+        <h2>Additional Information</h2>
+        <table>
+            <tr>
+                <td>Brand</td>
+                <td>Tiny Tots Apparel</td>
+            </tr>
+            <tr>
+                <td>Colour</td>
+                <td>Multiple Colour Combinations</td>
+            </tr>
+            <tr>
+                <td>Material</td>
+                <td>100% Cotton & Plush Trim</td>
+            </tr>
+            <tr>
+                <td>Style</td>
+                <td>3D Bunny Ear Cap</td>
+            </tr>
+            <tr>
+                <td>Pattern</td>
+                <td>Embroidered Animal Face</td>
+            </tr>
+            <tr>
+                <td>Size</td>
+                <td>Adjustable Kids Fit</td>
+            </tr>
+            <tr>
+                <td>Closure</td>
+                <td>Strap Closure</td>
+            </tr>
+            <tr>
+                <td>Occasion</td>
+                <td>Casual, Picnic, Outdoor & Daily Wear</td>
+            </tr>
+            <tr>
+                <td>Country</td>
+                <td>India</td>
+            </tr>
+            <tr>
+                <td>Weight</td>
+                <td>110 g</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="right" id="rightPanel">
+        <button onclick="goBack()" class="backCheckout">← Back</button>
+        <h2>Checkout</h2>
+        <hr>
+        <h3>Delivery Details</h3>
+        <label>Full Name</label><br>
+        <input type="text" placeholder="Enter your Full Name">
+        <br><br>
+
+        <label>Phone Number</label><br>
+        <input type="tel" placeholder="9876543210">
+        <br><br>
+
+        <label>Email Address</label><br>
+        <input type="email" placeholder="example@gmail.com">
+        <br><br>
+
+        <label>House Name</label><br>
+        <input type="text" placeholder="House Name">
+        <br><br>
+
+        <label>Street</label><br>
+        <input type="text" placeholder="Street">
+        <br><br>
+
+        <label>City</label><br>
+        <input type="text" placeholder="City">
+        <br><br>
+
+        <label>State</label><br>
+        <input type="text" placeholder="State">
+        <br><br>
+
+        <label>PIN Code</label><br>
+        <input type="text" placeholder="PIN Code">
+
+        <hr>
+        <h3>Select Payment Method</h3>
+        <label>
+            <input type="radio" name="pay">
+            <img src="gpay.jpeg" width="28">
+            Google Pay
+        </label>
+        <br><br>
+
+        <label>
+            <input type="radio" name="pay">
+            <img src="phonepe.jpeg" width="28">
+            PhonePe
+        </label>
+        <br><br>
+
+        <label>
+            <input type="radio" name="pay">
+            <img src="paytm.jpeg" width="28">
+            Paytm
+        </label>
+        <br><br>
+
+        <label>
+            <input type="radio" name="pay">
+            <img src="upi.jpeg" width="28">
+            UPI
+        </label>
+        <br><br>
+
+        <label>
+            <input type="radio" name="pay">
+            <img src="card.jpeg" width="28">
+            Credit / Debit Card
+        </label>
+        <br><br>
+
+        <label>
+            <input type="radio" name="pay">
+            <img src="netbanking.jpeg" width="28">
+            Net Banking
+        </label>
+        <br><br>
+
+        <label>
+            <input type="radio" name="pay">
+            <img src="cod.jpeg" width="28">
+            Cash on Delivery
+        </label>
+
+        <hr>
+        <hr>
+
+        <h3>Product Options</h3>
+        <label>Selected Colour</label><br>
+        <select>
+            <option>Sky Blue & White</option>
+            <option>Baby Pink & White</option>
+            <option>Soft Yellow & Cream</option>
+            <option>Lavender & Off-White</option>
+            <option>Mint Green & White</option>
+            <option>Peach & Cream</option>
+        </select>
+        <br><br>
+
+        <label>Selected Size</label><br>
+        <select>
+            <option>Free Size</option>
+            <option>2-4 Years</option>
+            <option>4-8 Years</option>
+        </select>
+        <br><br>
+
+        <hr>
+        <h3>Order Summary</h3>
+        <table width="100%">
+            <tr>
+                <td>Product</td>
+                <td align="right">Girls Cute Bunny Ears Baseball Cap</td>
+            </tr>
+            <tr>
+                <td>Price</td>
+                <td align="right">₹399</td>
+            </tr>
+            <tr>
+                <td>Delivery</td>
+                <td align="right">FREE</td>
+            </tr>
+            <tr>
+                <th>Total</th>
+                <th align="right">₹399</th>
+            </tr>
+        </table>
+        <br>
+        <button class="place" onclick="stock()">
+            Place Order
+        </button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

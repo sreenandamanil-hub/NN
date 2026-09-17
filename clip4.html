@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Navira</title>
+
+    <link rel="stylesheet" href="super.css">
+
+</head>
+
+<body>
+
+<button class="backTop" onclick="history.back()">← Back</button>
+
+
+<!-- Seller Information -->
+
+<div class="topbox">
+
+<div class="details">
+
+<h2 class="shop">
+Elara Hair Accessories Studio
+</h2>
+
+<div class="stars">
+★★★★★
+<span>11,842 Ratings</span>
+</div>
+
+<p class="desc">
+Women's Premium Triangle Hair Clip Set
+</p>
+
+</div>
+
+</div>
+
+
+<!-- Main Container -->
+
+<div class="container">
+
+
+<!-- LEFT SIDE -->
+
+<div class="left">
+
+<div class="likeBox">
+
+    <input type="checkbox" id="fav">
+
+    <label for="fav">♥</label>
+
+</div>
+
+
+<div class="slider">
+
+<img id="productImage"
+
+src="clip (12).jpeg"
+
+data-images="clip (12).jpeg, clip (11).jpeg, clip (10).jpeg"
+
+class="product">
+
+
+<br>
+
+
+<button class="arrow"
+onclick="previous()">❮</button>
+
+
+<button class="arrow"
+onclick="next()">❯</button>
+
+
+<br><br>
+
+
+<span id="dot1">●</span>
+
+<span id="dot2">○</span>
+
+<span id="dot3">○</span>
+
+
+</div>
+
+
+<h1>
+Women's Premium Triangle Hair Clip Set
+</h1>
+
+
+<h2 class="price">
+₹449
+</h2>
+
+
+<div class="discount">
+44% OFF
+</div>
+
+
+<h2>
+₹449
+<del>₹799</del>
+</h2>
+
+
+<h3>
+Select Colour
+</h3>
+
+
+<label>
+<input type="radio" name="colour">
+Silver
+</label>
+
+<label>
+<input type="radio" name="colour">
+Gold
+</label>
+
+<label>
+<input type="radio" name="colour">
+Rose Gold
+</label>
+
+<label>
+<input type="radio" name="colour">
+Black
+</label>
+
+<label>
+<input type="radio" name="colour">
+White
+</label>
+
+<label>
+<input type="radio" name="colour">
+Champagne Gold
+</label>
+
+
+<br><br>
+
+
+<button class="buy"
+onclick="showBuy()">
+
+Buy Now
+
+</button>
+
+
+<hr>
+
+
+<h2>
+Product Details
+</h2>
+
+
+<h3>
+Top Highlights
+</h3>
+
+
+<ul>
+
+<li>
+✔️ Premium Triangle Hair Clip Set
+</li>
+
+<li>
+✔️ Elegant Minimal Triangle Design
+</li>
+
+<li>
+✔️ Lightweight Hair Accessory
+</li>
+
+<li>
+✔️ Available in Multiple Colour Options
+</li>
+
+<li>
+✔️ Compact and Easy to Carry
+</li>
+
+<li>
+✔️ Suitable for Everyday & Party Hairstyles
+</li>
+
+</ul>
+
+
+<h2>
+Description
+</h2>
+
+
+<p>
+Give your hairstyle a clean and elegant finishing touch with this premium
+triangle hair clip set from Elara Hair Accessories Studio. Designed with a
+simple geometric triangle shape, these clips offer a stylish and modern
+alternative to traditional hair accessories. Their minimal appearance makes
+them easy to coordinate with different hairstyles and outfits. Available in
+multiple colours including Silver, Gold, Rose Gold, Black, White and
+Champagne Gold, they are suitable for college, office, casual outings,
+parties, celebrations, weddings and other special occasions.
+</p>
+
+
+<h2>
+Additional Information
+</h2>
+
+
+<table>
+
+<tr>
+<td>Brand</td>
+<td>Navira</td>
+</tr>
+
+<tr>
+<td>Colour</td>
+<td>
+Silver, Gold, Rose Gold, Black, White, Champagne Gold
+</td>
+</tr>
+
+<tr>
+<td>Type</td>
+<td>
+Triangle Hair Clip
+</td>
+</tr>
+
+<tr>
+<td>Design</td>
+<td>
+Geometric Triangle Design
+</td>
+</tr>
+
+<tr>
+<td>Style</td>
+<td>
+Minimal Fashion Hair Accessory
+</td>
+</tr>
+
+<tr>
+<td>Application</td>
+<td>
+Hair Styling
+</td>
+</tr>
+
+<tr>
+<td>Suitable For</td>
+<td>
+Everyday & Party Hair Styling
+</td>
+</tr>
+
+<tr>
+<td>Packaging</td>
+<td>
+Hair Clip Set
+</td>
+</tr>
+
+<tr>
+<td>Pattern</td>
+<td>
+Triangle
+</td>
+</tr>
+
+<tr>
+<td>Occasion</td>
+<td>
+Everyday, College, Office, Party, Wedding
+</td>
+</tr>
+
+<tr>
+<td>Care Instructions</td>
+<td>
+Keep Dry and Store Safely
+</td>
+</tr>
+
+<tr>
+<td>Country of Origin</td>
+<td>
+India
+</td>
+</tr>
+
+<tr>
+<td>Weight</td>
+<td>
+30 g
+</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<!-- RIGHT SIDE -->
+
+<div class="right" id="rightPanel">
+
+
+<button onclick="goBack()" class="backCheckout">
+← Back
+</button>
+
+
+<h2>
+Checkout
+</h2>
+
+
+<hr>
+
+
+<h3>
+Delivery Details
+</h3>
+
+
+<label>
+Full Name
+</label>
+
+<br>
+
+<input
+type="text"
+placeholder="Enter your Full Name">
+
+
+<br><br>
+
+
+<label>
+Phone Number
+</label>
+
+<br>
+
+<input
+type="tel"
+placeholder="9876543210">
+
+
+<br><br>
+
+
+<label>
+Email Address
+</label>
+
+<br>
+
+<input
+type="email"
+placeholder="example@gmail.com">
+
+
+<br><br>
+
+
+<label>
+House Name
+</label>
+
+<br>
+
+<input
+type="text"
+placeholder="House Name">
+
+
+<br><br>
+
+
+<label>
+Street
+</label>
+
+<br>
+
+<input
+type="text"
+placeholder="Street">
+
+
+<br><br>
+
+
+<label>
+City
+</label>
+
+<br>
+
+<input
+type="text"
+placeholder="City">
+
+
+<br><br>
+
+
+<label>
+State
+</label>
+
+<br>
+
+<input
+type="text"
+placeholder="State">
+
+
+<br><br>
+
+
+<label>
+PIN Code
+</label>
+
+<br>
+
+<input
+type="text"
+placeholder="PIN Code">
+
+
+<hr>
+
+
+<h3>
+Select Payment Method
+</h3>
+
+
+<label>
+
+<input
+type="radio"
+name="pay">
+
+<img
+src="gpay.jpeg"
+width="28">
+
+Google Pay
+
+</label>
+
+
+<br><br>
+
+
+<label>
+
+<input
+type="radio"
+name="pay">
+
+<img
+src="phonepe.jpeg"
+width="28">
+
+PhonePe
+
+</label>
+
+
+<br><br>
+
+
+<label>
+
+<input
+type="radio"
+name="pay">
+
+<img
+src="paytm.jpeg"
+width="28">
+
+Paytm
+
+</label>
+
+
+<br><br>
+
+
+<label>
+
+<input
+type="radio"
+name="pay">
+
+<img
+src="upi.jpeg"
+width="28">
+
+UPI
+
+</label>
+
+
+<br><br>
+
+
+<label>
+
+<input
+type="radio"
+name="pay">
+
+<img
+src="card.jpeg"
+width="28">
+
+Credit / Debit Card
+
+</label>
+
+
+<br><br>
+
+
+<label>
+
+<input
+type="radio"
+name="pay">
+
+<img
+src="netbanking.jpeg"
+width="28">
+
+Net Banking
+
+</label>
+
+
+<br><br>
+
+
+<label>
+
+<input
+type="radio"
+name="pay">
+
+<img
+src="cod.jpeg"
+width="28">
+
+Cash on Delivery
+
+</label>
+
+
+<hr>
+
+
+<hr>
+
+
+<h3>
+Product Options
+</h3>
+
+
+<label>
+Selected Colour
+</label>
+
+<br>
+
+
+<select>
+
+<option>
+Silver
+</option>
+
+<option>
+Gold
+</option>
+
+<option>
+Rose Gold
+</option>
+
+<option>
+Black
+</option>
+
+<option>
+White
+</option>
+
+<option>
+Champagne Gold
+</option>
+
+</select>
+
+
+<br><br>
+
+
+<hr>
+
+
+<h3>
+Order Summary
+</h3>
+
+
+<table width="100%">
+
+<tr>
+
+<td>
+Product
+</td>
+
+<td align="right">
+Premium Triangle Hair Clip Set
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+Price
+</td>
+
+<td align="right">
+₹449
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+Packaging Fee
+</td>
+
+<td align="right">
+₹49
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+Delivery Charges
+</td>
+
+<td align="right">
+FREE
+</td>
+
+</tr>
+
+
+<tr>
+
+<th>
+Total
+</th>
+
+<th align="right">
+₹498
+</th>
+
+</tr>
+
+</table>
+
+
+<br>
+
+
+<button
+class="place"
+onclick="stock()">
+
+Place Order
+
+</button>
+
+
+</div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+
+</body>
+</html>

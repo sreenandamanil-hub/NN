@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Navira</title>
+    <link rel="stylesheet" href="super.css">
+</head>
+<body>
+
+<button class="backTop" onclick="history.back()">← Back</button>
+
+<!-- Seller Information -->
+<div class="topbox">
+
+    <div class="details">
+
+        <h2 class="shop">Sree Krishna Jewellers</h2>
+
+        <div class="stars">
+            ★★★★★
+            <span>7,846 Ratings</span>
+        </div>
+
+        <p class="desc">
+            Women's Elegant Amethyst Crystal Stud Earrings
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- Main Container -->
+
+<div class="container">
+
+<!-- LEFT SIDE -->
+
+<div class="left">
+
+<div class="likeBox">
+    <input type="checkbox" id="fav">
+    <label for="fav">♥</label>
+</div>
+
+<div class="slider">
+
+<img id="productImage"
+     src="earrings (24).jpeg"
+     data-images="earrings (24).jpeg, earrings (23).jpeg, earrings (22).jpeg"
+     class="product">
+
+<br>
+
+<button class="arrow"
+onclick="previous()">❮</button>
+
+<button class="arrow"
+onclick="next()">❯</button>
+
+<br><br>
+
+<span id="dot1">●</span>
+<span id="dot2">○</span>
+<span id="dot3">○</span>
+
+</div>
+
+
+<h1>Women's Elegant Amethyst Crystal Stud Earrings</h1>
+
+<h2 class="price">₹1,149</h2>
+
+<div class="discount">
+34% OFF
+</div>
+
+<h2>
+₹1,149
+<del>₹1,749</del>
+</h2>
+
+
+<h3>Select Colour</h3>
+
+<label><input type="radio" name="colour"> Purple</label>
+
+<label><input type="radio" name="colour"> Blue</label>
+
+<label><input type="radio" name="colour"> Rose Gold</label>
+
+<label><input type="radio" name="colour"> Silver</label>
+
+<label><input type="radio" name="colour"> Champagne</label>
+
+<label><input type="radio" name="colour"> Crystal White</label>
+
+<br><br>
+
+<button class="buy"
+onclick="showBuy()">
+Buy Now
+</button>
+
+<hr>
+
+
+<h2>Product Details</h2>
+
+<h3>Top Highlights</h3>
+
+<ul>
+<li>✔️ Elegant Round Crystal Stud Design</li>
+<li>✔️ Beautiful Amethyst-Inspired Centre Stone</li>
+<li>✔️ Sparkling Crystal Border Detailing</li>
+<li>✔️ Lightweight and Comfortable for Daily Wear</li>
+<li>✔️ Suitable for Casual, Office and Party Styling</li>
+</ul>
+
+
+<h2>Description</h2>
+
+<p>
+Add a graceful sparkle to your jewellery collection with these elegant
+amethyst crystal stud earrings from Sree Krishna Jewellers. Featuring a
+beautiful central crystal surrounded by sparkling detailing, the refined
+stud design creates a sophisticated appearance without being overly
+heavy. The compact silhouette makes these earrings comfortable for
+regular use while still adding an attractive touch to your overall look.
+</p>
+
+<p>
+These earrings are available in six beautiful colour options including
+Purple, Blue, Rose Gold, Silver, Champagne and Crystal White. The versatile
+design can be paired with traditional outfits such as sarees, churidars
+and lehengas as well as western dresses, office outfits and casual wear.
+The crystal detailing provides a subtle sparkle that works beautifully
+during both daytime and evening occasions.
+</p>
+
+<p>
+Perfect for weddings, receptions, festivals, birthdays, parties, family
+functions, office events, dinner occasions and everyday styling, these
+Navira earrings are a versatile addition to a modern jewellery collection.
+Their elegant appearance also makes them a thoughtful gift choice for
+birthdays, anniversaries, festive celebrations and other memorable
+occasions.
+</p>
+
+
+<h2>Additional Information</h2>
+
+<table>
+
+<tr>
+<td>Brand</td>
+<td>Navira</td>
+</tr>
+
+<tr>
+<td>Shop</td>
+<td>Sree Krishna Jewellers</td>
+</tr>
+
+<tr>
+<td>Colour</td>
+<td>Purple, Blue, Rose Gold, Silver, Champagne, Crystal White</td>
+</tr>
+
+<tr>
+<td>Type</td>
+<td>Crystal Stud Earrings</td>
+</tr>
+
+<tr>
+<td>Design</td>
+<td>Round Crystal Stud Design</td>
+</tr>
+
+<tr>
+<td>Material</td>
+<td>Premium Alloy</td>
+</tr>
+
+<tr>
+<td>Stone</td>
+<td>Amethyst-Inspired Crystal</td>
+</tr>
+
+<tr>
+<td>Closure</td>
+<td>Push Back</td>
+</tr>
+
+<tr>
+<td>Style</td>
+<td>Stud Earrings</td>
+</tr>
+
+<tr>
+<td>Occasion</td>
+<td>
+Casual, Office, Party, Wedding, Reception,
+Festival & Everyday Wear
+</td>
+</tr>
+
+<tr>
+<td>Suitable For</td>
+<td>Women</td>
+</tr>
+
+<tr>
+<td>Country</td>
+<td>India</td>
+</tr>
+
+<tr>
+<td>Weight</td>
+<td>22 g</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<!-- RIGHT SIDE -->
+
+<div class="right" id="rightPanel">
+
+<button onclick="goBack()" class="backCheckout">← Back</button>
+
+<h2>Checkout</h2>
+
+<hr>
+
+<h3>Delivery Details</h3>
+
+<label>Full Name</label><br>
+<input type="text" placeholder="Enter your Full Name">
+
+<br><br>
+
+<label>Phone Number</label><br>
+<input type="tel" placeholder="9876543210">
+
+<br><br>
+
+<label>Email Address</label><br>
+<input type="email" placeholder="example@gmail.com">
+
+<br><br>
+
+<label>House Name</label><br>
+<input type="text" placeholder="House Name">
+
+<br><br>
+
+<label>Street</label><br>
+<input type="text" placeholder="Street">
+
+<br><br>
+
+<label>City</label><br>
+<input type="text" placeholder="City">
+
+<br><br>
+
+<label>State</label><br>
+<input type="text" placeholder="State">
+
+<br><br>
+
+<label>PIN Code</label><br>
+<input type="text" placeholder="PIN Code">
+
+<hr>
+
+<h3>Select Payment Method</h3>
+
+<label>
+<input type="radio" name="pay">
+<img src="gpay.jpeg" width="28">
+Google Pay
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="phonepe.jpeg" width="28">
+PhonePe
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="paytm.jpeg" width="28">
+Paytm
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="upi.jpeg" width="28">
+UPI
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="card.jpeg" width="28">
+Credit / Debit Card
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="netbanking.jpeg" width="28">
+Net Banking
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="cod.jpeg" width="28">
+Cash on Delivery
+</label>
+
+<hr>
+<hr>
+
+<h3>Product Options</h3>
+
+<label>Selected Colour</label><br>
+
+<select>
+
+<option>Purple</option>
+<option>Blue</option>
+<option>Rose Gold</option>
+<option>Silver</option>
+<option>Champagne</option>
+<option>Crystal White</option>
+
+</select>
+
+<br><br>
+
+<hr>
+
+<h3>Order Summary</h3>
+
+<table width="100%">
+
+<tr>
+<td>Product</td>
+<td align="right">
+Amethyst Crystal Stud Earrings
+</td>
+</tr>
+
+<tr>
+<td>Price</td>
+<td align="right">₹1,149</td>
+</tr>
+
+<tr>
+<td>Packaging Fee</td>
+<td align="right">₹49</td>
+</tr>
+
+<tr>
+<td>Delivery</td>
+<td align="right">FREE</td>
+</tr>
+
+<tr>
+<th>Total</th>
+<th align="right">₹1,198</th>
+</tr>
+
+</table>
+
+
+<br>
+
+<button class="place"
+onclick="stock()">
+Place Order
+</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

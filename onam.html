@@ -1,0 +1,1752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Navira Onam Collection</title>
+
+
+<style>
+
+/* =========================================
+   BASIC
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0 0 65px 0;
+
+    background: #ffffff;
+
+    color: #222;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.onamBackRow {
+
+    width: 100%;
+
+    padding: 8px 15px 0;
+
+    margin: 0;
+}
+
+
+.onamBackButton {
+
+    width: 36px;
+    height: 36px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #eeeeee;
+
+    color: #333;
+
+    font-size: 21px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+
+.onamBackButton:active {
+
+    transform: scale(0.94);
+}
+
+
+/* =========================================
+   POSTER SLIDER
+========================================= */
+
+.naviraOnamSlider {
+
+    width: 100%;
+
+    max-width: 1500px;
+
+    margin: 8px auto 25px;
+
+    padding: 0 10px;
+}
+
+
+.naviraOnamSlides {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 240px;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   ALL POSTER SLIDES
+========================================= */
+
+.naviraOnamSlide {
+
+    position: absolute;
+
+    top: 15px;
+
+    height: 210px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        all 0.4s ease;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+}
+
+
+/* =========================================
+   LEFT POSTER
+========================================= */
+
+.naviraOnamSlide.prev {
+
+    display: block;
+
+    left: 0;
+
+    width: 32%;
+
+    opacity: 0.9;
+
+    visibility: visible;
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   CENTER POSTER
+========================================= */
+
+.naviraOnamSlide.active {
+
+    display: block;
+
+    left: 32%;
+
+    top: 5px;
+
+    width: 36%;
+
+    height: 230px;
+
+    opacity: 1;
+
+    visibility: visible;
+
+    z-index: 3;
+}
+
+
+/* =========================================
+   RIGHT POSTER
+========================================= */
+
+.naviraOnamSlide.next {
+
+    display: block;
+
+    left: 68%;
+
+    width: 32%;
+
+    opacity: 0.9;
+
+    visibility: visible;
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   POSTER IMAGE
+========================================= */
+
+.naviraOnamSlide img {
+
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    object-position: center;
+
+    margin: 0;
+
+    padding: 0;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   POSTER ARROWS
+========================================= */
+
+.naviraOnamArrow {
+
+    position: absolute;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    width: 38px;
+    height: 38px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        rgba(0,0,0,0.55);
+
+    color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    z-index: 20;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.naviraOnamPrev {
+
+    left: 5px;
+}
+
+
+.naviraOnamNext {
+
+    right: 5px;
+}
+
+
+/* =========================================
+   POSTER DOTS
+========================================= */
+
+.naviraOnamDots {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    margin-top: 5px;
+}
+
+
+.naviraOnamDot {
+
+    width: 8px;
+    height: 8px;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #bbb;
+
+    cursor: pointer;
+}
+
+
+.naviraOnamDot.active {
+
+    width: 10px;
+    height: 10px;
+
+    background: #333;
+}
+
+
+/* =========================================
+   PAGE TITLE
+========================================= */
+
+.onamPageTitle {
+
+    width: 100%;
+
+    text-align: center;
+
+    padding:
+        0 15px
+        15px;
+}
+
+
+.onamPageTitle h1 {
+
+    margin: 0;
+
+    font-size: 25px;
+}
+
+
+.onamPageTitle p {
+
+    margin:
+        6px 0 0;
+
+    font-size: 13px;
+
+    color: #777;
+}
+
+
+/* =========================================
+   PRODUCT CONTAINER
+========================================= */
+
+#onamContainer {
+
+    width: 100%;
+
+    max-width: 1500px;
+
+    margin: 0 auto;
+
+    padding:
+        0 20px
+        20px;
+}
+
+
+/* =========================================
+   COLLECTION
+========================================= */
+
+.onamCollection {
+
+    width: 100%;
+
+    margin-bottom: 42px;
+
+    scroll-margin-top: 15px;
+}
+
+
+.onamCollectionHeader {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom:
+        1px solid #dddddd;
+
+    padding-bottom: 9px;
+
+    margin-bottom: 15px;
+}
+
+
+.onamCollectionHeader h2 {
+
+    margin: 0;
+
+    font-size: 21px;
+}
+
+
+.onamCollectionCount {
+
+    font-size: 12px;
+
+    color: #777;
+}
+
+
+/* =========================================
+   PRODUCT GRID
+   LAPTOP = 4 PRODUCTS
+========================================= */
+
+.onamProductGrid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 14px;
+
+    width: 100%;
+}
+
+
+/* =========================================
+   PRODUCT CARD
+========================================= */
+
+.onamProductCard {
+
+    min-width: 0;
+
+    background: #ffffff;
+
+    border:
+        1px solid #dddddd;
+
+    border-radius: 9px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.onamProductCard:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 4px 12px
+        rgba(0,0,0,0.10);
+}
+
+
+/* =========================================
+   ONE IMAGE PER PRODUCT
+========================================= */
+
+.onamProductImageArea {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 225px;
+
+    background: #f8f8f8;
+
+    overflow: hidden;
+}
+
+
+.onamProductImage {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =========================================
+   PRODUCT INFORMATION
+========================================= */
+
+.onamProductInfo {
+
+    padding: 10px;
+}
+
+
+.onamProductName {
+
+    margin:
+        0 0 7px;
+
+    font-size: 14px;
+
+    line-height: 1.3;
+
+    min-height: 36px;
+}
+
+
+.onamPriceRow {
+
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 6px;
+
+    margin-bottom: 5px;
+}
+
+
+.onamPrice {
+
+    font-size: 17px;
+
+    font-weight: 700;
+}
+
+
+.onamOldPrice {
+
+    font-size: 12px;
+
+    color: #888;
+
+    text-decoration:
+        line-through;
+}
+
+
+.onamDiscount {
+
+    font-size: 11px;
+
+    color: #16803a;
+
+    font-weight: 700;
+}
+
+
+.onamRating {
+
+    font-size: 12px;
+
+    margin-bottom: 6px;
+}
+
+
+.onamDescription {
+
+    margin:
+        0 0 10px;
+
+    font-size: 11px;
+
+    line-height: 1.4;
+
+    color: #666;
+
+    display: -webkit-box;
+
+    -webkit-line-clamp: 2;
+
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   VIEW PRODUCT
+========================================= */
+
+.onamViewProduct {
+
+    display: block;
+
+    width: 100%;
+
+    padding: 8px;
+
+    border-radius: 6px;
+
+    background: #222;
+
+    color: white;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+.onamMessage {
+
+    width: 100%;
+
+    padding: 25px;
+
+    text-align: center;
+
+    color: #777;
+
+    border:
+        1px solid #dddddd;
+
+    border-radius: 8px;
+}
+
+
+/* =========================================
+   BOTTOM HOME BUTTON
+========================================= */
+
+.onamBottomNav {
+
+    position: fixed;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 62px;
+
+    background: #ffffff;
+
+    border-top:
+        1px solid #dddddd;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 1000;
+}
+
+
+.onamHomeButton {
+
+    min-width: 80px;
+
+    height: 55px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #555;
+
+    cursor: pointer;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 2px;
+
+    font-size: 12px;
+}
+
+
+.onamHomeIcon {
+
+    font-size: 22px;
+
+    line-height: 22px;
+}
+
+
+.onamHomeButton:active {
+
+    transform:
+        scale(0.94);
+}
+
+
+/* =========================================
+   MOBILE
+   2 PRODUCTS PER ROW
+========================================= */
+
+@media (max-width: 600px) {
+
+
+    .onamBackRow {
+
+        padding:
+            7px 8px 0;
+    }
+
+
+    .naviraOnamSlider {
+
+        width: 100%;
+
+        padding:
+            0 6px;
+
+        margin:
+            7px auto
+            15px;
+    }
+
+
+    .naviraOnamSlides {
+
+        width: 100%;
+
+        height: 130px;
+    }
+
+
+    /* Only one poster on phone */
+
+    .naviraOnamSlide {
+
+        display: none !important;
+    }
+
+
+    .naviraOnamSlide.active {
+
+        display: block !important;
+
+        left: 0;
+
+        top: 0;
+
+        width: 100%;
+
+        height: 130px;
+
+        opacity: 1;
+
+        visibility: visible;
+
+        z-index: 3;
+    }
+
+
+    .naviraOnamSlide img {
+
+        width: 100%;
+
+        height: 100%;
+
+        object-fit: contain;
+
+        border-radius: 10px;
+    }
+
+
+    .naviraOnamArrow {
+
+        width: 32px;
+
+        height: 32px;
+
+        font-size: 18px;
+    }
+
+
+    .naviraOnamPrev {
+
+        left: 8px;
+    }
+
+
+    .naviraOnamNext {
+
+        right: 8px;
+    }
+
+
+    .onamPageTitle {
+
+        padding:
+            0 10px
+            13px;
+    }
+
+
+    .onamPageTitle h1 {
+
+        font-size: 21px;
+    }
+
+
+    .onamPageTitle p {
+
+        font-size: 12px;
+    }
+
+
+    #onamContainer {
+
+        padding:
+            0 8px
+            15px;
+    }
+
+
+    .onamCollection {
+
+        margin-bottom: 30px;
+    }
+
+
+    .onamCollectionHeader h2 {
+
+        font-size: 18px;
+    }
+
+
+    .onamCollectionCount {
+
+        font-size: 11px;
+    }
+
+
+    /* 2 DIFFERENT PRODUCTS */
+
+    .onamProductGrid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 9px;
+    }
+
+
+    .onamProductImageArea {
+
+        height: 180px;
+    }
+
+
+    .onamProductInfo {
+
+        padding: 8px;
+    }
+
+
+    .onamProductName {
+
+        font-size: 12px;
+
+        min-height: 32px;
+    }
+
+
+    .onamPrice {
+
+        font-size: 15px;
+    }
+
+
+    .onamOldPrice {
+
+        font-size: 10px;
+    }
+
+
+    .onamDiscount {
+
+        font-size: 10px;
+    }
+
+
+    .onamRating {
+
+        font-size: 10px;
+    }
+
+
+    .onamDescription {
+
+        font-size: 10px;
+    }
+
+
+    .onamViewProduct {
+
+        font-size: 11px;
+
+        padding: 7px;
+    }
+
+
+    .onamBottomNav {
+
+        height: 60px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     BACK BUTTON
+========================================= -->
+
+<div class="onamBackRow">
+
+    <button
+        type="button"
+        class="onamBackButton"
+        onclick="location.href='index.html'"
+        aria-label="Back to Home"
+    >
+        ←
+    </button>
+
+</div>
+
+
+
+<!-- =========================================
+     ONAM POSTER SLIDER
+========================================= -->
+
+<section class="naviraOnamSlider">
+
+    <div class="naviraOnamSlides">
+
+
+        <div
+            class="naviraOnamSlide active"
+            data-index="0"
+        >
+
+            <img
+                src="poster1.jpeg"
+                alt="Onam Collection"
+            >
+
+        </div>
+
+
+        <div
+            class="naviraOnamSlide"
+            data-index="1"
+        >
+
+            <img
+                src="poster2.jpeg"
+                alt="Onam Collection"
+            >
+
+        </div>
+
+
+        <div
+            class="naviraOnamSlide"
+            data-index="2"
+        >
+
+            <img
+                src="poster3.jpeg"
+                alt="Onam Collection"
+            >
+
+        </div>
+
+
+        <div
+            class="naviraOnamSlide"
+            data-index="3"
+        >
+
+            <img
+                src="poster4.jpeg"
+                alt="Onam Collection"
+            >
+
+        </div>
+
+
+        <!-- PREVIOUS -->
+
+        <button
+            type="button"
+            class="naviraOnamArrow naviraOnamPrev"
+            onclick="naviraOnamChange(-1)"
+            aria-label="Previous poster"
+        >
+            ‹
+        </button>
+
+
+        <!-- NEXT -->
+
+        <button
+            type="button"
+            class="naviraOnamArrow naviraOnamNext"
+            onclick="naviraOnamChange(1)"
+            aria-label="Next poster"
+        >
+            ›
+        </button>
+
+    </div>
+
+
+    <!-- POSTER DOTS -->
+
+    <div class="naviraOnamDots">
+
+        <button
+            type="button"
+            class="naviraOnamDot active"
+            onclick="naviraOnamGoTo(0)"
+            aria-label="Poster 1"
+        ></button>
+
+
+        <button
+            type="button"
+            class="naviraOnamDot"
+            onclick="naviraOnamGoTo(1)"
+            aria-label="Poster 2"
+        ></button>
+
+
+        <button
+            type="button"
+            class="naviraOnamDot"
+            onclick="naviraOnamGoTo(2)"
+            aria-label="Poster 3"
+        ></button>
+
+
+        <button
+            type="button"
+            class="naviraOnamDot"
+            onclick="naviraOnamGoTo(3)"
+            aria-label="Poster 4"
+        ></button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     PAGE TITLE
+========================================= -->
+
+<section class="onamPageTitle">
+
+    <h1>
+        Onam Collection
+    </h1>
+
+    <p>
+        Traditional Kerala styles for the festive season
+    </p>
+
+</section>
+
+
+
+<!-- =========================================
+     PRODUCTS
+========================================= -->
+
+<div id="onamContainer">
+
+    <div class="onamMessage">
+        Loading products...
+    </div>
+
+</div>
+
+
+
+<!-- =========================================
+     ONLY HOME BUTTON
+========================================= -->
+
+<nav class="onamBottomNav">
+
+    <button
+        type="button"
+        class="onamHomeButton"
+        onclick="location.href='index.html'"
+    >
+
+        <span class="onamHomeIcon">
+            ⌂
+        </span>
+
+        <span>
+            Home
+        </span>
+
+    </button>
+
+</nav>
+
+
+
+<!-- =========================================
+     PRODUCTS DATA
+========================================= -->
+
+<script src="products.js"></script>
+
+
+
+<!-- =========================================
+     ONAM JAVASCRIPT
+========================================= -->
+
+<script>
+
+/* =========================================
+   POSTER SLIDER
+========================================= */
+
+var onamCurrentPoster = 0;
+
+
+var onamSlides =
+    document.querySelectorAll(
+        ".naviraOnamSlide"
+    );
+
+
+var onamDots =
+    document.querySelectorAll(
+        ".naviraOnamDot"
+    );
+
+
+window.naviraOnamGoTo =
+function(index) {
+
+    if (!onamSlides.length) {
+
+        return;
+    }
+
+
+    var total =
+        onamSlides.length;
+
+
+    onamCurrentPoster =
+        (index + total) % total;
+
+
+    onamSlides.forEach(
+        function(slide) {
+
+            slide.classList.remove(
+                "active",
+                "prev",
+                "next"
+            );
+
+        }
+    );
+
+
+    var previousIndex =
+        (
+            onamCurrentPoster
+            - 1
+            + total
+        ) % total;
+
+
+    var nextIndex =
+        (
+            onamCurrentPoster
+            + 1
+        ) % total;
+
+
+    onamSlides[
+        previousIndex
+    ].classList.add("prev");
+
+
+    onamSlides[
+        onamCurrentPoster
+    ].classList.add("active");
+
+
+    onamSlides[
+        nextIndex
+    ].classList.add("next");
+
+
+    onamDots.forEach(
+        function(dot, i) {
+
+            dot.classList.toggle(
+                "active",
+                i === onamCurrentPoster
+            );
+
+        }
+    );
+
+};
+
+
+window.naviraOnamChange =
+function(direction) {
+
+    naviraOnamGoTo(
+        onamCurrentPoster + direction
+    );
+
+};
+
+
+naviraOnamGoTo(0);
+
+
+
+/* =========================================
+   PRODUCT DATA
+========================================= */
+
+function loadOnamProducts() {
+
+    var container =
+        document.getElementById(
+            "onamContainer"
+        );
+
+
+    if (!container) {
+
+        return;
+    }
+
+
+    /*
+       Check whether products.js loaded.
+    */
+
+    if (
+        typeof products === "undefined"
+        ||
+        !Array.isArray(products)
+    ) {
+
+        container.innerHTML = `
+
+            <div class="onamMessage">
+
+                Products could not be loaded.
+
+                <br><br>
+
+                Please make sure
+                <b>products.js</b>
+                is in the same folder
+                as <b>onam.html</b>.
+
+            </div>
+
+        `;
+
+        return;
+    }
+
+
+    var onamProducts =
+        products;
+
+
+    /* =====================================
+       ONAM COLLECTIONS
+
+       Single Mundu intentionally removed.
+    ===================================== */
+
+    var onamCollections = [
+
+        {
+            key: "ssaree",
+
+            title: "Set Saree",
+
+            description:
+                "Kerala traditional Kasavu and festive set sarees",
+
+            categories: [
+                "ssaree"
+            ]
+        },
+
+
+        {
+            key: "sms",
+
+            title: "Shirt & Mundu Sets",
+
+            description:
+                "Traditional festive shirt and mundu styles",
+
+            categories: [
+                "sms"
+            ]
+        },
+
+
+        {
+            key: "fsk",
+
+            title: "Full Skirt",
+
+            description:
+                "Traditional festive skirt and blouse styles",
+
+            categories: [
+                "fsk"
+            ]
+        }
+
+    ];
+
+
+
+    /* =====================================
+       ESCAPE HTML
+    ===================================== */
+
+    function escapeHTML(value) {
+
+        return String(value || "")
+            .replace(
+                /&/g,
+                "&amp;"
+            )
+            .replace(
+                /</g,
+                "&lt;"
+            )
+            .replace(
+                />/g,
+                "&gt;"
+            )
+            .replace(
+                /"/g,
+                "&quot;"
+            )
+            .replace(
+                /'/g,
+                "&#039;"
+            );
+
+    }
+
+
+
+    /* =====================================
+       GET COLLECTION PRODUCTS
+    ===================================== */
+
+    function getOnamProducts(
+        categories
+    ) {
+
+        return onamProducts.filter(
+            function(product) {
+
+                var category =
+                    String(
+                        product.category || ""
+                    ).toLowerCase();
+
+
+                return categories.indexOf(
+                    category
+                ) !== -1;
+
+            }
+        );
+
+    }
+
+
+
+    /* =====================================
+       PRODUCT CARD
+
+       IMPORTANT:
+       ONE PRODUCT = ONE CARD
+       ONE CARD = ONE IMAGE
+
+       It uses the FIRST existing
+       image from products.js.
+    ===================================== */
+
+    function createOnamProductCard(
+        product
+    ) {
+
+        var image = "";
+
+
+        if (
+            Array.isArray(product.images)
+            &&
+            product.images.length > 0
+        ) {
+
+            image =
+                product.images[0];
+
+        }
+
+
+        return `
+
+            <article
+                class="onamProductCard"
+            >
+
+                <div
+                    class="onamProductImageArea"
+                >
+
+                    <img
+                        class="onamProductImage"
+                        src="${escapeHTML(image)}"
+                        alt="${escapeHTML(product.name)}"
+                    >
+
+                </div>
+
+
+                <div
+                    class="onamProductInfo"
+                >
+
+
+                    <h3
+                        class="onamProductName"
+                    >
+
+                        ${escapeHTML(
+                            product.name
+                        )}
+
+                    </h3>
+
+
+
+                    <div
+                        class="onamPriceRow"
+                    >
+
+                        <span
+                            class="onamPrice"
+                        >
+
+                            ₹${escapeHTML(
+                                product.price
+                            )}
+
+                        </span>
+
+
+                        <span
+                            class="onamOldPrice"
+                        >
+
+                            ₹${escapeHTML(
+                                product.oldPrice
+                            )}
+
+                        </span>
+
+
+                        <span
+                            class="onamDiscount"
+                        >
+
+                            ${escapeHTML(
+                                product.discount
+                            )}
+
+                        </span>
+
+                    </div>
+
+
+
+                    <div
+                        class="onamRating"
+                    >
+
+                        ${escapeHTML(
+                            product.rating
+                        )}
+
+                    </div>
+
+
+
+                    <p
+                        class="onamDescription"
+                    >
+
+                        ${escapeHTML(
+                            product.description
+                        )}
+
+                    </p>
+
+
+
+                    <a
+                        class="onamViewProduct"
+                        href="${escapeHTML(
+                            product.page
+                        )}"
+                    >
+
+                        View Product
+
+                    </a>
+
+
+                </div>
+
+            </article>
+
+        `;
+
+    }
+
+
+
+    /* =====================================
+       RENDER COLLECTIONS
+    ===================================== */
+
+    var html = "";
+
+
+    onamCollections.forEach(
+        function(collection) {
+
+            var collectionProducts =
+                getOnamProducts(
+                    collection.categories
+                );
+
+
+            /*
+               Do not show empty collections.
+            */
+
+            if (
+                collectionProducts.length === 0
+            ) {
+
+                return;
+            }
+
+
+            html += `
+
+                <section
+                    class="onamCollection"
+                    id="onam-${escapeHTML(
+                        collection.key
+                    )}"
+                >
+
+
+                    <div
+                        class="onamCollectionHeader"
+                    >
+
+                        <div>
+
+                            <h2>
+                                ${escapeHTML(
+                                    collection.title
+                                )}
+                            </h2>
+
+                        </div>
+
+
+                        <span
+                            class="onamCollectionCount"
+                        >
+
+                            ${collectionProducts.length}
+                            products
+
+                        </span>
+
+                    </div>
+
+
+
+                    <div
+                        class="onamProductGrid"
+                    >
+
+            `;
+
+
+            collectionProducts.forEach(
+                function(product) {
+
+                    html +=
+                        createOnamProductCard(
+                            product
+                        );
+
+                }
+            );
+
+
+            html += `
+
+                    </div>
+
+                </section>
+
+            `;
+
+        }
+    );
+
+
+
+    /* =====================================
+       FINAL OUTPUT
+    ===================================== */
+
+    if (html.trim() === "") {
+
+        container.innerHTML = `
+
+            <div class="onamMessage">
+
+                No Onam products found.
+
+            </div>
+
+        `;
+
+    } else {
+
+        container.innerHTML = html;
+
+    }
+
+}
+
+
+
+/* =========================================
+   WAIT UNTIL PAGE IS READY
+========================================= */
+
+if (
+    document.readyState === "loading"
+) {
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        loadOnamProducts
+    );
+
+} else {
+
+    loadOnamProducts();
+
+}
+
+</script>
+<script src="products.js"></script>
+
+<script>
+    window.products = products;
+</script>
+
+<script src="onam.js"></script>
+
+</body>
+
+</html>

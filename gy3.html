@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navira</title>
+    <link rel="stylesheet" href="super.css">
+</head>
+<body>
+<button class="backTop" onclick="history.back()">← Back</button>
+<div class="topbox">
+    <div class="details">
+        <h2 class="shop">Prana Athletic Studio</h2>
+        <div class="stars">
+            ★★★★★
+            <span>6,120 Ratings</span>
+        </div>
+        <p class="desc">
+            Women Full Sleeve Side-Slit Longline Kurta & Yoga Tights Set
+        </p>
+    </div>
+</div>
+<div class="container">
+    <div class="left">
+        <div class="likeBox">
+            <input type="checkbox" id="fav">
+            <label for="fav">♥</label>
+        </div>
+        <div class="slider">
+            <img id="productImage" src="gy (7).jpeg" data-images="gy (7).jpeg, gy (8).jpeg, gy (9).jpeg" class="product">
+            <br>
+            <button class="arrow" onclick="previous()">❮</button>
+            <button class="arrow" onclick="next()">❯</button>
+            <br><br>
+            <span id="dot1">●</span>
+            <span id="dot2">○</span>
+            <span id="dot3">○</span>
+        </div>
+        <h1>Women Full Sleeve Side-Slit Longline Kurta & Yoga Tights Set</h1>
+        <h2 class="price">₹1,099</h2>
+        <div class="discount">
+            30% OFF
+        </div>
+        <h2>
+            ₹1,099
+            <del>₹1,570</del>
+        </h2>
+        <h3>Select Size</h3>
+        <label><input type="radio" name="size"> XS</label>
+        <label><input type="radio" name="size"> S</label>
+        <label><input type="radio" name="size"> M</label>
+        <label><input type="radio" name="size"> L</label>
+        <label><input type="radio" name="size"> XL</label>
+        <br><br>
+        <button class="buy" onclick="showBuy()">Buy Now</button>
+        <hr>
+        <h2>Product Details</h2>
+        <h3>Top Highlights</h3>
+        <ul>
+            <li>✔️ High Side Slits for Unrestricted Movement</li>
+            <li>✔️ Full Sleeve Coverage for All-Weather Practice</li>
+            <li>✔️ Elastic Ankle-Cut Active Tights</li>
+            <li>✔️ Breathable & Non-See-Through Stretch Fabric</li>
+            <li>✔️ Ideal for Outdoor Yoga & Fitness Practices</li>
+        </ul>
+        <h2>Description</h2>
+        <p>
+            Designed for athletic flexibility and modest coverage, this full-sleeve longline activewear kurta features deep side slits that allow effortless movement during yoga postures and stretching routines.
+        </p>
+        <p>
+            Paired with snug-fitting high-rise leggings, this set provides seamless body support. The premium performance blend fabric is soft against skin and guarantees reliable opacity.
+        </p>
+        <h2>Additional Information</h2>
+        <table>
+            <tr><td>Brand</td><td>Prana Active</td></tr>
+            <tr><td>Colour</td><td>Multiple Colour Combinations</td></tr>
+            <tr><td>Material</td><td>High-Performance Poly-Cotton Blend</td></tr>
+            <tr><td>Style</td><td>Full Sleeve Side-Slit Kurta & Tights</td></tr>
+            <tr><td>Pattern</td><td>Solid Neutral Design</td></tr>
+            <tr><td>Size</td><td>S to XXL</td></tr>
+            <tr><td>Closure</td><td>Pull-On Elastic Stretch</td></tr>
+            <tr><td>Occasion</td><td>Outdoor Fitness, Yoga & Workout</td></tr>
+            <tr><td>Country</td><td>India</td></tr>
+            <tr><td>Weight</td><td>520 g</td></tr>
+        </table>
+    </div>
+    <div class="right" id="rightPanel">
+        <button onclick="goBack()" class="backCheckout">← Back</button>
+        <h2>Checkout</h2>
+        <hr>
+        <h3>Delivery Details</h3>
+        <label>Full Name</label><br>
+        <input type="text" placeholder="Enter your Full Name"><br><br>
+        <label>Phone Number</label><br>
+        <input type="tel" placeholder="9876543210"><br><br>
+        <label>Email Address</label><br>
+        <input type="email" placeholder="example@gmail.com"><br><br>
+        <label>House Name</label><br>
+        <input type="text" placeholder="House Name"><br><br>
+        <label>Street</label><br>
+        <input type="text" placeholder="Street"><br><br>
+        <label>City</label><br>
+        <input type="text" placeholder="City"><br><br>
+        <label>State</label><br>
+        <input type="text" placeholder="State"><br><br>
+        <label>PIN Code</label><br>
+        <input type="text" placeholder="PIN Code">
+        <hr>
+        <h3>Select Payment Method</h3>
+        <label><input type="radio" name="pay"><img src="gpay.jpeg" width="28"> Google Pay</label><br><br>
+        <label><input type="radio" name="pay"><img src="phonepe.jpeg" width="28"> PhonePe</label><br><br>
+        <label><input type="radio" name="pay"><img src="paytm.jpeg" width="28"> Paytm</label><br><br>
+        <label><input type="radio" name="pay"><img src="upi.jpeg" width="28"> UPI</label><br><br>
+        <label><input type="radio" name="pay"><img src="card.jpeg" width="28"> Credit / Debit Card</label><br><br>
+        <label><input type="radio" name="pay"><img src="netbanking.jpeg" width="28"> Net Banking</label><br><br>
+        <label><input type="radio" name="pay"><img src="cod.jpeg" width="28"> Cash on Delivery</label>
+        <hr>
+        <h3>Product Options</h3>
+        <label>Selected Colour</label><br>
+        <select>
+            <option>Charcoal Grey</option>
+            <option>Jet Black</option>
+            <option>Dark Olive</option>
+            <option>Deep Plum</option>
+            <option>Navy Blue</option>
+        </select>
+        <br><br>
+        <label>Selected Size</label><br>
+        <select>
+            <option>XS</option>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+            <option>XL</option>
+            <option>XXL</option>
+        </select>
+        <br><br>
+        <hr>
+        <h3>Order Summary</h3>
+        <table width="100%">
+            <tr><td>Product</td><td align="right">Full Sleeve Side-Slit Yoga Set</td></tr>
+            <tr><td>Price</td><td align="right">₹1,099</td></tr>
+            <tr><td>Delivery</td><td align="right">FREE</td></tr>
+            <tr><th>Total</th><th align="right">₹1,099</th></tr>
+        </table>
+        <br>
+        <button class="place" onclick="stock()">Place Order</button>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

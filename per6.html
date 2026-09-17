@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Navira</title>
+    <link rel="stylesheet" href="super.css">
+</head>
+<body>
+
+<button class="backTop" onclick="history.back()">← Back</button>
+
+<!-- Seller Information -->
+<div class="topbox">
+
+    <div class="details">
+        <h2 class="shop">Shivansh Sugandh Kendra</h2>
+        <div class="stars">
+            ★★★★★
+            <span>6,735 Ratings</span>
+        </div>
+        <p class="desc">
+            Unisex Premium Vanilla Musk Eau de Parfum
+        </p>
+    </div>
+</div>
+
+
+<!-- Main Container -->
+
+<div class="container">
+
+<!-- LEFT SIDE -->
+
+<div class="left">
+
+<div class="likeBox">
+    <input type="checkbox" id="fav">
+    <label for="fav">♥</label>
+</div>
+
+<div class="slider">
+
+<img id="productImage"
+     src="per (12).jpeg"
+     data-images="per (12).jpeg,per (11).jpeg,per (10).jpeg"
+     class="product">
+
+<br>
+
+<button class="arrow"
+onclick="previous()">❮</button>
+
+<button class="arrow"
+onclick="next()">❯</button>
+
+<br><br>
+
+<span id="dot1">●</span>
+<span id="dot2">○</span>
+<span id="dot3">○</span>
+
+</div>
+
+<h1>Unisex Vanilla Musk Eau de Parfum</h1>
+
+<h2 class="price">₹1,599</h2>
+
+<div class="discount">
+42% OFF
+</div>
+
+<h2>
+₹1,599
+<del>₹2,749</del>
+</h2>
+
+
+<h3>Select Size</h3>
+
+<label><input type="radio" name="size"> 30 ml</label>
+
+<label><input type="radio" name="size"> 50 ml</label>
+
+<label><input type="radio" name="size"> 75 ml</label>
+
+<label><input type="radio" name="size"> 100 ml</label>
+
+<label><input type="radio" name="size"> 150 ml</label>
+
+<br><br>
+
+<button class="buy"
+onclick="showBuy()">
+Buy Now
+</button>
+
+<hr>
+
+
+<h2>Product Details</h2>
+
+<h3>Top Highlights</h3>
+
+<ul>
+<li>✔️ Premium Unisex Eau de Parfum</li>
+<li>✔️ Sweet Vanilla and Soft Musk Fragrance</li>
+<li>✔️ Warm, Creamy and Comforting Aroma</li>
+<li>✔️ Elegant Bottle Design</li>
+<li>✔️ Suitable for Everyday and Special Occasions</li>
+</ul>
+
+<h2>Description</h2>
+
+<p>
+Enjoy the warm and comforting aroma of this Unisex Vanilla Musk Eau de Parfum from Shivansh Sugandh Kendra. The fragrance blends sweet vanilla with soft musk and gentle warm notes to create a smooth and pleasant scent suitable for both men and women.
+</p>
+
+<p>
+Its creamy and inviting fragrance profile makes it suitable for college, office, travel, casual outings, dinner dates, parties, celebrations and evening occasions. The balanced aroma can be worn throughout the day and adds a subtle sophisticated touch to your personal style.
+</p>
+
+<p>
+Available in multiple bottle sizes and fragrance choices, this Navira perfume collection lets you select the size and scent that best matches your preference. The attractive bottle presentation also makes it a thoughtful gifting option for friends, family members and loved ones.
+</p>
+
+<h2>Additional Information</h2>
+
+<table>
+
+<tr>
+<td>Brand</td>
+<td>Navira</td>
+</tr>
+
+<tr>
+<td>Shop</td>
+<td>Shivansh Sugandh Kendra</td>
+</tr>
+
+<tr>
+<td>Fragrance</td>
+<td>Vanilla Musk</td>
+</tr>
+
+<tr>
+<td>Fragrance Type</td>
+<td>Vanilla, Musk & Warm</td>
+</tr>
+
+<tr>
+<td>Category</td>
+<td>Eau de Parfum</td>
+</tr>
+
+<tr>
+<td>Gender</td>
+<td>Unisex</td>
+</tr>
+
+<tr>
+<td>Size</td>
+<td>30 ml, 50 ml, 75 ml, 100 ml, 150 ml</td>
+</tr>
+
+<tr>
+<td>Occasion</td>
+<td>Casual, Office, Travel, Party & Special Occasions</td>
+</tr>
+
+<tr>
+<td>Country</td>
+<td>India</td>
+</tr>
+
+<tr>
+<td>Weight</td>
+<td>425 g</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<!-- RIGHT SIDE -->
+
+<div class="right" id="rightPanel">
+
+<button onclick="goBack()" class="backCheckout">← Back</button>
+
+<h2>Checkout</h2>
+
+<hr>
+
+<h3>Delivery Details</h3>
+
+<label>Full Name</label><br>
+<input type="text" placeholder="Enter your Full Name">
+
+<br><br>
+
+<label>Phone Number</label><br>
+<input type="tel" placeholder="9876543210">
+
+<br><br>
+
+<label>Email Address</label><br>
+<input type="email" placeholder="example@gmail.com">
+
+<br><br>
+
+<label>House Name</label><br>
+<input type="text" placeholder="House Name">
+
+<br><br>
+
+<label>Street</label><br>
+<input type="text" placeholder="Street">
+
+<br><br>
+
+<label>City</label><br>
+<input type="text" placeholder="City">
+
+<br><br>
+
+<label>State</label><br>
+<input type="text" placeholder="State">
+
+<br><br>
+
+<label>PIN Code</label><br>
+<input type="text" placeholder="PIN Code">
+
+<hr>
+
+<h3>Select Payment Method</h3>
+
+<label>
+<input type="radio" name="pay">
+<img src="gpay.jpeg" width="28">
+Google Pay
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="phonepe.jpeg" width="28">
+PhonePe
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="paytm.jpeg" width="28">
+Paytm
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="upi.jpeg" width="28">
+UPI
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="card.jpeg" width="28">
+Credit / Debit Card
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="netbanking.jpeg" width="28">
+Net Banking
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="cod.jpeg" width="28">
+Cash on Delivery
+</label>
+
+<hr>
+<hr>
+
+<h3>Product Options</h3>
+
+<label>Selected Fragrance</label><br>
+
+<select>
+<option>Vanilla Musk</option>
+<option>Royal Amber</option>
+<option>Honey Oud</option>
+<option>Botanical Fresh</option>
+<option>Crystal Musk</option>
+<option>Noir Oud</option>
+</select>
+
+<br><br>
+
+<label>Selected Size</label><br>
+
+<select>
+<option>30 ml</option>
+<option>50 ml</option>
+<option>75 ml</option>
+<option>100 ml</option>
+<option>150 ml</option>
+</select>
+
+<br><br>
+
+<hr>
+
+<h3>Order Summary</h3>
+
+<table width="100%">
+
+<tr>
+<td>Product</td>
+<td align="right">Vanilla Musk Eau de Parfum</td>
+</tr>
+
+<tr>
+<td>Price</td>
+<td align="right">₹1,599</td>
+</tr>
+
+<tr>
+<td>Delivery</td>
+<td align="right">FREE</td>
+</tr>
+
+<tr>
+<th>Total</th>
+<th align="right">₹1,599</th>
+</tr>
+
+</table>
+
+<br>
+
+<button class="place"
+onclick="stock()">
+Place Order
+</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

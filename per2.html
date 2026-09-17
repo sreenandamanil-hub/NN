@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Navira</title>
+    <link rel="stylesheet" href="super.css">
+</head>
+<body>
+
+<button class="backTop" onclick="history.back()">← Back</button>
+
+<!-- Seller Information -->
+<div class="topbox">
+
+    <div class="details">
+        <h2 class="shop">Madhav Sugandh House</h2>
+        <div class="stars">
+            ★★★★★
+            <span>7,346 Ratings</span>
+        </div>
+        <p class="desc">
+            Unisex Premium Honey Oud Eau de Parfum
+        </p>
+    </div>
+</div>
+
+
+<!-- Main Container -->
+
+<div class="container">
+
+<!-- LEFT SIDE -->
+
+<div class="left">
+
+<div class="likeBox">
+    <input type="checkbox" id="fav">
+    <label for="fav">♥</label>
+</div>
+
+<div class="slider">
+
+<img id="productImage"
+     src="per (24).jpeg"
+     data-images="per (24).jpeg,per (23).jpeg,per (22).jpeg"
+     class="product">
+
+<br>
+
+<button class="arrow"
+onclick="previous()">❮</button>
+
+<button class="arrow"
+onclick="next()">❯</button>
+
+<br><br>
+
+<span id="dot1">●</span>
+<span id="dot2">○</span>
+<span id="dot3">○</span>
+
+</div>
+
+<h1>Unisex Honey Oud Eau de Parfum</h1>
+
+<h2 class="price">₹1,699</h2>
+
+<div class="discount">
+40% OFF
+</div>
+
+<h2>
+₹1,699
+<del>₹2,849</del>
+</h2>
+
+
+<h3>Select Size</h3>
+
+<label><input type="radio" name="size"> 30 ml</label>
+
+<label><input type="radio" name="size"> 50 ml</label>
+
+<label><input type="radio" name="size"> 75 ml</label>
+
+<label><input type="radio" name="size"> 100 ml</label>
+
+<label><input type="radio" name="size"> 150 ml</label>
+
+<br><br>
+
+<button class="buy"
+onclick="showBuy()">
+Buy Now
+</button>
+
+<hr>
+
+
+<h2>Product Details</h2>
+
+<h3>Top Highlights</h3>
+
+<ul>
+<li>✔️ Premium Unisex Eau de Parfum</li>
+<li>✔️ Rich Honey and Oud Fragrance</li>
+<li>✔️ Warm, Sweet and Woody Aroma</li>
+<li>✔️ Long-Lasting Fragrance Experience</li>
+<li>✔️ Suitable for Everyday and Special Occasions</li>
+</ul>
+
+<h2>Description</h2>
+
+<p>
+Discover the warm and luxurious character of this Honey Oud Eau de Parfum from Madhav Sugandh House. The fragrance combines sweet honey accords with rich oud and smooth woody notes to create a sophisticated scent that can be enjoyed by both men and women.
+</p>
+
+<p>
+Its warm and elegant aroma is suitable for college, office, travel, casual outings, evening gatherings, celebrations, parties and special occasions. The balanced fragrance profile makes it versatile enough for regular use while also adding a refined touch to evening and festive occasions.
+</p>
+
+<p>
+Available in different bottle sizes and fragrance choices, this Navira perfume collection gives you the flexibility to select the size and scent that suits your preference. Its premium appearance also makes it an attractive gifting option for family members, friends and loved ones.
+</p>
+
+<h2>Additional Information</h2>
+
+<table>
+
+<tr>
+<td>Brand</td>
+<td>Navira</td>
+</tr>
+
+<tr>
+<td>Shop</td>
+<td>Madhav Sugandh House</td>
+</tr>
+
+<tr>
+<td>Fragrance</td>
+<td>Honey Oud</td>
+</tr>
+
+<tr>
+<td>Fragrance Type</td>
+<td>Sweet, Oud & Woody</td>
+</tr>
+
+<tr>
+<td>Category</td>
+<td>Eau de Parfum</td>
+</tr>
+
+<tr>
+<td>Gender</td>
+<td>Unisex</td>
+</tr>
+
+<tr>
+<td>Size</td>
+<td>30 ml, 50 ml, 75 ml, 100 ml, 150 ml</td>
+</tr>
+
+<tr>
+<td>Occasion</td>
+<td>Casual, Office, Travel, Party & Special Occasions</td>
+</tr>
+
+<tr>
+<td>Country</td>
+<td>India</td>
+</tr>
+
+<tr>
+<td>Weight</td>
+<td>430 g</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<!-- RIGHT SIDE -->
+
+<div class="right" id="rightPanel">
+
+<button onclick="goBack()" class="backCheckout">← Back</button>
+
+<h2>Checkout</h2>
+
+<hr>
+
+<h3>Delivery Details</h3>
+
+<label>Full Name</label><br>
+<input type="text" placeholder="Enter your Full Name">
+
+<br><br>
+
+<label>Phone Number</label><br>
+<input type="tel" placeholder="9876543210">
+
+<br><br>
+
+<label>Email Address</label><br>
+<input type="email" placeholder="example@gmail.com">
+
+<br><br>
+
+<label>House Name</label><br>
+<input type="text" placeholder="House Name">
+
+<br><br>
+
+<label>Street</label><br>
+<input type="text" placeholder="Street">
+
+<br><br>
+
+<label>City</label><br>
+<input type="text" placeholder="City">
+
+<br><br>
+
+<label>State</label><br>
+<input type="text" placeholder="State">
+
+<br><br>
+
+<label>PIN Code</label><br>
+<input type="text" placeholder="PIN Code">
+
+<hr>
+
+<h3>Select Payment Method</h3>
+
+<label>
+<input type="radio" name="pay">
+<img src="gpay.jpeg" width="28">
+Google Pay
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="phonepe.jpeg" width="28">
+PhonePe
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="paytm.jpeg" width="28">
+Paytm
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="upi.jpeg" width="28">
+UPI
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="card.jpeg" width="28">
+Credit / Debit Card
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="netbanking.jpeg" width="28">
+Net Banking
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="cod.jpeg" width="28">
+Cash on Delivery
+</label>
+
+<hr>
+<hr>
+
+<h3>Product Options</h3>
+
+<label>Selected Fragrance</label><br>
+
+<select>
+<option>Honey Oud</option>
+<option>Royal Amber</option>
+<option>Fresh Citrus</option>
+<option>Ocean Breeze</option>
+<option>Vanilla Musk</option>
+<option>Rose & Sandalwood</option>
+</select>
+
+<br><br>
+
+<label>Selected Size</label><br>
+
+<select>
+<option>30 ml</option>
+<option>50 ml</option>
+<option>75 ml</option>
+<option>100 ml</option>
+<option>150 ml</option>
+</select>
+
+<br><br>
+
+<hr>
+
+<h3>Order Summary</h3>
+
+<table width="100%">
+
+<tr>
+<td>Product</td>
+<td align="right">Honey Oud Eau de Parfum</td>
+</tr>
+
+<tr>
+<td>Price</td>
+<td align="right">₹1,699</td>
+</tr>
+
+<tr>
+<td>Delivery</td>
+<td align="right">FREE</td>
+</tr>
+
+<tr>
+<th>Total</th>
+<th align="right">₹1,699</th>
+</tr>
+
+</table>
+
+<br>
+
+<button class="place"
+onclick="stock()">
+Place Order
+</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

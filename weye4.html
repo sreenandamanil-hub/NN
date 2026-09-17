@@ -1,0 +1,181 @@
+<!DOCTYPE html>    <html>        <head>          <meta charset="UTF-8">          
+<meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Navira</title>
+
+<link rel="stylesheet" href="super.css">    </head>    <body>          
+<button class="backTop" onclick="history.back()">← Back</button>    <!-- Seller Information -->    <div class="topbox">    <div class="details">    <h2 class="shop">Aurelia Vision Boutique</h2>    <div class="stars">          
+★★★★★          
+<span>9,684 Ratings</span>          
+</div>    <p class="desc">          
+Women's Premium Oversized Clear Frame Eyeglasses          
+</p>    </div>    </div>    <!-- Main Container -->    <div class="container">    <!-- LEFT SIDE -->    <div class="left">          
+<div class="likeBox">          
+    <input type="checkbox" id="fav">          
+    <label for="fav">♥</label>          
+</div>    <div class="slider">    <img id="productImage"          
+src="weye (18).jpeg"          
+data-images="weye (18).jpeg,  weye (17).jpeg,   weye (16).jpeg"          
+class="product">      
+<br>    <button class="arrow"          
+onclick="previous()">❮</button>  <button class="arrow"          
+onclick="next()">❯</button>
+
+<br><br>
+
+<span id="dot1">●</span>
+<span id="dot2">○</span>
+<span id="dot3">○</span>
+
+</div>          
+<h1>Women's Premium Oversized Clear Frame Eyeglasses</h1>    <h2 class="price">₹1,449</h2>    <div class="discount">          
+45% OFF          
+</div>    <h2>          
+₹1,449          
+<del>₹2,649</del>          
+</h2>    <h3>Select Colour</h3>    <label><input type="radio" name="colour"> Transparent</label>    <label><input type="radio" name="colour"> Black</label>  <label><input type="radio" name="colour"> Brown</label>
+
+<label><input type="radio" name="colour"> Crystal Grey</label>
+
+<label><input type="radio" name="colour"> Navy Blue</label>
+
+<label><input type="radio" name="colour"> Clear Brown</label>
+
+<br><br>
+
+<button class="buy"          
+onclick="showBuy()">
+Buy Now
+</button>
+
+<hr>    <h2>Product Details</h2>    <h3>Top Highlights</h3>    <ul>    <li>✔️ Premium Oversized Clear Frame Eyeglasses</li>    <li>✔️ Stylish Transparent Frame Design</li>    <li>✔️ Lightweight Everyday Style</li>    <li>✔️ Available in Multiple Colour Options</li>    <li>✔️ Modern and Minimal Appearance</li>    <li>✔️ Suitable for Casual and Professional Looks</li>    </ul>    <h2>Description</h2>    <p>    Add a clean and contemporary touch to your everyday appearance with these premium oversized clear frame eyeglasses from Aurelia Vision Boutique. Designed with a fashionable oversized silhouette and a transparent frame appearance, these eyeglasses offer a modern look that can easily complement different personal styles. The clear frame design creates a subtle and elegant appearance while the larger shape adds a distinctive fashion-forward character.    </p>    <p>    The oversized profile gives these eyeglasses a stylish presence while maintaining a simple and versatile overall design. The transparent frame can be paired with casual outfits, office clothing, college wear and smart everyday looks. Its clean appearance makes it suitable for people who prefer fashionable eyewear without a heavy-looking frame.    </p>    <p>    These eyeglasses are available in Transparent, Black, Brown, Crystal Grey, Navy Blue and Clear Brown. Transparent provides a minimal contemporary appearance, Black gives a classic look, Brown adds warmth, Crystal Grey offers a subtle modern finish, Navy Blue creates a distinctive style and Clear Brown provides a softer fashionable appearance.    </p>    <p>    Suitable for college, office, meetings, shopping, travel, casual outings, social gatherings and everyday wear, these eyeglasses can be easily incorporated into different parts of your daily wardrobe. The oversized frame gives ordinary outfits a more fashionable appearance while remaining versatile enough for regular use.    </p>    <p>    The clear-frame styling works particularly well with both neutral and colourful clothing. Pair them with a simple casual outfit for a relaxed appearance or with professional clothing for a polished and contemporary look. The clean frame structure also makes them suitable for different fashion preferences and occasions.    </p>    <p>    Whether you are studying at college, working at an office, travelling, shopping or meeting friends, these eyeglasses can provide a stylish finishing touch to your appearance. The multiple colour choices allow you to select a frame that best matches your personal style and existing accessories.    </p>    <h2>Additional Information</h2>    <table>    <tr>          
+<td>Brand</td>          
+<td>Navira</td>          
+</tr>    <tr>          
+<td>Colour</td>          
+<td>Transparent, Black, Brown, Crystal Grey, Navy Blue, Clear Brown</td>          
+</tr>    <tr>          
+<td>Type</td>          
+<td>Oversized Eyeglasses</td>          
+</tr>    <tr>          
+<td>Frame Style</td>          
+<td>Oversized Clear Frame</td>          
+</tr>    <tr>          
+<td>Frame Finish</td>          
+<td>Transparent Smooth Finish</td>          
+</tr>    <tr>          
+<td>Lens Type</td>          
+<td>Clear Eyeglass Lens</td>          
+</tr>    <tr>          
+<td>Suitable For</td>          
+<td>Everyday & Professional Wear</td>          
+</tr>    <tr>          
+<td>Style</td>          
+<td>Modern Minimal</td>          
+</tr>    <tr>          
+<td>Pattern</td>          
+<td>Solid</td>          
+</tr>    <tr>          
+<td>Occasion</td>          
+<td>Everyday, College, Office, Travel, Party</td>          
+</tr>    <tr>          
+<td>Care Instructions</td>          
+<td>Clean Gently With a Soft Eyewear Cloth</td>          
+</tr>    <tr>          
+<td>Country of Origin</td>          
+<td>India</td>          
+</tr>    <tr>          
+<td>Packaging</td>          
+<td>Protective Eyewear Packaging</td>          
+</tr>    <tr>          
+<td>Product Category</td>          
+<td>Women's Eyewear</td>          
+</tr>    </table>    </div>          
+<!-- RIGHT SIDE -->    <div class="right" id="rightPanel">    <button onclick="goBack()" class="backCheckout">← Back</button><h2>Checkout</h2>    <hr>    <h3>Delivery Details</h3>    <label>Full Name</label><br>      
+<input type="text" placeholder="Enter your Full Name">    <br><br>  <label>Phone Number</label><br>
+<input type="tel" placeholder="9876543210">
+
+<br><br>
+
+<label>Email Address</label><br>
+<input type="email" placeholder="example@gmail.com">
+
+<br><br>
+
+<label>House Name</label><br>
+<input type="text" placeholder="House Name">
+
+<br><br>
+
+<label>Street</label><br>
+<input type="text" placeholder="Street">
+
+<br><br>
+
+<label>City</label><br>
+<input type="text" placeholder="City">
+
+<br><br>
+
+<label>State</label><br>
+<input type="text" placeholder="State">
+
+<br><br>
+
+<label>PIN Code</label><br>
+<input type="text" placeholder="PIN Code">
+
+<hr>    <h3>Select Payment Method</h3>    <label>          
+<input type="radio" name="pay">          
+<img src="gpay.jpeg" width="28">          
+Google Pay          
+</label>    <br><br>    <label>          
+<input type="radio" name="pay">          
+<img src="phonepe.jpeg" width="28">          
+PhonePe          
+</label>    <br><br>    <label>          
+<input type="radio" name="pay">          
+<img src="paytm.jpeg" width="28">          
+Paytm          
+</label>    <br><br>    <label>          
+<input type="radio" name="pay">          
+<img src="upi.jpeg" width="28">          
+UPI          
+</label>    <br><br>    <label>          
+<input type="radio" name="pay">          
+<img src="card.jpeg" width="28">          
+Credit / Debit Card          
+</label>    <br><br>    <label>          
+<input type="radio" name="pay">          
+<img src="netbanking.jpeg" width="28">          
+Net Banking          
+</label>    <br><br>    <label>          
+<input type="radio" name="pay">          
+<img src="cod.jpeg" width="28">          
+Cash on Delivery          
+</label>    <hr>          
+<hr>    <h3>Product Options</h3>    <label>Selected Colour</label><br>    <select>          
+<option>Transparent</option>          
+<option>Black</option>          
+<option>Brown</option>          
+<option>Crystal Grey</option>          
+<option>Navy Blue</option>          
+<option>Clear Brown</option>          
+</select>    <br><br>    <hr>    <h3>Order Summary</h3>    <table width="100%">    <tr>          
+<td>Product</td>          
+<td align="right">Premium Oversized Clear Frame Eyeglasses</td>          
+</tr>    <tr>          
+<td>Price</td>          
+<td align="right">₹1,449</td>          
+</tr>    <tr>          
+<td>Packaging Fee</td>          
+<td align="right">₹49</td>          
+</tr>    <tr>          
+<td>Delivery Charges</td>          
+<td align="right">FREE</td>          
+</tr>    <tr>          
+<th>Total</th>          
+<th align="right">₹1,498</th>          
+</tr>    </table>    <br>    <button class="place"          
+onclick="stock()">      
+Place Order      
+</button>    </div>    </div>    <script src="script.js"></script>    </body>          
+</html>

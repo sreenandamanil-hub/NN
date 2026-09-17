@@ -1,0 +1,640 @@
+body{
+font-family: Arial;
+background-color:#eef4ff;
+margin:40px;
+}
+
+h1{
+text-align:center;
+color:darkblue;
+}
+
+h2{
+text-align:center;
+color:navy;
+}
+
+.student{
+background-color:#dbe6ff;
+padding:15px;
+border-radius:8px;
+margin-bottom:20px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+background-color:white;
+}
+
+th{
+background-color:navy;
+color:white;
+padding:10px;
+border:1px solid black;
+}
+
+td{
+padding:10px;
+border:1px solid gray;
+text-align:center;
+}
+
+tr:nth-child(even){
+background-color:#f2f6ff;
+}
+.accountInput {
+    display: block;
+    width: 100%;
+    min-height: 44px;
+}
+
+select.accountInput {
+    background: #ffffff;
+    cursor: pointer;
+}
+
+.accountBox {
+    overflow-y: auto;
+}
+/* =====================================================
+   SETTINGS
+   ===================================================== */
+
+.settingsOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.45);
+
+    z-index: 10000;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px;
+
+    box-sizing: border-box;
+}
+
+
+.settingsBox {
+    position: relative;
+
+    width: 100%;
+    max-width: 470px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: #ffffff;
+
+    border-radius: 16px;
+
+    padding: 25px;
+
+    box-sizing: border-box;
+
+    box-shadow: 0 5px 30px rgba(0,0,0,0.25);
+}
+
+
+.settingsBox h2 {
+    margin: 0 0 20px 0;
+
+    text-align: center;
+
+    font-size: 22px;
+}
+
+
+.closeSettings {
+    position: absolute;
+
+    top: 10px;
+    right: 12px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+/* ================= SETTING ROW ================= */
+
+.settingRow {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid #eeeeee;
+
+    box-sizing: border-box;
+}
+
+
+.settingInfo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    min-width: 0;
+}
+
+
+.settingInfo div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.settingInfo strong {
+    font-size: 15px;
+}
+
+
+.settingInfo small {
+    color: #777777;
+
+    font-size: 12px;
+}
+
+
+.settingIcon {
+    font-size: 25px;
+
+    min-width: 32px;
+
+    text-align: center;
+}
+
+
+/* ================= SELECT ================= */
+
+.settingRow select {
+    padding: 8px 10px;
+
+    border: 1px solid #cccccc;
+
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    outline: none;
+}
+
+
+/* ================= SWITCH ================= */
+
+.switch {
+    position: relative;
+
+    display: inline-block;
+
+    width: 48px;
+
+    height: 26px;
+
+    flex-shrink: 0;
+}
+
+
+.switch input {
+    opacity: 0;
+
+    width: 0;
+    height: 0;
+}
+
+
+.slider {
+    position: absolute;
+
+    cursor: pointer;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: #cccccc;
+
+    border-radius: 30px;
+
+    transition: 0.3s;
+}
+
+
+.slider:before {
+    content: "";
+
+    position: absolute;
+
+    width: 20px;
+    height: 20px;
+
+    left: 3px;
+    bottom: 3px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    transition: 0.3s;
+}
+
+
+.switch input:checked + .slider {
+    background: #222222;
+}
+
+
+.switch input:checked + .slider:before {
+    transform: translateX(22px);
+}
+
+
+/* ================= THEME ================= */
+
+.themeSection {
+    padding: 18px 0;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.themeTitle {
+    display: flex;
+
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+
+.themeTitle div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.themeTitle strong {
+    font-size: 15px;
+}
+
+
+.themeTitle small {
+    color: #777777;
+
+    font-size: 12px;
+}
+
+
+.themeChoices {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-bottom: 15px;
+}
+
+
+.themeChoice {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    border: 3px solid #ffffff;
+
+    outline: 1px solid #cccccc;
+
+    cursor: pointer;
+
+    transition: transform 0.2s;
+}
+
+
+.themeChoice:hover {
+    transform: scale(1.1);
+}
+
+
+.themeBlue {
+    background: #d9f1f8;
+}
+
+
+.themePink {
+    background: #f8d9e8;
+}
+
+
+.themeGreen {
+    background: #d9f0df;
+}
+
+
+.themePurple {
+    background: #e4d9f8;
+}
+
+
+.themeOrange {
+    background: #f8e2c9;
+}
+
+
+/* ================= RESET THEME ================= */
+
+.resetTheme {
+    width: 100%;
+
+    padding: 10px;
+
+    border: 1px solid #d9f1f8;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+.resetTheme:hover {
+    background: #f5fbfd;
+}
+
+
+/* ================= RATING ================= */
+
+.ratingSection {
+    padding: 18px 0 5px;
+}
+
+
+.ratingTitle {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.ratingTitle div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.ratingTitle strong {
+    font-size: 15px;
+}
+
+
+.ratingTitle small {
+    color: #777777;
+
+    font-size: 12px;
+}
+
+
+.ratingStars {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    margin-top: 12px;
+}
+
+
+.ratingStars button {
+    border: none;
+
+    background: transparent;
+
+    font-size: 30px;
+
+    color: #cccccc;
+
+    cursor: pointer;
+
+    padding: 2px;
+}
+
+
+.ratingStars button:hover {
+    color: #f5b400;
+}
+
+
+#ratingMessage {
+    text-align: center;
+
+    font-size: 13px;
+
+    margin: 8px 0 0;
+
+    color: #666666;
+}
+
+
+/* =====================================================
+   DARK MODE
+   ===================================================== */
+
+body.darkMode {
+    background: #181818;
+
+    color: #eeeeee;
+}
+
+
+body.darkMode .settingsBox {
+    background: #252525;
+
+    color: #eeeeee;
+}
+
+
+body.darkMode .settingRow,
+body.darkMode .themeSection {
+    border-color: #444444;
+}
+
+
+body.darkMode .settingInfo small,
+body.darkMode .themeTitle small,
+body.darkMode .ratingTitle small,
+body.darkMode #ratingMessage {
+    color: #aaaaaa;
+}
+
+
+body.darkMode .settingRow select {
+    background: #333333;
+
+    color: #ffffff;
+
+    border-color: #555555;
+}
+
+
+body.darkMode .resetTheme {
+    background: #333333;
+
+    color: #ffffff;
+
+    border-color: #555555;
+}
+
+
+/* =====================================================
+   FONT SIZE
+   ===================================================== */
+
+body.fontSmall {
+    font-size: 14px;
+}
+
+
+body.fontMedium {
+    font-size: 16px;
+}
+
+
+body.fontLarge {
+    font-size: 19px;
+}
+
+
+/* =====================================================
+   FONT STYLE
+   ===================================================== */
+
+body.fontDefault {
+    font-family: Arial, sans-serif;
+}
+
+
+body.fontSerif {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+
+body.fontMono {
+    font-family: "Courier New", monospace;
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    .settingsOverlay {
+        padding: 10px;
+    }
+
+
+    .settingsBox {
+        width: 100%;
+
+        max-height: 92vh;
+
+        padding: 20px;
+
+        border-radius: 14px;
+    }
+
+
+    .settingsBox h2 {
+        font-size: 20px;
+    }
+
+
+    .settingRow {
+        padding: 13px 0;
+
+        gap: 10px;
+    }
+
+
+    .settingInfo {
+        gap: 9px;
+    }
+
+
+    .settingInfo strong {
+        font-size: 14px;
+    }
+
+
+    .settingInfo small {
+        font-size: 11px;
+    }
+
+
+    .settingIcon {
+        font-size: 22px;
+
+        min-width: 28px;
+    }
+
+
+    .themeChoice {
+        width: 38px;
+        height: 38px;
+    }
+
+
+    .ratingStars button {
+        font-size: 27px;
+    }
+}

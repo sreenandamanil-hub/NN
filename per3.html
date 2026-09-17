@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Navira</title>
+    <link rel="stylesheet" href="super.css">
+</head>
+<body>
+
+<button class="backTop" onclick="history.back()">← Back</button>
+
+<!-- Seller Information -->
+<div class="topbox">
+
+    <div class="details">
+        <h2 class="shop">Vasudev Sugandh Kendra</h2>
+        <div class="stars">
+            ★★★★★
+            <span>6,914 Ratings</span>
+        </div>
+        <p class="desc">
+            Unisex Premium Fresh Botanical Eau de Parfum
+        </p>
+    </div>
+</div>
+
+
+<!-- Main Container -->
+
+<div class="container">
+
+<!-- LEFT SIDE -->
+
+<div class="left">
+
+<div class="likeBox">
+    <input type="checkbox" id="fav">
+    <label for="fav">♥</label>
+</div>
+
+<div class="slider">
+
+<img id="productImage"
+     src="per (21).jpeg"
+     data-images="per (21).jpeg,per (20).jpeg,per (19).jpeg"
+     class="product">
+
+<br>
+
+<button class="arrow"
+onclick="previous()">❮</button>
+
+<button class="arrow"
+onclick="next()">❯</button>
+
+<br><br>
+
+<span id="dot1">●</span>
+<span id="dot2">○</span>
+<span id="dot3">○</span>
+
+</div>
+
+<h1>Unisex Botanical Fresh Eau de Parfum</h1>
+
+<h2 class="price">₹1,399</h2>
+
+<div class="discount">
+41% OFF
+</div>
+
+<h2>
+₹1,399
+<del>₹2,399</del>
+</h2>
+
+
+<h3>Select Size</h3>
+
+<label><input type="radio" name="size"> 30 ml</label>
+
+<label><input type="radio" name="size"> 50 ml</label>
+
+<label><input type="radio" name="size"> 75 ml</label>
+
+<label><input type="radio" name="size"> 100 ml</label>
+
+<label><input type="radio" name="size"> 150 ml</label>
+
+<br><br>
+
+<button class="buy"
+onclick="showBuy()">
+Buy Now
+</button>
+
+<hr>
+
+
+<h2>Product Details</h2>
+
+<h3>Top Highlights</h3>
+
+<ul>
+<li>✔️ Premium Unisex Eau de Parfum</li>
+<li>✔️ Fresh Botanical and Green Fragrance</li>
+<li>✔️ Light, Clean and Refreshing Aroma</li>
+<li>✔️ Elegant Minimal Bottle Design</li>
+<li>✔️ Suitable for Everyday and Outdoor Wear</li>
+</ul>
+
+<h2>Description</h2>
+
+<p>
+Refresh your senses with this Unisex Botanical Fresh Eau de Parfum from Vasudev Sugandh Kendra. Inspired by fresh green notes and botanical aromas, this fragrance offers a clean and refreshing character that can be comfortably enjoyed by both men and women.
+</p>
+
+<p>
+The light and pleasant fragrance makes it suitable for college, office, travel, shopping, casual outings, daytime gatherings and everyday use. Its fresh character is especially suitable for warm days and outdoor occasions where a clean and refreshing scent is preferred.
+</p>
+
+<p>
+Available in multiple bottle sizes and fragrance choices, this Navira perfume collection lets you select the quantity and scent that matches your personal preference. The simple and elegant presentation also makes it a suitable gift for friends, family members and anyone who enjoys fresh fragrances.
+</p>
+
+<h2>Additional Information</h2>
+
+<table>
+
+<tr>
+<td>Brand</td>
+<td>Navira</td>
+</tr>
+
+<tr>
+<td>Shop</td>
+<td>Vasudev Sugandh Kendra</td>
+</tr>
+
+<tr>
+<td>Fragrance</td>
+<td>Botanical Fresh</td>
+</tr>
+
+<tr>
+<td>Fragrance Type</td>
+<td>Fresh, Green & Botanical</td>
+</tr>
+
+<tr>
+<td>Category</td>
+<td>Eau de Parfum</td>
+</tr>
+
+<tr>
+<td>Gender</td>
+<td>Unisex</td>
+</tr>
+
+<tr>
+<td>Size</td>
+<td>30 ml, 50 ml, 75 ml, 100 ml, 150 ml</td>
+</tr>
+
+<tr>
+<td>Occasion</td>
+<td>Casual, Office, Travel, Outdoor & Everyday Wear</td>
+</tr>
+
+<tr>
+<td>Country</td>
+<td>India</td>
+</tr>
+
+<tr>
+<td>Weight</td>
+<td>410 g</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<!-- RIGHT SIDE -->
+
+<div class="right" id="rightPanel">
+
+<button onclick="goBack()" class="backCheckout">← Back</button>
+
+<h2>Checkout</h2>
+
+<hr>
+
+<h3>Delivery Details</h3>
+
+<label>Full Name</label><br>
+<input type="text" placeholder="Enter your Full Name">
+
+<br><br>
+
+<label>Phone Number</label><br>
+<input type="tel" placeholder="9876543210">
+
+<br><br>
+
+<label>Email Address</label><br>
+<input type="email" placeholder="example@gmail.com">
+
+<br><br>
+
+<label>House Name</label><br>
+<input type="text" placeholder="House Name">
+
+<br><br>
+
+<label>Street</label><br>
+<input type="text" placeholder="Street">
+
+<br><br>
+
+<label>City</label><br>
+<input type="text" placeholder="City">
+
+<br><br>
+
+<label>State</label><br>
+<input type="text" placeholder="State">
+
+<br><br>
+
+<label>PIN Code</label><br>
+<input type="text" placeholder="PIN Code">
+
+<hr>
+
+<h3>Select Payment Method</h3>
+
+<label>
+<input type="radio" name="pay">
+<img src="gpay.jpeg" width="28">
+Google Pay
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="phonepe.jpeg" width="28">
+PhonePe
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="paytm.jpeg" width="28">
+Paytm
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="upi.jpeg" width="28">
+UPI
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="card.jpeg" width="28">
+Credit / Debit Card
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="netbanking.jpeg" width="28">
+Net Banking
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="cod.jpeg" width="28">
+Cash on Delivery
+</label>
+
+<hr>
+<hr>
+
+<h3>Product Options</h3>
+
+<label>Selected Fragrance</label><br>
+
+<select>
+<option>Botanical Fresh</option>
+<option>Royal Amber</option>
+<option>Honey Oud</option>
+<option>Fresh Citrus</option>
+<option>Ocean Breeze</option>
+<option>Vanilla Musk</option>
+</select>
+
+<br><br>
+
+<label>Selected Size</label><br>
+
+<select>
+<option>30 ml</option>
+<option>50 ml</option>
+<option>75 ml</option>
+<option>100 ml</option>
+<option>150 ml</option>
+</select>
+
+<br><br>
+
+<hr>
+
+<h3>Order Summary</h3>
+
+<table width="100%">
+
+<tr>
+<td>Product</td>
+<td align="right">Botanical Fresh Eau de Parfum</td>
+</tr>
+
+<tr>
+<td>Price</td>
+<td align="right">₹1,399</td>
+</tr>
+
+<tr>
+<td>Delivery</td>
+<td align="right">FREE</td>
+</tr>
+
+<tr>
+<th>Total</th>
+<th align="right">₹1,399</th>
+</tr>
+
+</table>
+
+<br>
+
+<button class="place"
+onclick="stock()">
+Place Order
+</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

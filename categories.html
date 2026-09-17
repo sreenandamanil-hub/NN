@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Navira - Categories</title>
+
+<link rel="stylesheet" href="super.css">
+
+<style>
+
+/* =========================================================
+   NAVIRA CATEGORIES
+   MEN + WOMEN
+   ========================================================= */
+
+.naviraCategoriesPage{
+    --cat-border:var(--navira-theme-dark,#2F5D8C);
+    background:#f7faff;
+    min-height:100vh;
+    padding-bottom:90px;
+}
+
+/* ================= HEADER ================= */
+
+.naviraCategoriesHeader{
+    position:sticky;
+    top:0;
+    z-index:9000;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    margin:5px 8px 10px;
+    padding:10px 14px;
+
+    min-height:58px;
+
+    background:#fff;
+
+    border:2px solid var(--cat-border);
+    border-radius:12px;
+
+    box-sizing:border-box;
+}
+
+.naviraCategoriesHeader h1{
+    margin:0;
+    font-size:23px;
+    text-align:center;
+    flex:1;
+}
+
+.naviraCatBack{
+    width:42px;
+    height:42px;
+
+    border:0;
+    background:transparent;
+
+    font-size:29px;
+    cursor:pointer;
+}
+
+.naviraCatHeaderSpace{
+    width:42px;
+}
+
+
+/* =========================================================
+   MAIN LAYOUT
+
+   LEFT  = MEN / WOMEN
+   RIGHT = SELECTED CATEGORY + SUBCATEGORIES + PRODUCTS
+   ========================================================= */
+
+.naviraCategoryLayout{
+    width:100%;
+    max-width:1500px;
+
+    margin:0 auto;
+    padding:0 8px;
+
+    display:grid;
+
+    grid-template-columns:190px minmax(0,1fr);
+
+    gap:12px;
+
+    box-sizing:border-box;
+
+    align-items:start;
+}
+
+
+/* =========================================================
+   LEFT SIDE
+   MEN / WOMEN
+   ========================================================= */
+
+.naviraMainCategoryRail{
+    position:sticky;
+    top:78px;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:14px;
+
+    padding:12px;
+
+    background:#fff;
+
+    border:2px solid var(--cat-border);
+    border-radius:14px;
+
+    box-sizing:border-box;
+}
+
+.naviraMainCategoryButton{
+    width:100%;
+
+    border:2px solid #ddd;
+    border-radius:14px;
+
+    background:#fff;
+
+    padding:10px 7px 12px;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.naviraMainCategoryButton:hover,
+.naviraMainCategoryButton.active{
+    border-color:var(--cat-border);
+
+    transform:translateY(-2px);
+
+    box-shadow:0 4px 12px rgba(0,0,0,.10);
+}
+
+.naviraMainCategoryImage{
+    width:125px;
+    height:125px;
+
+    max-width:100%;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    display:block;
+
+    border:2px solid #e4e4e4;
+
+    background:#f5f5f5;
+}
+
+.naviraMainCategoryButton span{
+    display:block;
+
+    margin-top:8px;
+
+    font-size:18px;
+
+    font-weight:700;
+}
+
+
+/* =========================================================
+   RIGHT SIDE
+   ========================================================= */
+
+.naviraCategoryContent{
+    min-width:0;
+}
+
+
+/* =========================================================
+   MEN / WOMEN MAIN SECTION
+   ========================================================= */
+
+.naviraGenderSection{
+    scroll-margin-top:82px;
+
+    background:#fff;
+
+    border:2px solid var(--cat-border);
+
+    border-radius:16px;
+
+    padding:18px;
+
+    margin-bottom:18px;
+
+    box-sizing:border-box;
+}
+
+.naviraGenderHeading{
+    margin:0 0 5px;
+
+    font-size:28px;
+}
+
+.naviraGenderSubheading{
+    margin:0 0 18px;
+
+    color:#666;
+
+    font-size:14px;
+}
+
+
+/* =========================================================
+   SUBCATEGORY CIRCLES
+
+   Example:
+   Caps
+   Blazers
+   Jackets
+   Shirts
+   Pants
+   Watches
+   etc.
+   ========================================================= */
+
+.naviraSubcategoryScroller{
+    display:flex;
+
+    gap:18px;
+
+    overflow-x:auto;
+
+    padding:4px 4px 14px;
+
+    scroll-behavior:smooth;
+
+    scrollbar-width:thin;
+}
+
+.naviraSubcategoryButton{
+    flex:0 0 128px;
+
+    border:0;
+
+    background:transparent;
+
+    cursor:pointer;
+
+    text-align:center;
+
+    padding:0;
+}
+
+.naviraSubcategoryImage{
+    width:112px;
+    height:112px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    display:block;
+
+    margin:auto;
+
+    border:2px solid #ddd;
+
+    background:#f4f4f4;
+
+    transition:.2s;
+}
+
+.naviraSubcategoryButton:hover .naviraSubcategoryImage{
+    border-color:var(--cat-border);
+
+    transform:scale(1.05);
+}
+
+.naviraSubcategoryButton span{
+    display:block;
+
+    margin-top:8px;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    line-height:1.2;
+}
+
+
+/* =========================================================
+   PRODUCT SECTION
+
+   Example:
+
+   CAPS & HATS
+
+   [All] [Men] [Women]
+
+   product 1
+   product 2
+   ...
+   ========================================================= */
+
+.naviraProductSection{
+    scroll-margin-top:82px;
+
+    margin-top:18px;
+
+    padding-top:18px;
+
+    border-top:1px solid #ddd;
+}
+
+.naviraProductSection h3{
+    margin:0;
+
+    font-size:22px;
+}
+
+.naviraProductSectionTop{
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:10px;
+
+    margin-bottom:12px;
+}
+
+
+/* ================= FILTERS ================= */
+
+.naviraFilterRow{
+    display:flex;
+
+    gap:6px;
+
+    flex-wrap:wrap;
+
+    justify-content:flex-end;
+}
+
+.naviraFilterButton{
+    border:1px solid #bbb;
+
+    background:#fff;
+
+    color:#333;
+
+    border-radius:18px;
+
+    padding:7px 13px;
+
+    font-size:12px;
+
+    cursor:pointer;
+}
+
+.naviraFilterButton.active{
+    background:var(--cat-border);
+
+    color:#fff;
+
+    border-color:var(--cat-border);
+}
+
+
+/* =========================================================
+   PRODUCT GRID
+   ========================================================= */
+
+.naviraProductGrid{
+    display:grid;
+
+    grid-template-columns:repeat(5,minmax(0,1fr));
+
+    gap:15px;
+}
+
+.naviraProductCard{
+    min-width:0;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+    background:#fff;
+
+    padding:9px;
+
+    box-sizing:border-box;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.naviraProductCard:hover{
+    transform:translateY(-2px);
+
+    box-shadow:0 4px 14px rgba(0,0,0,.10);
+}
+
+
+/* PRODUCT IMAGE */
+
+.naviraProductImage{
+    width:100%;
+
+    aspect-ratio:1/1;
+
+    border-radius:50%;
+
+    object-fit:contain;
+
+    display:block;
+
+    background:#f7f7f7;
+
+    border:1px solid #eee;
+}
+
+.naviraProductName{
+    margin:9px 2px 4px;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    line-height:1.25;
+
+    min-height:35px;
+}
+
+.naviraProductPrice{
+    font-size:16px;
+
+    font-weight:700;
+}
+
+.naviraProductOld{
+    margin-left:5px;
+
+    color:#888;
+
+    font-size:11px;
+}
+
+.naviraProductDiscount{
+    margin-top:4px;
+
+    color:green;
+
+    font-size:12px;
+
+    font-weight:700;
+}
+
+.naviraProductRating{
+    margin-top:4px;
+
+    color:#f3a400;
+
+    font-size:12px;
+}
+
+
+/* EMPTY */
+
+.naviraEmpty{
+    padding:20px;
+
+    text-align:center;
+
+    color:#777;
+
+    border:1px dashed #bbb;
+
+    border-radius:10px;
+}
+
+
+/* =========================================================
+   TOP BUTTON
+   ========================================================= */
+
+.naviraTopButton{
+    position:fixed;
+
+    right:18px;
+
+    bottom:84px;
+
+    z-index:8000;
+
+    border:1px solid var(--cat-border);
+
+    background:#fff;
+
+    color:var(--cat-border);
+
+    border-radius:20px;
+
+    padding:8px 12px;
+
+    cursor:pointer;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.12);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media(max-width:1100px){
+
+    .naviraCategoryLayout{
+        grid-template-columns:155px minmax(0,1fr);
+    }
+
+    .naviraMainCategoryImage{
+        width:105px;
+        height:105px;
+    }
+
+    .naviraMainCategoryButton span{
+        font-size:16px;
+    }
+
+    .naviraProductGrid{
+        grid-template-columns:repeat(4,minmax(0,1fr));
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media(max-width:700px){
+
+    .naviraCategoriesHeader{
+        min-height:52px;
+
+        padding:7px 9px;
+    }
+
+    .naviraCategoriesHeader h1{
+        font-size:19px;
+    }
+
+    .naviraCategoryLayout{
+        grid-template-columns:92px minmax(0,1fr);
+
+        gap:7px;
+
+        padding:0 5px;
+    }
+
+    .naviraMainCategoryRail{
+        top:65px;
+
+        padding:7px 5px;
+
+        gap:8px;
+
+        border-radius:11px;
+    }
+
+    .naviraMainCategoryButton{
+        padding:6px 3px 8px;
+
+        border-radius:10px;
+    }
+
+    .naviraMainCategoryImage{
+        width:70px;
+        height:70px;
+    }
+
+    .naviraMainCategoryButton span{
+        font-size:13px;
+
+        margin-top:5px;
+    }
+
+
+    .naviraGenderSection{
+        padding:10px;
+
+        border-radius:12px;
+
+        scroll-margin-top:65px;
+    }
+
+    .naviraGenderHeading{
+        font-size:21px;
+    }
+
+    .naviraGenderSubheading{
+        margin-bottom:10px;
+
+        font-size:12px;
+    }
+
+
+    .naviraSubcategoryScroller{
+        gap:8px;
+
+        padding-bottom:10px;
+    }
+
+    .naviraSubcategoryButton{
+        flex-basis:82px;
+    }
+
+    .naviraSubcategoryImage{
+        width:68px;
+        height:68px;
+    }
+
+    .naviraSubcategoryButton span{
+        font-size:11px;
+
+        margin-top:5px;
+    }
+
+
+    .naviraProductSection{
+        scroll-margin-top:65px;
+
+        margin-top:13px;
+
+        padding-top:13px;
+    }
+
+    .naviraProductSectionTop{
+        display:block;
+    }
+
+    .naviraProductSection h3{
+        font-size:18px;
+
+        margin-bottom:8px;
+    }
+
+
+    .naviraFilterRow{
+        justify-content:flex-start;
+
+        overflow-x:auto;
+
+        flex-wrap:nowrap;
+
+        padding-bottom:4px;
+    }
+
+    .naviraFilterButton{
+        flex:0 0 auto;
+
+        padding:6px 10px;
+    }
+
+
+    .naviraProductGrid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+
+        gap:8px;
+    }
+
+    .naviraProductCard{
+        padding:6px;
+
+        border-radius:9px;
+    }
+
+    .naviraProductName{
+        font-size:12px;
+
+        min-height:31px;
+    }
+
+    .naviraProductPrice{
+        font-size:14px;
+    }
+
+    .naviraProductDiscount,
+    .naviraProductRating{
+        font-size:10px;
+    }
+
+
+    .naviraTopButton{
+        right:10px;
+
+        bottom:75px;
+
+        font-size:11px;
+    }
+}
+
+</style>
+</head>
+
+
+<body class="naviraCategoriesPage">
+
+
+<!-- =====================================================
+     HEADER
+     ===================================================== -->
+
+<header class="naviraCategoriesHeader">
+
+    <button
+        type="button"
+        class="naviraCatBack"
+        onclick="location.href='index.html'">
+        ←
+    </button>
+
+    <h1>Categories</h1>
+
+    <div class="naviraCatHeaderSpace"></div>
+
+</header>
+
+
+<!-- =====================================================
+     MAIN CATEGORY LAYOUT
+
+     LEFT:
+     MEN
+     WOMEN
+
+     RIGHT:
+     MEN / WOMEN CONTENT
+     ===================================================== -->
+
+<main class="naviraCategoryLayout">
+
+
+    <!-- ================= LEFT ================= -->
+
+    <aside class="naviraMainCategoryRail" aria-label="Main categories">
+
+    <!-- AUDIENCE -->
+    <div class="naviraCategoryGroup">
+        <h3 class="naviraCategoryGroupTitle">Shop By</h3>
+
+        <button type="button"
+                class="naviraMainCategoryButton"
+                onclick="scrollToGender('men')">
+            <img id="mainMenImage"
+                 class="naviraMainCategoryImage"
+                 src=""
+                 alt="Men">
+            <span>Men</span>
+        </button>
+
+        <button type="button"
+                class="naviraMainCategoryButton"
+                onclick="scrollToGender('women')">
+            <img id="mainWomenImage"
+                 class="naviraMainCategoryImage"
+                 src=""
+                 alt="Women">
+            <span>Women</span>
+        </button>
+
+        <button type="button"
+                class="naviraMainCategoryButton"
+                onclick="scrollToGender('boys')">
+            <img id="mainBoysImage"
+                 class="naviraMainCategoryImage"
+                 src=""
+                 alt="Boys">
+            <span>Boys</span>
+        </button>
+
+        <button type="button"
+                class="naviraMainCategoryButton"
+                onclick="scrollToGender('girls')">
+            <img id="mainGirlsImage"
+                 class="naviraMainCategoryImage"
+                 src=""
+                 alt="Girls">
+            <span>Girls</span>
+        </button>
+
+        <button type="button"
+                class="naviraMainCategoryButton"
+                onclick="scrollToGender('baby')">
+            <img id="mainBabyImage"
+                 class="naviraMainCategoryImage"
+                 src=""
+                 alt="Baby">
+            <span>Baby</span>
+        </button>
+
+        <button type="button"
+                class="naviraMainCategoryButton"
+                onclick="scrollToGender('common')">
+            <img id="mainCommonImage"
+                 class="naviraMainCategoryImage"
+                 src=""
+                 alt="Common / Unisex">
+            <span>Common</span>
+        </button>
+    </div>
+
+
+    <!-- PRODUCT CATEGORIES -->
+    <div class="naviraCategoryGroup">
+
+        <h3 class="naviraCategoryGroupTitle">Categories</h3>
+
+        <button type="button"
+                class="naviraMainCategoryButton"
+                onclick="naviraSelectCategory('cap')">
+            <img class="naviraMainCategoryImage"
+                 src=""
+                 data-category-image="cap"
+                 alt="Caps">
+            <span>Caps</span>
+        </button>
+
+        <button type="button"
+                class="naviraMainCategoryButton"
+                onclick="naviraSelectCategory('blazer')">
+            <img class="naviraMainCategoryImage"
+                 src=""
+                 data-category-image="blazer"
+                 alt="Blazers">
+            <span>Blazers</span>
+        </button>
+
+        <button type="button"
+                class="naviraMainCategoryButton"
+                onclick="naviraSelectCategory('jacket')">
+            <img class="naviraMainCategoryImage"
+                 src=""
+                 data-category-image="jacket"
+                 alt="Jackets">
+            <span>Jackets</span>
+        </button>
+
+        <button type="button"
+                class="naviraMainCategoryButton"
+                onclick="naviraSelectCategory('hoodie')">
+            <img class="naviraMainCategoryImage"
+                 src=""
+                 data-category-image="hoodie"
+                 alt="Hoodies">
+            <span>Hoodies</span>
+        </button>
+
+        <button type="button"
+                class="naviraMainCategoryButton"
+                onclick="naviraSelectCategory('shirt')">
+            <img class="naviraMainCategoryImage"
+                 src=""
+                 data-category-image="shirt"
+                 alt="Shirts">
+            <span>Shirts</span>
+        </button>
+
+        <button type="button"
+                class="naviraMainCategoryButton"
+                onclick="naviraSelectCategory('tshirt')">
+            <img class="naviraMainCategoryImage"
+                 src=""
+                 data-category-image="tshirt"
+                 alt="T-Shirts">
+            <span>T-Shirts</span>
+        </button>
+
+        <button type="button"
+                class="naviraMainCategoryButton"
+                onclick="naviraSelectCategory('pant')">
+            <img class="naviraMainCategoryImage"
+                 src=""
+                 data-category-image="pant"
+                 alt="Pants">
+            <span>Pants</span>
+        </button>
+
+        <button type="button"
+                class="naviraMainCategoryButton"
+                onclick="naviraSelectCategory('jeans')">
+            <img class="naviraMainCategoryImage"
+                 src=""
+                 data-category-image="jeans"
+                 alt="Jeans">
+            <span>Jeans</span>
+        </button>
+
+        <button type="button"
+                class="naviraMainCategoryButton"
+                onclick="naviraSelectCategory('shoes')">
+            <img class="naviraMainCategoryImage"
+                 src=""
+                 data-category-image="shoes"
+                 alt="Shoes">
+            <span>Shoes</span>
+        </button>
+
+        <button type="button"
+                class="naviraMainCategoryButton"
+                onclick="naviraSelectCategory('bag')">
+            <img class="naviraMainCategoryImage"
+                 src=""
+                 data-category-image="bag"
+                 alt="Bags">
+            <span>Bags</span>
+        </button>
+
+        <button type="button"
+                class="naviraMainCategoryButton"
+                onclick="naviraSelectCategory('watch')">
+            <img class="naviraMainCategoryImage"
+                 src=""
+                 data-category-image="watch"
+                 alt="Watches">
+            <span>Watches</span>
+        </button>
+
+        <button type="button"
+                class="naviraMainCategoryButton"
+                onclick="naviraSelectCategory('belt')">
+            <img class="naviraMainCategoryImage"
+                 src=""
+                 data-category-image="belt"
+                 alt="Belts">
+            <span>Belts</span>
+        </button>
+
+        <button type="button"
+                class="naviraMainCategoryButton"
+                onclick="naviraSelectCategory('mundu')">
+            <img class="naviraMainCategoryImage"
+                 src=""
+                 data-category-image="mundu"
+                 alt="Mundu">
+            <span>Mundu</span>
+        </button>
+
+        <button type="button"
+                class="naviraMainCategoryButton"
+                onclick="naviraSelectCategory('nightwear')">
+            <img class="naviraMainCategoryImage"
+                 src=""
+                 data-category-image="nightwear"
+                 alt="Nightwear">
+            <span>Nightwear</span>
+        </button>
+
+        <button type="button"
+                class="naviraMainCategoryButton"
+                onclick="naviraSelectCategory('saree')">
+            <img class="naviraMainCategoryImage"
+                 src=""
+                 data-category-image="saree"
+                 alt="Sarees">
+            <span>Sarees</span>
+        </button>
+
+        <button type="button"
+                class="naviraMainCategoryButton"
+                onclick="naviraSelectCategory('skirt')">
+            <img class="naviraMainCategoryImage"
+                 src=""
+                 data-category-image="skirt"
+                 alt="Skirts">
+            <span>Skirts</span>
+        </button>
+
+        <button type="button"
+                class="naviraMainCategoryButton"
+                onclick="naviraSelectCategory('beauty')">
+            <img class="naviraMainCategoryImage"
+                 src=""
+                 data-category-image="beauty"
+                 alt="Beauty">
+            <span>Beauty</span>
+        </button>
+
+        <button type="button"
+                class="naviraMainCategoryButton"
+                onclick="naviraSelectCategory('jewellery')">
+            <img class="naviraMainCategoryImage"
+                 src=""
+                 data-category-image="jewellery"
+                 alt="Jewellery">
+            <span>Jewellery</span>
+        </button>
+
+        <button type="button"
+                class="naviraMainCategoryButton"
+                onclick="naviraSelectCategory('perfume')">
+            <img class="naviraMainCategoryImage"
+                 src=""
+                 data-category-image="perfume"
+                 alt="Perfume">
+            <span>Perfume</span>
+        </button>
+
+        <button type="button"
+                class="naviraMainCategoryButton"
+                onclick="naviraSelectCategory('bedsheet')">
+            <img class="naviraMainCategoryImage"
+                 src=""
+                 data-category-image="bedsheet"
+                 alt="Bedsheets">
+            <span>Bedsheets</span>
+        </button>
+
+        <button type="button"
+                class="naviraMainCategoryButton"
+                onclick="naviraSelectCategory('blanket')">
+            <img class="naviraMainCategoryImage"
+                 src=""
+                 data-category-image="blanket"
+                 alt="Blankets">
+            <span>Blankets</span>
+        </button>
+		
+		
+
+
+        <button type="button"
+                class="naviraMainCategoryButton"
+                onclick="naviraSelectCategory('towel')">
+            <img class="naviraMainCategoryImage"
+                 src=""
+                 data-category-image="towel"
+                 alt="Towels">
+            <span>Towels</span>
+        </button>
+
+    </div>
+
+</aside>
+
+    <!-- ================= RIGHT ================= -->
+
+    <section
+        class="naviraCategoryContent"
+        id="naviraCategoryContent">
+
+    </section>
+
+
+</main>
+
+
+<!-- TOP -->
+
+<button
+    type="button"
+    class="naviraTopButton"
+    onclick="scrollToTop()">
+
+    ↑ Top
+
+</button>
+
+
+<!-- =====================================================
+     ABOUT POPUP
+     Compatible with your existing bottom-nav.js
+     ===================================================== -->
+
+<div
+    class="aboutOverlay"
+    id="aboutOverlay">
+
+    <div class="aboutBox">
+
+        <button
+            type="button"
+            class="closeAbout"
+            onclick="closeAbout()">
+
+            ×
+
+        </button>
+
+        <h2>ℹ️ About Navira</h2>
+
+        <div class="aboutContent"></div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     EXISTING NAVIRA FILES
+     DO NOT CHANGE THEM
+     ===================================================== -->
+<script src="products.js" onerror="alert('ERROR: products.js file cannot be loaded')"></script>
+<script src="settings.js"></script>
+<script src="wishlist.js"></script>
+<script src="bottom-nav.js"></script>
+<script src="categories.js"></script>
+
+<!-- NEW CATEGORY FILE -->
+</body>
+</html>

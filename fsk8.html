@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Navira</title>
+    <link rel="stylesheet" href="super.css">
+</head>
+<body>
+
+<button class="backTop" onclick="history.back()">← Back</button>
+
+<div class="topbox">
+    <div class="details">
+        <h2 class="shop">Saraswathi Ethnic Vasthra Nilayam</h2>
+        <div class="stars">
+            ★★★★★
+            <span>6,392 Ratings</span>
+        </div>
+        <p class="desc">
+            Kerala Style Flared Skirt and Blouse Set with Graceful Traditional Detailing
+        </p>
+    </div>
+</div>
+
+<div class="container">
+
+<div class="left">
+
+<div class="likeBox">
+    <input type="checkbox" id="fav">
+    <label for="fav">♥</label>
+</div>
+
+<div class="slider">
+
+<img id="productImage"
+     src="fsk (6).jpeg"
+     data-images="fsk (6).jpeg, fsk (5).jpeg, fsk (4).jpeg"
+     class="product">
+
+<br>
+
+<button class="arrow" onclick="previous()">❮</button>
+<button class="arrow" onclick="next()">❯</button>
+
+<br><br>
+
+<span id="dot1">●</span>
+<span id="dot2">○</span>
+<span id="dot3">○</span>
+
+</div>
+
+<h1>Kerala Style Flared Skirt and Blouse Set with Graceful Traditional Detailing</h1>
+
+<h2 class="price">₹2,299</h2>
+
+<div class="discount">
+34% OFF
+</div>
+
+<h2>
+₹2,299
+<del>₹3,499</del>
+</h2>
+
+<h3>Select Size</h3>
+
+<label><input type="radio" name="size"> S</label>
+<label><input type="radio" name="size"> M</label>
+<label><input type="radio" name="size"> L</label>
+<label><input type="radio" name="size"> XL</label>
+<label><input type="radio" name="size"> XXL</label>
+
+<br><br>
+
+<button class="buy" onclick="showBuy()">
+Buy Now
+</button>
+
+<hr>
+
+<h2>Product Details</h2>
+
+<h3>Top Highlights</h3>
+
+<ul>
+<li>✔️ Kerala Inspired Traditional Skirt Set</li>
+<li>✔️ Graceful Flared Skirt Design</li>
+<li>✔️ Coordinated Blouse</li>
+<li>✔️ Elegant Traditional Detailing</li>
+<li>✔️ Suitable for Festive and Cultural Occasions</li>
+</ul>
+
+<h2>Description</h2>
+
+<p>
+This Kerala Style Skirt and Blouse Set is designed with a graceful traditional appearance that blends cultural charm with a comfortable modern fit. The flowing skirt and coordinated blouse create an elegant ethnic look.
+</p>
+
+<p>
+The detailed traditional styling makes this outfit suitable for women who enjoy classic Kerala-inspired fashion. It can be paired with traditional jewellery and simple accessories for a beautiful festive appearance.
+</p>
+
+<p>
+Perfect for Onam, Vishu, weddings, family functions, cultural programmes and other festive occasions, this skirt set offers a versatile traditional outfit for celebrations and special gatherings.
+</p>
+
+<h2>Additional Information</h2>
+
+<table>
+
+<tr>
+<td>Brand</td>
+<td>Saraswathi Ethnic Vasthra</td>
+</tr>
+
+<tr>
+<td>Colour</td>
+<td>Multiple Colour Combinations Available</td>
+</tr>
+
+<tr>
+<td>Material</td>
+<td>Comfortable Fabric</td>
+</tr>
+
+<tr>
+<td>Style</td>
+<td>Kerala Style Skirt Set</td>
+</tr>
+
+<tr>
+<td>Pattern</td>
+<td>Traditional Detailing</td>
+</tr>
+
+<tr>
+<td>Size</td>
+<td>S, M, L, XL & XXL</td>
+</tr>
+
+<tr>
+<td>Top Type</td>
+<td>Coordinated Blouse</td>
+</tr>
+
+<tr>
+<td>Bottom Type</td>
+<td>Flared Traditional Skirt</td>
+</tr>
+
+<tr>
+<td>Occasion</td>
+<td>Onam, Vishu, Wedding, Festive & Traditional Events</td>
+</tr>
+
+<tr>
+<td>Country</td>
+<td>India</td>
+</tr>
+
+<tr>
+<td>Weight</td>
+<td>670 g</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="right" id="rightPanel">
+
+<button onclick="goBack()" class="backCheckout">← Back</button>
+
+<h2>Checkout</h2>
+
+<hr>
+
+<h3>Delivery Details</h3>
+
+<label>Full Name</label><br>
+<input type="text" placeholder="Enter your Full Name">
+
+<br><br>
+
+<label>Phone Number</label><br>
+<input type="tel" placeholder="9876543210">
+
+<br><br>
+
+<label>Email Address</label><br>
+<input type="email" placeholder="example@gmail.com">
+
+<br><br>
+
+<label>House Name</label><br>
+<input type="text" placeholder="House Name">
+
+<br><br>
+
+<label>Street</label><br>
+<input type="text" placeholder="Street">
+
+<br><br>
+
+<label>City</label><br>
+<input type="text" placeholder="City">
+
+<br><br>
+
+<label>State</label><br>
+<input type="text" placeholder="State">
+
+<br><br>
+
+<label>PIN Code</label><br>
+<input type="text" placeholder="PIN Code">
+
+<hr>
+
+<h3>Select Payment Method</h3>
+
+<label>
+<input type="radio" name="pay">
+<img src="gpay.jpeg" width="28">
+Google Pay
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="phonepe.jpeg" width="28">
+PhonePe
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="paytm.jpeg" width="28">
+Paytm
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="upi.jpeg" width="28">
+UPI
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="card.jpeg" width="28">
+Credit / Debit Card
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="netbanking.jpeg" width="28">
+Net Banking
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="cod.jpeg" width="28">
+Cash on Delivery
+</label>
+
+<hr>
+<hr>
+
+<h3>Product Options</h3>
+
+<label>Selected Colour</label><br>
+
+<select>
+<option>Available Colour Combination</option>
+<option>Traditional Combination</option>
+<option>Festive Combination</option>
+<option>Classic Combination</option>
+<option>Elegant Combination</option>
+<option>Designer Combination</option>
+</select>
+
+<br><br>
+
+<label>Selected Size</label><br>
+
+<select>
+<option>S</option>
+<option>M</option>
+<option>L</option>
+<option>XL</option>
+<option>XXL</option>
+</select>
+
+<br><br>
+
+<hr>
+
+<h3>Order Summary</h3>
+
+<table width="100%">
+
+<tr>
+<td>Product</td>
+<td align="right">Kerala Style Skirt Set</td>
+</tr>
+
+<tr>
+<td>Price</td>
+<td align="right">₹2,299</td>
+</tr>
+
+<tr>
+<td>Delivery</td>
+<td align="right">FREE</td>
+</tr>
+
+<tr>
+<th>Total</th>
+<th align="right">₹2,299</th>
+</tr>
+
+</table>
+
+<br>
+
+<button class="place" onclick="stock()">
+Place Order
+</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

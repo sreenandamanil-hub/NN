@@ -1,0 +1,434 @@
+<!DOCTYPE html><!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Navira</title>
+    <link rel="stylesheet" href="super.css">
+</head>
+
+<body>
+<button class="backTop" onclick="history.back()">← Back</button>
+
+<!-- Seller Information -->
+<div class="topbox">
+
+<div class="details">
+
+<h2 class="shop">StreetNova Footwear</h2>
+
+<div class="stars">
+★★★★★
+<span>19,384 Ratings</span>
+</div>
+
+<p class="desc">
+Men's & Boys' Platform Street Sneakers with Graphic Socks
+</p>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- Main Container -->
+
+<div class="container">
+
+<!-- LEFT SIDE -->
+
+<div class="left">
+<div class="likeBox">
+    <input type="checkbox" id="fav">
+    <label for="fav">♥</label>
+</div>
+
+<div class="slider">
+
+<img id="productImage"
+     src="shoe (9).jpeg"
+     data-images="shoe (9).jpeg,  shoe (8).jpeg,   shoe (7).jpeg"
+     class="product">
+<br>
+
+<button class="arrow"
+onclick="previous()">❮</button>
+
+<button class="arrow"
+onclick="next()">❯</button>
+
+<br><br>
+
+<span id="dot1">●</span>
+<span id="dot2">○</span>
+<span id="dot3">○</span>
+
+</div>
+<h1>Men's & Boys' Platform Street Sneakers with Graphic Socks</h1>
+
+<h2 class="price">₹3,299</h2>
+
+<div class="discount">
+45% OFF
+</div>
+
+<h2>
+₹3,299
+<del>₹5,999</del>
+</h2>
+
+
+
+
+
+
+
+
+
+
+<h3>Select Size</h3>
+
+<label><input type="radio" name="size"> UK 6</label>
+
+<label><input type="radio" name="size"> UK 7</label>
+
+<label><input type="radio" name="size"> UK 8</label>
+
+<label><input type="radio" name="size"> UK 9</label>
+
+<label><input type="radio" name="size"> UK 10</label>
+
+<label><input type="radio" name="size"> UK 11</label>
+
+<br><br>
+
+<button class="buy" onclick="showBuy()">
+Buy Now
+</button>
+</button>
+
+<hr>
+
+<h2>Product Details</h2>
+
+<h3>Top Highlights</h3>
+
+<ul>
+
+<li>✔️ Premium Synthetic Leather & Mesh Upper</li>
+
+<li>✔️ Chunky Platform EVA Sole</li>
+
+<li>✔️ Soft Graphic Crew Socks Included</li>
+
+<li>✔️ Anti-Slip Rubber Grip Outsole</li>
+
+<li>✔️ Available in Multiple Colour Options</li>
+
+<li>✔️ Perfect for Streetwear, College, Travel & Daily Wear</li>
+
+</ul>
+
+<h2>Description</h2>
+
+<p>
+
+Stand out with this premium platform sneaker combo designed for men and boys. Featuring a breathable mesh and premium synthetic leather upper, these sneakers deliver lasting comfort, durability and reliable support for everyday use. The chunky platform EVA sole provides excellent cushioning and stability, while the anti-slip rubber outsole offers dependable grip on different surfaces. The included premium graphic crew socks complete this stylish combo, making it perfect for streetwear, college, shopping, travel and daily wear. Available in a variety of colour options to suit your personal style.
+
+</p>
+
+<h2>Additional Information</h2>
+
+<table>
+
+<tr>
+<td>Brand</td>
+<td>StreetNova</td>
+</tr>
+
+<tr>
+<td>Colour</td>
+<td>Multiple Colours Available</td>
+</tr>
+
+<tr>
+<td>Type</td>
+<td>Platform Street Sneakers Combo</td>
+</tr>
+
+<tr>
+<td>Upper Material</td>
+<td>Premium Synthetic Leather & Breathable Mesh</td>
+</tr>
+
+<tr>
+<td>Sole Material</td>
+<td>Chunky EVA Midsole with Rubber Outsole</td>
+</tr>
+
+<tr>
+<td>Closure</td>
+<td>Lace-Up</td>
+</tr>
+
+<tr>
+<td>Fit</td>
+<td>Comfort Street Fit</td>
+</tr>
+
+<tr>
+<td>Toe Shape</td>
+<td>Round Toe</td>
+</tr>
+
+<tr>
+<td>Insole</td>
+<td>Soft Memory Foam Cushion</td>
+</tr>
+
+<tr>
+<td>Socks Included</td>
+<td>1 Pair Premium Graphic Crew Socks</td>
+</tr>
+
+<tr>
+<td>Sock Material</td>
+<td>Combed Cotton, Polyester & Elastane Blend</td>
+</tr>
+
+<tr>
+<td>Occasion</td>
+<td>Streetwear, College, Casual Wear, Travel & Daily Use</td>
+</tr>
+
+<tr>
+<td>Care Instructions</td>
+<td>Clean Shoes with Soft Brush; Machine Wash Socks Separately</td>
+</tr>
+
+<tr>
+<td>Warranty</td>
+<td>6 Months Manufacturing Warranty</td>
+</tr>
+
+<tr>
+<td>Country of Origin</td>
+<td>India</td>
+</tr>
+
+<tr>
+<td>Weight</td>
+<td>940 g (Pair with Socks)</td>
+</tr>
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<!-- RIGHT SIDE -->
+
+<div class="right" id="rightPanel">
+
+<button onclick="goBack()" class="backCheckout">← Back</button><h2>Checkout</h2>
+
+<hr>
+
+<h3>Delivery Details</h3>
+
+<label>Full Name</label><br>
+<input type="text" placeholder="Enter your Full Name">
+
+<br><br>
+
+<label>Phone Number</label><br>
+<input type="tel" placeholder="9876543210">
+
+<br><br>
+
+<label>Email Address</label><br>
+<input type="email" placeholder="example@gmail.com">
+
+<br><br>
+
+<label>House Name</label><br>
+<input type="text" placeholder="House Name">
+
+<br><br>
+
+<label>Street</label><br>
+<input type="text" placeholder="Street">
+
+<br><br>
+
+<label>City</label><br>
+<input type="text" placeholder="City">
+
+<br><br>
+
+<label>State</label><br>
+<input type="text" placeholder="State">
+
+<br><br>
+
+<label>PIN Code</label><br>
+<input type="text" placeholder="PIN Code">
+
+<hr>
+
+<h3>Select Payment Method</h3>
+
+<label>
+<input type="radio" name="pay">
+<img src="gpay.jpeg" width="28">
+Google Pay
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="phonepe.jpeg" width="28">
+PhonePe
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="paytm.jpeg" width="28">
+Paytm
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="upi.jpeg" width="28">
+UPI
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="card.jpeg" width="28">
+Credit / Debit Card
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="netbanking.jpeg" width="28">
+Net Banking
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+<img src="cod.jpeg" width="28">
+Cash on Delivery
+</label>
+
+<hr>
+<hr>
+
+<h3>Product Options</h3>
+
+<label>Selected Colour</label><br>
+
+<select>
+<option>Blue</option>
+<option>Black</option>
+<option>Pink</option>
+<option>Green</option>
+<option>White</option>
+<option>Red</option>
+</select>
+
+<br><br>
+
+<label>Selected Size</label><br>
+
+<select>
+<option>UK 6</option>
+<option>UK 7</option>
+<option>UK 8</option>
+<option>UK 9</option>
+<option>UK 10</option>
+<option>UK 11</option></select>
+
+<br><br>
+
+<hr>
+<h3>Order Summary</h3>
+
+<table width="100%">
+
+<tr>
+<td>Product</td>
+<td align="right">Men's & Boys' Platform Street Sneakers with Graphic Socks</td>
+</tr>
+
+<tr>
+<td>Price</td>
+<td align="right">₹3,299</td>
+</tr>
+
+<tr>
+<td>Packaging Fee</td>
+<td align="right">₹59</td>
+</tr>
+
+<tr>
+<td>Delivery Charges</td>
+<td align="right">FREE</td>
+</tr>
+
+<tr>
+<th>Total</th>
+<th align="right">₹3,358</th>
+</tr>
+
+</table>
+
+
+
+
+
+
+
+
+<br>
+
+<button class="place"
+onclick="stock()">
+Place Order
+</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
