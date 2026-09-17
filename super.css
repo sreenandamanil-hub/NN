@@ -6512,4 +6512,37 @@ body:has(#products .card) #homeContent {
         margin-top: 10px !important;
         z-index: 1 !important;
     }
+}/* =====================================================
+   NAVIRA HOME - REMOVE BIG TOP SPACE / OVERLAP
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    .naviraOnamSlider {
+        margin-top: 0 !important;
+        margin-bottom: 10px !important;
+    }
+
+    .naviraOnamSlider + #homeContent {
+        margin-top: 0 !important;
+    }
+
+    .naviraTrending {
+        position: relative !important;
+        top: 0 !important;
+        transform: none !important;
+        margin-top: 5px !important;
+    }
+}/* =====================================================
+   NAVIRA HOME - REMOVE BIG TOP SPACE
+   ===================================================== */
+
+html,
+body {
+    margin: 0 !important;
+    padding-top: 0 !important;
+}
+
+.homeTop {
+    margin-top: 0 !important;
 }

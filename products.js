@@ -10895,9 +10895,9 @@ rating: "★★★★★",
 description: "Girls Cute Layered Ruffle Sleeve Dress",
 keywords: "girls baby girls kids dress layered ruffle sleeve cute party birthday casual comfortable outing wear",
 images: [
-"gbaby (34).jpeg",
-"gbaby (35).jpeg",
-"gbaby (36).jpeg"
+"gbaby (13).jpeg",
+"gbaby (14).jpeg",
+"gbaby (15).jpeg"
 ]
 },
 

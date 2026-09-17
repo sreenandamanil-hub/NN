@@ -32,7 +32,7 @@
     align-items:center;
     justify-content:space-between;
 
-    margin:5px 8px 10px;
+    margin:0 8px 10px;
     padding:10px 14px;
 
     min-height:58px;
@@ -708,6 +708,81 @@
 
         font-size:11px;
     }
+}
+/* =========================================================
+   NAVIRA - REMOVE UNWANTED TOP SPACE
+   ========================================================= */
+
+html,
+body{
+    margin:0 !important;
+    padding-top:0 !important;
+}
+
+.naviraCategoriesPage{
+    margin-top:0 !important;
+    padding-top:0 !important;
+}
+
+.naviraCategoriesHeader{
+    margin-top:0 !important;
+}/* =====================================================
+   NAVIRA CATEGORIES
+   SUBCATEGORY CIRCLES - NO HORIZONTAL SCROLL
+   ===================================================== */
+
+.naviraSubcategoryScroller{
+    display:grid !important;
+    grid-template-columns:repeat(6, 1fr) !important;
+    gap:18px 10px !important;
+    overflow:visible !important;
+    padding:8px !important;
+    box-sizing:border-box !important;
+}
+
+.naviraSubcategoryButton{
+    width:100% !important;
+    max-width:128px !important;
+    justify-self:center !important;
+}
+
+/* PHONE */
+@media(max-width:700px){
+
+    .naviraSubcategoryScroller{
+        grid-template-columns:repeat(3, 1fr) !important;
+        gap:16px 6px !important;
+        overflow:visible !important;
+        padding:5px !important;
+    }
+
+    .naviraSubcategoryButton{
+        max-width:90px !important;
+    }
+
+}/* =====================================================
+   NAVIRA CATEGORIES - SPACE BETWEEN MAIN CATEGORY CARDS
+   ===================================================== */
+
+.naviraMainCategoryRail{
+    gap:18px !important;
+}
+
+.naviraMainCategoryButton{
+    margin-bottom:4px !important;
+}
+
+/* PHONE */
+@media(max-width:700px){
+
+    .naviraMainCategoryRail{
+        gap:14px !important;
+    }
+
+    .naviraMainCategoryButton{
+        margin-bottom:3px !important;
+    }
+
 }
 
 </style>

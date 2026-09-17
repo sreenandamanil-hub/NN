@@ -9,6 +9,138 @@
 </head>
 
 <body>
+<!-- ================= NAVIRA OPENING ================= -->
+
+<div id="naviraSplash">
+
+    <img src="navira.jpeg"
+         alt="Navira"
+         class="naviraSplashImage">
+
+</div>
+<style>
+
+/* =====================================================
+   NAVIRA FULL WINDOW OPENING
+   ===================================================== */
+
+#naviraSplash{
+    position:fixed;
+
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+
+    width:100vw;
+    height:100vh;
+
+    margin:0;
+    padding:0;
+
+    background:#071b78;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+
+    z-index:999999999;
+
+    opacity:1;
+    visibility:visible;
+
+    transition:opacity 1s ease;
+}
+
+
+/* FULL WINDOW IMAGE */
+
+.naviraSplashImage{
+
+    width:100vw;
+    height:100vh;
+
+    margin:0;
+    padding:0;
+
+    display:block;
+
+    /*
+       FULL WINDOW
+       NO CROPPING
+       NO SIDE SPACE
+    */
+
+    object-fit:fill;
+
+    /*
+       SMOOTH MOVEMENT
+    */
+
+    animation:naviraSmoothMove 2.5s ease-in-out forwards;
+}
+
+
+/* =====================================================
+   SMOOTH MOVEMENT
+   ===================================================== */
+
+@keyframes naviraSmoothMove{
+
+    0%{
+        opacity:0;
+        transform:scale(0.97);
+    }
+
+    40%{
+        opacity:1;
+        transform:scale(1);
+    }
+
+    100%{
+        opacity:1;
+        transform:scale(1.02);
+    }
+
+}
+
+
+/* =====================================================
+   FADE OUT
+   ===================================================== */
+
+#naviraSplash.hide{
+
+    opacity:0;
+    visibility:hidden;
+
+    pointer-events:none;
+}
+
+
+/* =====================================================
+   PHONE
+   ===================================================== */
+
+@media(max-width:700px){
+
+    #naviraSplash{
+        width:100vw;
+        height:100vh;
+    }
+
+    .naviraSplashImage{
+        width:100vw;
+        height:100vh;
+        object-fit:fill;
+    }
+
+}
+
+</style>
+
 
 <!-- HOME TOP -->
 
@@ -84,20 +216,7 @@
 
     </div>
 
-    <button
-        type="button"
-        class="naviraOnamArrow naviraOnamPrev"
-        onclick="naviraOnamChange(-1)">
-        &#10094;
-    </button>
-
-    <button
-        type="button"
-        class="naviraOnamArrow naviraOnamNext"
-        onclick="naviraOnamChange(1)">
-        &#10095;
-    </button>
-
+  
     <div class="naviraOnamDots">
 
         <button
@@ -811,6 +930,30 @@
 <script src="bottom-nav.js"></script>
 
 <script src="onam-slider.js"></script>
+<script>
 
+window.addEventListener("load", function(){
+
+    setTimeout(function(){
+
+        var splash = document.getElementById("naviraSplash");
+
+        if(splash){
+
+            splash.classList.add("hide");
+
+            setTimeout(function(){
+
+                splash.remove();
+
+            }, 1000);
+
+        }
+
+    }, 2500);
+
+});
+
+</script>
 </body>
 </html>
