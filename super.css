@@ -19,9 +19,13 @@ background:#eaf4ff;
         box-sizing:border-box;
     }
 
-    .right{
-        display:none;
-    }
+   .right{
+    display:none;
+    width:100% !important;
+    max-width:100% !important;
+    flex:none !important;
+    box-sizing:border-box !important;
+}
 
     .product{
         width:100%;
@@ -6447,4 +6451,65 @@ body:has(#products .card) #homeContent {
     max-width: none !important;
     margin: 0 8px 8px !important;
     box-sizing: border-box !important;
+}
+/* =====================================================
+   MOBILE CHECKOUT - FULL WIDTH AFTER BUY NOW
+   ===================================================== */
+
+@media (max-width:768px) {
+
+    .container {
+        display:block !important;
+        width:100% !important;
+        padding:10px !important;
+        box-sizing:border-box !important;
+    }
+
+    .container .right {
+        width:100% !important;
+        max-width:100% !important;
+        margin:0 !important;
+        padding:15px !important;
+        box-sizing:border-box !important;
+    }
+
+    .container .right[style*="display: block"] {
+        display:block !important;
+    }
+
+}/* =====================================================
+   NAVIRA HOME - FIX ONAM + TRENDING OVERLAP
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    /* Keep Onam poster and arrows inside their own area */
+    .naviraOnamSlider {
+        position: relative !important;
+        margin-bottom: 25px !important;
+        z-index: 10 !important;
+    }
+
+    .naviraOnamSlides {
+        position: relative !important;
+        height: 130px !important;
+        overflow: hidden !important;
+    }
+
+    /* Keep dots below the poster */
+    .naviraOnamDots {
+        position: relative !important;
+        margin-top: 4px !important;
+        margin-bottom: 10px !important;
+        z-index: 20 !important;
+    }
+
+    /* Trending must stay BELOW Onam */
+    .naviraTrending {
+        position: relative !important;
+        top: 0 !important;
+        transform: none !important;
+        margin-top: 10px !important;
+        z-index: 1 !important;
+    }
 }
