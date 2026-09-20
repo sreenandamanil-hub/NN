@@ -6,20 +6,23 @@
     width: 100%;
     max-width: 1500px;
 
-    margin: 0 auto !important;
-
-    padding: 20px 10px 0 !important;
+    margin: 8px auto 20px !important;
+    padding: 0 10px !important;
 
     box-sizing: border-box;
 }
+
+
 /* =====================================================
    SLIDES CONTAINER
 ===================================================== */
 
 .naviraPromotionSlides {
     position: relative;
+
     width: 100%;
     height: 220px;
+
     overflow: hidden;
 }
 
@@ -29,7 +32,6 @@
 ===================================================== */
 
 .naviraPromotionSlide {
-
     position: absolute;
 
     top: 20px;
@@ -41,34 +43,29 @@
     border-radius: 12px;
 
     opacity: 0;
-
     visibility: hidden;
 
-    transition:
-        all 0.4s ease;
+    transition: all 0.4s ease;
 
     z-index: 1;
 }
 
 
 /* =====================================================
-   LEFT
+   LEFT POSTER
 ===================================================== */
 
 .naviraPromotionSlide.prev {
-
     display: block;
 
-    left: 2;
-
-    width: 30%;
+    left: 0 !important;
+    width: 31% !important;
 
     height: 190px;
 
     top: 15px;
 
     opacity: 0.85;
-
     visibility: visible;
 
     z-index: 2;
@@ -76,21 +73,20 @@
 
 
 /* =====================================================
-   CENTER / ACTIVE
+   CENTER / ACTIVE POSTER
 ===================================================== */
+
 .naviraPromotionSlide.active {
     display: block;
 
-    left: 28%;
-
-    top: 5px;
-
-    width: 44%;
+    left: 28% !important;
+    width: 44% !important;
 
     height: 210px;
 
-    opacity: 1;
+    top: 5px;
 
+    opacity: 1;
     visibility: visible;
 
     z-index: 5;
@@ -98,23 +94,20 @@
 
 
 /* =====================================================
-   RIGHT
+   RIGHT POSTER
 ===================================================== */
 
 .naviraPromotionSlide.next {
-
     display: block;
 
-    left: 68%;
-
-    width: 30%;
+    left: 69% !important;
+    width: 31% !important;
 
     height: 190px;
 
     top: 15px;
 
     opacity: 0.85;
-
     visibility: visible;
 
     z-index: 2;
@@ -122,19 +115,16 @@
 
 
 /* =====================================================
-   IMAGE
+   POSTER IMAGE
 ===================================================== */
 
 .naviraPromotionSlide img {
-
     width: 100%;
-
     height: 100%;
 
     display: block;
 
     object-fit: contain;
-
     object-position: center;
 
     border-radius: 12px;
@@ -146,11 +136,9 @@
 ===================================================== */
 
 .naviraPromotionDots {
-
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     gap: 7px;
@@ -160,15 +148,12 @@
 
 
 .naviraPromotionDot {
-
     width: 8px;
-
     height: 8px;
 
     padding: 0;
 
     border: none;
-
     border-radius: 50%;
 
     background: #bbb;
@@ -178,120 +163,22 @@
 
 
 .naviraPromotionDot.active {
-
     width: 10px;
-
     height: 10px;
 
-    background:
-        var(--navira-theme-dark, #071b78);
+    background: var(--navira-theme-dark, #071b78);
 }
 
 
 /* =====================================================
-   PHONE
+   TRENDING + PROMOTION SPACING
 ===================================================== */
 
-@media (max-width: 600px) {
-
-    .naviraPromotionSlider {
-
-        width: 100%;
-
-        padding: 0 6px;
-
-        margin:
-            18px auto
-            25px;
-    }
-
-
-    .naviraPromotionSlides {
-
-        width: 100%;
-
-        height: 150px;
-    }
-
-
-    /* Hide all slides */
-
-    .naviraPromotionSlide {
-
-        display: none !important;
-
-        opacity: 0;
-
-        visibility: hidden;
-    }
-
-
-    /* Show only active */
-
-    .naviraPromotionSlide.active {
-
-        display: block !important;
-
-        left: 0;
-
-        top: 0;
-
-        width: 100%;
-
-        height: 145px;
-        object-fit: contain;
-        opacity: 1;
-
-        visibility: visible;
-
-        z-index: 5;
-    }
-
-
-    .naviraPromotionSlide img {
-
-        width: 100%;
-
-        height: 100%;
-
-        object-fit: cover;
-
-        border-radius: 10px;
-    }
-
-
-    .naviraPromotionDots {
-
-        margin-top: 6px;
-
-        gap: 6px;
-    }
-
-
-    .naviraPromotionDot {
-
-        width: 7px;
-
-        height: 7px;
-    }
-
-
-    .naviraPromotionDot.active {
-
-        width: 9px;
-
-        height: 9px;
-    }
-/* =====================================================
-   NAVIRA PROMOTION - FINAL SPACING FIX
-===================================================== */
-
-/* Remove the large space after Trending */
 .naviraTrending {
     margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
 }
 
-/* Promotion starts very close to Trending */
 .naviraPromotionSlider {
     margin-top: 5px !important;
     margin-bottom: 20px !important;
@@ -299,61 +186,100 @@
 
 
 /* =====================================================
-   PROMOTION POSTERS - SMALL GAP
-===================================================== */
-
-.naviraPromotionSlide.prev {
-    left: 0 !important;
-    width: 31% !important;
-}
-
-.naviraPromotionSlide.active {
-    left: 28% !important;
-    width: 44% !important;
-}
-
-.naviraPromotionSlide.next {
-    left: 69% !important;
-    width: 31% !important;
-}
-
-
-/* =====================================================
    PHONE
 ===================================================== */
 
 @media (max-width: 600px) {
 
+    /* Trending should stay close to promotion */
     .naviraTrending {
         margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
     }
 
+
+    /* Promotion container */
     .naviraPromotionSlider {
-        margin-top: 5px !important;
-    }
-
-    .naviraPromotionSlide.active {
-        left: 0 !important;
-        width: 100% !important;
-    }
-
-}.naviraPromotionSlider {
-    width: 100%;
-    margin: 8px 0 0 !important;
-    padding: 0 !important;
-}
-@media (max-width: 600px) {
-
-    .naviraPromotionSlider {
-        margin-bottom: 65px !important;
-    }
-
-}@media (max-width: 600px) {
-
-    .naviraPromotionSlide.active img {
         width: 100%;
-        height: 100%;
-        object-fit: contain;
+
+        margin-top: 5px !important;
+        margin-bottom: 20px !important;
+
+        padding: 0 6px !important;
+
+        box-sizing: border-box;
+    }
+
+
+    /* Phone poster area */
+    .naviraPromotionSlides {
+        width: 100%;
+
+        height: 190px !important;
+
+        overflow: hidden;
+    }
+
+
+    /* Hide left and right posters */
+    .naviraPromotionSlide {
+        display: none !important;
+
+        opacity: 0;
+        visibility: hidden;
+    }
+
+
+    /* Show only center poster */
+    .naviraPromotionSlide.active {
+        display: block !important;
+
+        left: 0 !important;
+        top: 0 !important;
+
+        width: 100% !important;
+
+        height: 180px !important;
+
+        opacity: 1;
+        visibility: visible;
+
+        z-index: 5;
+    }
+
+
+    /* Phone poster image */
+    .naviraPromotionSlide.active img {
+        width: 100% !important;
+
+        height: 180px !important;
+
+        display: block;
+
+        object-fit: contain !important;
+        object-position: center;
+
+        border-radius: 10px;
+    }
+
+
+    /* Dots */
+    .naviraPromotionDots {
+        margin-top: 6px;
+
+        gap: 6px;
+    }
+
+
+    .naviraPromotionDot {
+        width: 7px;
+        height: 7px;
+    }
+
+
+    .naviraPromotionDot.active {
+        width: 9px;
+        height: 9px;
     }
 
 }
