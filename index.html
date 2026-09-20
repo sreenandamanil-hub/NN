@@ -186,7 +186,6 @@
 /* =========================================
    PHONE
 ========================================= */
-
 @media (max-width: 600px) {
 
     .naviraTrending {
@@ -200,12 +199,19 @@
     }
 
     .naviraPromotionSlides {
-        height: 145px !important;
+        height: 190px !important;
     }
 
     .naviraPromotionSlide.active {
-        height: 140px !important;
+        height: 180px !important;
         top: 0 !important;
+    }
+
+    .naviraPromotionSlide.active img {
+        width: 100% !important;
+        height: 180px !important;
+        object-fit: contain !important;
+        object-position: center !important;
     }
 
 }
@@ -1062,7 +1068,7 @@ window.addEventListener("load", function(){
 
         }
 
-    }, 2500);
+    }, 1500);
 
 });
 
