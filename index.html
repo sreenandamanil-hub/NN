@@ -6,6 +6,8 @@
 
     <title>Navira</title>
     <link rel="stylesheet" href="super.css">
+	<link rel="stylesheet" href="promotion.css">
+	
 </head>
 
 <body>
@@ -135,6 +137,75 @@
         width:100vw;
         height:100vh;
         object-fit:fill;
+    }
+
+}
+/* =========================================
+   TRENDING + PROMOTION FINAL SPACING
+========================================= */
+
+/* Very small gap above promotion */
+.naviraPromotionSlider {
+    margin-top: 3px !important;
+    margin-bottom: 0 !important;
+    padding: 0 !important;
+}
+
+/* Remove the large empty space below promotion */
+.naviraTrending {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+
+/* Promotion area itself */
+.naviraPromotionSlides {
+    height: 220px !important;
+}
+
+
+/* Desktop poster height */
+.naviraPromotionSlide.prev,
+.naviraPromotionSlide.next {
+    height: 195px !important;
+    top: 15px !important;
+}
+
+.naviraPromotionSlide.active {
+    height: 215px !important;
+    top: 2px !important;
+}
+
+
+/* Keep dots close to posters */
+.naviraPromotionDots {
+    margin-top: 3px !important;
+}
+
+
+/* =========================================
+   PHONE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .naviraTrending {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .naviraPromotionSlider {
+        margin-top: 3px !important;
+        margin-bottom: 0 !important;
+    }
+
+    .naviraPromotionSlides {
+        height: 145px !important;
+    }
+
+    .naviraPromotionSlide.active {
+        height: 140px !important;
+        top: 0 !important;
     }
 
 }
@@ -273,8 +344,48 @@
 
     <div id="trendingProducts" class="trendingGrid"></div>
 
-</section>
+    <!-- PROMOTIONS INSIDE TRENDING -->
 
+    <div class="naviraPromotionSlider">
+
+        <div class="naviraPromotionSlides">
+
+            <a href="#" class="naviraPromotionSlide active">
+                <img src="promotion1.jpeg"
+                     alt="Safe Delivery Included">
+            </a>
+
+            <a href="#" class="naviraPromotionSlide">
+                <img src="promotion2.jpeg"
+                     alt="Speed Delivery">
+            </a>
+
+            <a href="#" class="naviraPromotionSlide">
+                <img src="promotion3.jpeg"
+                     alt="Customer Data Safety">
+            </a>
+
+        </div>
+
+        <div class="naviraPromotionDots">
+
+            <button class="naviraPromotionDot active"
+                    onclick="naviraPromotionGoTo(0)">
+            </button>
+
+            <button class="naviraPromotionDot"
+                    onclick="naviraPromotionGoTo(1)">
+            </button>
+
+            <button class="naviraPromotionDot"
+                    onclick="naviraPromotionGoTo(2)">
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
 <!-- ================= ACCOUNT INFORMATION ================= -->
 <div class="accountOverlay" id="accountOverlay">
 
@@ -330,19 +441,9 @@
         <button
             type="button"
             class="photoChoice"
-            onclick="selectProfilePhoto('profile1.png')">
+            onclick="selectProfilePhoto('profile1.jpeg')">
 
-            <img src="profile1.png" alt="Profile 1">
-
-        </button>
-
-
-        <button
-            type="button"
-            class="photoChoice"
-            onclick="selectProfilePhoto('profile2.png')">
-
-            <img src="profile2.png" alt="Profile 2">
+            <img src="profile1.jpeg" alt="Profile 1">
 
         </button>
 
@@ -350,19 +451,9 @@
         <button
             type="button"
             class="photoChoice"
-            onclick="selectProfilePhoto('profile3.png')">
+            onclick="selectProfilePhoto('profile2.jpeg')">
 
-            <img src="profile3.png" alt="Profile 3">
-
-        </button>
-
-
-        <button
-            type="button"
-            class="photoChoice"
-            onclick="selectProfilePhoto('profile4.png')">
-
-            <img src="profile4.png" alt="Profile 4">
+            <img src="profile2.jpeg" alt="Profile 2">
 
         </button>
 
@@ -370,19 +461,9 @@
         <button
             type="button"
             class="photoChoice"
-            onclick="selectProfilePhoto('profile5.png')">
+            onclick="selectProfilePhoto('profile3.jpeg')">
 
-            <img src="profile5.png" alt="Profile 5">
-
-        </button>
-
-
-        <button
-            type="button"
-            class="photoChoice"
-            onclick="selectProfilePhoto('profile6.png')">
-
-            <img src="profile6.png" alt="Profile 6">
+            <img src="profile3.jpeg" alt="Profile 3">
 
         </button>
 
@@ -390,19 +471,9 @@
         <button
             type="button"
             class="photoChoice"
-            onclick="selectProfilePhoto('profile7.png')">
+            onclick="selectProfilePhoto('profile4.jpeg')">
 
-            <img src="profile7.png" alt="Profile 7">
-
-        </button>
-
-
-        <button
-            type="button"
-            class="photoChoice"
-            onclick="selectProfilePhoto('profile8.png')">
-
-            <img src="profile8.png" alt="Profile 8">
+            <img src="profile4.jpeg" alt="Profile 4">
 
         </button>
 
@@ -410,9 +481,49 @@
         <button
             type="button"
             class="photoChoice"
-            onclick="selectProfilePhoto('profile9.png')">
+            onclick="selectProfilePhoto('profile5.jpeg')">
 
-            <img src="profile9.png" alt="Profile 9">
+            <img src="profile5.jpeg" alt="Profile 5">
+
+        </button>
+
+
+        <button
+            type="button"
+            class="photoChoice"
+            onclick="selectProfilePhoto('profile6.jpeg')">
+
+            <img src="profile6.jpeg" alt="Profile 6">
+
+        </button>
+
+
+        <button
+            type="button"
+            class="photoChoice"
+            onclick="selectProfilePhoto('profile7.jpeg')">
+
+            <img src="profile7.jpeg" alt="Profile 7">
+
+        </button>
+
+
+        <button
+            type="button"
+            class="photoChoice"
+            onclick="selectProfilePhoto('profile8.jpeg')">
+
+            <img src="profile8.jpeg" alt="Profile 8">
+
+        </button>
+
+
+        <button
+            type="button"
+            class="photoChoice"
+            onclick="selectProfilePhoto('profile9.jpeg')">
+
+            <img src="profile9.jpeg" alt="Profile 9">
 
         </button>
 
@@ -928,8 +1039,9 @@
 <script src="settings.js"></script>
 <script src="wishlist.js"></script>
 <script src="bottom-nav.js"></script>
-
+<script src="trending2.js"></script>
 <script src="onam-slider.js"></script>
+<script src="promotion.js"></script>
 <script>
 
 window.addEventListener("load", function(){

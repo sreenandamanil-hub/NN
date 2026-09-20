@@ -1,1151 +1,659 @@
 <!DOCTYPE html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
 
-<title>Navira - Categories</title>
+<head>
 
 <link rel="stylesheet" href="super.css">
 
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Navira Categories</title>
+
+
 <style>
 
-/* =========================================================
+/* =====================================================
    NAVIRA CATEGORIES
-   MEN + WOMEN
-   ========================================================= */
+   ===================================================== */
 
-.naviraCategoriesPage{
-    --cat-border:var(--navira-theme-dark,#2F5D8C);
-    background:#f7faff;
-    min-height:100vh;
-    padding-bottom:90px;
+*{
+    box-sizing:border-box;
 }
 
-/* ================= HEADER ================= */
+html{
+    scroll-behavior:smooth;
+}
 
-.naviraCategoriesHeader{
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial, sans-serif;
+    background:#ffffff;
+    color:#222;
+}
+
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+.naviraHeader{
+    width:100%;
+    background:#071b78;
+    color:white;
+    padding:18px 15px;
+    text-align:center;
     position:sticky;
     top:0;
-    z-index:9000;
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-
-    margin:0 8px 10px;
-    padding:10px 14px;
-
-    min-height:58px;
-
-    background:#fff;
-
-    border:2px solid var(--cat-border);
-    border-radius:12px;
-
-    box-sizing:border-box;
+    z-index:5000;
 }
 
-.naviraCategoriesHeader h1{
+.naviraHeader h1{
     margin:0;
-    font-size:23px;
-    text-align:center;
-    flex:1;
-}
-
-.naviraCatBack{
-    width:42px;
-    height:42px;
-
-    border:0;
-    background:transparent;
-
-    font-size:29px;
-    cursor:pointer;
-}
-
-.naviraCatHeaderSpace{
-    width:42px;
+    font-size:25px;
+    letter-spacing:1px;
 }
 
 
-/* =========================================================
+/* =====================================================
+   BACK TO HOME
+   ===================================================== */
+
+.backHomeBox{
+    padding:14px 18px;
+    background:#f5f6fa;
+    border-bottom:1px solid #ddd;
+}
+
+.backHome{
+    display:inline-block;
+    background:#071b78;
+    color:white;
+    text-decoration:none;
+    padding:10px 17px;
+    border-radius:8px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.backHome:hover{
+    opacity:.9;
+}
+
+
+/* =====================================================
    MAIN LAYOUT
+   ===================================================== */
 
-   LEFT  = MEN / WOMEN
-   RIGHT = SELECTED CATEGORY + SUBCATEGORIES + PRODUCTS
-   ========================================================= */
-
-.naviraCategoryLayout{
+.naviraCategoryPage{
+    display:flex;
     width:100%;
     max-width:1500px;
-
-    margin:0 auto;
-    padding:0 8px;
-
-    display:grid;
-
-    grid-template-columns:190px minmax(0,1fr);
-
-    gap:12px;
-
-    box-sizing:border-box;
-
-    align-items:start;
+    margin:auto;
+    align-items:flex-start;
 }
 
 
-/* =========================================================
-   LEFT SIDE
-   MEN / WOMEN
-   ========================================================= */
+/* =====================================================
+   LEFT - MEN
+   ===================================================== */
 
-.naviraMainCategoryRail{
+.naviraMajorSide{
+    width:190px;
+    min-width:190px;
+    padding:18px 12px;
     position:sticky;
-    top:78px;
-
-    display:flex;
-    flex-direction:column;
-
-    gap:14px;
-
-    padding:12px;
-
-    background:#fff;
-
-    border:2px solid var(--cat-border);
-    border-radius:14px;
-
-    box-sizing:border-box;
+    top:80px;
+    height:calc(100vh - 80px);
 }
 
-.naviraMainCategoryButton{
-    width:100%;
-
-    border:2px solid #ddd;
-    border-radius:14px;
-
-    background:#fff;
-
-    padding:10px 7px 12px;
-
-    cursor:pointer;
-
-    transition:.2s;
-}
-
-.naviraMainCategoryButton:hover,
-.naviraMainCategoryButton.active{
-    border-color:var(--cat-border);
-
-    transform:translateY(-2px);
-
-    box-shadow:0 4px 12px rgba(0,0,0,.10);
-}
-
-.naviraMainCategoryImage{
-    width:125px;
-    height:125px;
-
-    max-width:100%;
-
-    margin:auto;
-
-    border-radius:50%;
-
-    object-fit:cover;
-
-    display:block;
-
-    border:2px solid #e4e4e4;
-
-    background:#f5f5f5;
-}
-
-.naviraMainCategoryButton span{
-    display:block;
-
-    margin-top:8px;
-
-    font-size:18px;
-
-    font-weight:700;
-}
-
-
-/* =========================================================
-   RIGHT SIDE
-   ========================================================= */
-
-.naviraCategoryContent{
-    min-width:0;
-}
-
-
-/* =========================================================
-   MEN / WOMEN MAIN SECTION
-   ========================================================= */
-
-.naviraGenderSection{
-    scroll-margin-top:82px;
-
-    background:#fff;
-
-    border:2px solid var(--cat-border);
-
-    border-radius:16px;
-
-    padding:18px;
-
-    margin-bottom:18px;
-
-    box-sizing:border-box;
-}
-
-.naviraGenderHeading{
-    margin:0 0 5px;
-
-    font-size:28px;
-}
-
-.naviraGenderSubheading{
-    margin:0 0 18px;
-
-    color:#666;
-
-    font-size:14px;
-}
-
-
-/* =========================================================
-   SUBCATEGORY CIRCLES
-
-   Example:
-   Caps
-   Blazers
-   Jackets
-   Shirts
-   Pants
-   Watches
-   etc.
-   ========================================================= */
-
-.naviraSubcategoryScroller{
-    display:flex;
-
-    gap:18px;
-
-    overflow-x:auto;
-
-    padding:4px 4px 14px;
-
-    scroll-behavior:smooth;
-
-    scrollbar-width:thin;
-}
-
-.naviraSubcategoryButton{
-    flex:0 0 128px;
-
-    border:0;
-
-    background:transparent;
-
-    cursor:pointer;
-
+.naviraMajorTitle{
     text-align:center;
-
-    padding:0;
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:15px;
 }
 
-.naviraSubcategoryImage{
-    width:112px;
-    height:112px;
+.naviraMajorCard{
+    background:white;
+    border:1px solid #ddd;
+    border-radius:15px;
+    padding:10px;
+    text-align:center;
+    box-shadow:0 3px 10px rgba(0,0,0,.10);
+}
 
-    border-radius:50%;
-
+.naviraMajorCard img{
+    width:100%;
+    aspect-ratio:1/1;
     object-fit:cover;
-
+    border-radius:12px;
     display:block;
+}
 
+.naviraMajorCard h2{
+    margin:10px 0 3px;
+    font-size:18px;
+}
+
+.naviraMajorCard p{
+    margin:0;
+    color:#666;
+    font-size:12px;
+}
+
+
+/* =====================================================
+   RIGHT SIDE
+   ===================================================== */
+
+.naviraRightSide{
+    flex:1;
+    min-width:0;
+    padding:20px;
+}
+
+
+/* =====================================================
+   CATEGORY BUTTONS
+   ===================================================== */
+
+.naviraCategoryTitle{
+    margin:0 0 15px;
+    font-size:23px;
+}
+
+.naviraCategoryButtons{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:18px;
+    margin-bottom:35px;
+}
+
+.naviraCategoryButton{
+    border:1px solid #ddd;
+    background:white;
+    border-radius:14px;
+    padding:10px;
+    cursor:pointer;
+    text-align:center;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+    transition:.25s;
+}
+
+.naviraCategoryButton:hover{
+    transform:translateY(-3px);
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.naviraCategoryButton img{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    object-fit:cover;
+    display:block;
     margin:auto;
-
-    border:2px solid #ddd;
-
-    background:#f4f4f4;
-
-    transition:.2s;
+    border:2px solid #eee;
 }
 
-.naviraSubcategoryButton:hover .naviraSubcategoryImage{
-    border-color:var(--cat-border);
-
-    transform:scale(1.05);
-}
-
-.naviraSubcategoryButton span{
+.naviraCategoryButton span{
     display:block;
-
-    margin-top:8px;
-
+    margin-top:9px;
     font-size:14px;
-
-    font-weight:700;
-
-    line-height:1.2;
+    font-weight:bold;
 }
 
 
-/* =========================================================
+/* =====================================================
    PRODUCT SECTION
-
-   Example:
-
-   CAPS & HATS
-
-   [All] [Men] [Women]
-
-   product 1
-   product 2
-   ...
-   ========================================================= */
+   ===================================================== */
 
 .naviraProductSection{
-    scroll-margin-top:82px;
-
-    margin-top:18px;
-
-    padding-top:18px;
-
-    border-top:1px solid #ddd;
+    scroll-margin-top:100px;
+    margin-bottom:45px;
 }
 
-.naviraProductSection h3{
-    margin:0;
-
+.naviraProductSection h2{
+    margin:0 0 15px;
+    padding-bottom:9px;
+    border-bottom:2px solid #071b78;
+    color:#071b78;
     font-size:22px;
 }
 
-.naviraProductSectionTop{
-    display:flex;
 
-    align-items:center;
+/* =====================================================
+   PRODUCTS
+   ===================================================== */
 
-    justify-content:space-between;
-
-    gap:10px;
-
-    margin-bottom:12px;
-}
-
-
-/* ================= FILTERS ================= */
-
-.naviraFilterRow{
-    display:flex;
-
-    gap:6px;
-
-    flex-wrap:wrap;
-
-    justify-content:flex-end;
-}
-
-.naviraFilterButton{
-    border:1px solid #bbb;
-
-    background:#fff;
-
-    color:#333;
-
-    border-radius:18px;
-
-    padding:7px 13px;
-
-    font-size:12px;
-
-    cursor:pointer;
-}
-
-.naviraFilterButton.active{
-    background:var(--cat-border);
-
-    color:#fff;
-
-    border-color:var(--cat-border);
-}
-
-
-/* =========================================================
-   PRODUCT GRID
-   ========================================================= */
-
-.naviraProductGrid{
+.naviraProducts{
     display:grid;
-
-    grid-template-columns:repeat(5,minmax(0,1fr));
-
-    gap:15px;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
 }
 
 .naviraProductCard{
-    min-width:0;
-
+    background:white;
     border:1px solid #ddd;
-
     border-radius:12px;
-
-    background:#fff;
-
-    padding:9px;
-
-    box-sizing:border-box;
-
+    overflow:hidden;
     cursor:pointer;
-
-    transition:.2s;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+    transition:.25s;
 }
 
 .naviraProductCard:hover{
-    transform:translateY(-2px);
-
-    box-shadow:0 4px 14px rgba(0,0,0,.10);
+    transform:translateY(-3px);
+    box-shadow:0 6px 16px rgba(0,0,0,.14);
 }
-
-
-/* PRODUCT IMAGE */
 
 .naviraProductImage{
     width:100%;
-
-    aspect-ratio:1/1;
-
-    border-radius:50%;
-
+    height:230px;
     object-fit:contain;
-
     display:block;
+    background:#fafafa;
+}
 
-    background:#f7f7f7;
-
-    border:1px solid #eee;
+.naviraProductInfo{
+    padding:12px;
 }
 
 .naviraProductName{
-    margin:9px 2px 4px;
-
-    font-size:14px;
-
-    font-weight:700;
-
-    line-height:1.25;
-
-    min-height:35px;
-}
-
-.naviraProductPrice{
+    margin:0 0 6px;
     font-size:16px;
-
-    font-weight:700;
+    line-height:1.3;
 }
 
-.naviraProductOld{
-    margin-left:5px;
+.naviraRating{
+    color:#e5a900;
+    font-size:14px;
+    margin-bottom:7px;
+}
 
+.naviraPrice{
+    color:#071b78;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.naviraOldPrice{
     color:#888;
-
-    font-size:11px;
+    text-decoration:line-through;
+    margin-left:7px;
+    font-size:13px;
 }
 
-.naviraProductDiscount{
-    margin-top:4px;
+.naviraDiscount{
+    display:block;
+    margin-top:6px;
+    color:#16833b;
+    font-size:13px;
+    font-weight:bold;
+}
 
-    color:green;
-
+.naviraDescription{
+    color:#666;
     font-size:12px;
-
-    font-weight:700;
-}
-
-.naviraProductRating{
-    margin-top:4px;
-
-    color:#f3a400;
-
-    font-size:12px;
+    line-height:1.4;
+    margin:8px 0 0;
 }
 
 
-/* EMPTY */
+/* =====================================================
+   NO PRODUCTS
+   ===================================================== */
 
-.naviraEmpty{
-    padding:20px;
-
+.noProducts{
+    padding:25px;
     text-align:center;
-
     color:#777;
-
-    border:1px dashed #bbb;
-
+    background:#f8f8f8;
     border-radius:10px;
 }
 
 
-/* =========================================================
+/* =====================================================
    TOP BUTTON
-   ========================================================= */
+   ===================================================== */
 
-.naviraTopButton{
+.topButton{
     position:fixed;
+    right:20px;
+    bottom:20px;
 
-    right:18px;
+    border:none;
+    background:#071b78;
+    color:white;
 
-    bottom:84px;
+    padding:11px 16px;
+    border-radius:25px;
 
-    z-index:8000;
-
-    border:1px solid var(--cat-border);
-
-    background:#fff;
-
-    color:var(--cat-border);
-
-    border-radius:20px;
-
-    padding:8px 12px;
+    font-size:14px;
+    font-weight:bold;
 
     cursor:pointer;
 
-    box-shadow:0 3px 10px rgba(0,0,0,.12);
+    z-index:9999;
+
+    box-shadow:0 3px 12px rgba(0,0,0,.25);
+
+    transition:.25s;
+}
+
+.topButton:hover{
+    transform:translateY(-3px);
 }
 
 
-/* =========================================================
-   TABLET
-   ========================================================= */
-
-@media(max-width:1100px){
-
-    .naviraCategoryLayout{
-        grid-template-columns:155px minmax(0,1fr);
-    }
-
-    .naviraMainCategoryImage{
-        width:105px;
-        height:105px;
-    }
-
-    .naviraMainCategoryButton span{
-        font-size:16px;
-    }
-
-    .naviraProductGrid{
-        grid-template-columns:repeat(4,minmax(0,1fr));
-    }
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
+/* =====================================================
+   PHONE
+   ===================================================== */
 
 @media(max-width:700px){
 
-    .naviraCategoriesHeader{
-        min-height:52px;
-
-        padding:7px 9px;
+    .naviraHeader{
+        padding:14px 10px;
     }
 
-    .naviraCategoriesHeader h1{
-        font-size:19px;
-    }
-
-    .naviraCategoryLayout{
-        grid-template-columns:92px minmax(0,1fr);
-
-        gap:7px;
-
-        padding:0 5px;
-    }
-
-    .naviraMainCategoryRail{
-        top:65px;
-
-        padding:7px 5px;
-
-        gap:8px;
-
-        border-radius:11px;
-    }
-
-    .naviraMainCategoryButton{
-        padding:6px 3px 8px;
-
-        border-radius:10px;
-    }
-
-    .naviraMainCategoryImage{
-        width:70px;
-        height:70px;
-    }
-
-    .naviraMainCategoryButton span{
-        font-size:13px;
-
-        margin-top:5px;
+    .naviraHeader h1{
+        font-size:20px;
     }
 
 
-    .naviraGenderSection{
+    .backHomeBox{
         padding:10px;
-
-        border-radius:12px;
-
-        scroll-margin-top:65px;
     }
 
-    .naviraGenderHeading{
-        font-size:21px;
-    }
-
-    .naviraGenderSubheading{
-        margin-bottom:10px;
-
+    .backHome{
+        padding:8px 12px;
         font-size:12px;
     }
 
 
-    .naviraSubcategoryScroller{
-        gap:8px;
-
-        padding-bottom:10px;
-    }
-
-    .naviraSubcategoryButton{
-        flex-basis:82px;
-    }
-
-    .naviraSubcategoryImage{
-        width:68px;
-        height:68px;
-    }
-
-    .naviraSubcategoryButton span{
-        font-size:11px;
-
-        margin-top:5px;
+    .naviraCategoryPage{
+        display:flex;
     }
 
 
-    .naviraProductSection{
-        scroll-margin-top:65px;
+    /* LEFT MEN */
 
-        margin-top:13px;
-
-        padding-top:13px;
+    .naviraMajorSide{
+        width:88px;
+        min-width:88px;
+        padding:12px 5px;
+        position:sticky;
+        top:65px;
+        height:calc(100vh - 65px);
     }
 
-    .naviraProductSectionTop{
-        display:block;
-    }
-
-    .naviraProductSection h3{
-        font-size:18px;
-
+    .naviraMajorTitle{
+        font-size:14px;
         margin-bottom:8px;
     }
 
-
-    .naviraFilterRow{
-        justify-content:flex-start;
-
-        overflow-x:auto;
-
-        flex-wrap:nowrap;
-
-        padding-bottom:4px;
+    .naviraMajorCard{
+        padding:5px;
+        border-radius:10px;
     }
 
-    .naviraFilterButton{
-        flex:0 0 auto;
+    .naviraMajorCard img{
+        border-radius:8px;
+    }
 
-        padding:6px 10px;
+    .naviraMajorCard h2{
+        font-size:13px;
+        margin:6px 0 2px;
+    }
+
+    .naviraMajorCard p{
+        font-size:9px;
     }
 
 
-    .naviraProductGrid{
-        grid-template-columns:repeat(2,minmax(0,1fr));
+    /* RIGHT */
 
-        gap:8px;
+    .naviraRightSide{
+        padding:12px 8px;
     }
 
-    .naviraProductCard{
-        padding:6px;
+    .naviraCategoryTitle{
+        font-size:18px;
+        margin-bottom:12px;
+    }
 
-        border-radius:9px;
+
+    /* CATEGORY BUTTONS */
+
+    .naviraCategoryButtons{
+        grid-template-columns:repeat(2,1fr);
+        gap:10px;
+        margin-bottom:25px;
+    }
+
+    .naviraCategoryButton{
+        padding:7px;
+        border-radius:11px;
+    }
+
+    .naviraCategoryButton img{
+        width:65px;
+        height:65px;
+    }
+
+    .naviraCategoryButton span{
+        font-size:11px;
+        margin-top:6px;
+    }
+
+
+    /* PRODUCT SECTION */
+
+    .naviraProductSection{
+        scroll-margin-top:80px;
+        margin-bottom:30px;
+    }
+
+    .naviraProductSection h2{
+        font-size:18px;
+        margin-bottom:10px;
+    }
+
+
+    /* PRODUCTS - 2 PER ROW */
+
+    .naviraProducts{
+        grid-template-columns:repeat(2,1fr);
+        gap:9px;
+    }
+
+    .naviraProductImage{
+        height:145px;
+    }
+
+    .naviraProductInfo{
+        padding:8px;
     }
 
     .naviraProductName{
         font-size:12px;
-
-        min-height:31px;
     }
 
-    .naviraProductPrice{
+    .naviraRating{
+        font-size:11px;
+    }
+
+    .naviraPrice{
         font-size:14px;
     }
 
-    .naviraProductDiscount,
-    .naviraProductRating{
+    .naviraOldPrice{
+        font-size:10px;
+        margin-left:3px;
+    }
+
+    .naviraDiscount{
         font-size:10px;
     }
 
+    .naviraDescription{
+        font-size:9px;
+    }
 
-    .naviraTopButton{
+
+    /* TOP BUTTON */
+
+    .topButton{
         right:10px;
-
-        bottom:75px;
-
-        font-size:11px;
+        bottom:12px;
+        padding:9px 13px;
+        font-size:12px;
     }
-}
-/* =========================================================
-   NAVIRA - REMOVE UNWANTED TOP SPACE
-   ========================================================= */
 
-html,
-body{
-    margin:0 !important;
-    padding-top:0 !important;
 }
 
-.naviraCategoriesPage{
-    margin-top:0 !important;
-    padding-top:0 !important;
-}
 
-.naviraCategoriesHeader{
-    margin-top:0 !important;
-}/* =====================================================
-   NAVIRA CATEGORIES
-   SUBCATEGORY CIRCLES - NO HORIZONTAL SCROLL
+/* =====================================================
+   VERY SMALL PHONE
    ===================================================== */
 
-.naviraSubcategoryScroller{
-    display:grid !important;
-    grid-template-columns:repeat(6, 1fr) !important;
-    gap:18px 10px !important;
-    overflow:visible !important;
-    padding:8px !important;
-    box-sizing:border-box !important;
-}
+@media(max-width:380px){
 
-.naviraSubcategoryButton{
-    width:100% !important;
-    max-width:128px !important;
-    justify-self:center !important;
-}
-
-/* PHONE */
-@media(max-width:700px){
-
-    .naviraSubcategoryScroller{
-        grid-template-columns:repeat(3, 1fr) !important;
-        gap:16px 6px !important;
-        overflow:visible !important;
-        padding:5px !important;
+    .naviraMajorSide{
+        width:78px;
+        min-width:78px;
     }
 
-    .naviraSubcategoryButton{
-        max-width:90px !important;
+    .naviraCategoryButtons{
+        gap:7px;
     }
 
-}/* =====================================================
-   NAVIRA CATEGORIES - SPACE BETWEEN MAIN CATEGORY CARDS
-   ===================================================== */
+    .naviraCategoryButton img{
+        width:58px;
+        height:58px;
+    }
 
-.naviraMainCategoryRail{
-    gap:18px !important;
+    .naviraProductImage{
+        height:125px;
+    }
+
 }
+/* =========================================
+   CATEGORIES - THICK THEME BORDERS
+========================================= */
 
-.naviraMainCategoryButton{
-    margin-bottom:4px !important;
-}
-
-/* PHONE */
-@media(max-width:700px){
-
-    .naviraMainCategoryRail{
-        gap:14px !important;
-    }
-
-    .naviraMainCategoryButton{
-        margin-bottom:3px !important;
-    }
-
+.naviraMajorCard,
+.naviraCategoryButton,
+.naviraProductCard {
+    border: 2px solid var(--navira-theme-dark) !important;
 }
 
 </style>
+
 </head>
 
 
-<body class="naviraCategoriesPage">
+<body id="top">
 
 
 <!-- =====================================================
      HEADER
-     ===================================================== -->
+===================================================== -->
 
-<header class="naviraCategoriesHeader">
+<header class="naviraHeader">
 
-    <button
-        type="button"
-        class="naviraCatBack"
-        onclick="location.href='index.html'">
-        ←
-    </button>
-
-    <h1>Categories</h1>
-
-    <div class="naviraCatHeaderSpace"></div>
+    <h1>NAVIRA CATEGORIES</h1>
 
 </header>
 
 
 <!-- =====================================================
-     MAIN CATEGORY LAYOUT
+     BACK HOME
+===================================================== -->
 
-     LEFT:
-     MEN
-     WOMEN
+<div class="backHomeBox">
 
-     RIGHT:
-     MEN / WOMEN CONTENT
-     ===================================================== -->
+    <a href="index.html"
+       class="backHome">
 
-<main class="naviraCategoryLayout">
+        ← Back to Home
 
+    </a>
 
-    <!-- ================= LEFT ================= -->
-
-    <aside class="naviraMainCategoryRail" aria-label="Main categories">
-
-    <!-- AUDIENCE -->
-    <div class="naviraCategoryGroup">
-        <h3 class="naviraCategoryGroupTitle">Shop By</h3>
-
-        <button type="button"
-                class="naviraMainCategoryButton"
-                onclick="scrollToGender('men')">
-            <img id="mainMenImage"
-                 class="naviraMainCategoryImage"
-                 src=""
-                 alt="Men">
-            <span>Men</span>
-        </button>
-
-        <button type="button"
-                class="naviraMainCategoryButton"
-                onclick="scrollToGender('women')">
-            <img id="mainWomenImage"
-                 class="naviraMainCategoryImage"
-                 src=""
-                 alt="Women">
-            <span>Women</span>
-        </button>
-
-        <button type="button"
-                class="naviraMainCategoryButton"
-                onclick="scrollToGender('boys')">
-            <img id="mainBoysImage"
-                 class="naviraMainCategoryImage"
-                 src=""
-                 alt="Boys">
-            <span>Boys</span>
-        </button>
-
-        <button type="button"
-                class="naviraMainCategoryButton"
-                onclick="scrollToGender('girls')">
-            <img id="mainGirlsImage"
-                 class="naviraMainCategoryImage"
-                 src=""
-                 alt="Girls">
-            <span>Girls</span>
-        </button>
-
-        <button type="button"
-                class="naviraMainCategoryButton"
-                onclick="scrollToGender('baby')">
-            <img id="mainBabyImage"
-                 class="naviraMainCategoryImage"
-                 src=""
-                 alt="Baby">
-            <span>Baby</span>
-        </button>
-
-        <button type="button"
-                class="naviraMainCategoryButton"
-                onclick="scrollToGender('common')">
-            <img id="mainCommonImage"
-                 class="naviraMainCategoryImage"
-                 src=""
-                 alt="Common / Unisex">
-            <span>Common</span>
-        </button>
-    </div>
+</div>
 
 
-    <!-- PRODUCT CATEGORIES -->
-    <div class="naviraCategoryGroup">
+<!-- =====================================================
+     MAIN
+===================================================== -->
 
-        <h3 class="naviraCategoryGroupTitle">Categories</h3>
-
-        <button type="button"
-                class="naviraMainCategoryButton"
-                onclick="naviraSelectCategory('cap')">
-            <img class="naviraMainCategoryImage"
-                 src=""
-                 data-category-image="cap"
-                 alt="Caps">
-            <span>Caps</span>
-        </button>
-
-        <button type="button"
-                class="naviraMainCategoryButton"
-                onclick="naviraSelectCategory('blazer')">
-            <img class="naviraMainCategoryImage"
-                 src=""
-                 data-category-image="blazer"
-                 alt="Blazers">
-            <span>Blazers</span>
-        </button>
-
-        <button type="button"
-                class="naviraMainCategoryButton"
-                onclick="naviraSelectCategory('jacket')">
-            <img class="naviraMainCategoryImage"
-                 src=""
-                 data-category-image="jacket"
-                 alt="Jackets">
-            <span>Jackets</span>
-        </button>
-
-        <button type="button"
-                class="naviraMainCategoryButton"
-                onclick="naviraSelectCategory('hoodie')">
-            <img class="naviraMainCategoryImage"
-                 src=""
-                 data-category-image="hoodie"
-                 alt="Hoodies">
-            <span>Hoodies</span>
-        </button>
-
-        <button type="button"
-                class="naviraMainCategoryButton"
-                onclick="naviraSelectCategory('shirt')">
-            <img class="naviraMainCategoryImage"
-                 src=""
-                 data-category-image="shirt"
-                 alt="Shirts">
-            <span>Shirts</span>
-        </button>
-
-        <button type="button"
-                class="naviraMainCategoryButton"
-                onclick="naviraSelectCategory('tshirt')">
-            <img class="naviraMainCategoryImage"
-                 src=""
-                 data-category-image="tshirt"
-                 alt="T-Shirts">
-            <span>T-Shirts</span>
-        </button>
-
-        <button type="button"
-                class="naviraMainCategoryButton"
-                onclick="naviraSelectCategory('pant')">
-            <img class="naviraMainCategoryImage"
-                 src=""
-                 data-category-image="pant"
-                 alt="Pants">
-            <span>Pants</span>
-        </button>
-
-        <button type="button"
-                class="naviraMainCategoryButton"
-                onclick="naviraSelectCategory('jeans')">
-            <img class="naviraMainCategoryImage"
-                 src=""
-                 data-category-image="jeans"
-                 alt="Jeans">
-            <span>Jeans</span>
-        </button>
-
-        <button type="button"
-                class="naviraMainCategoryButton"
-                onclick="naviraSelectCategory('shoes')">
-            <img class="naviraMainCategoryImage"
-                 src=""
-                 data-category-image="shoes"
-                 alt="Shoes">
-            <span>Shoes</span>
-        </button>
-
-        <button type="button"
-                class="naviraMainCategoryButton"
-                onclick="naviraSelectCategory('bag')">
-            <img class="naviraMainCategoryImage"
-                 src=""
-                 data-category-image="bag"
-                 alt="Bags">
-            <span>Bags</span>
-        </button>
-
-        <button type="button"
-                class="naviraMainCategoryButton"
-                onclick="naviraSelectCategory('watch')">
-            <img class="naviraMainCategoryImage"
-                 src=""
-                 data-category-image="watch"
-                 alt="Watches">
-            <span>Watches</span>
-        </button>
-
-        <button type="button"
-                class="naviraMainCategoryButton"
-                onclick="naviraSelectCategory('belt')">
-            <img class="naviraMainCategoryImage"
-                 src=""
-                 data-category-image="belt"
-                 alt="Belts">
-            <span>Belts</span>
-        </button>
-
-        <button type="button"
-                class="naviraMainCategoryButton"
-                onclick="naviraSelectCategory('mundu')">
-            <img class="naviraMainCategoryImage"
-                 src=""
-                 data-category-image="mundu"
-                 alt="Mundu">
-            <span>Mundu</span>
-        </button>
-
-        <button type="button"
-                class="naviraMainCategoryButton"
-                onclick="naviraSelectCategory('nightwear')">
-            <img class="naviraMainCategoryImage"
-                 src=""
-                 data-category-image="nightwear"
-                 alt="Nightwear">
-            <span>Nightwear</span>
-        </button>
-
-        <button type="button"
-                class="naviraMainCategoryButton"
-                onclick="naviraSelectCategory('saree')">
-            <img class="naviraMainCategoryImage"
-                 src=""
-                 data-category-image="saree"
-                 alt="Sarees">
-            <span>Sarees</span>
-        </button>
-
-        <button type="button"
-                class="naviraMainCategoryButton"
-                onclick="naviraSelectCategory('skirt')">
-            <img class="naviraMainCategoryImage"
-                 src=""
-                 data-category-image="skirt"
-                 alt="Skirts">
-            <span>Skirts</span>
-        </button>
-
-        <button type="button"
-                class="naviraMainCategoryButton"
-                onclick="naviraSelectCategory('beauty')">
-            <img class="naviraMainCategoryImage"
-                 src=""
-                 data-category-image="beauty"
-                 alt="Beauty">
-            <span>Beauty</span>
-        </button>
-
-        <button type="button"
-                class="naviraMainCategoryButton"
-                onclick="naviraSelectCategory('jewellery')">
-            <img class="naviraMainCategoryImage"
-                 src=""
-                 data-category-image="jewellery"
-                 alt="Jewellery">
-            <span>Jewellery</span>
-        </button>
-
-        <button type="button"
-                class="naviraMainCategoryButton"
-                onclick="naviraSelectCategory('perfume')">
-            <img class="naviraMainCategoryImage"
-                 src=""
-                 data-category-image="perfume"
-                 alt="Perfume">
-            <span>Perfume</span>
-        </button>
-
-        <button type="button"
-                class="naviraMainCategoryButton"
-                onclick="naviraSelectCategory('bedsheet')">
-            <img class="naviraMainCategoryImage"
-                 src=""
-                 data-category-image="bedsheet"
-                 alt="Bedsheets">
-            <span>Bedsheets</span>
-        </button>
-
-        <button type="button"
-                class="naviraMainCategoryButton"
-                onclick="naviraSelectCategory('blanket')">
-            <img class="naviraMainCategoryImage"
-                 src=""
-                 data-category-image="blanket"
-                 alt="Blankets">
-            <span>Blankets</span>
-        </button>
-		
-		
+<div class="naviraCategoryPage">
 
 
-        <button type="button"
-                class="naviraMainCategoryButton"
-                onclick="naviraSelectCategory('towel')">
-            <img class="naviraMainCategoryImage"
-                 src=""
-                 data-category-image="towel"
-                 alt="Towels">
-            <span>Towels</span>
-        </button>
+    <!-- =================================================
+         LEFT - MEN
+    ================================================== -->
 
-    </div>
+    <aside class="naviraMajorSide">
 
-</aside>
+        <div class="naviraMajorTitle">
+            Major Category
+        </div>
 
-    <!-- ================= RIGHT ================= -->
+        <div class="naviraMajorCard">
 
-    <section
-        class="naviraCategoryContent"
-        id="naviraCategoryContent">
+            <img
+                src="men.jpeg"
+                alt="Men">
 
-    </section>
+            <h2>Men</h2>
+
+            <p>Men's Collection</p>
+
+        </div>
+
+    </aside>
 
 
-</main>
+    <!-- =================================================
+         RIGHT
+    ================================================== -->
+
+    <main class="naviraRightSide">
+
+        <h2 class="naviraCategoryTitle">
+            Men's Categories
+        </h2>
 
 
-<!-- TOP -->
+        <!-- CATEGORY BUTTONS -->
+
+        <div
+            class="naviraCategoryButtons"
+            id="menCategoryButtons">
+        </div>
+
+
+        <!-- PRODUCTS -->
+
+        <div id="menProducts">
+        </div>
+
+    </main>
+
+</div>
+
+
+<!-- =====================================================
+     TOP BUTTON
+===================================================== -->
 
 <button
-    type="button"
-    class="naviraTopButton"
-    onclick="scrollToTop()">
+    class="topButton"
+    onclick="goToTop()">
 
     ↑ Top
 
@@ -1153,44 +661,8231 @@ body{
 
 
 <!-- =====================================================
-     ABOUT POPUP
-     Compatible with your existing bottom-nav.js
-     ===================================================== -->
+     PRODUCTS DATA
+===================================================== -->
 
-<div
-    class="aboutOverlay"
-    id="aboutOverlay">
+<script src="products.js"></script>
 
-    <div class="aboutBox">
 
-        <button
-            type="button"
-            class="closeAbout"
-            onclick="closeAbout()">
+<script>
 
-            ×
+/* =====================================================
+   NAVIRA MEN CATEGORIES
+===================================================== */
 
-        </button>
+/*
+   The category buttons below use the requested
+   gender + product + 9 image naming style.
+*/
 
-        <h2>ℹ️ About Navira</h2>
+var MEN_CATEGORIES = [
+ {
+        name:"Shirts",
+        image:"mshirt.jpeg",
+        words:["shirt","shirts"]
+    },
+ {
+        name:"Mundu",
+        image:"mmundu.jpeg",
+        words:["mundu","dhoti"]
+    },
+ {
+        name:"Kurta",
+        image:"mkurta.jpeg",
+        words:["kurta","pyjama"]
+    },
 
-        <div class="aboutContent"></div>
+
+    {
+        name:"Caps & Hats",
+        image:"mcap.jpeg",
+        words:["cap","caps","hat","hats"]
+    },
+
+    {
+        name:"Nightwear",
+        image:"mnight.jpeg",
+        words:["nightwear","night wear","sleepwear"]
+    },
+
+    {
+        name:"T-Shirts",
+        image:"mtshirt.jpeg",
+        words:["tshirt","t-shirt","tee"]
+    },
+
+    {
+        name:"Pants",
+        image:"mpant.jpeg",
+        words:["pant","pants","trouser","trousers"]
+    },
+
+
+    {
+        name:"Jackets",
+        image:"mjacket.jpeg",
+        words:["jacket","jackets"]
+    },
+	 {
+        name:"Coats",
+        image:"mcoat.jpeg",
+        words:["coat","coats"]
+    },
+
+    {
+        name:"Blazers",
+        image:"mblazer.jpeg",
+        words:["blazer","blazers"]
+    },
+
+    {
+        name:"Hoodies",
+        image:"mhoodie.jpeg",
+        words:["hoodie","hoodies"]
+    },
+
+   
+    {
+        name:"Shirt & Mundu",
+        image:"msms.jpeg",
+        words:["shirt & mundu","shirt and mundu","mundu set"]
+    },
+{
+        name:"Yoga Dress",
+        image:"myogadress.jpeg",
+        words:["yoga dress","yoga"]
+    },
+
+    {
+        name:"Footwear",
+        image:"mfootwear.jpeg",
+        words:["footwear","sandal"]
+    },
+	 {
+        name:"Shoes",
+        image:"mshoes.jpeg",
+        words:["shoes"]
+    },
+
+    {
+        name:"Watches",
+        image:"mwatch.jpeg",
+        words:["watch","watches"]
+    },
+
+    {
+        name:"Belts",
+        image:"mbelt.jpeg",
+        words:["belt","belts"]
+    },
+
+    {
+        name:"Bags",
+        image:"mbag.jpeg",
+        words:["bag","bags","backpack","crossbody"]
+    },
+
+    {
+        name:"Bedsheets",
+        image:"mbedsheet.jpeg",
+        words:["bedsheets","bedsheet"]
+    },
+ {
+        name:"Blankets",
+        image:"mbla.jpeg",
+        words:["blankets","blanket"]
+    },
+
+    {
+        name:"Eyewear",
+        image:"meyeglass.jpeg",
+        words:["eyewear","glasses","sunglasses","spectacles"]
+    },
+
+    {
+        name:"Perfume",
+        image:"wwper.jpeg",
+        words:["perfume","fragrance"]
+    },
+	{
+        name:"Towels",
+        image:"cckt.jpeg",
+        words:["towel","Turkey"]
+    },
+
+{
+        name:"Yoga Mat",
+        image:"ccmmat.jpeg",
+        words:["yogamat","mat"]
+    },{
+        name:"Comb",
+        image:"wwcomb.jpeg",
+        words:["comb"]
+    }
+];
+
+
+/* =====================================================
+   TEXT
+===================================================== */
+
+function getProductText(product){
+
+    return (
+
+        String(product.name || "") + " " +
+
+        String(product.description || "") + " " +
+
+        String(product.keywords || "") + " " +
+
+        String(product.category || "")
+
+    ).toLowerCase();
+
+}
+
+
+/* =====================================================
+   IS MEN PRODUCT
+===================================================== */
+
+function isMenProduct(product){
+
+    var text = getProductText(product);
+
+    var menWords = [
+
+        "men",
+        "men's",
+        "mens",
+        "male",
+        "man",
+        "boys",
+        "boy"
+
+    ];
+
+    for(var i = 0; i < menWords.length; i++){
+
+        if(text.includes(menWords[i])){
+
+            return true;
+
+        }
+
+    }
+
+    return false;
+
+}
+
+
+/* =====================================================
+   CATEGORY MATCH
+===================================================== */
+
+function productMatchesCategory(product, category){
+
+    var text = getProductText(product);
+
+    for(var i = 0; i < category.words.length; i++){
+
+        if(text.includes(category.words[i])){
+
+            return true;
+
+        }
+
+    }
+
+    return false;
+
+}
+
+
+/* =====================================================
+   CREATE CATEGORY BUTTONS
+===================================================== */
+
+function createCategoryButtons(){
+
+    var container =
+        document.getElementById("menCategoryButtons");
+
+    if(!container){
+        return;
+    }
+
+    var output = "";
+
+    MEN_CATEGORIES.forEach(function(category){
+
+        output += `
+
+            <button
+                type="button"
+                class="naviraCategoryButton"
+                onclick="showMenCategory('${category.name}')">
+
+                <img
+                    src="${category.image}"
+                    alt="${category.name}">
+
+                <span>
+                    ${category.name}
+                </span>
+
+            </button>
+
+        `;
+
+    });
+
+    container.innerHTML = output;
+
+}
+
+
+/* =====================================================
+   CREATE PRODUCT CARD
+===================================================== */
+
+function createProductCard(product){
+
+    if(!product.images ||
+       product.images.length === 0){
+
+        return "";
+
+    }
+
+    var image = product.images[0];
+
+    return `
+
+        <div
+            class="naviraProductCard"
+            onclick="location.href='${product.page}'">
+
+            <img
+                src="${image}"
+                alt="${product.name}"
+                class="naviraProductImage">
+
+            <div class="naviraProductInfo">
+
+                <h3 class="naviraProductName">
+                    ${product.name}
+                </h3>
+
+                <div class="naviraRating">
+                    ${product.rating || ""}
+                </div>
+
+                <div>
+
+                    <span class="naviraPrice">
+                        ₹${product.price}
+                    </span>
+
+                    <span class="naviraOldPrice">
+                        ₹${product.oldPrice}
+                    </span>
+
+                </div>
+
+                <span class="naviraDiscount">
+                    ${product.discount || ""}
+                </span>
+
+                <p class="naviraDescription">
+                    ${product.description || ""}
+                </p>
+
+            </div>
+
+        </div>
+
+    `;
+
+}
+
+
+/* =====================================================
+   SHOW CATEGORY
+===================================================== */
+
+function showMenCategory(categoryName){
+
+    var category = null;
+
+    MEN_CATEGORIES.forEach(function(item){
+
+        if(item.name === categoryName){
+
+            category = item;
+
+        }
+
+    });
+
+    if(!category){
+        return;
+    }
+
+    var productsContainer =
+        document.getElementById("menProducts");
+
+    if(!productsContainer){
+        return;
+    }
+
+
+    var matchingProducts = [];
+
+
+    if(typeof products !== "undefined"){
+
+        products.forEach(function(product){
+
+            if(
+                isMenProduct(product) &&
+                productMatchesCategory(product, category)
+            ){
+
+                matchingProducts.push(product);
+
+            }
+
+        });
+
+    }
+
+
+    var sectionId =
+        "category-" +
+        categoryName
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g,"-");
+
+
+    var existing =
+        document.getElementById(sectionId);
+
+
+    if(existing){
+
+        existing.scrollIntoView({
+            behavior:"smooth",
+            block:"start"
+        });
+
+        return;
+
+    }
+
+
+    var cards = "";
+
+    matchingProducts.forEach(function(product){
+
+        cards += createProductCard(product);
+
+    });
+
+
+    if(cards === ""){
+
+        cards = `
+
+            <div class="noProducts">
+
+                No products found in
+                ${categoryName}
+
+            </div>
+
+        `;
+
+    }
+
+
+    var section = document.createElement("section");
+
+    section.className =
+        "naviraProductSection";
+
+    section.id = sectionId;
+
+
+    section.innerHTML = `
+
+        <h2>
+            ${categoryName}
+        </h2>
+
+        <div class="naviraProducts">
+
+            ${cards}
+
+        </div>
+
+    `;
+
+
+    productsContainer.appendChild(section);
+
+
+    setTimeout(function(){
+
+        section.scrollIntoView({
+
+            behavior:"smooth",
+            block:"start"
+
+        });
+
+    },50);
+
+}
+
+
+/* =====================================================
+   SHOW ALL MEN PRODUCTS
+===================================================== */
+
+function showAllMenProducts(){
+
+    var container =
+        document.getElementById("menProducts");
+
+    if(!container ||
+       typeof products === "undefined"){
+
+        return;
+
+    }
+
+
+    var allMenProducts = [];
+
+
+    products.forEach(function(product){
+
+        if(isMenProduct(product)){
+
+            allMenProducts.push(product);
+
+        }
+
+    });
+
+
+    var cards = "";
+
+
+    allMenProducts.forEach(function(product){
+
+        cards += createProductCard(product);
+
+    });
+
+
+    var section =
+        document.createElement("section");
+
+    section.className =
+        "naviraProductSection";
+
+    section.id =
+        "all-men-products";
+
+
+    section.innerHTML = `
+
+        <h2>
+            All Men's Products
+        </h2>
+
+        <div class="naviraProducts">
+
+            ${cards}
+
+        </div>
+
+    `;
+
+
+    container.appendChild(section);
+
+}
+
+
+/* =====================================================
+   TOP
+===================================================== */
+
+function goToTop(){
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+    });
+
+}
+
+
+/* =====================================================
+   START
+===================================================== */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function(){
+
+        createCategoryButtons();
+
+        /*
+           The products are loaded from products.js.
+           We do not modify products.js.
+        */
+
+    }
+);
+
+</script>
+<!-- =====================================================
+     WOMEN SECTION
+===================================================== -->
+
+<section class="naviraGenderSection" id="womenSection">
+
+    <div class="naviraGenderTitle">
+        <h2>Women's Collection</h2>
+        <p>Explore Women's Categories</p>
+    </div>
+
+    <div class="naviraGenderLayout">
+
+        <!-- LEFT -->
+        <aside class="naviraGenderMajor">
+
+            <div class="naviraGenderMajorCard">
+
+                <img src="women.jpeg" alt="Women">
+
+                <h3>Women</h3>
+
+                <p>Women's Collection</p>
+
+            </div>
+
+        </aside>
+
+
+        <!-- RIGHT -->
+        <div class="naviraGenderRight">
+
+            <div class="naviraGenderCategories">
+
+<!-- SAREE -->
+<button onclick="showWomenCategory('womenSaree')">
+    <img src="wwsaree.jpeg">
+    <span>Sarees</span>
+</button>
+
+<!-- CHURIDAR -->
+<button onclick="showWomenCategory('womenChuridar')">
+    <img src="wwsalwar.jpeg">
+    <span>Salwar</span>
+</button>
+
+<!-- SKIRT -->
+<button onclick="showWomenCategory('womenSkirt')">
+    <img src="wwskirt.jpeg">
+    <span>Skirts</span>
+</button>
+
+<!-- NIGHTWEAR -->
+<button onclick="showWomenCategory('womenNightwear')">
+    <img src="wwnight.jpeg">
+    <span>Nightwear</span>
+</button>
+
+<!-- PANTS -->
+<button onclick="showWomenCategory('womenPant')">
+    <img src="wwpant.jpeg">
+    <span>Pants</span>
+</button>
+
+<!-- COAT -->
+<button onclick="showWomenCategory('womenCoat')">
+    <img src="wwcoat.jpeg">
+    <span>Coats</span>
+</button>
+
+<!-- JEANS -->
+<button onclick="showWomenCategory('womenJeans')">
+    <img src="wwjeans.jpeg">
+    <span>Jeans</span>
+</button>
+
+<!-- TROUSERS -->
+<button onclick="showWomenCategory('womenTrousers')">
+    <img src="wwtrou.jpeg">
+    <span>Trousers</span>
+</button>
+
+<!-- SHIRT -->
+<button onclick="showWomenCategory('womenShirt')">
+    <img src="wwshirt.jpeg">
+    <span>Shirts</span>
+</button>
+
+<!-- BAG -->
+<button onclick="showWomenCategory('womenBag')">
+    <img src="wwbag.jpeg">
+    <span>Bags</span>
+</button>
+
+<!-- EYELINER -->
+<button onclick="showWomenCategory('womenEyeliner')">
+    <img src="wwline.jpeg">
+    <span>Eyeliner</span>
+</button>
+
+<!-- BRUSH -->
+<button onclick="showWomenCategory('womenBush')">
+    <img src="wwtie.jpeg">
+    <span>Women's Ties</span>
+</button>
+
+<!-- MIRROR -->
+<button onclick="showWomenCategory('womenMirror')">
+    <img src="ccmirror.jpeg">
+    <span>Mirrors</span>
+</button>
+
+<!-- CLIP -->
+<button onclick="showWomenCategory('womenClip')">
+    <img src="wwclip.jpeg">
+    <span>Hair Clips</span>
+</button>
+
+<!-- NAIL POLISH -->
+<button onclick="showWomenCategory('womenNailpolish')">
+    <img src="wwnail.jpeg">
+    <span>Nail Polish</span>
+</button>
+
+<!-- HAIR STYLING -->
+<button onclick="showWomenCategory('womenHairstyling')">
+    <img src="cchairstyling.jpeg">
+    <span>Hair Styling</span>
+</button>
+
+<!-- COMB -->
+<button onclick="showWomenCategory('womenComb')">
+    <img src="wwcomb.jpeg">
+    <span>Combs</span>
+</button>
+
+<!-- CREAM -->
+<button onclick="showWomenCategory('womenCream')">
+    <img src="cccream.jpeg">
+    <span>Creams</span>
+</button>
+
+<!-- NECKLACE -->
+<button onclick="showWomenCategory('womenNecklace')">
+    <img src="wwneck.jpeg">
+    <span>Necklaces</span>
+</button>
+
+<!-- NOSE RING -->
+<button onclick="showWomenCategory('womenNoseRing')">
+    <img src="wwnring.jpeg">
+    <span>Nose Rings</span>
+</button>
+
+<!-- EYE GLASSES -->
+<button onclick="showWomenCategory('womenEyeglasses')">
+    <img src="wwglass.jpeg">
+    <span>Eyeglasses</span>
+</button>
+
+<!-- ANKLET -->
+<button onclick="showWomenCategory('womenAnklet')">
+    <img src="wwleg.jpeg">
+    <span>Anklets</span>
+</button>
+
+<!-- BANGLE -->
+<button onclick="showWomenCategory('womenBangle')">
+    <img src="wwbangle.jpeg">
+    <span>Bangles</span>
+</button>
+
+<!-- RING -->
+<button onclick="showWomenCategory('womenRing')">
+    <img src="wwring.jpeg">
+    <span>Rings</span>
+</button>
+
+<!-- EARRINGS -->
+<button onclick="showWomenCategory('womenEarrings')">
+    <img src="wwearring.jpeg">
+    <span>Earrings</span>
+</button>
+
+<!-- PERFUME -->
+<button onclick="showWomenCategory('womenPerfume')">
+    <img src="wwper.jpeg">
+    <span>Perfumes</span>
+</button>
+
+<!-- MAKEUP SET -->
+<button onclick="showWomenCategory('womenMakeupSet')">
+    <img src="wwmakeup.jpeg">
+    <span>Makeup Sets</span>
+</button>
+
+<!-- SHOES -->
+<button onclick="showWomenCategory('womenShoes')">
+    <img src="wwshoe.jpeg">
+    <span>Shoes</span>
+</button>
+
+<!-- HEELS -->
+<button onclick="showWomenCategory('womenHeels')">
+    <img src="wwheel.jpeg">
+    <span>Heels</span>
+</button>
+
+<!-- BINDI -->
+<button onclick="showWomenCategory('womenBindi')">
+    <img src="wwbindi.jpeg">
+    <span>Bindis</span>
+</button>
+
+<!-- CAP -->
+<button onclick="showWomenCategory('womenCap')">
+    <img src="wwcap.jpeg">
+    <span>Caps</span>
+</button>
+
+<!-- SANDAL -->
+<button onclick="showWomenCategory('womenSandal')">
+    <img src="wwsandel.jpeg">
+    <span>Sandals</span>
+</button>
+
+<!-- YOGA MAT -->
+<button onclick="showWomenCategory('womenYogaMat')">
+    <img src="ccmmat.jpeg">
+    <span>Yoga Mats</span>
+</button>
+
+<!-- YOGA DRESS -->
+<button onclick="showWomenCategory('womenYogaDress')">
+    <img src="wwyogadress.jpeg">
+    <span>Yoga Dress</span>
+</button>
+
+<!-- TOWEL -->
+<button onclick="showWomenCategory('womenTowel')">
+    <img src="cckt.jpeg">
+    <span>Towels</span>
+</button>
+
+<!-- BEDSHEET -->
+<button onclick="showWomenCategory('womenBedsheet')">
+    <img src="wwbedsheet.jpeg">
+    <span>Bedsheets</span>
+</button>
+
+<!-- BLANKET -->
+<button onclick="showWomenCategory('womenBlanket')">
+    <img src="wwbla.jpeg">
+    <span>Blankets</span>
+</button>
+
+<!-- BELT -->
+<button onclick="showWomenCategory('womenBelt')">
+    <img src="wwbelt.jpeg">
+    <span>Belts</span>
+</button>
+
+<button onclick="showWomenCategory('womenBlazer')">
+    <img src="wwblazer.jpeg">
+    <span>Blazers</span>
+</button>
+<button onclick="showWomenCategory('womenJacket')">
+    <img src="wwjacket.jpeg">
+    <span>Jackets</span>
+</button>
+            </div>
+
+
+            <!-- WOMEN PRODUCTS -->
+
+            <div id="womenProducts"></div>
+
+        </div>
 
     </div>
 
-</div>
+</section>
 
 
 <!-- =====================================================
-     EXISTING NAVIRA FILES
-     DO NOT CHANGE THEM
-     ===================================================== -->
-<script src="products.js" onerror="alert('ERROR: products.js file cannot be loaded')"></script>
-<script src="settings.js"></script>
-<script src="wishlist.js"></script>
-<script src="bottom-nav.js"></script>
-<script src="categories.js"></script>
+     BOYS SECTION
+===================================================== -->
 
-<!-- NEW CATEGORY FILE -->
+<section class="naviraGenderSection" id="boysSection">
+
+    <div class="naviraGenderTitle">
+
+        <h2>Boys' Collection</h2>
+
+        <p>Explore Boys' Categories</p>
+
+    </div>
+
+
+    <div class="naviraGenderLayout">
+
+
+        <!-- LEFT -->
+
+        <aside class="naviraGenderMajor">
+
+            <div class="naviraGenderMajorCard">
+
+                <img src="boys.jpeg" alt="Boys">
+
+                <h3>Boys</h3>
+
+                <p>Boys' Collection</p>
+
+            </div>
+
+        </aside>
+
+
+        <!-- RIGHT -->
+
+        <div class="naviraGenderRight">
+
+            <div class="naviraGenderCategories">
+
+
+                <!-- BOYS CAPS -->
+
+               <!-- BOY DRESS -->
+<button onclick="showBoysCategory('boysDress')">
+    <img src="boydress.jpeg">
+    <span>Dresses</span>
+</button>
+
+
+<!-- BOYS FOOTWEAR -->
+<button onclick="showBoysCategory('boysFootwear')">
+    <img src="boyfootwear.jpeg">
+    <span>Footwear</span>
+</button>
+
+
+<!-- BOYS CAP -->
+<button onclick="showBoysCategory('boysCap')">
+    <img src="boycap.jpeg">
+    <span>Caps</span>
+</button>
+
+
+<!-- BOYS WATCH -->
+<button onclick="showBoysCategory('boysWatch')">
+    <img src="boywatch.jpeg">
+    <span>Watches</span>
+</button>
+
+
+<!-- BOYS BAG -->
+<button onclick="showBoysCategory('boysBag')">
+    <img src="boybag.jpeg">
+    <span>Bags</span>
+</button>
+
+
+<!-- BOYS BEDSHEET -->
+<button onclick="showBoysCategory('boysBedsheet')">
+    <img src="boybedsheet.jpeg">
+    <span>Bedsheets</span>
+</button>
+
+
+<!-- BOYS BLANKET -->
+<button onclick="showBoysCategory('boysBlanket')">
+    <img src="boybla.jpeg">
+    <span>Blankets</span>
+</button>
+
+
+            </div>
+
+
+            <!-- BOYS PRODUCTS -->
+
+            <div id="boysProducts"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     COMMON CSS
+===================================================== -->
+
+<style>
+
+.naviraGenderSection{
+
+    width:100%;
+
+    padding:35px 20px;
+
+    box-sizing:border-box;
+
+}
+
+
+.naviraGenderTitle{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+}
+
+
+.naviraGenderTitle h2{
+
+    margin:0;
+
+    font-size:28px;
+
+}
+
+
+.naviraGenderTitle p{
+
+    margin:7px 0 0;
+
+    color:#777;
+
+}
+
+
+.naviraGenderLayout{
+
+    display:flex;
+
+    width:100%;
+
+    gap:25px;
+
+}
+
+
+.naviraGenderMajor{
+
+    width:180px;
+
+    flex-shrink:0;
+
+}
+
+
+.naviraGenderMajorCard{
+
+    position:sticky;
+
+    top:90px;
+
+    text-align:center;
+
+    padding:12px;
+
+    background:#fff;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+}
+
+
+.naviraGenderMajorCard img{
+
+    width:100%;
+
+    height:170px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+
+}
+
+
+.naviraGenderMajorCard h3{
+
+    margin:10px 0 4px;
+
+}
+
+
+.naviraGenderMajorCard p{
+
+    margin:0;
+
+    color:#777;
+
+    font-size:13px;
+
+}
+
+
+.naviraGenderRight{
+
+    flex:1;
+
+    min-width:0;
+
+}
+
+
+.naviraGenderCategories{
+
+    display:grid;
+
+    grid-template-columns:repeat(5,1fr);
+
+    gap:18px;
+
+    margin-bottom:35px;
+
+}
+
+
+.naviraGenderCategories button{
+
+    border:1px solid #ddd;
+
+    background:#fff;
+
+    border-radius:12px;
+
+    padding:10px;
+
+    cursor:pointer;
+
+    transition:0.25s;
+
+}
+
+
+.naviraGenderCategories button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.12);
+
+}
+
+
+.naviraGenderCategories img{
+
+    width:100%;
+
+    height:110px;
+
+    object-fit:contain;
+
+    display:block;
+
+    border-radius:8px;
+
+}
+
+
+.naviraGenderCategories span{
+
+    display:block;
+
+    margin-top:8px;
+
+    font-weight:bold;
+
+    font-size:14px;
+
+}
+
+
+.naviraCategoryProductSection{
+
+    margin-bottom:50px;
+
+    scroll-margin-top:90px;
+
+}
+
+
+.naviraCategoryProductSection h3{
+
+    font-size:22px;
+
+    margin:0 0 18px;
+
+    padding-bottom:8px;
+
+    border-bottom:2px solid #071b78;
+
+}
+
+
+.naviraCategoryProducts{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:18px;
+
+}
+
+
+.naviraCategoryProductCard{
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+    padding:10px;
+
+    background:#fff;
+
+    cursor:pointer;
+
+}
+
+
+.naviraCategoryProductCard img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:contain;
+
+    border-radius:8px;
+
+}
+
+
+.naviraCategoryProductCard h4{
+
+    margin:8px 0 5px;
+
+    font-size:16px;
+
+}
+
+
+.naviraCategoryProductCard .naviraRating{
+
+    font-size:14px;
+
+}
+
+
+.naviraCategoryProductCard .naviraPrice{
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    margin-top:7px;
+
+}
+
+
+.naviraCategoryProductCard .naviraOldPrice{
+
+    color:#888;
+
+    text-decoration:line-through;
+
+    margin-left:5px;
+
+    font-size:14px;
+
+}
+
+
+.naviraCategoryProductCard .naviraDiscount{
+
+    margin-top:5px;
+
+    font-weight:bold;
+
+}
+
+
+.naviraCategoryProductCard p{
+
+    font-size:13px;
+
+    color:#666;
+
+}
+
+
+/* ================= PHONE ================= */
+
+@media(max-width:700px){
+
+    .naviraGenderSection{
+
+        padding:25px 8px;
+
+    }
+
+
+    .naviraGenderLayout{
+
+        gap:10px;
+
+    }
+
+
+    .naviraGenderMajor{
+
+        width:88px;
+
+    }
+
+
+    .naviraGenderMajorCard{
+
+        padding:5px;
+
+        top:70px;
+
+    }
+
+
+    .naviraGenderMajorCard img{
+
+        height:85px;
+
+    }
+
+
+    .naviraGenderMajorCard h3{
+
+        font-size:13px;
+
+    }
+
+
+    .naviraGenderMajorCard p{
+
+        font-size:9px;
+
+    }
+
+
+    .naviraGenderCategories{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:10px;
+
+    }
+
+
+    .naviraGenderCategories button{
+
+        padding:6px;
+
+    }
+
+
+    .naviraGenderCategories img{
+
+        height:90px;
+
+    }
+
+
+    .naviraGenderCategories span{
+
+        font-size:12px;
+
+    }
+
+
+    .naviraCategoryProducts{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:10px;
+
+    }
+
+
+    .naviraCategoryProductCard{
+
+        padding:7px;
+
+    }
+
+
+    .naviraCategoryProductCard img{
+
+        height:150px;
+
+    }
+
+
+    .naviraCategoryProductCard h4{
+
+        font-size:13px;
+
+    }
+
+
+    .naviraCategoryProductCard p{
+
+        font-size:11px;
+
+    }
+
+}
+
+</style>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+function getProductsByPages(pages){
+
+    if(typeof products === "undefined"){
+
+        return [];
+
+    }
+
+    return products.filter(function(product){
+
+        return pages.includes(product.page);
+
+    });
+
+}
+
+
+/* =====================================================
+   PRODUCT CARD
+===================================================== */
+
+function createWomenBoysProduct(product){
+
+    return `
+
+        <div class="naviraCategoryProductCard"
+             onclick="location.href='${product.page}'">
+
+            <img
+                src="${product.images[0]}"
+                alt="${product.name}"
+            >
+
+            <h4>${product.name}</h4>
+
+            <div class="naviraRating">
+                ${product.rating}
+            </div>
+
+            <div class="naviraPrice">
+
+                ₹${product.price}
+
+                <span class="naviraOldPrice">
+                    ₹${product.oldPrice}
+                </span>
+
+            </div>
+
+            <div class="naviraDiscount">
+                ${product.discount}
+            </div>
+
+            <p>
+                ${product.description}
+            </p>
+
+        </div>
+
+    `;
+
+}
+
+
+/* =====================================================
+   WOMEN
+===================================================== */
+
+var WOMEN_CATEGORIES = {
+
+    womenSaree: {
+
+        title:"Sarees",
+
+        pages:[
+            "sari1.html",
+			"sar12.html",
+            "sari3.html",
+            "sari4.html",
+            "sari5.html",
+            "sari6.html",
+            "sari7.html",
+            "sari8.html",
+            "sari9.html",
+            "ssaree1.html",
+            "ssaree2.html",
+            "ssaree3.html",
+            "ssaree4.html",
+            "ssaree5.html",
+            "ssaree6.html",
+            "ssaree7.html",
+            "ssaree8.html",
+            "ssaree9.html"
+        ]
+
+    },
+ womenChuridar: {
+
+        title:"Salwar",
+
+        pages:[
+            "churidar1.html",
+			"churidar2.html",
+            "churidar3.html",
+            "churidar4.html",
+            "churidar5.html",
+            "churidar6.html",
+            "churidar7.html",
+            "churidar8.html",
+            "churidar9.html",
+            "churidar11.html",
+            "churidar12.html",
+            "churidar13.html",
+            "churidar14.html",
+            "churidar15.html",
+            "churidar16.html",
+            "churidar18.html",
+            "churidar19.html",
+            "churidar20.html"
+        ]
+
+    },
+
+
+    womenSkirt: {
+
+        title:"Skirts",
+
+        pages:[
+            "skirt1.html",
+            "skirt2.html",
+            "skirt3.html",
+            "skirt4.html",
+            "skirt5.html",
+            "skirt6.html",
+            "skirt7.html",
+            "skirt8.html",
+            "skirt9.html"
+        ]
+
+    },
+	
+	womenNightwear: {
+
+        title:"Nightwear",
+
+        pages:[
+            "wnight1.html",
+            "wnight2.html",
+            "wnight3.html",
+            "wnight4.html",
+            "wnight5.html",
+            "wnight6.html",
+            "wnight7.html",
+            "wnight8.html",
+            "wnight9.html"
+        ]
+
+    },
+	
+	
+	womenPant: {
+
+        title:"Women's Pant",
+
+        pages:[
+            "wpant1.html",
+            "wpant2.html",
+            "wpant3.html",
+            "wpant4.html",
+            "wpant5.html",
+            "wpant6.html",
+            "wpant7.html",
+            "wpant8.html",
+            "wpant9.html",
+			"wwpant4.html"
+        ]
+
+    },
+womenCoat: {
+
+        title:"Coat",
+
+        pages:[
+            "wcoat6.html",
+            "wcoat9.html",
+            "wcoat13.html",
+            "wcoat18.html",
+            "wcoat24.html"
+        ]
+
+    },
+	
+	
+	womenPant: {
+
+        title:"Women's ",
+
+        pages:[
+            "wpant1.html",
+            "wpant2.html",
+            "wpant3.html",
+            "wpant4.html",
+            "wpant5.html",
+            "wpant6.html",
+            "wpant7.html",
+            "wpant8.html",
+            "wpant9.html"
+        ]
+
+    },
+
+
+    womenJeans: {
+
+        title:"Jeans",
+
+        pages:[
+            "wwpant1.html",
+            "wwpant2.html",
+            "wwpant3.html",
+			]},
+			
+			
+			womenTrousers: {
+
+        title:"Trousers",
+
+        pages:[
+            "wwpant5.html",
+            "wwpant6.html",
+            "wwpant7.html",
+            "wwpant8.html",
+            "wwpant9.html"
+        ]
+
+    },
+	
+	
+    womenShirt: {
+
+        title:"Women's Shirts",
+
+        pages:[
+            "wshirt1.html",
+            "wshirt2.html",
+            "wshirt3.html",
+            "wshirt4.html",
+            "wshirt5.html",
+            "wshirt6.html",
+            "wshirt7.html",
+            "wshirt8.html",
+            "wshirt9.html"
+        ]
+
+    },
+
+
+    womenBag: {
+
+        title:"Women's Bags",
+
+        pages:[
+            "bag1.html",
+            "bag2.html",
+            "bag3.html",
+            "bag4.html",
+            "bag5.html",
+            "bag6.html",
+            "bag7.html",
+            "bag8.html",
+			"ubag1.html",
+            "ubag2.html",
+            "ubag3.html",
+            "ubag4.html",
+            "ubag5.html",
+            "ubag6.html",
+            "ubag7.html",
+            "ubag8.html"
+        ]
+
+    },
+	
+	womenEyeliner: {
+
+        title:"Eyeliner",
+
+        pages:[
+            "line1.html",
+            "line2.html",
+            "line3.html",
+            "line4.html",
+            "line5.html"
+        ]
+
+    },
+	womenBush: {
+
+        title:"Hair Bush",
+
+        pages:[
+            "bush1.html",
+            "bush2.html",
+            "bush3.html",
+            "bush4.html",
+            "bush6.html"
+        ]
+
+    },
+	
+	
+	womenMirror: {
+
+        title:"Mirror",
+
+        pages:[
+            "mirror.html",
+            "mirror2.html",
+            "mirror3.html",
+            "mirror4.html"
+        ]
+
+    },
+	womenClip: {
+
+        title:"Hair Clips",
+
+        pages:[
+            "clip10.html",
+            "clip9.html",
+            "clip8.html",
+            "clip7.html",
+            "clip6.html"
+        ]
+
+    },
+	 womenNailpolish: {
+
+        title:"Nail Polish",
+
+        pages:[
+            "nail1.html",
+            "nail2.html",
+            "nail3.html",
+            "nail4.html",
+            "nail5.html",
+            "nail6.html",
+            "nail7.html",
+            "nail8.html",
+            "nail9.html"
+        ]
+
+    },
+
+ womenHairstyling: {
+
+        title:"Hair Styling",
+
+        pages:[
+            "hhair1.html",
+            "hhair2.html",
+            "hhair3.html",
+            "hhair4.html",
+            "hhair5.html",
+            "hhair6.html",
+            "hhair7.html",
+            "hhair8.html",
+            "hhair9.html"
+        ]
+
+    },
+	womenComb: {
+
+        title:"Hair Combs",
+
+        pages:[
+            "comb1.html",
+            "comb2.html",
+            "comb3.html",
+            "comb4.html",
+            "comb5.html"
+        ]
+
+    },
+	 womenCream: {
+
+        title:"Creams",
+
+        pages:[
+            "cream1.html",
+            "cream2.html",
+            "cream3.html",
+            "cream4.html",
+            "cream5.html",
+            "cream6.html",
+            "cream7.html",
+            "cream8.html",
+            "cream9.html"
+        ]
+
+    },
+womenNecklace: {
+
+        title:"Necklaces",
+
+        pages:[
+            "neck1.html",
+            "neck2.html",
+            "neck3.html",
+            "neck4.html",
+            "neck5.html",
+            "neck6.html",
+            "neck7.html",
+            "neck8.html",
+            "neck9.html"
+        ]
+
+    },
+	womenNoseRing: {
+
+    title:"Nose Rings",
+
+    pages:[
+        "nring1.html",
+        "nring2.html",
+        "nring3.html",
+        "nring4.html",
+        "nring5.html",
+        "nring6.html",
+        "nring7.html",
+        "nring8.html",
+        "nring9.html"
+    ]
+
+},
+
+womenEyeglasses: {
+
+    title:"Eyeglasses",
+
+    pages:[
+        "weye1.html",
+        "weye2.html",
+        "weye3.html",
+        "weye4.html",
+        "weye5.html",
+        "weye6.html",
+        "weye7.html",
+        "weye8.html",
+        "weye9.html"
+    ]
+
+},
+
+womenAnklet: {
+
+    title:"Anklets",
+
+    pages:[
+        "leg1.html",
+        "leg2.html",
+        "leg3.html",
+        "leg4.html",
+        "leg5.html",
+        "leg6.html",
+        "leg7.html",
+        "leg8.html",
+        "leg9.html"
+    ]
+
+},
+
+womenBangle: {
+
+    title:"Bangles",
+
+    pages:[
+        "bangle1.html",
+        "bangle2.html",
+        "bangle3.html",
+        "bangle4.html",
+        "bangle5.html",
+        "bangle6.html",
+        "bangle7.html",
+        "bangle8.html",
+        "bangle9.html"
+    ]
+
+},
+
+womenRing: {
+
+    title:"Rings",
+
+    pages:[
+        "ring1.html",
+        "ring2.html",
+        "ring3.html",
+        "ring4.html",
+        "ring5.html",
+        "ring6.html",
+        "ring7.html",
+        "ring8.html",
+        "ring9.html"
+    ]
+
+},
+
+womenEarrings: {
+
+    title:"Earrings",
+
+    pages:[
+        "earring1.html",
+        "earring2.html",
+        "earring3.html",
+        "earring4.html",
+        "earring5.html",
+        "earring6.html",
+        "earring7.html",
+        "earring8.html",
+        "earring9.html"
+    ]
+
+},
+
+womenPerfume: {
+
+    title:"Perfumes",
+
+    pages:[
+        "per1.html",
+        "per2.html",
+        "per3.html",
+        "per4.html",
+        "per5.html",
+        "per6.html",
+        "per7.html",
+        "per8.html",
+        "per9.html"
+    ]
+
+},
+
+womenMakeupset: {
+
+    title:"Makeup Sets",
+
+    pages:[
+        "makeup1.html",
+        "makeup2.html",
+        "makeup3.html",
+        "makeup4.html",
+        "makeup5.html",
+        "makeup6.html",
+        "makeup7.html",
+        "makeup8.html",
+        "makeup9.html"
+    ]
+
+},
+
+
+
+    womenShoes: {
+
+        title:"Women's Footwear",
+
+        pages:[
+            "wshoes1.html",
+            "wshoes2.html",
+            "wshoes3.html",
+            "wshoes4.html",
+            "wshoes5.html",
+            "wshoes6.html",
+            "wshoes7.html",
+            "wshoes8.html",
+            "wshoes9.html"
+        ]
+
+    },
+
+
+   womenHeels: {
+
+    title:"Heels",
+
+    pages:[
+        "heel1.html",
+        "heel2.html",
+        "heel3.html",
+        "heel4.html",
+        "heel5.html",
+        "heel6.html",
+        "heel7.html",
+        "heel8.html",
+        "heel9.html"
+    ]
+
+},
+
+womenBindi: {
+
+    title:"Bindis",
+
+    pages:[
+        "bindi1.html",
+        "bindi2.html",
+        "bindi3.html",
+        "bindi4.html",
+        "bindi5.html",
+        "bindi6.html",
+        "bindi7.html",
+        "bindi8.html",
+        "bindi9.html"
+    ]
+
+},
+
+womenCap: {
+
+    title:"Caps",
+
+    pages:[
+        "cap1.html",
+        "cap2.html",
+        "cap3.html",
+        "cap4.html",
+        "cap5.html",
+        "cap6.html",
+        "cap7.html",
+        "cap8.html",
+        "cap9.html"
+    ]
+
+},
+
+womenSandal: {
+
+    title:"Sandals",
+
+    pages:[
+        "wsandle1.html",
+        "wsandle2.html",
+        "wsandle3.html",
+        "wsandle4.html",
+        "wsandle5.html",
+        "wsandle6.html",
+        "wsandle7.html",
+        "wsandle8.html",
+        "wsandle9.html"
+    ]
+
+},
+
+womenYogaMat: {
+
+    title:"Yoga Mats",
+
+    pages:[
+        "mmat1.html",
+        "mmat2.html",
+        "mmat3.html",
+        "mmat4.html",
+        "mmat5.html",
+        "mmat6.html",
+        "mmat7.html",
+        "mmat8.html",
+        "mmat9.html"
+    ]
+
+},
+
+womenYogaDress: {
+
+    title:"Yoga Dress",
+
+    pages:[
+        "gy1.html",
+        "gy2.html",
+        "gy3.html",
+        "gy4.html",
+        "gy5.html",
+        "gy6.html",
+        "gy7.html",
+        "gy8.html",
+        "gy9.html"
+    ]
+
+},
+
+womenTowel: {
+
+    title:"Towels",
+
+    pages:[
+        "kt1.html",
+        "kt2.html",
+        "kt3.html",
+        "kt4.html",
+        "kt5.html",
+        "kt6.html",
+        "kt7.html",
+        "kt8.html",
+        "kt9.html"
+    ]
+
+},
+
+womenBedsheet: {
+
+    title:"Bedsheets",
+
+    pages:[
+        "wbed1.html",
+        "wbed2.html",
+        "wbed3.html",
+        "wbed4.html",
+        "wbed5.html",
+        "wbed6.html"
+    ]
+
+},
+
+womenBlanket: {
+
+    title:"Blankets",
+
+    pages:[
+        "wbla1.html",
+        "wbla2.html",
+        "wbla3.html",
+        "wbla4.html",
+        "wbla5.html",
+        "wbla6.html"
+    ]
+
+},
+
+womenBelt: {
+
+    title:"Belts",
+
+    pages:[
+        "belt1.html",
+        "belt2.html",
+        "belt3.html",
+        "belt4.html",
+        "belt5.html",
+        "belt6.html",
+        "belt7.html",
+        "belt8.html",
+        "belt9.html"
+    ]
+
+},
+	womenBlazer: {
+
+        title:"Blazers",
+
+        pages:[
+            "wcoat1.html",
+            "wcoat19.html",
+            "wcoat11.html",
+            "wcoat8.html",
+            "wcoat20.html",
+			"wcoat21.html",
+            "wcoat22.html",
+            "wcoat23.html",
+            "wcoat25.html",
+            "wcoat26.html",
+			"wcoat27.html"
+        ]
+
+   
+
+},
+
+
+womenJacket: {
+
+        title:"Jackets",
+
+        pages:[
+            "wcoat2.html",
+            "wcoat3.html",
+            "wcoat8.html",
+            "wcoat4.html","wcoat21.html",
+            "wcoat5.html",
+            "wcoat7.html",
+            "wcoat10.html",
+            "wcoat12.html",
+			"wcoat14.html",
+			"wcoat15.html",
+            "wcoat16.html",
+			"wcoat17.html"
+        ]
+
+   }
+};
+
+
+/* =====================================================
+   SHOW WOMEN CATEGORY
+===================================================== */
+
+function showWomenCategory(category){
+
+    var data = WOMEN_CATEGORIES[category];
+
+    if(!data){
+
+        return;
+
+    }
+
+    var list = getProductsByPages(data.pages);
+
+    var html = `
+
+        <div
+            class="naviraCategoryProductSection"
+            id="${category}"
+        >
+
+            <h3>${data.title}</h3>
+
+            <div class="naviraCategoryProducts">
+
+    `;
+
+
+    list.forEach(function(product){
+
+        html += createWomenBoysProduct(product);
+
+    });
+
+
+    html += `
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    document.getElementById("womenProducts").innerHTML = html;
+
+
+    document.getElementById(category).scrollIntoView({
+
+        behavior:"smooth",
+
+        block:"start"
+
+    });
+
+}
+
+
+/* =====================================================
+   BOYS
+===================================================== */
+
+var BOYS_CATEGORIES = {
+
+ boysDress: {
+
+        title:"Dresses",
+
+        pages:[
+            "bbaby1.html",
+            "bbaby2.html",
+            "bbaby3.html",
+            "bbaby4.html",
+            "bbaby5.html",
+            "bbaby6.html",
+            "bbaby7.html",
+            "bbaby8.html",
+            "bbaby9.html"
+        ]
+
+    },
+
+
+boysFootwear: {
+
+        title:"Footwears",
+
+        pages:[
+            "bb1.html",
+            "bb2.html",
+            "bb3.html",
+            "bb4.html",
+            "bb5.html",
+            "bb6.html",
+            "bb7.html",
+            "bb8.html",
+            "bb9.html",
+			"bb10.html"
+        ]
+
+    },
+
+    boysCap: {
+
+        title:"Boys' Caps",
+
+        pages:[
+            "bcap1.html",
+            "bcap2.html",
+            "bcap3.html",
+            "bcap4.html",
+            "bcap5.html",
+            "bcap6.html",
+            "bcap7.html",
+            "bcap8.html",
+            "bcap9.html"
+        ]
+
+    },
+
+
+    boysWatch: {
+
+        title:"Boys' Watches",
+
+        pages:[
+            "bwatch1.html",
+            "bwatch2.html",
+            "bwatch3.html",
+            "bwatch4.html",
+            "bwatch5.html",
+            "bwatch6.html",
+            "bwatch7.html"
+        ]
+
+    },
+	
+	 boysBag: {
+
+        title:"Bags",
+
+         pages: [
+            "bbag3.html",
+            "bbag5.html",
+            "bbag10.html",
+            "bbag11.html",
+            "bbag12.html",
+            "bbag7.html",
+            "bbag8.html",
+]
+    },
+
+
+    boysBedsheet: {
+
+        title:"Bedsheets",
+
+        pages:[
+            "bbbed1.html",
+            "bbbed2.html",
+            "bbbed3.html",
+            "bbbed4.html",
+            "bbbed5.html",
+            "bbbed6.html"
+        ]
+
+    },
+
+
+    boysBlanket: {
+
+        title:"Blankets",
+
+        pages:[
+            "bbbla1.html",
+            "bbbla2.html",
+            "bbbla3.html",
+            "bbbla4.html",
+            "bbbla5.html",
+            "bbbla6.html"
+        ]
+
+    }
+
+};
+
+
+/* =====================================================
+   SHOW BOYS CATEGORY
+===================================================== */
+
+function showBoysCategory(category){
+
+    var data = BOYS_CATEGORIES[category];
+
+    if(!data){
+
+        return;
+
+    }
+
+    var list = getProductsByPages(data.pages);
+
+    var html = `
+
+        <div
+            class="naviraCategoryProductSection"
+            id="${category}"
+        >
+
+            <h3>${data.title}</h3>
+
+            <div class="naviraCategoryProducts">
+
+    `;
+
+
+    list.forEach(function(product){
+
+        html += createWomenBoysProduct(product);
+
+    });
+
+
+    html += `
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    document.getElementById("boysProducts").innerHTML = html;
+
+
+    document.getElementById(category).scrollIntoView({
+
+        behavior:"smooth",
+
+        block:"start"
+
+    });
+
+}
+
+</script>
+<!-- =====================================================
+     GIRLS SECTION
+===================================================== -->
+
+<section class="naviraGenderSection" id="girlsSection">
+
+    <div class="naviraGenderTitle">
+
+        <h2>Girls' Collection</h2>
+
+        <p>Explore Girls' Categories</p>
+
+    </div>
+
+
+    <div class="naviraGenderLayout">
+
+
+        <!-- LEFT SIDE -->
+
+        <aside class="naviraGenderMajor">
+
+            <div class="naviraGenderMajorCard">
+
+                <img src="girls.jpeg" alt="Girls">
+
+                <h3>Girls</h3>
+
+                <p>Girls' Collection</p>
+
+            </div>
+
+        </aside>
+
+
+        <!-- RIGHT SIDE -->
+
+        <div class="naviraGenderRight">
+
+            <div class="naviraGenderCategories">
+
+
+                <!-- GIRLS BEDSHEETS -->
+
+               <!-- GIRL DRESSES -->
+<button onclick="showGirlsCategory('girlsDress')">
+    <img src="ggdress.jpeg">
+    <span>Girl Dresses</span>
+</button>
+
+
+<!-- GIRLS FULL SKIRT -->
+<button onclick="showGirlsCategory('girlsFullSkirt')">
+    <img src="ggfsk.jpeg">
+    <span>Full Skirts</span>
+</button>
+
+
+<!-- GIRLS BRUSH -->
+<button onclick="showGirlsCategory('girlsBrush')">
+    <img src="ggtie.jpeg">
+    <span>Bushes</span>
+</button>
+
+
+<!-- GIRLS CLIP -->
+<button onclick="showGirlsCategory('girlsClip')">
+    <img src="ggclip.jpeg">
+    <span>Clips</span>
+</button>
+
+
+<!-- GIRLS COMB -->
+<button onclick="showGirlsCategory('girlsComb')">
+    <img src="ggcomb.jpeg">
+    <span>Combs</span>
+</button>
+
+
+<!-- GIRLS CAP -->
+<button onclick="showGirlsCategory('girlsCap')">
+    <img src="ggcap.jpeg">
+    <span>Caps</span>
+</button>
+
+
+<!-- GIRLS FOOTWEAR -->
+<button onclick="showGirlsCategory('girlsFootwear')">
+    <img src="ggfootwear.jpeg">
+    <span>Footwear</span>
+</button>
+
+
+<!-- GIRLS WATCH -->
+<button onclick="showGirlsCategory('girlsWatch')">
+    <img src="ggwatch.jpeg">
+    <span>Watches</span>
+</button>
+
+
+<!-- GIRLS BEDSHEET -->
+<button onclick="showGirlsCategory('girlsBedsheet')">
+    <img src="ggbedsheet.jpeg">
+    <span>Bedsheets</span>
+</button>
+
+
+<!-- GIRLS BLANKET -->
+<button onclick="showGirlsCategory('girlsBlanket')">
+    <img src="ggbla.jpeg">
+    <span>Blankets</span>
+</button>
+
+<button onclick="showGirlsCategory('girlsBags')">
+    <img src="ggbag.jpeg">
+    <span>Bags</span>
+</button>
+
+
+            </div>
+
+
+            <!-- GIRLS PRODUCTS -->
+
+            <div id="girlsProducts"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+/* =====================================================
+   GIRLS CATEGORIES
+===================================================== */
+
+var GIRLS_CATEGORIES = {
+
+
+   girlsDress: {
+
+    title:"Girl Dresses",
+
+    pages:[
+        "gbaby1.html",
+        "gbaby2.html",
+        "gbaby3.html",
+        "gbaby4.html",
+        "gbaby5.html",
+        "gbaby6.html",
+        "gbaby7.html",
+        "gbaby8.html",
+        "gbaby9.html"
+    ]
+
+},
+
+girlsFullSkirt: {
+
+    title:"Full Skirts",
+
+    pages:[
+        "fsk1.html",
+        "fsk2.html",
+        "fsk3.html",
+        "fsk4.html",
+        "fsk5.html",
+        "fsk6.html",
+        "fsk7.html",
+        "fsk8.html",
+        "fsk9.html"
+    ]
+
+},
+
+girlsBrush: {
+
+    title:"Brushes",
+
+    pages:[
+        "bush5.html",
+        "bush7.html",
+        "bush8.html",
+        "bush9.html",
+        "bush10.html"
+    ]
+
+},
+
+girlsClip: {
+
+    title:"Clips",
+
+    pages:[
+        "clip1.html",
+        "clip2.html",
+        "clip3.html",
+        "clip4.html",
+        "clips5.html"
+    ]
+
+},
+
+girlsComb: {
+
+    title:"Combs",
+
+    pages:[
+        "comb6.html",
+        "comb7.html",
+        "comb8.html",
+        "comb9.html",
+        "comb10.html"
+    ]
+
+},
+
+girlsCap: {
+
+    title:"Caps",
+
+    pages:[
+        "gcap1.html",
+        "gcap2.html",
+        "gcap3.html",
+        "gcap4.html",
+        "gcap5.html",
+        "gcap6.html",
+        "gcap7.html",
+        "gcap8.html",
+        "gcap9.html"
+    ]
+
+},
+
+girlsFootwear: {
+
+    title:"Footwear",
+
+    pages:[
+        "gf1.html",
+        "gf2.html",
+        "gf3.html",
+        "gf4.html",
+        "gf5.html",
+        "gf6.html",
+        "gf7.html",
+        "gf8.html",
+        "gf9.html",
+        "gf10.html",
+        "gf11.html",
+        "gf12.html"
+    ]
+
+},
+
+girlsWatch: {
+
+    title:"Watches",
+
+    pages:[
+        "gwatch1.html",
+        "gwatch2.html",
+        "gwatch3.html",
+        "gwatch4.html",
+        "gwatch5.html"
+    ]
+
+},
+
+girlsBedsheet: {
+
+    title:"Bedsheets",
+
+    pages:[
+        "bgbed1.html",
+        "bgbed2.html",
+        "bgbed3.html",
+        "bgbed4.html",
+        "bgbed5.html",
+        "bgbed6.html"
+    ]
+
+},
+
+girlsBlanket: {
+
+    title:"Blankets",
+
+    pages:[
+        "bgbla1.html",
+        "bgbla2.html",
+        "bgbla3.html",
+        "bgbla4.html",
+        "bgbla5.html",
+        "bgbla6.html"
+    ]
+
+},
+
+girlsBags: {
+
+        title: "Girls Bags",
+        pages:[
+            "gbag1.html",
+            "gbag2.html",
+            "gbag3.html",
+            "gbag4.html",
+            "gbag5.html",
+            "gbag6.html",
+            "gbag7.html",
+            "gbag8.html",
+            "gbag9.html"
+       
+
+        ]
+
+    }
+};
+
+
+/* =====================================================
+   SHOW GIRLS CATEGORY
+===================================================== */
+
+function showGirlsCategory(category) {
+
+    var data = GIRLS_CATEGORIES[category];
+
+    if (!data) {
+        return;
+    }
+
+
+    var list = getProductsByPages(data.pages);
+
+
+    var html = `
+
+        <div
+            class="naviraCategoryProductSection"
+            id="${category}"
+        >
+
+            <h3>${data.title}</h3>
+
+            <div class="naviraCategoryProducts">
+
+    `;
+
+
+    list.forEach(function(product) {
+
+        html += createWomenBoysProduct(product);
+
+    });
+
+
+    html += `
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    document.getElementById("girlsProducts").innerHTML = html;
+
+
+    document.getElementById(category).scrollIntoView({
+
+        behavior: "smooth",
+
+        block: "start"
+
+    });
+
+}
+
+</script>
+<!-- =====================================================
+     BABY SECTION
+===================================================== -->
+
+<section class="naviraGenderSection" id="babySection">
+
+    <div class="naviraGenderTitle">
+
+        <h2>Baby Collection</h2>
+
+        <p>Explore Baby Categories</p>
+
+    </div>
+
+
+    <div class="naviraGenderLayout">
+
+
+        <!-- LEFT SIDE -->
+
+        <aside class="naviraGenderMajor">
+
+            <div class="naviraGenderMajorCard">
+
+                <img src="baby.jpeg" alt="Baby">
+
+                <h3>Baby</h3>
+
+                <p>Baby Collection</p>
+
+            </div>
+
+        </aside>
+
+
+        <!-- RIGHT SIDE -->
+
+        <div class="naviraGenderRight">
+
+            <div class="naviraGenderCategories">
+
+
+                <!-- BABY CLOTHING -->
+
+               <!-- BOY DRESS -->
+<button onclick="showBabyCategory('babybaby')">
+    <img src="babydress.jpeg">
+    <span>Dresses</span>
+</button>
+
+
+<!-- BOYS FOOTWEAR -->
+<button onclick="showBabyCategory('babyboy')">
+    <img src="babyboy.jpeg">
+    <span>Boy's Footwear</span>
+</button>
+
+
+<!-- GIRL FOOTWEAR -->
+<button onclick="showBabyCategory('babygirl')">
+    <img src="babygirl.jpeg">
+    <span>Girl's Footwear</span>
+</button>
+
+
+            </div>
+
+
+            <!-- BABY PRODUCTS -->
+
+            <div id="babyProducts"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+/* =====================================================
+   BABY CATEGORIES
+===================================================== */
+
+var BABY_CATEGORIES = {
+
+
+    babybaby: {
+
+    title:"Dresses",
+
+    pages:[
+        "baby1.html",
+        "baby2.html",
+        "baby3.html",
+        "baby4.html",
+        "baby5.html",
+        "baby6.html",
+        "baby7.html",
+        "baby8.html",
+        "baby9.html"
+    ]
+
+},
+
+babyboy: {
+
+    title:"Boy Footwear",
+
+    pages:[
+        "bf1.html",
+        "bf2.html",
+        "bf3.html",
+        "bf4.html",
+        "bf5.html",
+        "bf6.html",
+        "bf7.html",
+        "bf8.html"
+    ]
+
+},
+
+babygirl: {
+
+    title:"Girls Footwear",
+
+    pages:[
+        "gba1.html",
+        "gba2.html",
+        "gba3.html",
+        "gba4.html",
+        "gba5.html",
+        "gba6.html"
+    ]
+
+}
+
+   
+
+};
+
+
+/* =====================================================
+   SHOW BABY CATEGORY
+===================================================== */
+
+function showBabyCategory(category) {
+
+    var data = BABY_CATEGORIES[category];
+
+    if (!data) {
+        return;
+    }
+
+
+    var list = getProductsByPages(data.pages);
+
+
+    var html = `
+
+        <div
+            class="naviraCategoryProductSection"
+            id="${category}"
+        >
+
+            <h3>${data.title}</h3>
+
+            <div class="naviraCategoryProducts">
+
+    `;
+
+
+    list.forEach(function(product) {
+
+        html += createWomenBoysProduct(product);
+
+    });
+
+
+    html += `
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    document.getElementById("babyProducts").innerHTML = html;
+
+
+    document.getElementById(category).scrollIntoView({
+
+        behavior: "smooth",
+
+        block: "start"
+
+    });
+
+}
+
+</script>
+
+
+
+<!-- =====================================================
+     COMMON SECTION
+===================================================== -->
+
+<section class="naviraGenderSection" id="commonSection">
+
+    <div class="naviraGenderTitle">
+
+        <h2>Common Collection</h2>
+
+        <p>Explore Common Categories</p>
+
+    </div>
+
+
+    <div class="naviraGenderLayout">
+
+
+        <!-- LEFT SIDE -->
+
+        <aside class="naviraGenderMajor">
+
+            <div class="naviraGenderMajorCard">
+
+                <img src="common.jpeg" alt="Common">
+
+                <h3>Common</h3>
+
+                <p>Common Collection</p>
+
+            </div>
+
+        </aside>
+
+
+        <!-- RIGHT SIDE -->
+
+        <div class="naviraGenderRight">
+
+            <div class="naviraGenderCategories">
+
+
+                <!-- MIRRORS -->
+
+                <button onclick="showCommonCategory('commonmirror')">
+
+                    <img src="ccmirror.jpeg">
+
+                    <span>Mirrors</span>
+
+                </button>
+
+
+                <!-- CREAMS -->
+
+                <button onclick="showCommonCategory('commoncream')">
+
+                    <img src="cccream.jpeg">
+
+                    <span>Creams</span>
+
+                </button>
+
+
+                <!-- HAIR STYLING -->
+
+                <button onclick="showCommonCategory('commonhairstyling')">
+
+                    <img src="cchairstyling.jpeg">
+
+                    <span>Hair Styling</span>
+
+                </button>
+
+
+                <!-- YOGA MATS -->
+
+                <button onclick="showCommonCategory('commonyogaMat')">
+
+                    <img src="ccmmat.jpeg">
+
+                    <span>Yoga Mats</span>
+
+                </button>
+
+
+                <!-- BAGS -->
+
+                <button onclick="showCommonCategory('commonbag')">
+
+                    <img src="ccubag.jpeg">
+
+                    <span>Bags</span>
+
+                </button>
+
+
+            </div>
+
+
+            <!-- COMMON PRODUCTS -->
+
+            <div id="commonProducts"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+/* =====================================================
+   COMMON CATEGORIES
+===================================================== */
+
+var COMMON_CATEGORIES = {
+
+
+    commonmirror: {
+
+        title: "Mirrors",
+
+        pages: [
+
+            "mirror1.html",
+            "mirror2.html",
+            "mirror3.html",
+            "mirror4.html"
+
+        ]
+
+    },
+
+
+    commoncream: {
+
+        title: "Creams",
+
+        pages: [
+
+            "cream1.html",
+            "cream2.html",
+            "cream3.html",
+            "cream4.html",
+            "cream5.html",
+            "cream6.html",
+            "cream7.html",
+            "cream8.html",
+            "cream9.html"
+
+        ]
+
+    },
+
+
+    commonhairstyling: {
+
+        title: "Hair Styling",
+
+        pages: [
+
+            "hhair1.html",
+            "hhair2.html",
+            "hhair3.html",
+            "hhair4.html",
+            "hhair5.html",
+            "hhair6.html",
+            "hhair7.html",
+            "hhair8.html",
+            "hhair9.html"
+
+        ]
+
+    },
+
+
+    commonyogaMat: {
+
+        title: "Yoga Mats",
+
+        pages: [
+
+            "mmat1.html",
+            "mmat2.html",
+            "mmat3.html",
+            "mmat4.html",
+            "mmat5.html",
+            "mmat6.html",
+            "mmat7.html",
+            "mmat8.html",
+            "mmat9.html"
+
+        ]
+
+    },
+
+
+    commonbag: {
+
+        title: "Bags",
+
+        pages: [
+
+            "ubag1.html",
+            "ubag2.html",
+            "ubag3.html",
+            "ubag4.html",
+            "ubag5.html",
+            "ubag6.html",
+            "ubag7.html",
+            "ubag8.html"
+
+        ]
+
+    }
+
+};
+
+/* =====================================================
+   SHOW COMMON CATEGORY
+===================================================== */
+
+function showCommonCategory(category) {
+
+    var data = COMMON_CATEGORIES[category];
+
+    if (!data) {
+        console.log("Common category not found:", category);
+        return;
+    }
+
+    var container = document.getElementById("commonProducts");
+
+    if (!container) {
+        console.log("commonProducts element not found");
+        return;
+    }
+
+    var list = getProductsByPages(data.pages);
+
+    if (!list || list.length === 0) {
+
+        container.innerHTML = `
+            <div class="naviraCategoryProductSection">
+                <h3>${data.title}</h3>
+
+                <p style="
+                    text-align:center;
+                    padding:30px;
+                    font-size:18px;
+                ">
+                    No products found.
+                </p>
+            </div>
+        `;
+
+        return;
+    }
+
+    var html = `
+        <div
+            class="naviraCategoryProductSection"
+            id="${category}"
+        >
+
+            <h3>${data.title}</h3>
+
+            <div class="naviraCategoryProducts">
+    `;
+
+    list.forEach(function(product) {
+
+        html += createWomenBoysProduct(product);
+
+    });
+
+    html += `
+            </div>
+
+        </div>
+    `;
+
+    container.innerHTML = html;
+
+    var section = document.getElementById(category);
+
+    if (section) {
+
+        section.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+    }
+}
+
+
+</script>
+<!-- =====================================================
+     YOGA SECTION
+===================================================== -->
+
+<section class="naviraGenderSection" id="yogaSection">
+
+    <div class="naviraGenderTitle">
+
+        <h2>Yoga Collection</h2>
+
+        <p>Explore Yoga Categories</p>
+
+    </div>
+
+
+    <div class="naviraGenderLayout">
+
+
+        <!-- LEFT SIDE -->
+
+        <aside class="naviraGenderMajor">
+
+            <div class="naviraGenderMajorCard">
+
+               <img src="yoga.jpeg" alt="Yoga">
+
+                <h3>Yoga</h3>
+
+                <p>Yoga Collection</p>
+
+            </div>
+
+        </aside>
+
+
+        <!-- RIGHT SIDE -->
+
+        <div class="naviraGenderRight">
+
+            <div class="naviraGenderCategories">
+			<button onclick="showYogaCategory('menYoga')">
+
+                    <img src="myogadress.jpeg">
+
+                    <span>Men's Yoga</span>
+
+                </button>
+
+                <button onclick="showYogaCategory('womenYoga')">
+
+                    <img src="wwyogadress.jpeg">
+
+                    <span>Women's Yoga</span>
+
+                </button>
+
+
+                
+				<button onclick="showYogaCategory('yogamat')">
+    <img src="ccmmat.jpeg">
+    <span>Yoga Mats</span>
+</button>
+
+            </div>
+
+
+            <div id="yogaProducts"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+/* =====================================================
+   YOGA CATEGORIES
+===================================================== */
+
+var YOGA_CATEGORIES = {
+
+
+menYoga: {
+
+        title: "Men Yoga",
+
+        pages: [
+
+            "by1.html",
+            "by2.html",
+            "by3.html",
+            "by4.html",
+            "by5.html",
+            "by6.html",
+            "by7.html",
+            "by8.html",
+            "by9.html"
+
+        ]
+
+    },
+
+    womenYoga: {
+
+        title: "Women Yoga",
+
+        pages: [
+
+            "gy1.html",
+            "gy2.html",
+            "gy3.html",
+            "gy4.html",
+            "gy5.html",
+            "gy6.html",
+            "gy7.html",
+            "gy8.html",
+            "gy9.html"
+
+        ]
+
+    },
+
+
+    
+	yogamat: {
+
+    title:"Yoga Mats",
+
+    pages:[
+        "mmat1.html",
+        "mmat2.html",
+        "mmat3.html",
+        "mmat4.html",
+        "mmat5.html",
+        "mmat6.html",
+        "mmat7.html",
+        "mmat8.html",
+        "mmat9.html"
+    ]
+
+},
+
+};
+
+
+/* =====================================================
+   SHOW YOGA CATEGORY
+===================================================== */
+
+function showYogaCategory(category) {
+
+    var data = YOGA_CATEGORIES[category];
+
+    if (!data) {
+        return;
+    }
+
+
+    var list = getProductsByPages(data.pages);
+
+
+    var html = `
+
+        <div
+            class="naviraCategoryProductSection"
+            id="${category}"
+        >
+
+            <h3>${data.title}</h3>
+
+            <div class="naviraCategoryProducts">
+
+    `;
+
+
+    list.forEach(function(product) {
+
+        html += createWomenBoysProduct(product);
+
+    });
+
+
+    html += `
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    document.getElementById("yogaProducts").innerHTML = html;
+
+
+    document.getElementById(category).scrollIntoView({
+
+        behavior: "smooth",
+
+        block: "start"
+
+    });
+
+}
+
+</script>
+
+
+<!-- =====================================================
+     NIGHTWEAR SECTION
+===================================================== -->
+
+<section class="naviraGenderSection" id="nightwearSection">
+
+    <div class="naviraGenderTitle">
+
+        <h2>Nightwear Collection</h2>
+
+        <p>Explore Nightwear Categories</p>
+
+    </div>
+
+
+    <div class="naviraGenderLayout">
+
+
+        <!-- LEFT SIDE -->
+
+        <aside class="naviraGenderMajor">
+
+            <div class="naviraGenderMajorCard">
+
+                <img src="nightwear.jpeg" alt="Nightwear">
+
+                <h3>Nightwear</h3>
+
+                <p>Nightwear Collection</p>
+
+            </div>
+
+        </aside>
+
+
+        <!-- RIGHT SIDE -->
+
+        <div class="naviraGenderRight">
+
+            <div class="naviraGenderCategories">
+
+               <!-- MEN NIGHT DRESS -->
+<button onclick="showNightwearCategory('menNightDress')">
+    <img src="mnight.jpeg">
+    <span>Night Dress</span>
+</button>
+
+
+<!-- WOMEN NIGHT DRESS -->
+<button onclick="showNightwearCategory('womenNightwear')">
+    <img src="wwnight.jpeg">
+    <span>Night Dress</span>
+</button>
+
+            </div>
+
+
+            <div id="nightwearProducts"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+/* =====================================================
+   NIGHTWEAR CATEGORIES
+===================================================== */
+
+var NIGHTWEAR_CATEGORIES = {
+menNightDress: {
+
+    title:"Night Dress",
+
+    pages:[
+        "night1.html",
+        "night2.html",
+        "night3.html",
+        "night4.html",
+        "night5.html",
+        "night6.html",
+        "night7.html",
+        "night8.html",
+        "night9.html",
+        "nighty.html"
+    ]
+
+},
+
+womenNightwear: {
+
+    title:"Night Dress",
+
+    pages:[
+        "wnight1.html",
+        "wnight2.html",
+        "wnight3.html",
+        "wnight4.html",
+        "wnight5.html",
+        "wnight6.html",
+        "wnight7.html",
+        "wnight8.html",
+        "wnight9.html"
+    ]
+
+}
+   
+
+};
+
+
+/* =====================================================
+   SHOW NIGHTWEAR CATEGORY
+===================================================== */
+
+function showNightwearCategory(category) {
+
+    var data = NIGHTWEAR_CATEGORIES[category];
+
+    if (!data) {
+        return;
+    }
+
+
+    var list = getProductsByPages(data.pages);
+
+
+    var html = `
+
+        <div
+            class="naviraCategoryProductSection"
+            id="${category}"
+        >
+
+            <h3>${data.title}</h3>
+
+            <div class="naviraCategoryProducts">
+
+    `;
+
+
+    list.forEach(function(product) {
+
+        html += createWomenBoysProduct(product);
+
+    });
+
+
+    html += `
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    document.getElementById("nightwearProducts").innerHTML = html;
+
+
+    document.getElementById(category).scrollIntoView({
+
+        behavior: "smooth",
+
+        block: "start"
+
+    });
+
+}
+
+</script>
+
+
+<!-- =====================================================
+     BEAUTY SECTION
+===================================================== -->
+
+<section class="naviraGenderSection" id="beautySection">
+
+    <div class="naviraGenderTitle">
+
+        <h2>Beauty Collection</h2>
+
+        <p>Explore Beauty Categories</p>
+
+    </div>
+
+
+    <div class="naviraGenderLayout">
+
+
+        <!-- LEFT SIDE -->
+
+        <aside class="naviraGenderMajor">
+
+            <div class="naviraGenderMajorCard">
+
+                <img src="beauty.jpeg" alt="Beauty">
+
+                <h3>Beauty</h3>
+
+                <p>Beauty Collection</p>
+
+            </div>
+
+        </aside>
+
+
+        <!-- RIGHT SIDE -->
+
+        <div class="naviraGenderRight">
+
+            <div class="naviraGenderCategories">
+
+               <!-- EYELINER -->
+<button onclick="showBeautyCategory('womenEyeliner')">
+    <img src="wwline.jpeg">
+    <span>Eyeliner</span>
+</button>
+
+
+<!-- NAIL POLISH -->
+<button onclick="showBeautyCategory('womenNailpolish')">
+    <img src="wwnail.jpeg">
+    <span>Nail Polish</span>
+</button>
+
+
+<!-- PERFUME -->
+<button onclick="showBeautyCategory('womenPerfume')">
+    <img src="wwper.jpeg">
+    <span>Perfumes</span>
+</button>
+
+
+<!-- MAKEUP SET -->
+<button onclick="showBeautyCategory('womenMakeupset')">
+    <img src="wwmakeup.jpeg">
+    <span>Makeup Sets</span>
+</button>
+<button onclick="showBeautyCategory('womenBindi')">
+    <img src="wwBindi.jpeg">
+    <span>Bindi</span>
+</button>
+
+            </div>
+
+
+            <div id="beautyProducts"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+/* =====================================================
+   BEAUTY CATEGORIES
+===================================================== */
+
+var BEAUTY_CATEGORIES = {
+
+   womenEyeliner: {
+
+    title:"Eyeliner",
+
+    pages:[
+        "line1.html",
+        "line2.html",
+        "line3.html",
+        "line4.html",
+        "line5.html"
+    ]
+
+},
+
+womenNailpolish: {
+
+    title:"Nail Polish",
+
+    pages:[
+        "nail1.html",
+        "nail2.html",
+        "nail3.html",
+        "nail4.html",
+        "nail5.html",
+        "nail6.html",
+        "nail7.html",
+        "nail8.html",
+        "nail9.html"
+    ]
+
+},
+
+womenPerfume: {
+
+    title:"Perfumes",
+
+    pages:[
+        "per1.html",
+        "per2.html",
+        "per3.html",
+        "per4.html",
+        "per5.html",
+        "per6.html",
+        "per7.html",
+        "per8.html",
+        "per9.html"
+    ]
+
+},
+
+womenMakeupset: {
+
+    title:"Makeup Sets",
+
+    pages:[
+        "makeup1.html",
+        "makeup2.html",
+        "makeup3.html",
+        "makeup4.html",
+        "makeup5.html",
+        "makeup6.html",
+        "makeup7.html",
+        "makeup8.html",
+        "makeup9.html"
+    ]
+
+},
+womenBindi: {
+
+    title:"Bindis",
+
+    pages:[
+        "bindi1.html",
+        "bindi2.html",
+        "bindi3.html",
+        "bindi4.html",
+        "bindi5.html",
+        "bindi6.html",
+        "bindi7.html",
+        "bindi8.html",
+        "bindi9.html"
+    ]
+
+}
+
+};
+
+
+/* =====================================================
+   SHOW BEAUTY CATEGORY
+===================================================== */
+
+function showBeautyCategory(category) {
+
+    var data = BEAUTY_CATEGORIES[category];
+
+    if (!data) {
+        return;
+    }
+
+
+    var list = getProductsByPages(data.pages);
+
+
+    var html = `
+
+        <div
+            class="naviraCategoryProductSection"
+            id="${category}"
+        >
+
+            <h3>${data.title}</h3>
+
+            <div class="naviraCategoryProducts">
+
+    `;
+
+
+    list.forEach(function(product) {
+
+        html += createWomenBoysProduct(product);
+
+    });
+
+
+    html += `
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    document.getElementById("beautyProducts").innerHTML = html;
+
+
+    document.getElementById(category).scrollIntoView({
+
+        behavior: "smooth",
+
+        block: "start"
+
+    });
+
+}
+
+</script>
+
+
+<!-- =====================================================
+     JEWELLERY SECTION
+===================================================== -->
+
+<section class="naviraGenderSection" id="jewellerySection">
+
+    <div class="naviraGenderTitle">
+
+        <h2>Jewellery Collection</h2>
+
+        <p>Explore Jewellery Categories</p>
+
+    </div>
+
+
+    <div class="naviraGenderLayout">
+
+
+        <!-- LEFT SIDE -->
+
+        <aside class="naviraGenderMajor">
+
+            <div class="naviraGenderMajorCard">
+
+                <img src="jewellery.jpeg" alt="Jewellery">
+
+                <h3>Jewellery</h3>
+
+                <p>Jewellery Collection</p>
+
+            </div>
+
+        </aside>
+
+
+        <!-- RIGHT SIDE -->
+
+        <div class="naviraGenderRight">
+
+            <div class="naviraGenderCategories">
+
+                <button onclick="showJewelleryCategory('earrings')">
+
+                    <img src="wwearring.jpeg">
+
+                    <span>Earrings</span>
+
+                </button>
+				
+				
+
+                <button onclick="showJewelleryCategory('bangles')">
+
+                    <img src="wwbangle.jpeg">
+
+                    <span>Bangles</span>
+
+                </button>
+
+
+                <button onclick="showJewelleryCategory('rings')">
+
+                    <img src="wwring.jpeg">
+
+                    <span>Rings</span>
+
+                </button>
+
+
+                <button onclick="showJewelleryCategory('necklace')">
+
+                    <img src="wwneck.jpeg">
+
+                    <span>Necklaces</span>
+
+                </button>
+
+
+                <button onclick="showJewelleryCategory('noseRing')">
+
+                    <img src="wwnring.jpeg">
+
+                    <span>Nose Rings</span>
+
+                </button><!-- BRUSH -->
+<button onclick="showJewelleryCategory('brush')">
+    <img src="jjtie.jpeg">
+    <span>Hair Rubber Ties</span>
+</button>
+
+
+<!-- CLIP -->
+<button onclick="showJewelleryCategory('clip')">
+    <img src="jjclip.jpeg">
+    <span>Clips</span>
+</button>
+
+
+<!-- ANKLET -->
+<button onclick="showJewelleryCategory('anklet')">
+    <img src="wwleg.jpeg">
+    <span>Anklets</span>
+</button>
+
+            </div>
+
+
+            <div id="jewelleryProducts"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+/* =====================================================
+   JEWELLERY CATEGORIES
+===================================================== */
+
+var JEWELLERY_CATEGORIES = {
+
+    earrings: {
+        title: "Earrings",
+        pages: [
+            "earrings1.html",
+            "earrings2.html",
+            "earrings3.html",
+            "earrings4.html",
+            "earrings5.html",
+            "earrings6.html",
+            "earrings7.html",
+            "earrings8.html",
+            "earrings9.html"
+        ]
+    },
+
+    bangles: {
+        title: "Bangles",
+        pages: [
+            "bangle1.html",
+            "bangle2.html",
+            "bangle3.html",
+            "bangle4.html",
+            "bangle5.html",
+            "bangle6.html",
+            "bangle7.html",
+            "bangle8.html"
+        ]
+    },
+
+    rings: {
+        title: "Rings",
+        pages: [
+            "ring1.html",
+            "ring2.html",
+            "ring3.html",
+            "ring4.html",
+            "ring5.html",
+            "ring6.html",
+            "ring7.html",
+            "ring8.html",
+            "ring9.html"
+        ]
+    },
+
+    necklace: {
+        title: "Necklaces",
+        pages: [
+            "neck1.html",
+            "neck2.html",
+            "neck3.html",
+            "neck4.html",
+            "neck5.html",
+            "neck6.html",
+            "neck7.html",
+            "neck8.html",
+            "neck9.html"
+        ]
+    },
+
+    noseRing: {
+        title: "Nose Rings",
+        pages: [
+            "nring1.html",
+            "nring2.html",
+            "nring3.html",
+            "nring4.html",
+            "nring5.html",
+            "nring6.html",
+            "nring7.html",
+            "nring8.html",
+            "nring9.html"
+        ]
+    },
+
+    brush: {
+        title: "Bushes",
+        pages: [
+            "bush1.html",
+            "bush2.html",
+            "bush3.html",
+            "bush4.html",
+            "bush5.html",
+            "bush6.html",
+            "bush7.html",
+            "bush8.html",
+            "bush9.html"
+        ]
+    },
+
+    clip: {
+        title: "Clips",
+        pages: [
+            "clip1.html",
+            "clip2.html",
+            "clip3.html",
+            "clip4.html",
+            "clip5.html",
+            "clip6.html",
+            "clip7.html",
+            "clip8.html",
+            "clip9.html"
+        ]
+    },
+
+    anklet: {
+        title: "Anklets",
+        pages: [
+            "leg1.html",
+            "leg2.html",
+            "leg3.html",
+            "leg4.html",
+            "leg5.html",
+            "leg6.html",
+            "leg7.html",
+            "leg8.html",
+            "leg9.html"
+        ]
+    }
+
+};
+/* =====================================================
+   SHOW JEWELLERY CATEGORY
+===================================================== */
+
+function showJewelleryCategory(category) {
+
+    var data = JEWELLERY_CATEGORIES[category];
+
+    if (!data) {
+        return;
+    }
+
+
+    var list = getProductsByPages(data.pages);
+
+
+    var html = `
+
+        <div
+            class="naviraCategoryProductSection"
+            id="${category}"
+        >
+
+            <h3>${data.title}</h3>
+
+            <div class="naviraCategoryProducts">
+
+    `;
+
+
+    list.forEach(function(product) {
+
+        html += createWomenBoysProduct(product);
+
+    });
+
+
+    html += `
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    document.getElementById("jewelleryProducts").innerHTML = html;
+
+
+    document.getElementById(category).scrollIntoView({
+
+        behavior: "smooth",
+
+        block: "start"
+
+    });
+
+}
+
+</script>
+
+
+<!-- =====================================================
+     SHIRTS SECTION
+===================================================== -->
+
+<section class="naviraGenderSection" id="shirtsSection">
+
+    <div class="naviraGenderTitle">
+
+        <h2>Shirts Collection</h2>
+
+        <p>Explore Shirt Categories</p>
+
+    </div>
+
+
+    <div class="naviraGenderLayout">
+
+
+        <!-- LEFT SIDE -->
+
+        <aside class="naviraGenderMajor">
+
+            <div class="naviraGenderMajorCard">
+
+                <img src="shirts.jpeg" alt="Shirts">
+
+                <h3>Shirts</h3>
+
+                <p>Shirts Collection</p>
+
+            </div>
+
+        </aside>
+
+
+        <!-- RIGHT SIDE -->
+
+        <div class="naviraGenderRight">
+
+            <div class="naviraGenderCategories">
+
+                <button onclick="showShirtsCategory('menShirts')">
+
+                    <img src="mshirt.jpeg">
+
+                    <span>Men's Shirts</span>
+
+                </button>
+
+
+                <button onclick="showShirtsCategory('womenShirts')">
+
+                    <img src="wwshirt.jpeg">
+
+                    <span>Women's Shirts</span>
+
+                </button>
+
+            </div>
+
+
+            <div id="shirtsProducts"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+/* =====================================================
+   SHIRTS CATEGORIES
+===================================================== */
+
+var SHIRTS_CATEGORIES = {
+
+    menShirts: {
+
+        title: "Men Shirts",
+
+        pages: [
+
+            "shirt1.html",
+            "shirt2.html",
+            "shirt3.html",
+            "shirt4.html",
+            "shirt5.html",
+            "shirt6.html",
+            "shirt7.html",
+            "shirt8.html",
+            "shirt9.html"
+
+        ]
+
+    },
+
+
+    womenShirts: {
+
+        title: "Women Shirts",
+
+        pages: [
+
+            "wshirt1.html",
+            "wshirt2.html",
+            "wshirt3.html",
+            "wshirt4.html",
+            "wshirt5.html",
+            "wshirt6.html",
+            "wshirt7.html",
+            "wshirt8.html",
+            "wshirt9.html"
+
+        ]
+
+    }
+
+};
+
+
+/* =====================================================
+   SHOW SHIRTS CATEGORY
+===================================================== */
+
+function showShirtsCategory(category) {
+
+    var data = SHIRTS_CATEGORIES[category];
+
+    if (!data) {
+        return;
+    }
+
+
+    var list = getProductsByPages(data.pages);
+
+
+    var html = `
+
+        <div
+            class="naviraCategoryProductSection"
+            id="${category}"
+        >
+
+            <h3>${data.title}</h3>
+
+            <div class="naviraCategoryProducts">
+
+    `;
+
+
+    list.forEach(function(product) {
+
+        html += createWomenBoysProduct(product);
+
+    });
+
+
+    html += `
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    document.getElementById("shirtsProducts").innerHTML = html;
+
+
+    document.getElementById(category).scrollIntoView({
+
+        behavior: "smooth",
+
+        block: "start"
+
+    });
+
+}
+
+</script>
+
+
+<!-- =====================================================
+     HAIR ACCESSORIES SECTION
+===================================================== -->
+
+<section class="naviraGenderSection" id="hairSection">
+
+    <div class="naviraGenderTitle">
+
+        <h2>Hair Accessories</h2>
+
+        <p>Explore Hair Categories</p>
+
+    </div>
+
+
+    <div class="naviraGenderLayout">
+
+
+        <aside class="naviraGenderMajor">
+
+            <div class="naviraGenderMajorCard">
+
+                <img src="hair.jpeg" alt="Hair Accessories">
+
+                <h3>Hair Accessories</h3>
+
+                <p>Hair Collection</p>
+
+            </div>
+
+        </aside>
+
+
+        <div class="naviraGenderRight">
+
+            <div class="naviraGenderCategories">
+
+                <button onclick="showHairCategory('hairAccessories')">
+
+                    <img src="jjtie.jpeg">
+
+                    <span>Hair Tie Set</span>
+
+                </button>
+
+
+                <button onclick="showHairCategory('hairStyling')">
+
+                    <img src="cchairstyling.jpeg">
+
+                    <span>Hair Styling</span>
+
+                </button><button onclick="showHairCategory('womenClip')">
+
+                    <img src="jjclip.jpeg">
+
+                    <span>Clips</span>
+
+                </button><button onclick="showHairCategory('womenComb')">
+
+                    <img src="jjcomb.jpeg">
+
+                    <span>Comb Set</span>
+
+                </button>
+				
+				
+
+            </div>
+
+
+            <div id="hairProducts"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+var HAIR_CATEGORIES = {
+
+    hairAccessories: {
+
+        title: "Hair Accessories",
+
+        pages: [
+
+            "bush1.html",
+            "bush2.html",
+            "bush3.html",
+            "bush4.html",
+            "bush5.html",
+            "bush6.html",
+            "bush7.html",
+            "bush8.html",
+            "bush9.html",
+            "bush10.html"
+
+        ]
+
+    },
+
+
+    hairStyling: {
+
+        title: "Hair Styling",
+
+        pages: [
+
+            "hhair1.html",
+            "hhair2.html",
+            "hhair3.html",
+            "hhair4.html",
+            "hhair5.html",
+            "hhair6.html",
+            "hhair7.html",
+            "hhair8.html",
+            "hhair9.html"
+
+        ]
+
+    },womenClip: {
+
+        title:"Hair Clips",
+
+        pages:[
+            "clip10.html",
+            "clip9.html",
+            "clip8.html",
+            "clip7.html",
+            "clip6.html",        "clip1.html",
+        "clip2.html",
+        "clip3.html",
+        "clip4.html",
+        "clips5.html"
+        ]
+
+    },womenComb: {
+
+        title:"Hair Combs",
+
+        pages:[
+            "comb1.html",
+            "comb2.html",
+            "comb3.html",
+            "comb4.html",
+            "comb5.html","comb6.html",
+        "comb7.html",
+        "comb8.html",
+        "comb9.html",
+        "comb10.html"
+        ]
+
+    }
+
+};
+
+
+function showHairCategory(category) {
+
+    var data = HAIR_CATEGORIES[category];
+
+    if (!data) {
+        return;
+    }
+
+
+    var list = getProductsByPages(data.pages);
+
+
+    var html = `
+
+        <div
+            class="naviraCategoryProductSection"
+            id="${category}"
+        >
+
+            <h3>${data.title}</h3>
+
+            <div class="naviraCategoryProducts">
+
+    `;
+
+
+    list.forEach(function(product) {
+
+        html += createWomenBoysProduct(product);
+
+    });
+
+
+    html += `
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    document.getElementById("hairProducts").innerHTML = html;
+
+
+    document.getElementById(category).scrollIntoView({
+
+        behavior: "smooth",
+
+        block: "start"
+
+    });
+
+}
+
+</script>
+
+
+<!-- =====================================================
+     T-SHIRT SECTION
+===================================================== -->
+
+<section class="naviraGenderSection" id="tshirtSection">
+
+    <div class="naviraGenderTitle">
+
+        <h2>T-shirt Collection</h2>
+
+        <p>Explore T-shirt Categories</p>
+
+    </div>
+
+
+    <div class="naviraGenderLayout">
+
+        <aside class="naviraGenderMajor">
+
+            <div class="naviraGenderMajorCard">
+
+                <img src="T-shirts.jpeg" alt="T-shirt">
+
+                <h3>T-shirt</h3>
+
+                <p>T-shirt Collection</p>
+
+            </div>
+
+        </aside>
+
+
+        <div class="naviraGenderRight">
+
+            <div class="naviraGenderCategories">
+
+                <button onclick="showTshirtCategory('tshirtProducts')">
+
+                    <img src="mtshirt.jpeg">
+
+                    <span>T-shirt</span>
+
+                </button>
+
+            </div>
+
+
+            <div id="tshirtProducts"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+var TSHIRT_CATEGORIES = {
+
+    tshirtProducts: {
+
+        title: "T-shirt",
+
+        pages: [
+
+            "tshirt1.html",
+            "tshirt2.html",
+            "tshirt3.html",
+            "tshirt4.html",
+            "tshirt5.html",
+            "tshirt6.html",
+            "tshirt7.html",
+            "tshirt8.html",
+            "tshirt9.html"
+
+        ]
+
+    }
+
+};
+
+
+function showTshirtCategory(category) {
+
+    var data = TSHIRT_CATEGORIES[category];
+
+    if (!data) {
+        return;
+    }
+
+
+    var list = getProductsByPages(data.pages);
+
+
+    var html = `
+
+        <div
+            class="naviraCategoryProductSection"
+            id="${category}"
+        >
+
+            <h3>${data.title}</h3>
+
+            <div class="naviraCategoryProducts">
+
+    `;
+
+
+    list.forEach(function(product) {
+
+        html += createWomenBoysProduct(product);
+
+    });
+
+
+    html += `
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    document.getElementById("tshirtProducts").innerHTML = html;
+
+
+    document.getElementById(category).scrollIntoView({
+
+        behavior: "smooth",
+
+        block: "start"
+
+    });
+
+}
+
+</script>
+
+
+<!-- =====================================================
+     SHOES SECTION
+===================================================== -->
+
+<section class="naviraGenderSection" id="shoesSection">
+
+    <div class="naviraGenderTitle">
+
+        <h2>Shoes Collection</h2>
+
+        <p>Explore Shoe Categories</p>
+
+    </div>
+
+
+    <div class="naviraGenderLayout">
+
+        <aside class="naviraGenderMajor">
+
+            <div class="naviraGenderMajorCard">
+
+                <img src="shoes.jpeg" alt="Shoes">
+
+                <h3>Shoes</h3>
+
+                <p>Shoes Collection</p>
+
+            </div>
+
+        </aside>
+
+
+        <div class="naviraGenderRight">
+
+            <div class="naviraGenderCategories">
+
+                <button onclick="showShoesCategory('menShoes')">
+
+                    <img src="mshoes.jpeg">
+
+                    <span>Men's Shoes</span>
+
+                </button>
+
+
+                <button onclick="showShoesCategory('womenShoes')">
+
+                    <img src="wwshoe.jpeg">
+
+                    <span>Wome's Shoes</span>
+
+                </button>
+
+
+                <button onclick="showShoesCategory('boysShoes')">
+
+                    <img src="boyshoes.jpeg">
+
+                    <span>Boy's Shoes</span>
+
+                </button>
+
+
+                <button onclick="showShoesCategory('girlsShoes')">
+
+                    <img src="ggshoe.jpeg">
+
+                    <span>Girl's Shoes</span>
+
+                </button>
+
+            </div>
+
+
+            <div id="shoesProducts"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+var SHOES_CATEGORIES = {
+
+    menShoes: {
+
+        title: "Men Shoes",
+
+        pages: [
+
+            "shoe1.html",
+            "shoe2.html",
+            "shoe3.html",
+            "shoe4.html",
+            "shoe5.html",
+            "shoe6.html",
+            "shoe7.html",
+            "shoe8.html",
+            "shoe9.html"
+
+        ]
+
+    },
+
+
+    womenShoes: {
+
+        title: "Women Shoes",
+
+        pages: [
+
+            "wshoes1.html",
+            "wshoes2.html",
+            "wshoes3.html",
+            "wshoes4.html",
+            "wshoes9.html"
+
+        ]
+
+    },
+
+
+    boysShoes: {
+
+        title: "Boys Shoes",
+
+        pages: [
+
+            "bb1.html",
+            "bb2.html",
+            "bb3.html",
+            "bb4.html",
+            
+            "bb9.html"
+
+        ]
+
+    },
+
+
+    girlsShoes: {
+
+        title: "Girls Shoes",
+
+        pages: [
+
+           "gf1.html",
+       
+        "gf3.html",
+        
+        "gf5.html",
+        "gf6.html",
+        "gf7.html",
+        "gf8.html",
+        "gf9.html",
+        "gf10.html",
+        
+
+        ]
+
+    }
+
+};
+
+
+function showShoesCategory(category) {
+
+    var data = SHOES_CATEGORIES[category];
+
+    if (!data) {
+        return;
+    }
+
+
+    var list = getProductsByPages(data.pages);
+
+
+    var html = `
+
+        <div
+            class="naviraCategoryProductSection"
+            id="${category}"
+        >
+
+            <h3>${data.title}</h3>
+
+            <div class="naviraCategoryProducts">
+
+    `;
+
+
+    list.forEach(function(product) {
+
+        html += createWomenBoysProduct(product);
+
+    });
+
+
+    html += `
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    document.getElementById("shoesProducts").innerHTML = html;
+
+
+    document.getElementById(category).scrollIntoView({
+
+        behavior: "smooth",
+
+        block: "start"
+
+    });
+
+}
+
+</script>
+
+
+<!-- =====================================================
+     MUNDU SECTION
+===================================================== -->
+
+<section class="naviraGenderSection" id="munduSection">
+
+    <div class="naviraGenderTitle">
+
+        <h2>Mundu Collection</h2>
+
+        <p>Explore Mundu Categories</p>
+
+    </div>
+
+
+    <div class="naviraGenderLayout">
+
+        <aside class="naviraGenderMajor">
+
+            <div class="naviraGenderMajorCard">
+
+                <img src="mundu.jpeg" alt="Mundu">
+
+                <h3>Mundu</h3>
+
+                <p>Mundu Collection</p>
+
+            </div>
+
+        </aside>
+
+
+        <div class="naviraGenderRight">
+
+            <div class="naviraGenderCategories">
+
+                <button onclick="showMunduCategory('munduProducts')">
+
+                    <img src="mmundu.jpeg">
+
+                    <span>Mundu</span>
+
+                </button>
+
+            </div>
+
+
+            <div id="munduProducts"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+var MUNDU_CATEGORIES = {
+
+    munduProducts: {
+
+        title: "Mundu",
+
+        pages: [
+
+            "mundu1.html",
+            "mundu2.html",
+            "mundu3.html",
+            "mundu4.html",
+            "mundu5.html",
+            "mundu6.html",
+            "mundu7.html",
+            "mundu8.html",
+            "mundu9.html"
+
+        ]
+
+    }
+
+};
+
+
+function showMunduCategory(category) {
+
+    var data = MUNDU_CATEGORIES[category];
+
+    if (!data) {
+        return;
+    }
+
+
+    var list = getProductsByPages(data.pages);
+
+
+    var html = `
+
+        <div
+            class="naviraCategoryProductSection"
+            id="${category}"
+        >
+
+            <h3>${data.title}</h3>
+
+            <div class="naviraCategoryProducts">
+
+    `;
+
+
+    list.forEach(function(product) {
+
+        html += createWomenBoysProduct(product);
+
+    });
+
+
+    html += `
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    document.getElementById("munduProducts").innerHTML = html;
+
+
+    document.getElementById(category).scrollIntoView({
+
+        behavior: "smooth",
+
+        block: "start"
+
+    });
+
+}
+
+</script>
+
+
+<!-- =====================================================
+     CAPS SECTION
+===================================================== -->
+
+<section class="naviraGenderSection" id="capsSection">
+
+    <div class="naviraGenderTitle">
+
+        <h2>Caps Collection</h2>
+
+        <p>Explore Cap Categories</p>
+
+    </div>
+
+
+    <div class="naviraGenderLayout">
+
+        <aside class="naviraGenderMajor">
+
+            <div class="naviraGenderMajorCard">
+
+                <img src="caps.jpeg" alt="Caps">
+
+                <h3>Caps</h3>
+
+                <p>Caps Collection</p>
+
+            </div>
+
+        </aside>
+
+
+        <div class="naviraGenderRight">
+
+            <div class="naviraGenderCategories">
+
+                <button onclick="showCapsCategory('menCaps')">
+
+                    <img src="mcap.jpeg">
+
+                    <span>Men's Caps</span>
+
+                </button>
+
+
+                <button onclick="showCapsCategory('boysCaps')">
+
+                    <img src="boycap.jpeg">
+
+                    <span>Boy's Caps</span>
+
+                </button>
+				<button onclick="showCapsCategory('girlsCaps')">
+
+                    <img src="ggcap.jpeg">
+
+                    <span>Girl's Caps</span>
+
+                </button>
+
+            </div>
+
+
+            <div id="capsProducts"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+var CAPS_CATEGORIES = {
+
+    menCaps: {
+
+        title: "Men Caps",
+
+        pages: [
+
+            "cap1.html",
+            "cap2.html",
+            "cap3.html",
+            "cap4.html",
+            "cap5.html",
+            "cap6.html",
+            "cap7.html",
+            "cap8.html",
+            "cap9.html"
+
+        ]
+
+    },
+
+
+    boysCaps: {
+
+        title: "Boys Caps",
+
+        pages: [
+
+            "bcap1.html",
+            "bcap2.html",
+            "bcap3.html",
+            "bcap4.html",
+            "bcap5.html",
+            "bcap6.html",
+            "bcap7.html",
+            "bcap8.html",
+            "bcap9.html"
+
+        ]
+		},
+ girlsCaps: {
+
+        title: "Girls Caps",
+
+        pages: [
+    
+	"gcap1.html",
+        "gcap2.html",
+        "gcap3.html",
+        "gcap4.html",
+        "gcap5.html",
+        "gcap6.html",
+        "gcap7.html",
+        "gcap8.html",
+        "gcap9.html"
+		]
+     }
+};
+
+
+function showCapsCategory(category) {
+
+    var data = CAPS_CATEGORIES[category];
+
+    if (!data) {
+        return;
+    }
+
+
+    var list = getProductsByPages(data.pages);
+
+
+    var html = `
+
+        <div
+            class="naviraCategoryProductSection"
+            id="${category}"
+        >
+
+            <h3>${data.title}</h3>
+
+            <div class="naviraCategoryProducts">
+
+    `;
+
+
+    list.forEach(function(product) {
+
+        html += createWomenBoysProduct(product);
+
+    });
+
+
+    html += `
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    document.getElementById("capsProducts").innerHTML = html;
+
+
+    document.getElementById(category).scrollIntoView({
+
+        behavior: "smooth",
+
+        block: "start"
+
+    });
+
+}
+
+</script>
+
+
+<!-- =====================================================
+     BLAZERS SECTION
+===================================================== -->
+
+<section class="naviraGenderSection" id="blazersSection">
+
+    <div class="naviraGenderTitle">
+
+        <h2>Blazers Collection</h2>
+
+        <p>Explore Blazer Categories</p>
+
+    </div>
+
+
+    <div class="naviraGenderLayout">
+
+        <aside class="naviraGenderMajor">
+
+            <div class="naviraGenderMajorCard">
+
+                <img src="blazers.jpeg" alt="Blazers">
+
+                <h3>Blazers</h3>
+
+                <p>Blazers Collection</p>
+
+            </div>
+
+        </aside>
+
+
+        <div class="naviraGenderRight">
+
+            <div class="naviraGenderCategories">
+
+                <button onclick="showBlazersCategory('menBlazers')">
+
+                    <img src="mblazer.jpeg">
+
+                    <span>Men's Blazers</span>
+
+                </button>
+
+
+                <button onclick="showBlazersCategory('womenBlazers')">
+
+                    <img src="wwblazer.jpeg">
+
+                    <span>Women's Blazers</span>
+
+                </button>
+
+            </div>
+
+
+            <div id="blazersProducts"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+var BLAZERS_CATEGORIES = {
+
+    menBlazers: {
+
+        title: "Men Blazers",
+
+        pages: [
+
+            "blazer1.html",
+            "blazer2.html",
+            "blazer3.html",
+            "blazer4.html",
+            "blazer5.html",
+            "blazer6.html",
+            "blazer7.html",
+            "blazer8.html",
+            "blazer9.html"
+
+        ]
+
+    },
+
+
+    womenBlazers: {
+
+       title:"Blazers",
+
+        pages:[
+            "wcoat1.html",
+            "wcoat19.html",
+            "wcoat11.html",
+            "wcoat8.html",
+            "wcoat20.html",
+			"wcoat21.html",
+            "wcoat22.html",
+            "wcoat23.html",
+            "wcoat25.html",
+            "wcoat26.html",
+			"wcoat27.html"
+        ]
+
+  
+
+    }
+
+};
+
+
+function showBlazersCategory(category) {
+
+    var data = BLAZERS_CATEGORIES[category];
+
+    if (!data) {
+        return;
+    }
+
+
+    var list = getProductsByPages(data.pages);
+
+
+    var html = `
+
+        <div
+            class="naviraCategoryProductSection"
+            id="${category}"
+        >
+
+            <h3>${data.title}</h3>
+
+            <div class="naviraCategoryProducts">
+
+    `;
+
+
+    list.forEach(function(product) {
+
+        html += createWomenBoysProduct(product);
+
+    });
+
+
+    html += `
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    document.getElementById("blazersProducts").innerHTML = html;
+
+
+    document.getElementById(category).scrollIntoView({
+
+        behavior: "smooth",
+
+        block: "start"
+
+    });
+
+}
+
+</script>
+
+
+<!-- =====================================================
+     JACKET SECTION
+===================================================== -->
+
+<section class="naviraGenderSection" id="jacketSection">
+
+    <div class="naviraGenderTitle">
+
+        <h2>Jacket Collection</h2>
+
+        <p>Explore Jacket Categories</p>
+
+    </div>
+
+
+    <div class="naviraGenderLayout">
+
+        <aside class="naviraGenderMajor">
+
+            <div class="naviraGenderMajorCard">
+
+                <img src="jackets.jpeg" alt="Jacket">
+
+                <h3>Jacket</h3>
+
+                <p>Jacket Collection</p>
+
+            </div>
+
+        </aside>
+
+
+        <div class="naviraGenderRight">
+
+            <div class="naviraGenderCategories">
+
+                <button onclick="showJacketCategory('menJacket')">
+
+                    <img src="mjacket.jpeg">
+
+                    <span>Men's Jacket</span>
+
+                </button>
+
+
+                <button onclick="showJacketCategory('womenJacket')">
+
+                    <img src="wwjacket.jpeg">
+
+                    <span>Women's Jacket</span>
+
+                </button>
+
+            </div>
+
+
+            <div id="jacketProducts"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+var JACKET_CATEGORIES = {
+
+    menJacket: {
+
+        title: "Men Jacket",
+
+        pages: [
+
+            "jacket1.html",
+            "jacket2.html",
+            "jacket3.html",
+            "jacket4.html",
+            "jacket5.html",
+            "jacket6.html",
+            "jacket7.html",
+            "jacket8.html",
+            "jacket9.html"
+
+        ]
+
+    },
+
+
+    womenJacket: {
+
+        title: "Women Jacket",
+
+        pages: [
+
+             "wcoat2.html",
+            "wcoat3.html",
+            "wcoat8.html",
+            "wcoat4.html","wcoat21.html",
+            "wcoat5.html",
+            "wcoat7.html",
+            "wcoat10.html",
+            "wcoat12.html",
+			"wcoat14.html",
+			"wcoat15.html",
+            "wcoat16.html",
+			"wcoat17.html"
+        ]
+
+    }
+
+};
+
+
+function showJacketCategory(category) {
+
+    var data = JACKET_CATEGORIES[category];
+
+    if (!data) {
+        return;
+    }
+
+
+    var list = getProductsByPages(data.pages);
+
+
+    var html = `
+
+        <div
+            class="naviraCategoryProductSection"
+            id="${category}"
+        >
+
+            <h3>${data.title}</h3>
+
+            <div class="naviraCategoryProducts">
+
+    `;
+
+
+    list.forEach(function(product) {
+
+        html += createWomenBoysProduct(product);
+
+    });
+
+
+    html += `
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    document.getElementById("jacketProducts").innerHTML = html;
+
+
+    document.getElementById(category).scrollIntoView({
+
+        behavior: "smooth",
+
+        block: "start"
+
+    });
+
+}
+
+</script>
+
+
+<!-- =====================================================
+     PANTS SECTION
+===================================================== -->
+
+<section class="naviraGenderSection" id="pantsSection">
+
+    <div class="naviraGenderTitle">
+
+        <h2>Pants Collection</h2>
+
+        <p>Explore Pants Categories</p>
+
+    </div>
+
+
+    <div class="naviraGenderLayout">
+
+        <aside class="naviraGenderMajor">
+
+            <div class="naviraGenderMajorCard">
+
+                <img src="pants.jpeg" alt="Pants">
+
+                <h3>Pants</h3>
+
+                <p>Pants Collection</p>
+
+            </div>
+
+        </aside>
+
+
+        <div class="naviraGenderRight">
+
+            <div class="naviraGenderCategories">
+
+                <button onclick="showPantsCategory('menPants')">
+
+                    <img src="mpant.jpeg">
+
+                    <span>Men's Pants</span>
+
+                </button>
+
+
+                <button onclick="showPantsCategory('womenPants')">
+
+                    <img src="wwpant.jpeg">
+
+                    <span>Women's Pants</span>
+
+                </button>
+				 <button onclick="showPantsCategory('womenJeans')">
+
+                    <img src="wwjeans.jpeg">
+
+                    <span>Women's Jeans</span>
+
+                </button>
+<button onclick="showPantsCategory('womenTrousers')">
+
+                    <img src="wwTrou.jpeg">
+
+                    <span>Women's Trousers</span>
+
+                </button>
+
+            </div>
+
+
+            <div id="pantsProducts"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+var PANTS_CATEGORIES = {
+
+    menPants: {
+
+        title: "Men Pants",
+
+        pages: [
+
+            "pant1.html",
+            "pant2.html",
+            "pant3.html",
+            "pant4.html",
+            "pant5.html",
+            "pant6.html",
+            "pant7.html",
+            "pant8.html",
+            "pant9.html"
+
+        ]
+
+    },
+
+
+    womenPants: {
+
+        title: "Women Pants",
+
+        pages: [
+
+            "wpant1.html",
+            "wpant2.html",
+            "wpant3.html",
+            "wpant4.html",
+            "wpant5.html",
+            "wpant6.html",
+            "wpant7.html",
+            "wpant8.html",
+            "wpant9.html"
+
+        ]
+
+    }, womenJeans: {
+
+        title: "Women Jeans",
+
+        pages: [
+
+            "wwpant1.html",
+            "wwpant2.html",
+            "wwpant3.html",
+
+        ]
+
+    },
+	womenTrousers: {
+
+        title:"Trousers",
+
+        pages:[
+            "wwpant5.html",
+            "wwpant6.html",
+            "wwpant7.html",
+            "wwpant8.html",
+            "wwpant9.html"
+        ]
+
+    }
+
+
+};
+
+
+function showPantsCategory(category) {
+
+    var data = PANTS_CATEGORIES[category];
+
+    if (!data) {
+        return;
+    }
+
+
+    var list = getProductsByPages(data.pages);
+
+
+    var html = `
+
+        <div
+            class="naviraCategoryProductSection"
+            id="${category}"
+        >
+
+            <h3>${data.title}</h3>
+
+            <div class="naviraCategoryProducts">
+
+    `;
+
+
+    list.forEach(function(product) {
+
+        html += createWomenBoysProduct(product);
+
+    });
+
+
+    html += `
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    document.getElementById("pantsProducts").innerHTML = html;
+
+
+    document.getElementById(category).scrollIntoView({
+
+        behavior: "smooth",
+
+        block: "start"
+
+    });
+
+}
+
+</script>
+
+<!-- =====================================================
+     SAREE SECTION
+===================================================== -->
+
+<section class="naviraGenderSection" id="sareeSection">
+
+    <div class="naviraGenderTitle">
+
+        <h2>Saree Collection</h2>
+
+        <p>Explore Saree Categories</p>
+
+    </div>
+
+
+    <div class="naviraGenderLayout">
+
+        <aside class="naviraGenderMajor">
+
+            <div class="naviraGenderMajorCard">
+
+                <img src="sarees.jpeg" alt="Saree">
+
+                <h3>Saree</h3>
+
+                <p>Saree Collection</p>
+
+            </div>
+
+        </aside>
+
+
+        <div class="naviraGenderRight">
+
+            <div class="naviraGenderCategories">
+
+                <button onclick="showSareeCategory('setSaree')">
+
+                    <img src="wwsari.jpeg">
+
+                    <span>Set Saree</span>
+
+                </button>
+				 <button onclick="showSareeCategory('Saree')">
+
+                    <img src="wwsaree.jpeg">
+
+                    <span>Saree</span>
+
+                </button>
+
+            </div>
+
+
+            <div id="sareeProducts"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+var SAREE_CATEGORIES = {
+
+    setSaree: {
+
+        title: "Set Saree",
+
+        pages: [
+
+            "ssaree1.html",
+            "ssaree2.html",
+            "ssaree3.html",
+            "ssaree4.html",
+            "ssaree5.html",
+            "ssaree6.html",
+            "ssaree7.html",
+            "ssaree8.html",
+            "ssaree9.html"
+
+        ]
+
+    },
+	 Saree: {
+
+        title: "Saree",
+
+        pages: [
+"sari1.html",
+			"sar12.html",
+            "sari3.html",
+            "sari4.html",
+            "sari5.html",
+            "sari6.html",
+            "sari7.html",
+            "sari8.html",
+            "sari9.html",
+            
+
+        ]
+}
+
+};
+
+
+function showSareeCategory(category) {
+
+    var data = SAREE_CATEGORIES[category];
+
+    if (!data) {
+        return;
+    }
+
+
+    var list = getProductsByPages(data.pages);
+
+
+    var html = `
+
+        <div
+            class="naviraCategoryProductSection"
+            id="${category}"
+        >
+
+            <h3>${data.title}</h3>
+
+            <div class="naviraCategoryProducts">
+
+    `;
+
+
+    list.forEach(function(product) {
+
+        html += createWomenBoysProduct(product);
+
+    });
+
+
+    html += `
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    document.getElementById("sareeProducts").innerHTML = html;
+
+
+    document.getElementById(category).scrollIntoView({
+
+        behavior: "smooth",
+
+        block: "start"
+
+    });
+
+}
+
+</script>
+
+
+<!-- =====================================================
+     SALWAR SECTION
+===================================================== -->
+
+<section class="naviraGenderSection" id="salwarSection">
+
+    <div class="naviraGenderTitle">
+
+        <h2>Salwar Collection</h2>
+
+        <p>Explore Salwar Categories</p>
+
+    </div>
+
+
+    <div class="naviraGenderLayout">
+
+        <aside class="naviraGenderMajor">
+
+            <div class="naviraGenderMajorCard">
+
+                <img src="salwar.jpeg" alt="Salwar">
+
+                <h3>Salwar</h3>
+
+                <p>Salwar Collection</p>
+
+            </div>
+
+        </aside>
+
+
+        <div class="naviraGenderRight">
+
+            <div class="naviraGenderCategories">
+
+                <button onclick="showSalwarCategory('salwarProducts')">
+
+                    <img src="wwsalwar.jpeg">
+
+                    <span>Salwar</span>
+
+                </button>
+
+            </div>
+
+
+            <div id="salwarProducts"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+var SALWAR_CATEGORIES = {
+
+    salwarProducts: {
+
+        title: "Salwar",
+
+        pages: [
+
+            "churidar1.html",
+			"churidar2.html",
+            "churidar3.html",
+            "churidar4.html",
+            "churidar5.html",
+            "churidar6.html",
+            "churidar7.html",
+            "churidar8.html",
+            "churidar9.html",
+            "churidar11.html",
+            "churidar12.html",
+            "churidar13.html",
+            "churidar14.html",
+            "churidar15.html",
+            "churidar16.html",
+            "churidar18.html",
+            "churidar19.html",
+            "churidar20.html"
+
+        ]
+
+    }
+
+};
+
+
+function showSalwarCategory(category) {
+
+    var data = SALWAR_CATEGORIES[category];
+
+    if (!data) {
+        return;
+    }
+
+
+    var list = getProductsByPages(data.pages);
+
+
+    var html = `
+
+        <div
+            class="naviraCategoryProductSection"
+            id="${category}"
+        >
+
+            <h3>${data.title}</h3>
+
+            <div class="naviraCategoryProducts">
+
+    `;
+
+
+    list.forEach(function(product) {
+
+        html += createWomenBoysProduct(product);
+
+    });
+
+
+    html += `
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    document.getElementById("salwarProducts").innerHTML = html;
+
+
+    document.getElementById(category).scrollIntoView({
+
+        behavior: "smooth",
+
+        block: "start"
+
+    });
+
+}
+
+</script>
+
+
+<!-- =====================================================
+     KURTAS SECTION
+===================================================== -->
+
+<section class="naviraGenderSection" id="kurtasSection">
+
+    <div class="naviraGenderTitle">
+
+        <h2>Kurtas Collection</h2>
+
+        <p>Explore Kurta Categories</p>
+
+    </div>
+
+
+    <div class="naviraGenderLayout">
+
+        <aside class="naviraGenderMajor">
+
+            <div class="naviraGenderMajorCard">
+
+                <img src="kurta.jpeg" alt="Kurtas">
+
+                <h3>Kurtas</h3>
+
+                <p>Kurta Collection</p>
+
+            </div>
+
+        </aside>
+
+
+        <div class="naviraGenderRight">
+
+            <div class="naviraGenderCategories">
+
+                <button onclick="showKurtasCategory('kurtaProducts')">
+
+                    <img src="mkurta.jpeg">
+
+                    <span>Kurtas</span>
+
+                </button>
+
+            </div>
+
+
+            <div id="kurtaProducts"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+var KURTAS_CATEGORIES = {
+
+    kurtaProducts: {
+
+        title: "Kurtas",
+
+        pages: [
+
+            "kurta1.html",
+            "kurta2.html",
+            "kurta3.html",
+            "kurta4.html",
+            "kurta5.html",
+            "kurta6.html",
+            "kurta7.html",
+            "kurta8.html",
+            "kurta9.html"
+
+        ]
+
+    }
+
+};
+
+
+function showKurtasCategory(category) {
+
+    var data = KURTAS_CATEGORIES[category];
+
+    if (!data) {
+        return;
+    }
+
+
+    var list = getProductsByPages(data.pages);
+
+
+    var html = `
+
+        <div
+            class="naviraCategoryProductSection"
+            id="${category}"
+        >
+
+            <h3>${data.title}</h3>
+
+            <div class="naviraCategoryProducts">
+
+    `;
+
+
+    list.forEach(function(product) {
+
+        html += createWomenBoysProduct(product);
+
+    });
+
+
+    html += `
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    document.getElementById("kurtaProducts").innerHTML = html;
+
+
+    document.getElementById(category).scrollIntoView({
+
+        behavior: "smooth",
+
+        block: "start"
+
+    });
+
+}
+
+</script>
+
+
+<!-- =====================================================
+     SANDALS SECTION
+===================================================== -->
+
+<section class="naviraGenderSection" id="sandalsSection">
+
+    <div class="naviraGenderTitle">
+
+        <h2>Sandals Collection</h2>
+
+        <p>Explore Sandal Categories</p>
+
+    </div>
+
+
+    <div class="naviraGenderLayout">
+
+        <aside class="naviraGenderMajor">
+
+            <div class="naviraGenderMajorCard">
+
+                <img src="sandals.jpeg" alt="Sandals">
+
+                <h3>Sandals</h3>
+
+                <p>Sandals Collection</p>
+
+            </div>
+
+        </aside>
+
+
+        <div class="naviraGenderRight">
+
+            <div class="naviraGenderCategories">
+
+               <!-- MEN FOOTWEAR -->
+<button onclick="showSandalsCategory('men')">
+    <img src="mfootwear.jpeg">
+    <span>Men</span>
+</button>
+
+
+<!-- WOMEN SANDALS -->
+<button onclick="showSandalsCategory('women')">
+    <img src="wwsandel.jpeg">
+    <span>Women</span>
+</button>
+
+
+<!-- HEELS -->
+<button onclick="showSandalsCategory('heels')">
+    <img src="wwheel.jpeg">
+    <span>Heels</span>
+</button>
+
+
+<!-- BOYS FOOTWEAR -->
+<button onclick="showSandalsCategory('boy')">
+    <img src="boyfootwear.jpeg">
+    <span>Boys</span>
+</button>
+
+
+<!-- GIRLS FOOTWEAR -->
+<button onclick="showSandalsCategory('girl')">
+    <img src="ggfootwear.jpeg">
+    <span>Girls</span>
+</button>
+
+
+<!-- BABY BOYS FOOTWEAR -->
+<button onclick="showSandalsCategory('babyboy')">
+    <img src="babyboy.jpeg">
+    <span>Baby Boys</span>
+</button>
+
+
+<!-- BABY GIRLS FOOTWEAR -->
+<button onclick="showSandalsCategory('babygirl')">
+    <img src="babyboy.jpeg">
+    <span>Baby Girls</span>
+</button>
+
+            </div>
+
+
+            <div id="sandalsProducts"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+/* =====================================================
+   SANDALS CATEGORIES
+===================================================== */
+
+var SANDALS_CATEGORIES = {
+
+    men: {
+
+        title: "Men's Footwear",
+
+        pages: [
+
+            "foot1.html",
+            "foot2.html",
+            "foot3.html",
+            "foot4.html",
+            "foot5.html"
+
+        ]
+
+    },
+
+
+    women: {
+
+        title: "Women's Sandals",
+
+        pages: [
+
+            "wsandle1.html",
+            "wsandle2.html",
+            "wsandle3.html",
+            "wsandle4.html",
+            "wsandle5.html",
+            "wsandle6.html",
+            "wsandle7.html",
+            "wsandle8.html",
+            "wsandle9.html"
+
+        ]
+
+    },
+
+
+    heels: {
+
+        title: "Heels",
+
+        pages: [
+
+            "heel1.html",
+            "heel2.html",
+            "heel3.html",
+            "heel4.html",
+            "heel5.html",
+            "heel6.html",
+            "heel7.html",
+            "heel8.html",
+            "heel9.html"
+
+        ]
+
+    },
+
+
+    boy: {
+
+        title: "Boys' Footwear",
+
+        pages: [
+
+            "bb5.html",
+            "bb6.html",
+            "bb7.html",
+            "bb8.html"
+
+        ]
+
+    },
+
+
+    girl: {
+
+        title: "Girls' Footwear",
+
+        pages: [
+
+            "gf2.html",
+            "gf4.html"
+
+        ]
+
+    },
+
+
+    babyboy: {
+
+        title: "Baby Boys' Footwear",
+
+        pages: [
+
+            "bf1.html",
+            "bf2.html",
+            "bf3.html",
+            "bf4.html",
+            "bf5.html",
+            "bf6.html",
+            "bf7.html",
+            "bf8.html"
+
+        ]
+
+    },
+
+
+    babygirl: {
+
+        title: "Baby Girls' Footwear",
+
+        pages: [
+
+            "gba1.html",
+            "gba2.html",
+            "gba3.html",
+            "gba4.html",
+            "gba5.html",
+            "gba6.html"
+
+        ]
+
+    }
+
+};
+
+
+function showSandalsCategory(category) {
+
+    var data = SANDALS_CATEGORIES[category];
+
+    if (!data) {
+        return;
+    }
+
+
+    var list = getProductsByPages(data.pages);
+
+
+    var html = `
+
+        <div
+            class="naviraCategoryProductSection"
+            id="${category}"
+        >
+
+            <h3>${data.title}</h3>
+
+            <div class="naviraCategoryProducts">
+
+    `;
+
+
+    list.forEach(function(product) {
+
+        html += createWomenBoysProduct(product);
+
+    });
+
+
+    html += `
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    document.getElementById("sandalsProducts").innerHTML = html;
+
+
+    document.getElementById(category).scrollIntoView({
+
+        behavior: "smooth",
+
+        block: "start"
+
+    });
+
+}
+
+</script>
+
+
+<!-- =====================================================
+     BAGS SECTION
+===================================================== -->
+
+<section class="naviraGenderSection" id="bagsSection">
+
+    <div class="naviraGenderTitle">
+
+        <h2>Bags Collection</h2>
+
+        <p>Explore Bag Categories</p>
+
+    </div>
+
+
+    <div class="naviraGenderLayout">
+
+        <aside class="naviraGenderMajor">
+
+            <div class="naviraGenderMajorCard">
+
+                <img src="bags.jpeg" alt="Bags">
+
+                <h3>Bags</h3>
+
+                <p>Bags Collection</p>
+
+            </div>
+
+        </aside>
+
+
+        <div class="naviraGenderRight">
+
+            <div class="naviraGenderCategories">
+			
+			
+			
+			<button onclick="showBagsCategory('menBags')">
+
+                    <img src="mbag.jpeg">
+
+                    <span>Men's Bags</span>
+
+                </button>
+
+                <button onclick="showBagsCategory('womenBags')">
+
+                    <img src="wwbag.jpeg">
+
+                    <span>Women's Bags</span>
+
+                </button>
+				 <button onclick="showBagsCategory('boysBags')">
+
+                    <img src="boybag.jpeg">
+
+                    <span>Boy's Bags</span>
+
+                </button>
+
+
+                <button onclick="showBagsCategory('girlsBags')">
+
+                    <img src="ggbag.jpeg">
+
+                    <span>Girl's Bags</span>
+
+                </button>
+				 <button onclick="showBagsCategory('commonBags')">
+
+                    <img src="ccubag.jpeg">
+
+                    <span>Bags</span>
+
+                </button>
+            </div>
+
+
+            <div id="bagsProducts"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+var BAGS_CATEGORIES = {
+
+    menBags: {
+
+        title: "Men Bags",
+
+        pages: [
+            "bbag1.html",
+            "bbag2.html",
+            "bbag4.html",
+            "bbag9.html",
+            "bbag6.html"
+        ]
+
+    },
+
+
+    womenBags: {
+
+        title: "Women Bags",
+
+        pages: [
+            "bag1.html",
+            "bag2.html",
+            "bag3.html",
+            "bag4.html",
+            "bag5.html",
+            "bag6.html",
+            "bag7.html",
+            "bag8.html"
+        ]
+
+    },
+
+
+    boysBags: {
+
+        title: "Boys Bags",
+
+        pages: [
+            "bbag3.html",
+            "bbag5.html",
+            "bbag10.html",
+            "bbag11.html",
+            "bbag12.html",
+            "bbag7.html",
+            "bbag8.html"
+        ]
+
+    },
+
+
+    girlsBags: {
+
+        title: "Girls Bags",
+
+        pages: [
+            "gbag1.html",
+            "gbag2.html",
+            "gbag3.html",
+            "gbag4.html",
+            "gbag5.html",
+            "gbag6.html",
+            "gbag7.html",
+            "gbag8.html",
+            "gbag9.html"
+        ]
+
+    },
+
+
+    commonBags: {
+
+        title: "Bags",
+
+        pages: [
+            "ubag1.html",
+            "ubag2.html",
+            "ubag3.html",
+            "ubag4.html",
+            "ubag5.html",
+            "ubag6.html",
+            "ubag7.html",
+            "ubag8.html"
+        ]
+
+    }
+
+};
+
+
+function showBagsCategory(category) {
+
+    var data = BAGS_CATEGORIES[category];
+
+    if (!data) {
+        return;
+    }
+
+
+    var list = getProductsByPages(data.pages);
+
+
+    var html = `
+
+        <div
+            class="naviraCategoryProductSection"
+            id="${category}"
+        >
+
+            <h3>${data.title}</h3>
+
+            <div class="naviraCategoryProducts">
+
+    `;
+
+
+    list.forEach(function(product) {
+
+        html += createWomenBoysProduct(product);
+
+    });
+
+
+    html += `
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    document.getElementById("bagsProducts").innerHTML = html;
+
+
+    document.getElementById(category).scrollIntoView({
+
+        behavior: "smooth",
+
+        block: "start"
+
+    });
+
+}
+
+</script>
+
+
+<!-- =====================================================
+     EYEGLASSES SECTION
+===================================================== -->
+
+<section class="naviraGenderSection" id="eyeglassesSection">
+
+    <div class="naviraGenderTitle">
+
+        <h2>Eyeglasses Collection</h2>
+
+        <p>Explore Eyeglasses Categories</p>
+
+    </div>
+
+
+    <div class="naviraGenderLayout">
+
+        <aside class="naviraGenderMajor">
+
+            <div class="naviraGenderMajorCard">
+
+                <img src="glasses.jpeg" alt="Eyeglasses">
+
+                <h3>Eyeglasses</h3>
+
+                <p>Eyeglasses Collection</p>
+
+            </div>
+
+        </aside>
+
+
+        <div class="naviraGenderRight">
+
+            <div class="naviraGenderCategories">
+			
+			<button onclick="showEyeglassesCategory('Meneyeglasses')">
+
+                    <img src="meyeglass.jpeg">
+
+                    <span>Men's Eyeglasses</span>
+
+                </button>
+
+                <button onclick="showEyeglassesCategory('Womeneyeglasses')">
+
+                    <img src="wwglass.jpeg">
+
+                    <span>Women's Eyeglasses</span>
+
+                </button>
+            </div>
+
+
+            <div id="eyeglassesProducts"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+var EYEGLASSES_CATEGORIES = {
+
+Meneyeglasses: {
+
+        title: "Eyeglasses",
+
+        pages: [
+
+            "eye1.html",
+            "eye2.html",
+            "eye3.html",
+            "eye4.html",
+            "eye5.html",
+            "eye6.html",
+            "eye7.html",
+            "eye8.html",
+            "eye9.html"
+
+        ]
+
+    },
+
+    Womeneyeglasses: {
+
+        title: "Eyeglasses",
+
+        pages: [
+
+            "weye1.html",
+            "weye2.html",
+            "weye3.html",
+            "weye4.html",
+            "weye5.html",
+            "weye6.html",
+            "weye7.html",
+            "weye8.html",
+            "weye9.html"
+
+        ]
+
+    }
+
+};
+
+
+function showEyeglassesCategory(category) {
+
+    var data = EYEGLASSES_CATEGORIES[category];
+
+    if (!data) {
+        return;
+    }
+
+
+    var list = getProductsByPages(data.pages);
+
+
+    var html = `
+
+        <div
+            class="naviraCategoryProductSection"
+            id="${category}"
+        >
+
+            <h3>${data.title}</h3>
+
+            <div class="naviraCategoryProducts">
+
+    `;
+
+
+    list.forEach(function(product) {
+
+        html += createWomenBoysProduct(product);
+
+    });
+
+
+    html += `
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    document.getElementById("eyeglassesProducts").innerHTML = html;
+
+
+    document.getElementById(category).scrollIntoView({
+
+        behavior: "smooth",
+
+        block: "start"
+
+    });
+
+}
+
+</script>
+
+
+<!-- =====================================================
+     WATCH SECTION
+===================================================== -->
+
+<section class="naviraGenderSection" id="watchSection">
+
+    <div class="naviraGenderTitle">
+
+        <h2>Watch Collection</h2>
+
+        <p>Explore Watch Categories</p>
+
+    </div>
+
+
+    <div class="naviraGenderLayout">
+
+        <aside class="naviraGenderMajor">
+
+            <div class="naviraGenderMajorCard">
+
+                <img src="watches.jpeg" alt="Watch">
+
+                <h3>Watch</h3>
+
+                <p>Watch Collection</p>
+
+            </div>
+
+        </aside>
+
+
+        <div class="naviraGenderRight">
+
+            <div class="naviraGenderCategories">
+			<button onclick="showWatchCategory('menWatch')">
+
+                    <img src="mwatch.jpeg">
+
+                    <span>Men's Watch</span>
+
+                </button>
+				<button onclick="showWatchCategory('menWatch')">
+
+                    <img src="wwwatch.jpeg">
+
+                    <span>Women's Watch</span>
+
+                </button>
+
+                <button onclick="showWatchCategory('boysWatch')">
+
+                    <img src="boywatch.jpeg">
+
+                    <span>Boy's Watch</span>
+
+                </button>
+
+
+                <button onclick="showWatchCategory('girlsWatch')">
+
+                    <img src="ggwatch.jpeg">
+
+                    <span>Girl's Watch</span>
+
+                </button>
+
+            </div>
+
+
+            <div id="watchProducts"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+var WATCH_CATEGORIES = {
+
+menWatch: {
+
+        title: "Men's Watch",
+
+        pages: [
+
+            "watch1.html",
+            "watch2.html",
+            "watch3.html",
+            "watch4.html",
+            "watch5.html",
+            "watch6.html",
+            "watch7.html",
+            "watch8.html",
+            "watch9.html"
+
+        ]
+
+    },
+
+    boysWatch: {
+
+        title: "Boys Watch",
+
+        pages: [
+
+            "bwatch1.html",
+            "bwatch2.html",
+            "bwatch3.html",
+            "bwatch4.html",
+            "bwatch5.html",
+            "bwatch6.html",
+            "bwatch7.html",
+            "bwatch8.html",
+            "bwatch9.html"
+
+        ]
+
+    },
+
+
+    girlsWatch: {
+
+        title: "Girls Watch",
+
+        pages: [
+
+            "gwatch1.html",
+            "gwatch2.html",
+            "gwatch3.html",
+            "gwatch4.html",
+            "gwatch5.html",
+            "gwatch6.html",
+            "gwatch7.html",
+            "gwatch8.html",
+            "gwatch9.html"
+
+        ]
+
+    }
+
+};
+
+
+function showWatchCategory(category) {
+
+    var data = WATCH_CATEGORIES[category];
+
+    if (!data) {
+        return;
+    }
+
+
+    var list = getProductsByPages(data.pages);
+
+
+    var html = `
+
+        <div
+            class="naviraCategoryProductSection"
+            id="${category}"
+        >
+
+            <h3>${data.title}</h3>
+
+            <div class="naviraCategoryProducts">
+
+    `;
+
+
+    list.forEach(function(product) {
+
+        html += createWomenBoysProduct(product);
+
+    });
+
+
+    html += `
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    document.getElementById("watchProducts").innerHTML = html;
+
+
+    document.getElementById(category).scrollIntoView({
+
+        behavior: "smooth",
+
+        block: "start"
+
+    });
+
+}
+
+</script>
+
+
+<!-- =====================================================
+     BEDSHEET SECTION
+===================================================== -->
+
+<section class="naviraGenderSection" id="bedsheetSection">
+
+    <div class="naviraGenderTitle">
+
+        <h2>Bedsheet Collection</h2>
+
+        <p>Explore Bedsheet Categories</p>
+
+    </div>
+
+
+    <div class="naviraGenderLayout">
+
+        <aside class="naviraGenderMajor">
+
+            <div class="naviraGenderMajorCard">
+
+                <img src="bedsheet.jpeg" alt="Bedsheet">
+
+                <h3>Bedsheet</h3>
+
+                <p>Bedsheet Collection</p>
+
+            </div>
+
+        </aside>
+
+
+        <div class="naviraGenderRight">
+
+            <div class="naviraGenderCategories">
+			
+			 <button onclick="showBedsheetCategory('menBedsheet')">
+
+                    <img src="mbedsheet.jpeg">
+
+                    <span>Men's Bedsheet</span>
+
+                </button>
+				
+				 <button onclick="showBedsheetCategory('womenBedsheet')">
+
+                    <img src="wwbedsheet.jpeg">
+
+                    <span>Women's Bedsheet</span>
+
+                </button>
+
+                <button onclick="showBedsheetCategory('boysBedsheet')">
+
+                    <img src="boybedsheet.jpeg">
+
+                    <span>Boy's Bedsheet</span>
+
+                </button>
+
+
+                <button onclick="showBedsheetCategory('girlsBedsheet')">
+
+                    <img src="ggbedsheet.jpeg">
+
+                    <span>Girl's Bedsheet</span>
+
+                </button>
+
+            </div>
+
+
+            <div id="bedsheetProducts"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+<script>
+
+var BEDSHEET_CATEGORIES = {
+menBedsheet: {
+
+        title: "Men's Bedsheet",
+
+        pages: [
+
+            "mbed1.html",
+            "mbed2.html",
+            "mbed3.html",
+            "mbed4.html",
+            "mbed5.html",
+            "mbed6.html"
+
+        ]
+
+    },
+
+womenBedsheet: {
+
+        title: "Women's Bedsheet",
+
+         pages:[
+        "wbed1.html",
+        "wbed2.html",
+        "wbed3.html",
+        "wbed4.html",
+        "wbed5.html",
+        "wbed6.html"
+    ]
+
+
+    },
+
+
+    boysBedsheet: {
+
+        title: "Boy's Bedsheet",
+
+        pages: [
+
+            "bbbed1.html",
+            "bbbed2.html",
+            "bbbed3.html",
+            "bbbed4.html",
+            "bbbed5.html",
+            "bbbed6.html"
+
+        ]
+
+    },
+
+
+    girlsBedsheet: {
+
+        title: "Girl's Bedsheet",
+
+        pages: [
+
+            "bgbed1.html",
+            "bgbed2.html",
+            "bgbed3.html",
+            "bgbed4.html",
+            "bgbed5.html",
+            "bgbed6.html"
+
+        ]
+
+    }
+
+};
+
+
+function showBedsheetCategory(category) {
+
+    var data = BEDSHEET_CATEGORIES[category];
+
+    if (!data) {
+        return;
+    }
+
+
+    var list = getProductsByPages(data.pages);
+
+
+    var html = `
+
+        <div
+            class="naviraCategoryProductSection"
+            id="${category}"
+        >
+
+            <h3>${data.title}</h3>
+
+            <div class="naviraCategoryProducts">
+
+    `;
+
+
+    list.forEach(function(product) {
+
+        html += createWomenBoysProduct(product);
+
+    });
+
+
+    html += `
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    document.getElementById("bedsheetProducts").innerHTML = html;
+
+
+    document.getElementById(category).scrollIntoView({
+
+        behavior: "smooth",
+
+        block: "start"
+
+    });
+
+}
+
+</script>
+
+
+<!-- =====================================================
+     BLANKET SECTION
+===================================================== -->
+
+<section class="naviraGenderSection" id="blanketSection">
+
+    <div class="naviraGenderTitle">
+
+        <h2>Blanket Collection</h2>
+
+        <p>Explore Blanket Categories</p>
+
+    </div>
+
+
+    <div class="naviraGenderLayout">
+
+        <aside class="naviraGenderMajor">
+
+            <div class="naviraGenderMajorCard">
+
+                <img src="blanket.jpeg" alt="Blanket">
+
+                <h3>Blanket</h3>
+
+                <p>Blanket Collection</p>
+
+            </div>
+
+        </aside>
+
+
+        <div class="naviraGenderRight">
+
+            <div class="naviraGenderCategories">
+
+               <button onclick="showBlanketCategory('menBlanket')">
+
+                    <img src="mbla.jpeg">
+
+                    <span>Men's Blanket</span>
+
+                </button>
+				
+				 <button onclick="showBlanketCategory('womenBlanket')">
+
+                    <img src="wwbla.jpeg">
+
+                    <span>Women's Blanket</span>
+
+                </button>
+
+                <button onclick="showBlanketCategory('boysBlanket')">
+
+                    <img src="boybla.jpeg">
+
+                    <span>Boy's Blankett</span>
+
+                </button>
+
+
+                <button onclick="showBlanketCategory('girlsBlanket')">
+
+                    <img src="ggbla.jpeg">
+
+                    <span>Girl's Blanket</span>
+
+                </button>
+
+            </div>
+
+
+            <div id="blanketProducts"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+var BLANKET_CATEGORIES = {
+
+   menBlanket: {
+
+        title: "Men's Blanket",
+
+        pages: [
+
+            "mbla1.html",
+            "mbla2.html",
+            "mbla3.html",
+            "mbla4.html",
+            "mbla5.html",
+            "mbla6.html"
+
+        ]
+
+    },
+
+womenBlanket: {
+
+        title: "Women's Blanket",
+
+         pages:[
+        "wbla1.html",
+        "wbla2.html",
+        "wbla3.html",
+        "wbla4.html",
+        "wbla5.html",
+        "wbla6.html"
+    ]
+
+
+    },
+
+
+    boysBlanket: {
+
+        title: "Boy's Blanket",
+
+        pages: [
+
+            "bbbla1.html",
+            "bbbla2.html",
+            "bbbla3.html",
+            "bbbla4.html",
+            "bbbla5.html",
+            "bbbla6.html"
+
+        ]
+
+    },
+
+
+    girlsBlanket: {
+
+        title: "Girl's Blanket",
+
+        pages: [
+
+            "bgbla1.html",
+            "bgbla2.html",
+            "bgbla3.html",
+            "bgbla4.html",
+            "bgbla5.html",
+            "bgbla6.html"
+
+        ]
+
+    }
+
+};
+
+
+function showBlanketCategory(category) {
+
+    var data = BLANKET_CATEGORIES[category];
+
+    if (!data) {
+        return;
+    }
+
+
+    var list = getProductsByPages(data.pages);
+
+
+    var html = `
+
+        <div
+            class="naviraCategoryProductSection"
+            id="${category}"
+        >
+
+            <h3>${data.title}</h3>
+
+            <div class="naviraCategoryProducts">
+
+    `;
+
+
+    list.forEach(function(product) {
+
+        html += createWomenBoysProduct(product);
+
+    });
+
+
+    html += `
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    document.getElementById("blanketProducts").innerHTML = html;
+
+
+    document.getElementById(category).scrollIntoView({
+
+        behavior: "smooth",
+
+        block: "start"
+
+    });
+
+}
+
+</script>
+<!-- =====================================================
+     STYLING SECTION
+===================================================== -->
+
+<section class="naviraGenderSection" id="stylingSection">
+
+    <div class="naviraGenderTitle">
+
+        <h2>Styling Collection</h2>
+
+        <p>Explore Styling Categories</p>
+
+    </div>
+
+
+    <div class="naviraGenderLayout">
+
+        <aside class="naviraGenderMajor">
+
+            <div class="naviraGenderMajorCard">
+
+                <img src="styling.jpeg" alt="Styling">
+
+                <h3>Hair Styling</h3>
+
+                <p>Styling Collection</p>
+
+            </div>
+
+        </aside>
+
+
+        <div class="naviraGenderRight">
+
+            <div class="naviraGenderCategories">
+
+                <button onclick="showStylingCategory('hairDryer')">
+
+                    <img src="Dryer.jpeg">
+
+                    <span>Hair Dryer</span>
+
+                </button>
+				<button onclick="showStylingCategory('hairCurler')">
+
+                    <img src="Curler.jpeg">
+
+                    <span>Hair Curler</span>
+
+                </button>
+				<button onclick="showStylingCategory('hairStraightener')">
+
+                    <img src="Straightener.jpeg">
+
+                    <span>Hair Straightener</span>
+
+                </button>
+
+            </div>
+
+
+            <div id="stylingProducts"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+<script>
+
+var STYLING_CATEGORIES = {
+
+    hairStraightener: {
+
+        title: "HairStraightener",
+
+        pages: [
+            "hhair7.html",
+            "hhair8.html",
+            "hhair9.html"
+
+        ]
+
+    },
+	 hairCurler: {
+
+        title: "HairCurler",
+
+        pages: [
+           "hhair4.html",
+            "hhair5.html",
+            "hhair6.html"
+
+        ]
+
+    },
+	 hairDryer: {
+
+        title: "HairDryer",
+
+        pages: [
+            "hhair1.html",
+            "hhair2.html",
+            "hhair3.html",
+
+        ]
+
+    }
+
+};
+
+
+function showStylingCategory(category) {
+
+    var data = STYLING_CATEGORIES[category];
+
+    if (!data) {
+        return;
+    }
+
+
+    var list = getProductsByPages(data.pages);
+
+
+    var html = `
+
+        <div
+            class="naviraCategoryProductSection"
+            id="${category}"
+        >
+
+            <h3>${data.title}</h3>
+
+            <div class="naviraCategoryProducts">
+
+    `;
+
+
+    list.forEach(function(product) {
+
+        html += createWomenBoysProduct(product);
+
+    });
+
+
+    html += `
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    document.getElementById("stylingProducts").innerHTML = html;
+
+
+    document.getElementById(category).scrollIntoView({
+
+        behavior: "smooth",
+
+        block: "start"
+
+    });
+
+}
+
+</script>
+
+
+<!-- =====================================================
+     HOODIES SECTION
+===================================================== -->
+
+<section class="naviraGenderSection" id="hoodiesSection">
+
+    <div class="naviraGenderTitle">
+
+        <h2>Hoodies Collection</h2>
+
+        <p>Explore Hoodie Categories</p>
+
+    </div>
+
+
+    <div class="naviraGenderLayout">
+
+        <aside class="naviraGenderMajor">
+
+            <div class="naviraGenderMajorCard">
+
+                <img src="hoodies.jpeg" alt="Hoodies">
+
+                <h3>Hoodies</h3>
+
+                <p>Hoodies Collection</p>
+
+            </div>
+
+        </aside>
+
+
+        <div class="naviraGenderRight">
+
+            <div class="naviraGenderCategories">
+			 <button onclick="showHoodiesCategory('hoodiesProducts')">
+
+                    <img src="mhoodie.jpeg">
+
+                    <span>Men's Hoodies</span>
+
+                <button onclick="showHoodiesCategory('hoodiesProducts')">
+
+                    <img src="wwhoodies.jpeg">
+
+                    <span>Women's Hoodies</span>
+
+                </button>
+
+            </div>
+
+
+            <div id="hoodiesProducts"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+var HOODIES_CATEGORIES = {
+
+    hoodiesProducts: {
+
+        title: "Hoodies",
+
+        pages: [
+
+            "hoodie1.html",
+            "hoodie2.html",
+            "hoodie3.html",
+            "hoodie4.html",
+            "hoodie5.html",
+            "hoodie6.html",
+            "hoodie7.html",
+            "hoodie8.html",
+            "hoodie9.html"
+
+        ]
+
+    }
+
+};
+
+
+function showHoodiesCategory(category) {
+
+    var data = HOODIES_CATEGORIES[category];
+
+    if (!data) {
+        return;
+    }
+
+
+    var list = getProductsByPages(data.pages);
+
+
+    var html = `
+
+        <div
+            class="naviraCategoryProductSection"
+            id="${category}"
+        >
+
+            <h3>${data.title}</h3>
+
+            <div class="naviraCategoryProducts">
+
+    `;
+
+
+    list.forEach(function(product) {
+
+        html += createWomenBoysProduct(product);
+
+    });
+
+
+    html += `
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    document.getElementById("hoodiesProducts").innerHTML = html;
+
+
+    document.getElementById(category).scrollIntoView({
+
+        behavior: "smooth",
+
+        block: "start"
+
+    });
+
+}
+
+</script>
+
+
+<!-- =====================================================
+     BELTS SECTION
+===================================================== -->
+
+<section class="naviraGenderSection" id="beltsSection">
+
+    <div class="naviraGenderTitle">
+
+        <h2>Belts Collection</h2>
+
+        <p>Explore Belt Categories</p>
+
+    </div>
+
+
+    <div class="naviraGenderLayout">
+
+        <aside class="naviraGenderMajor">
+
+            <div class="naviraGenderMajorCard">
+
+                <img src="belts.jpeg" alt="Belts">
+
+                <h3>Belts</h3>
+
+                <p>Belts Collection</p>
+
+            </div>
+
+        </aside>
+
+
+        <div class="naviraGenderRight">
+
+            <div class="naviraGenderCategories">
+
+                <button onclick="showBeltsCategory('beltsProducts')">
+
+                    <img src="mbelt.jpeg">
+
+                    <span>Men's Belts</span>
+
+                </button>
+				 <button onclick="showBeltsCategory('beltsProducts')">
+
+                    <img src="wwbelt.jpeg">
+
+                    <span>Women's Belts</span>
+
+                </button>
+
+            </div>
+
+
+            <div id="beltsProducts"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+var BELTS_CATEGORIES = {
+
+    beltsProducts: {
+
+        title: "Belts",
+
+        pages: [
+
+            "belt1.html",
+            "belt2.html",
+            "belt3.html",
+            "belt4.html",
+            "belt5.html",
+            "belt6.html",
+            "belt7.html",
+            "belt8.html",
+            "belt9.html"
+
+        ]
+
+    }
+
+};
+
+
+function showBeltsCategory(category) {
+
+    var data = BELTS_CATEGORIES[category];
+
+    if (!data) {
+        return;
+    }
+
+
+    var list = getProductsByPages(data.pages);
+
+
+    var html = `
+
+        <div
+            class="naviraCategoryProductSection"
+            id="${category}"
+        >
+
+            <h3>${data.title}</h3>
+
+            <div class="naviraCategoryProducts">
+
+    `;
+
+
+    list.forEach(function(product) {
+
+        html += createWomenBoysProduct(product);
+
+    });
+
+
+    html += `
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    document.getElementById("beltsProducts").innerHTML = html;
+
+
+    document.getElementById(category).scrollIntoView({
+
+        behavior: "smooth",
+
+        block: "start"
+
+    });
+
+}
+
+</script>
+<script src="products.js"></script>
+<script src="settings.js"></script>
 </body>
 </html>

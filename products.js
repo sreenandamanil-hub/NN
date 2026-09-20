@@ -8226,9 +8226,9 @@ rating: "★★★★★",
 description: "Boys' Compact Casual School Backpack",
 keywords: "boys boy kids backpack compact school casual lightweight travel children durable everyday storage",
 images: [
-"bbag (28).jpeg",
-"bbag (29).jpeg",
-"bbag (30).jpeg"
+"bbag (25).jpeg",
+"bbag (26).jpeg",
+"bbag (27).jpeg"
 ]
 },
 
@@ -10859,9 +10859,9 @@ rating: "★★★★★",
 description: "Girls Peter Pan Collar Cotton Dress",
 keywords: "girls baby girls kids dress peter pan collar cotton comfortable flared casual cute everyday outing wear",
 images: [
-"gbaby (28).jpeg",
-"gbaby (29).jpeg",
-"gbaby (30).jpeg"
+"gbaby (8).jpeg",
+"gbaby (7).jpeg",
+"gbaby (9).jpeg"
 ]
 },
 
@@ -10877,9 +10877,9 @@ rating: "★★★★★",
 description: "Girls Bow Detail Sleeveless Cotton Dress",
 keywords: "girls baby girls kids dress bow sleeveless cotton comfortable cute party casual outing celebration wear",
 images: [
-"gbaby (31).jpeg",
-"gbaby (32).jpeg",
-"gbaby (33).jpeg"
+"gbaby (10).jpeg",
+"gbaby (12).jpeg",
+"gbaby (11).jpeg"
 ]
 },
 
@@ -10913,9 +10913,467 @@ rating: "★★★★★",
 description: "Girls Polka Dot Puff Sleeve Cotton Dress",
 keywords: "girls baby girls kids dress polka dot puff sleeve cotton cute comfortable party casual everyday wear",
 images: [
-"gbaby (37).jpeg",
-"gbaby (38).jpeg",
-"gbaby (39).jpeg"
+"gbaby (16).jpeg",
+"gbaby (18).jpeg",
+"gbaby (17).jpeg"
 ]
 },
+{
+    id: 585,
+    category: "churidar",
+    name: "Myra Ethnic Studio",
+    page: "churidar1.html",
+    price: "1749",
+    oldPrice: "2999",
+    discount: "41% OFF",
+    rating: "★★★★★",
+    description: "Women's Printed Straight Kurta Set with Churidar and Designer Dupatta",
+    keywords: "women women's churidar kurta set printed straight kurta churidar designer dupatta ethnic traditional cotton casual festive party wear",
+    images: [
+        "churidar (58).jpeg",
+        "churidar (59).jpeg",
+        "churidar (60).jpeg"
+    ]
+},
+{
+    id: 586,
+    category: "churidar",
+    name: "Suhana Ethnic Collection",
+    page: "churidar2.html",
+    price: "2249",
+    oldPrice: "3999",
+    discount: "44% OFF",
+    rating: "★★★★★",
+    description: "Women's Elegant Printed Anarkali Kurta Set with Churidar and Dupatta",
+    keywords: "women women's churidar anarkali kurta set printed churidar dupatta ethnic traditional festive party wear elegant",
+    images: [
+        "churidar (55).jpeg",
+        "churidar (56).jpeg",
+        "churidar (57).jpeg"
+    ]
+},
+{
+    id: 587,
+    category: "churidar",
+    name: "Aaliya Women's Boutique",
+    page: "churidar3.html",
+    price: "1899",
+    oldPrice: "3299",
+    discount: "42% OFF",
+    rating: "★★★★★",
+    description: "Women's Traditional Printed Kurta Churidar Set with Dupatta",
+    keywords: "women women's churidar kurta set traditional printed dupatta ethnic cotton festive casual party wear",
+    images: [
+        "churidar (52).jpeg",
+        "churidar (53).jpeg",
+        "churidar (54).jpeg"
+    ]
+},
+{
+    id: 588,
+    category: "churidar",
+    name: "Anaya Women's Fashion Hub",
+    page: "churidar4.html",
+    price: "2149",
+    oldPrice: "3799",
+    discount: "43% OFF",
+    rating: "★★★★★",
+    description: "Women's Elegant Floral Embroidered Kurta Set with Churidar",
+    keywords: "women women's churidar kurta set floral embroidered elegant dupatta ethnic traditional festive party wear",
+    images: [
+        "churidar (46).jpeg",
+        "churidar (47).jpeg",
+        "churidar (48).jpeg"
+    ]
+},
+{
+    id: 589,
+    category: "churidar",
+    name: "Hiba Women's Ethnic Wear",
+    page: "churidar5.html",
+    price: "1799",
+    oldPrice: "2999",
+    discount: "40% OFF",
+    rating: "★★★★★",
+    description: "Women's Elegant Printed Kurta Churidar Set with Matching Dupatta",
+    keywords: "women women's churidar kurta set printed matching dupatta ethnic traditional cotton festive casual elegant",
+    images: [
+        "churidar (43).jpeg",
+        "churidar (44).jpeg",
+        "churidar (45).jpeg"
+    ]
+},
+{
+    id: 590,
+    category: "churidar",
+    name: "Aaradhya Women's Collection",
+    page: "churidar6.html",
+    price: "1949",
+    oldPrice: "3499",
+    discount: "44% OFF",
+    rating: "★★★★★",
+    description: "Women's Floral Embroidered Churidar Set with Elegant Dupatta",
+    keywords: "women women's churidar floral embroidered kurta set elegant dupatta ethnic traditional festive party wear",
+    images: [
+        "churidar (40).jpeg",
+        "churidar (41).jpeg",
+        "churidar (42).jpeg"
+    ]
+},
+{
+    id: 591,
+    category: "churidar",
+    name: "Ishita Ethnic Studio",
+    page: "churidar7.html",
+    price: "2099",
+    oldPrice: "3599",
+    discount: "42% OFF",
+    rating: "★★★★★",
+    description: "Women's Printed Anarkali Kurta Set with Churidar and Dupatta",
+    keywords: "women women's churidar anarkali printed kurta set dupatta ethnic traditional festive party wear elegant",
+    images: [
+        "churidar (37).jpeg",
+        "churidar (38).jpeg",
+        "churidar (39).jpeg"
+    ]
+},
+{
+    id: 592,
+    category: "churidar",
+    name: "Ameera Ethnic Collection",
+    page: "churidar8.html",
+    price: "1999",
+    oldPrice: "3499",
+    discount: "43% OFF",
+    rating: "★★★★★",
+    description: "Women's Elegant Embroidered Kurta Churidar Set with Dupatta",
+    keywords: "women women's churidar embroidered kurta set dupatta ethnic traditional elegant festive party wear",
+    images: [
+        "churidar (31).jpeg",
+        "churidar (32).jpeg",
+        "churidar (33).jpeg"
+    ]
+},
+{
+    id: 593,
+    category: "churidar",
+    name: "Nivetha Women's Boutique",
+    page: "churidar9.html",
+    price: "1749",
+    oldPrice: "3099",
+    discount: "44% OFF",
+    rating: "★★★★★",
+    description: "Women's Floral Printed Churidar Set with Embroidered Dupatta",
+    keywords: "women women's churidar floral printed kurta set embroidered dupatta ethnic traditional festive casual wear",
+    images: [
+        "churidar (28).jpeg",
+        "churidar (29).jpeg",
+        "churidar (30).jpeg"
+    ]
+},
+{
+    id: 594,
+    category: "churidar",
+    name: "Aarna Women's Wardrobe",
+    page: "churidar10.html",
+    price: "1849",
+    oldPrice: "3199",
+    discount: "42% OFF",
+    rating: "★★★★★",
+    description: "Women's Elegant Printed Kurta Churidar Set with Designer Dupatta",
+    keywords: "women women's churidar printed kurta set designer dupatta ethnic traditional festive party wear elegant",
+    images: [
+        "churidar (25).jpeg",
+        "churidar (26).jpeg",
+        "churidar (27).jpeg"
+    ]
+},
+{
+    id: 595,
+    category: "churidar",
+    name: "Maira Women's Fashion",
+    page: "churidar11.html",
+    price: "1599",
+    oldPrice: "2799",
+    discount: "43% OFF",
+    rating: "★★★★★",
+    description: "Women's Printed Cotton Churidar Set with Matching Dupatta",
+    keywords: "women women's churidar cotton printed kurta set matching dupatta ethnic traditional casual festive comfortable",
+    images: [
+        "churidar (22).jpeg",
+        "churidar (23).jpeg",
+        "churidar (24).jpeg"
+    ]
+},
+{
+    id: 596,
+    category: "churidar",
+    name: "Riya Ethnic Boutique",
+    page: "churidar12.html",
+    price: "1899",
+    oldPrice: "3199",
+    discount: "41% OFF",
+    rating: "★★★★★",
+    description: "Women's Elegant Embroidered Kurta Churidar Set with Dupatta",
+    keywords: "women women's churidar embroidered kurta set dupatta ethnic traditional festive party wear elegant cotton",
+    images: [
+        "churidar (19).jpeg",
+        "churidar (20).jpeg",
+        "churidar (21).jpeg"
+    ]
+},
+{
+    id: 597,
+    category: "churidar",
+    name: "Saanvi Women's Studio",
+    page: "churidar13.html",
+    price: "1699",
+    oldPrice: "2999",
+    discount: "43% OFF",
+    rating: "★★★★★",
+    description: "Women's Printed Straight Kurta Set with Churidar and Dupatta",
+    keywords: "women women's churidar straight kurta set printed dupatta ethnic traditional cotton casual festive wear",
+    images: [
+        "churidar (16).jpeg",
+        "churidar (17).jpeg",
+        "churidar (18).jpeg"
+    ]
+},
+{
+    id: 598,
+    category: "churidar",
+    name: "Noor Fashion House",
+    page: "churidar14.html",
+    price: "2299",
+    oldPrice: "3999",
+    discount: "43% OFF",
+    rating: "★★★★★",
+    description: "Women's Embroidered Anarkali Kurta Set with Churidar and Dupatta",
+    keywords: "women women's churidar anarkali embroidered kurta set dupatta ethnic traditional festive party wear elegant",
+    images: [
+        "churidar (13).jpeg",
+        "churidar (14).jpeg",
+        "churidar (15).jpeg"
+    ]
+},
+{
+    id: 599,
+    category: "churidar",
+    name: "Aayat Ethnic Wear",
+    page: "churidar15.html",
+    price: "1749",
+    oldPrice: "2999",
+    discount: "42% OFF",
+    rating: "★★★★★",
+    description: "Women's Embroidered Straight Kurta Churidar Set with Dupatta",
+    keywords: "women women's churidar straight kurta embroidered dupatta ethnic traditional festive casual wear elegant",
+    images: [
+        "churidar (10).jpeg",
+        "churidar (11).jpeg",
+        "churidar (12).jpeg"
+    ]
+},
+{
+    id: 600,
+    category: "churidar",
+    name: "Meher Women's Collection",
+    page: "churidar16.html",
+    price: "1999",
+    oldPrice: "3499",
+    discount: "43% OFF",
+    rating: "★★★★★",
+    description: "Women's Purple Floral Printed Kurta Set with Palazzo and Dupatta",
+    keywords: "women women's kurta set purple floral printed palazzo dupatta ethnic traditional festive party wear",
+    images: [
+        "churidar (4).jpeg",
+        "churidar (5).jpeg",
+        "churidar (6).jpeg"
+    ]
+},
+{
+    id: 601,
+    category: "churidar",
+    name: "Ziya Women's Boutique",
+    page: "churidar17.html",
+    price: "1799",
+    oldPrice: "3299",
+    discount: "45% OFF",
+    rating: "★★★★★",
+    description: "Women's Embroidered Straight Kurta Churidar Set with Dupatta",
+    keywords: "women women's churidar straight kurta embroidered dupatta ethnic traditional festive party wear elegant",
+    images: [
+        "churidar (7).jpeg",
+        "churidar (8).jpeg",
+        "churidar (9).jpeg"
+    ]
+},
+{
+    id: 602,
+    category: "churidar",
+    name: "Aarohi Ethnic Studio",
+    page: "churidar18.html",
+    price: "1899",
+    oldPrice: "3499",
+    discount: "46% OFF",
+    rating: "★★★★★",
+    description: "Women's Olive Green Printed Churidar Set with Dupatta",
+    keywords: "women women's churidar olive green printed kurta set dupatta ethnic traditional cotton festive casual wear",
+    images: [
+        "churidar (1).jpeg",
+        "churidar (2).jpeg",
+        "churidar (3).jpeg"
+    ]
+},{
+    id: 603,
+    category: "sari",
+    name: "Vasudha Saree Studio",
+    page: "sari1.html",
+    price: "1899",
+    oldPrice: "3299",
+    discount: "42% OFF",
+    rating: "★★★★★",
+    description: "Women's Elegant Printed Saree with Designer Border and Pallu",
+    keywords: "women women's saree printed designer border pallu traditional ethnic floral casual festive party wear elegant",
+    images: [
+        "sari (1).jpeg",
+        "sari (2).jpeg",
+        "sari (3).jpeg"
+    ]
+},
+{
+    id: 604,
+    category: "sari",
+    name: "Meenakshi Saree House",
+    page: "sari2.html",
+    price: "2099",
+    oldPrice: "3799",
+    discount: "44% OFF",
+    rating: "★★★★★",
+    description: "Women's Classic Printed Saree with Elegant Floral Border and Designer Pallu",
+    keywords: "women women's saree classic printed floral border designer pallu traditional ethnic festive party wear elegant",
+    images: [
+        "sari (4).jpeg",
+        "sari (5).jpeg",
+        "sari (6).jpeg"
+    ]
+},
+{
+    id: 605,
+    category: "sari",
+    name: "Aadhira Saree Collection",
+    page: "sari3.html",
+    price: "2299",
+    oldPrice: "3999",
+    discount: "43% OFF",
+    rating: "★★★★★",
+    description: "Women's Elegant Printed Saree with Floral Design and Designer Border",
+    keywords: "women women's saree printed floral design designer border traditional ethnic festive party wear elegant",
+    images: [
+        "sari (7).jpeg",
+        "sari (8).jpeg",
+        "sari (9).jpeg"
+    ]
+},
+{
+    id: 606,
+    category: "sari",
+    name: "Kavya Women's Saree Boutique",
+    page: "sari4.html",
+    price: "1999",
+    oldPrice: "3499",
+    discount: "43% OFF",
+    rating: "★★★★★",
+    description: "Women's Traditional Printed Saree with Contrast Border and Elegant Pallu",
+    keywords: "women women's saree traditional printed contrast border elegant pallu ethnic festive party wear casual",
+    images: [
+        "sari (10).jpeg",
+        "sari (11).jpeg",
+        "sari (12).jpeg"
+    ]
+},
+{
+    id: 607,
+    category: "sari",
+    name: "Ishani Women's Saree Studio",
+    page: "sari5.html",
+    price: "2199",
+    oldPrice: "3999",
+    discount: "45% OFF",
+    rating: "★★★★★",
+    description: "Women's Classic Printed Saree with Peacock Motifs and Contrast Border",
+    keywords: "women women's saree printed peacock motifs contrast border traditional ethnic festive elegant party wear",
+    images: [
+        "sari (13).jpeg",
+        "sari (14).jpeg",
+        "sari (15).jpeg"
+    ]
+},
+{
+    id: 608,
+    category: "sari",
+    name: "Roshni Saree Gallery",
+    page: "sari6.html",
+    price: "1799",
+    oldPrice: "2999",
+    discount: "40% OFF",
+    rating: "★★★★★",
+    description: "Women's Graceful Printed Saree with Traditional Motifs and Designer Border",
+    keywords: "women women's saree graceful printed traditional motifs designer border ethnic festive party wear elegant",
+    images: [
+        "sari (16).jpeg",
+        "sari (17).jpeg",
+        "sari (18).jpeg"
+    ]
+},
+{
+    id: 609,
+    category: "sari",
+    name: "Aarini Women's Saree Collection",
+    page: "sari7.html",
+    price: "1949",
+    oldPrice: "3399",
+    discount: "43% OFF",
+    rating: "★★★★★",
+    description: "Women's Elegant Printed Saree with Traditional Floral Motifs and Contrast Pallu",
+    keywords: "women women's saree printed traditional floral motifs contrast pallu ethnic festive party wear elegant",
+    images: [
+        "sari (19).jpeg",
+        "sari (20).jpeg",
+        "sari (21).jpeg"
+    ]
+},
+{
+    id: 610,
+    category: "sari",
+    name: "Nandini Saree Boutique",
+    page: "sari8.html",
+    price: "1849",
+    oldPrice: "3199",
+    discount: "42% OFF",
+    rating: "★★★★★",
+    description: "Women's Beautiful Printed Saree with Elegant Border and Traditional Pallu",
+    keywords: "women women's saree beautiful printed elegant border traditional pallu ethnic festive party wear casual",
+    images: [
+        "sari (22).jpeg",
+        "sari (23).jpeg",
+        "sari (24).jpeg"
+    ]
+},
+{
+    id: 611,
+    category: "sari",
+    name: "Suhana Saree World",
+    page: "sari9.html",
+    price: "2049",
+    oldPrice: "3499",
+    discount: "41% OFF",
+    rating: "★★★★★",
+    description: "Women's Elegant Printed Saree with Floral Pattern and Designer Border",
+    keywords: "women women's saree elegant printed floral pattern designer border traditional ethnic festive party wear",
+    images: [
+        "sari (25).jpeg",
+        "sari (26).jpeg",
+        "sari (27).jpeg"
+    ]
+}
 ];

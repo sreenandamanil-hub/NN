@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+<link rel="stylesheet" href="super.css">
 
 <meta charset="UTF-8">
 
@@ -168,13 +169,13 @@ body {
 
     display: block;
 
-    left: 32%;
+    left: 39%;
 
     top: 5px;
 
-    width: 36%;
+    width: 39%;
 
-    height: 230px;
+    height: 237px;
 
     opacity: 1;
 
@@ -941,6 +942,89 @@ body {
         height: 60px;
     }
 
+}
+/* =========================================
+   NAVIRA THEME SUPPORT
+========================================= */
+
+.onamBackButton,
+.onamViewProduct {
+    background: var(--navira-theme-dark) !important;
+    color: white !important;
+}
+
+.onamPageTitle h1,
+.onamCollectionHeader h2 {
+    color: var(--navira-theme-dark) !important;
+}
+
+.onamCollectionHeader {
+    border-bottom: 2px solid var(--navira-theme-dark) !important;
+}
+
+.onamProductCard {
+    border: 2px solid var(--navira-theme-dark) !important;
+}
+
+.onamMessage {
+    border: 2px solid var(--navira-theme-dark) !important;
+}
+
+.onamBottomNav {
+    border-top: 2px solid var(--navira-theme-dark) !important;
+}
+
+.onamHomeButton {
+    color: var(--navira-theme-dark) !important;
+}
+
+.onamHomeIcon {
+    color: var(--navira-theme-dark) !important;
+}
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+body.naviraDark {
+    background: #181818 !important;
+    color: #eeeeee !important;
+}
+
+body.naviraDark .onamBackButton {
+    background: #333333 !important;
+    color: #ffffff !important;
+}
+
+body.naviraDark .onamPageTitle p,
+body.naviraDark .onamCollectionCount,
+body.naviraDark .onamDescription {
+    color: #bbbbbb !important;
+}
+
+body.naviraDark .onamProductCard {
+    background: #252525 !important;
+    border-color: #555555 !important;
+}
+
+body.naviraDark .onamProductImageArea {
+    background: #202020 !important;
+}
+
+body.naviraDark .onamMessage {
+    background: #252525 !important;
+    color: #eeeeee !important;
+    border-color: #555555 !important;
+}
+
+body.naviraDark .onamBottomNav {
+    background: #202020 !important;
+    border-color: #555555 !important;
+}
+
+body.naviraDark .onamHomeButton {
+    color: #eeeeee !important;
 }
 
 </style>
@@ -1746,7 +1830,7 @@ if (
 </script>
 
 <script src="onam.js"></script>
-
+<script src="settings.js"></script>
 </body>
 
 </html>

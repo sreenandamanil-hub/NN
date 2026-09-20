@@ -2944,7 +2944,7 @@ body.naviraThemeLightBlue .homeSearch {
 
     /* Continue down through the Home viewport */
     bottom: auto;
-height: 1369px;
+height: 2427px;
 
     /* CLOSED BORDER */
     border: 2px solid var(--navira-theme-dark);
@@ -5481,7 +5481,7 @@ body {
 
     box-sizing: border-box !important;
 
-    border: 1px solid var(--navira-theme-dark) !important;
+    border: 2px solid var(--navira-theme-dark) !important;
 
     border-radius: 12px !important;
 
@@ -6545,4 +6545,170 @@ body {
 
 .homeTop {
     margin-top: 0 !important;
+}
+/* =====================================================
+   NAVIRA CATEGORY CIRCLES
+   VERTICAL ROWS - NO HORIZONTAL SCROLL
+   ===================================================== */
+
+.naviraSubcategoryGrid {
+
+    display: grid !important;
+
+    grid-template-columns:
+        repeat(6, minmax(0, 1fr)) !important;
+
+    gap: 20px 12px !important;
+
+    width: 100% !important;
+
+    overflow: visible !important;
+
+    padding: 8px 5px 15px !important;
+
+    box-sizing: border-box !important;
+
+}
+
+
+/* CATEGORY BUTTON */
+
+.naviraSubcategoryGrid .naviraSubcategoryButton {
+
+    width: 100% !important;
+
+    max-width: 130px !important;
+
+    min-width: 0 !important;
+
+    justify-self: center !important;
+
+    flex: none !important;
+
+    text-align: center !important;
+
+}
+
+
+/* CATEGORY IMAGE */
+
+.naviraSubcategoryGrid .naviraSubcategoryImage {
+
+    width: 100px !important;
+
+    height: 100px !important;
+
+    border-radius: 50% !important;
+
+    object-fit: cover !important;
+
+    display: block !important;
+
+    margin: 0 auto 7px !important;
+
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (max-width: 1000px) {
+
+    .naviraSubcategoryGrid {
+
+        grid-template-columns:
+            repeat(4, minmax(0, 1fr)) !important;
+
+    }
+
+}
+
+
+/* =====================================================
+   PHONE
+   ===================================================== */
+
+@media (max-width: 700px) {
+
+    .naviraSubcategoryGrid {
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr)) !important;
+
+        gap: 16px 6px !important;
+
+        overflow: visible !important;
+
+        padding: 5px 3px 12px !important;
+
+    }
+
+
+    .naviraSubcategoryGrid .naviraSubcategoryButton {
+
+        max-width: 90px !important;
+
+    }
+
+
+    .naviraSubcategoryGrid .naviraSubcategoryImage {
+
+        width: 68px !important;
+
+        height: 68px !important;
+
+    }
+
+}/* ================================
+   FINAL TRENDING + PROMOTION GAP
+================================ */
+
+.naviraTrending {
+    margin-bottom: 5px !important;
+}
+
+.naviraPromotionSlider {
+    margin-top: 5px !important;
+    margin-bottom: 10px !important;
+}
+
+
+/* ================================
+   SMALL GAP BETWEEN POSTERS
+================================ */
+
+.naviraPromotionSlide.prev {
+    left: 0 !important;
+    width: 32% !important;
+}
+
+.naviraPromotionSlide.active {
+    left: 27% !important;
+    width: 46% !important;
+}
+
+.naviraPromotionSlide.next {
+    left: 68% !important;
+    width: 32% !important;
+}
+
+
+/* PHONE */
+@media (max-width: 600px) {
+
+    .naviraTrending {
+        margin-bottom: 5px !important;
+    }
+
+    .naviraPromotionSlider {
+        margin-top: 5px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .naviraPromotionSlide.active {
+        left: 0 !important;
+        width: 100% !important;
+    }
+
 }
