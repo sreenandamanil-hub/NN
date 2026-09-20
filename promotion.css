@@ -6,7 +6,7 @@
     width: 100%;
     max-width: 1500px;
 
-    margin: 8px auto 20px !important;
+    margin: 5px auto 20px !important;
     padding: 0 10px !important;
 
     box-sizing: border-box;
@@ -35,6 +35,7 @@
     position: absolute;
 
     top: 20px;
+    left: 0;
 
     height: 210px;
 
@@ -62,7 +63,6 @@
     width: 31% !important;
 
     height: 190px;
-
     top: 15px;
 
     opacity: 0.85;
@@ -73,7 +73,7 @@
 
 
 /* =====================================================
-   CENTER / ACTIVE POSTER
+   CENTER POSTER
 ===================================================== */
 
 .naviraPromotionSlide.active {
@@ -83,7 +83,6 @@
     width: 44% !important;
 
     height: 210px;
-
     top: 5px;
 
     opacity: 1;
@@ -104,7 +103,6 @@
     width: 31% !important;
 
     height: 190px;
-
     top: 15px;
 
     opacity: 0.85;
@@ -119,10 +117,10 @@
 ===================================================== */
 
 .naviraPromotionSlide img {
+    display: block;
+
     width: 100%;
     height: 100%;
-
-    display: block;
 
     object-fit: contain;
     object-position: center;
@@ -166,22 +164,20 @@
     width: 10px;
     height: 10px;
 
-    background: var(--navira-theme-dark, #071b78);
+    background: var(
+        --navira-theme-dark,
+        #071b78
+    );
 }
 
 
 /* =====================================================
-   TRENDING + PROMOTION SPACING
+   TRENDING → PROMOTION
 ===================================================== */
 
 .naviraTrending {
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
-}
-
-.naviraPromotionSlider {
-    margin-top: 5px !important;
-    margin-bottom: 20px !important;
 }
 
 
@@ -191,19 +187,16 @@
 
 @media (max-width: 600px) {
 
-    /* Trending should stay close to promotion */
     .naviraTrending {
         margin-bottom: 0 !important;
         padding-bottom: 0 !important;
     }
 
 
-    /* Promotion container */
     .naviraPromotionSlider {
         width: 100%;
 
-        margin-top: 5px !important;
-        margin-bottom: 20px !important;
+        margin: 5px 0 20px !important;
 
         padding: 0 6px !important;
 
@@ -211,7 +204,10 @@
     }
 
 
-    /* Phone poster area */
+    /* IMPORTANT:
+       Give the phone poster enough space
+    */
+
     .naviraPromotionSlides {
         width: 100%;
 
@@ -222,6 +218,7 @@
 
 
     /* Hide left and right posters */
+
     .naviraPromotionSlide {
         display: none !important;
 
@@ -230,9 +227,12 @@
     }
 
 
-    /* Show only center poster */
+    /* Show only active poster */
+
     .naviraPromotionSlide.active {
         display: block !important;
+
+        position: absolute;
 
         left: 0 !important;
         top: 0 !important;
@@ -241,29 +241,33 @@
 
         height: 180px !important;
 
-        opacity: 1;
-        visibility: visible;
+        opacity: 1 !important;
+        visibility: visible !important;
 
         z-index: 5;
     }
 
 
-    /* Phone poster image */
+    /* IMPORTANT:
+       Show the complete poster
+    */
+
     .naviraPromotionSlide.active img {
+        display: block;
+
         width: 100% !important;
 
         height: 180px !important;
 
-        display: block;
-
         object-fit: contain !important;
-        object-position: center;
+        object-position: center !important;
 
         border-radius: 10px;
     }
 
 
     /* Dots */
+
     .naviraPromotionDots {
         margin-top: 6px;
 
