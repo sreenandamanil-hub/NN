@@ -175,12 +175,6 @@
    TRENDING → PROMOTION
 ===================================================== */
 
-.naviraTrending {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-}
-
-
 @media (max-width: 600px) {
 
     .naviraPromotionSlider {
@@ -192,23 +186,23 @@
 
     .naviraPromotionSlides {
         width: 100%;
-        height: 180px !important;
+        height: 210px !important;
 
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
 
         overflow: hidden;
     }
 
     .naviraPromotionSlide.active {
         width: 100% !important;
-        height: 180px !important;
+        height: 210px !important;
         top: 0 !important;
 
         display: flex !important;
         justify-content: center !important;
-        align-items: center !important;
+        align-items: flex-start !important;
     }
 
     .naviraPromotionSlide.active img {
@@ -216,7 +210,7 @@
         height: 180px !important;
 
         object-fit: contain !important;
-        object-position: center !important;
+        object-position: center top !important;
 
         display: block;
     }
