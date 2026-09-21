@@ -142,7 +142,7 @@ var profileData =
     ) || {
 
         name: "User",
-        photo: "profile.jpeg",
+        photo: "profile1.jpeg",
 
         address: "",
         email: "",
@@ -156,7 +156,19 @@ var profileData =
         state: ""
     };
 
+/* ================= DEFAULT PROFILE PHOTO ================= */
 
+if (
+    !profileData.photo ||
+    profileData.photo === "profile.jpeg"
+) {
+    profileData.photo = "profile1.jpeg";
+
+    localStorage.setItem(
+        "naviraProfile",
+        JSON.stringify(profileData)
+    );
+}
 /* =====================================================
    LOAD PROFILE ON HOME
    ===================================================== */
@@ -184,7 +196,7 @@ function loadHomeProfile() {
     if (photo) {
 
         photo.src =
-            profileData.photo || "profile.jpeg";
+            profileData.photo || "profile1.jpeg";
     }
 }
 
@@ -292,7 +304,7 @@ function openAccount() {
 
     if (accountPhoto)
         accountPhoto.src =
-            profileData.photo || "profile.jpeg";
+            profileData.photo || "profile1.jpeg";
 }
 
 
