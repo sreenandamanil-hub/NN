@@ -481,17 +481,18 @@ body {
 
     cursor: pointer;
 }
-
-
 .homeProfile img {
 
     width: 68px !important;
-
     height: 68px !important;
 
     object-fit: cover;
 
     border-radius: 50%;
+
+    border: 3px solid var(--profile-border-color, #142B5F);
+
+    box-sizing: border-box;
 
     flex-shrink: 0;
 }
@@ -7135,4 +7136,18 @@ body.naviraDark .naviraSettingsBox label {
         padding: 0 8px !important;
     }
 
+}
+/* ================= PROFILE THEME BORDER ================= */
+
+.homeProfile img {
+    width: 68px !important;
+    height: 68px !important;
+
+    object-fit: cover !important;
+    border-radius: 50% !important;
+
+    border: 3px solid var(--navira-theme-dark) !important;
+
+    box-sizing: border-box !important;
+    flex-shrink: 0 !important;
 }

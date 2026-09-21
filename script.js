@@ -988,3 +988,4 @@ function closeAbout() {
     }
 
 }
+
