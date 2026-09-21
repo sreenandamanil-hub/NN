@@ -7094,3 +7094,14 @@ body.naviraDark .naviraSettingInfo small {
 body.naviraDark .naviraSettingsBox label {
     color: #ffffff !important;
 }
+/* =========================================
+   TRENDING POSITION - PHONE ONLY
+========================================= */
+
+@media (max-width: 600px) {
+    .naviraTrending {
+        margin-top: 10px !important;
+        position: relative !important;
+        z-index: 2 !important;
+    }
+}
