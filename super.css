@@ -7083,20 +7083,56 @@ body.naviraDark .naviraSettingsBox label {
 
 /* ================= TRENDING - PHONE ONLY ================= */
 
+/* =========================================
+   FINAL MOBILE ONAM → TRENDING SPACING
+========================================= */
+
 @media (max-width: 600px) {
 
-    .naviraPromotionSlider {
-        margin-top: 5px !important;
-        margin-bottom: -75px !important;
+    /* Onam slider */
+    .naviraOnamSlider {
+        margin: 0 !important;
+        padding: 0 6px !important;
     }
 
+    /* Poster */
+    .naviraOnamSlides {
+        height: 130px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Dots */
+    .naviraOnamDots {
+        margin: 2px 0 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Empty area between Onam and Trending */
+    .naviraOnamSlider + #homeContent {
+        height: 0 !important;
+        min-height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: none !important;
+    }
+
+    /* Empty search-results container */
+    #products:empty {
+        display: none !important;
+        height: 0 !important;
+        min-height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Trending */
     .naviraTrending {
         position: relative !important;
         top: 0 !important;
         transform: none !important;
-        margin-top: 0 !important;
-        margin-bottom: 0 !important;
-        z-index: 5 !important;
+        margin: 8px auto 100px !important;
+        padding: 0 8px !important;
     }
 
 }
