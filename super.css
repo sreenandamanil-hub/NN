@@ -6684,7 +6684,7 @@ body.naviraDark .aboutItem p {
 /* MOVE TRENDING UP */
 
 .naviraTrending {
-    margin-top: -100px !important;
+    margin-top: -120px !important;
 }
 
 
@@ -7079,18 +7079,20 @@ body.naviraDark .naviraSettingsBox label {
 ========================================= */
 /* ================= TRENDING - PHONE ONLY ================= */
 
+/* ================= TRENDING - PHONE ONLY ================= */
+
 @media (max-width: 600px) {
 
     .naviraTrending {
-        margin-top: 0 !important;
         position: relative !important;
-        top: 30px !important;
+        top: 0 !important;
+        margin-top: -80px !important;
         z-index: 2 !important;
     }
 
     .naviraPromotionSlider {
         margin-top: 5px !important;
-        margin-bottom: 10px !important;
+        margin-bottom: 0 !important;
     }
 
     .naviraPromotionSlide.active {
