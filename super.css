@@ -7361,4 +7361,31 @@ body.naviraDark .naviraEmptyWishlist .naviraWishlistShop {
         border: 2px solid var(--navira-theme-dark) !important;
     }
 
+}/* =====================================================
+   NAVIRA - PRODUCT CARD THEME BORDER
+   MOBILE + ALL SCREENS
+   ===================================================== */
+
+.card,
+.trendingCard,
+.naviraWishlistCard,
+.naviraRecentCard {
+    box-sizing: border-box !important;
+
+    /* Use outline so existing border CSS cannot hide it */
+    outline: 2px solid var(--navira-theme-dark) !important;
+    outline-offset: -2px !important;
+
+    opacity: 1 !important;
+}
+@media (max-width: 600px) {
+
+    .card,
+    .trendingCard,
+    .naviraWishlistCard,
+    .naviraRecentCard {
+        outline: 2px solid var(--navira-theme-dark) !important;
+        outline-offset: -2px !important;
+    }
+
 }
