@@ -6605,26 +6605,6 @@ body {
     width: 32% !important;
 }
 
-
-/* PHONE */
-@media (max-width: 600px) {
-
-    .naviraTrending {
-        margin-bottom: 5px !important;
-    }
-
-    .naviraPromotionSlider {
-        margin-top: 5px !important;
-        margin-bottom: 10px !important;
-    }
-
-    .naviraPromotionSlide.active {
-        left: 0 !important;
-        width: 100% !important;
-    }
-
-}
-
     color: var(--navira-theme-dark);
 
     font-size: 18px;
@@ -7097,11 +7077,25 @@ body.naviraDark .naviraSettingsBox label {
 /* =========================================
    TRENDING POSITION - PHONE ONLY
 ========================================= */
+/* ================= TRENDING - PHONE ONLY ================= */
 
 @media (max-width: 600px) {
+
     .naviraTrending {
-        margin-top: 100px !important;
+        margin-top: 0 !important;
         position: relative !important;
+        top: 100px !important;
         z-index: 2 !important;
     }
+
+    .naviraPromotionSlider {
+        margin-top: 5px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .naviraPromotionSlide.active {
+        left: 0 !important;
+        width: 100% !important;
+    }
+
 }
