@@ -7081,13 +7081,16 @@ body.naviraDark .naviraSettingsBox label {
 
 /* ================= TRENDING - PHONE ONLY ================= */
 
+/* ================= TRENDING - PHONE ONLY ================= */
+
 @media (max-width: 600px) {
 
     .naviraTrending {
         position: relative !important;
         top: 0 !important;
-        margin-top: -65px !important;
-        z-index: 2 !important;
+        margin-top: 0 !important;
+        transform: translateY(-35px) !important;
+        z-index: 5 !important;
     }
 
     .naviraPromotionSlider {
