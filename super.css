@@ -7100,7 +7100,7 @@ body.naviraDark .naviraSettingsBox label {
 
 @media (max-width: 600px) {
     .naviraTrending {
-        margin-top: 10px !important;
+        margin-top: 100px !important;
         position: relative !important;
         z-index: 2 !important;
     }
