@@ -37,33 +37,6 @@ function openRecentlyViewed() {
 
 
 /* =====================================================
-   ABOUT
-   ===================================================== */
-
-function openAbout() {
-
-    var about =
-        document.getElementById("aboutOverlay");
-
-    if (about) {
-        about.style.display = "flex";
-    }
-
-}
-
-
-function closeAbout() {
-
-    var about =
-        document.getElementById("aboutOverlay");
-
-    if (about) {
-        about.style.display = "none";
-    }
-
-}
-
-/* =====================================================
    SAVE CURRENT PRODUCT
    ===================================================== */
 
@@ -348,3 +321,18 @@ document.addEventListener(
 
     }
 );
+function openAbout() {
+    var about = document.getElementById("aboutOverlay");
+
+    if (about) {
+        about.classList.add("showAbout");
+    }
+}
+
+function closeAbout() {
+    var about = document.getElementById("aboutOverlay");
+
+    if (about) {
+        about.classList.remove("showAbout");
+    }
+}

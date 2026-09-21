@@ -141,8 +141,8 @@ var profileData =
         localStorage.getItem("naviraProfile") || "null"
     ) || {
 
-        name: "Sreenanda",
-        photo: "profile.png",
+        name: "User",
+        photo: "profile.jpeg",
 
         address: "",
         email: "",
@@ -177,14 +177,14 @@ function loadHomeProfile() {
     if (name) {
 
         name.textContent =
-            profileData.name || "Sreenanda";
+            profileData.name || "User";
     }
 
 
     if (photo) {
 
         photo.src =
-            profileData.photo || "profile.png";
+            profileData.photo || "profile.jpeg";
     }
 }
 
@@ -292,7 +292,7 @@ function openAccount() {
 
     if (accountPhoto)
         accountPhoto.src =
-            profileData.photo || "profile.png";
+            profileData.photo || "profile.jpeg";
 }
 
 
@@ -361,7 +361,7 @@ function saveAccount() {
             nameInput.value.trim();
 
         if (profileData.name === "") {
-            profileData.name = "Sreenanda";
+            profileData.name = "User";
         }
     }
 
@@ -962,74 +962,29 @@ document.addEventListener(
         loadTrendingProducts();
 
     }
-);/* =====================================================
-   NAVIRA - DIRECT ONAM TO TRENDING POSITION FIX
-   ===================================================== */
+);
 
-function positionTrendingAfterOnam() {
+/* ================================
+   ABOUT OPEN / CLOSE
+================================ */
 
-    var onam = document.querySelector(".naviraOnamSlider");
-    var trending = document.querySelector(".naviraTrending");
+function openAbout() {
 
-    if (!onam || !trending) {
-        return;
+    var about = document.getElementById("aboutOverlay");
+
+    if (about) {
+        about.style.display = "flex";
     }
 
-    /* Get the actual bottom of the Onam section */
-    var onamBottom = onam.getBoundingClientRect().bottom;
-
-    /* Get current Trending position */
-    var trendingTop = trending.getBoundingClientRect().top;
-
-    /* Difference between them */
-    var gap = trendingTop - onamBottom;
-
-    /*
-       Keep only 5px space between
-       Onam posters and Trending
-    */
-    if (gap > 5) {
-
-        trending.style.position = "relative";
-
-        trending.style.top =
-            "-" + (gap - 5) + "px";
-    }
 }
 
 
-/* Run after everything is loaded */
-window.addEventListener("load", function() {
+function closeAbout() {
 
-    setTimeout(function() {
-        positionTrendingAfterOnam();
-    }, 300);
+    var about = document.getElementById("aboutOverlay");
 
-});
-
-
-/* Run again when Trending is inserted */
-document.addEventListener("DOMContentLoaded", function() {
-
-    var homeContent =
-        document.getElementById("homeContent");
-
-    if (!homeContent) {
-        return;
+    if (about) {
+        about.style.display = "none";
     }
 
-    var observer =
-        new MutationObserver(function() {
-
-            setTimeout(function() {
-                positionTrendingAfterOnam();
-            }, 50);
-
-        });
-
-    observer.observe(homeContent, {
-        childList: true,
-        subtree: true
-    });
-
-});
+}
