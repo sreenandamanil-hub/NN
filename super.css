@@ -7334,3 +7334,31 @@ body.naviraDark .naviraEmptyWishlist .naviraWishlistShop {
     color: #000000 !important;
     opacity: 1 !important;
 }
+/* =====================================================
+   NAVIRA PRODUCT BORDER - MOBILE FIX
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    /* Normal product cards */
+    .card {
+        border: 2px solid var(--navira-theme-dark) !important;
+        border-radius: 14px !important;
+        box-sizing: border-box;
+    }
+
+
+    /* Trending product cards */
+    .trendingCard {
+        border: 2px solid var(--navira-theme-dark) !important;
+        border-radius: 14px !important;
+        box-sizing: border-box;
+    }
+
+
+    /* Search product cards */
+    #products .card {
+        border: 2px solid var(--navira-theme-dark) !important;
+    }
+
+}
