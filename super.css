@@ -7150,4 +7150,187 @@ body.naviraDark .naviraSettingsBox label {
 
     box-sizing: border-box !important;
     flex-shrink: 0 !important;
+}/* =========================================
+   HOME FRAME
+   Visible normally
+   Hidden during search
+========================================= */
+
+.homeTop::before {
+    display: block;
+}
+
+/* Hide the frame when searching */
+body.naviraSearching .homeTop::before {
+    display: none !important;
+}/* =========================================
+   SEARCH RESULTS → TRENDING GAP
+   SEARCH ONLY
+========================================= */
+
+body.naviraSearching .naviraTrending {
+    margin-top: 70px !important;
+}
+/* =========================================
+   HIDE PROMOTION POSTERS DURING SEARCH
+========================================= */
+
+body.naviraSearching .naviraPromotionSlider {
+    display: none !important;
+}
+
+/* =====================================================
+   SEARCH MODE - FINAL TRENDING FIX
+===================================================== */
+
+/* Hide promotion posters only while searching */
+body.naviraSearching .naviraPromotionSlider {
+    display: none !important;
+}
+
+/* Keep ALL Trending products visible */
+body.naviraSearching .naviraTrending {
+    position: relative !important;
+
+    top: auto !important;
+    transform: none !important;
+
+    margin-top: 30px !important;
+    margin-bottom: 120px !important;
+
+    padding-bottom: 20px !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+
+    overflow: visible !important;
+}
+
+/* Make sure the Trending grid itself is not clipped */
+body.naviraSearching .naviraTrending .trendingGrid {
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+}
+/* =====================================================
+   WISHLIST + RECENTLY VIEWED
+   DARK MODE - CLEAR BLACK TEXT
+   ===================================================== */
+
+body.naviraDark .naviraWishlistCard,
+body.naviraDark .naviraRecentCard {
+    color: #000000 !important;
+    opacity: 1 !important;
+    filter: none !important;
+}
+
+
+/* Product name */
+
+body.naviraDark .naviraWishlistInfo h3,
+body.naviraDark .naviraRecentInfo h3 {
+    color: #000000 !important;
+    opacity: 1 !important;
+}
+
+
+/* Rating */
+
+body.naviraDark .naviraWishlistRating,
+body.naviraDark .naviraRecentRating {
+    color: #000000 !important;
+    opacity: 1 !important;
+}
+
+
+
+
+
+/* Discount */
+
+body.naviraDark .naviraWishlistDiscount,
+body.naviraDark .naviraRecentDiscount {
+    color: #000000 !important;
+    opacity: 1 !important;
+    filter: none !important;
+}
+
+/* Buttons */
+
+body.naviraDark .naviraWishlistView,
+body.naviraDark .naviraWishlistRemove,
+body.naviraDark .naviraRecentViewButton {
+    color: #000000 !important;
+    opacity: 1 !important;
+}
+
+
+/* Empty page text */
+
+body.naviraDark .naviraEmptyWishlist,
+body.naviraDark .naviraRecentEmpty {
+    color: #000000 !important;
+    opacity: 1 !important;
+}
+
+
+body.naviraDark .naviraEmptyWishlist h2,
+body.naviraDark .naviraRecentEmpty h2,
+body.naviraDark .naviraEmptyWishlist p,
+body.naviraDark .naviraRecentEmpty p {
+    color: #000000 !important;
+    opacity: 1 !important;
+}
+/* =====================================================
+   WISHLIST + RECENTLY VIEWED PRICE - DARK MODE
+   ===================================================== */
+
+/* CURRENT PRICE */
+
+body.naviraDark .naviraWishlistPrice span,
+body.naviraDark .naviraRecentPrice span {
+    color: #000000 !important;
+    opacity: 1 !important;
+    filter: none !important;
+    visibility: visible !important;
+}
+
+
+/* PRICE CONTAINER */
+
+body.naviraDark .naviraWishlistPrice,
+body.naviraDark .naviraRecentPrice {
+    color: #000000 !important;
+    opacity: 1 !important;
+    filter: none !important;
+}
+
+
+/* OLD PRICE */
+
+body.naviraDark .naviraWishlistPrice del,
+body.naviraDark .naviraRecentPrice del {
+    color: #555555 !important;
+    opacity: 1 !important;
+    filter: none !important;
+    visibility: visible !important;
+}
+/* =====================================================
+   EMPTY WISHLIST - DARK MODE
+   ===================================================== */
+
+body.naviraDark .naviraEmptyWishlist,
+body.naviraDark .naviraEmptyWishlist h2,
+body.naviraDark .naviraEmptyWishlist p {
+    color: #ffffff !important;
+    opacity: 1 !important;
+    filter: none !important;
+}
+
+
+/* Continue Shopping button */
+
+body.naviraDark .naviraEmptyWishlist .naviraWishlistShop {
+    color: #000000 !important;
+    opacity: 1 !important;
 }

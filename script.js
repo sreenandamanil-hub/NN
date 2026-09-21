@@ -660,6 +660,11 @@ function searchProducts() {
     }
 
     var text = searchBox.value.trim().toLowerCase();
+	if (text !== "") {
+    document.body.classList.add("naviraSearching");
+} else {
+    document.body.classList.remove("naviraSearching");
+}
 var output = "";
 
 var homeContent = document.getElementById("homeContent");

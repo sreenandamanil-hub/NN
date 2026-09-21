@@ -21,12 +21,22 @@
         </p>      
     </div>  
 </div>    
-<div class="container">    
-    <div class="left">      
-        <div class="likeBox">      
-            <input type="checkbox" id="fav">      
-            <label for="fav">♥</label>      
-        </div>    
+<div class="container">
+
+<!-- LEFT SIDE -->
+
+<div class="left">
+<div class="likeBox">
+
+    <button
+        type="button"
+        class="naviraWishlistHeart"
+        data-wishlist-id="1"
+        onclick="toggleWishlist(1)">
+        ♡
+    </button>
+
+</div>  
         <div class="slider">    
             <img id="productImage" src="bbbed (13).jpeg" data-images="bbbed (13).jpeg, bbbed (14).jpeg, bbbed (15).jpeg" class="product">  
             <br>  
@@ -141,6 +151,11 @@
         <button class="place" onclick="stock()">Place Order</button>  
     </div>    
 </div>    
-<script src="script.js"></script>    
+<script src="products.js"></script>
+<script src="script.js"></script>
+<script src="categories.js"></script>
+<script src="settings.js"></script>
+<script src="wishlist.js"></script>
+<script src="bottom-nav.js"></script>    
 </body>      
 </html>
